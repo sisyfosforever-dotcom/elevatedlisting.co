@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Elevated Listing — Handmade films & songs by Luis from Sweden</title>
+  <meta name="description" content="Handmade listing films that open the theater of the mind — before anyone boards the plane. By Luis from Sweden." />
+  <meta property="og:title" content="Elevated Listing" />
+  <meta property="og:description" content="The best travel film is the one already playing in your head. We just light the match." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0f1210;
+      --bg-soft: #171c18;
+      --card: #1c231e;
+      --ink: #f3efe6;
+      --mute: #a8b0a6;
+      --line: rgba(243,239,230,.12);
+      --accent: #c4a574;
+      --accent-2: #7d9b84;
+      --glow: rgba(196,165,116,.18);
+      --radius: 18px;
+      --max: 1080px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Outfit, system-ui, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(1200px 600px at 10% -10%, var(--glow), transparent 55%),
+        radial-gradient(900px 500px at 90% 0%, rgba(125,155,132,.12), transparent 50%),
+        var(--bg);
+      line-height: 1.55;
+      font-weight: 400;
+      letter-spacing: .01em;
+    }
+    a { color: inherit; }
+    img { max-width: 100%; display: block; }
+    .wrap { width: min(var(--max), calc(100% - 2.5rem)); margin: 0 auto; }
+    header {
+      position: sticky; top: 0; z-index: 20;
+      backdrop-filter: blur(14px);
+      background: rgba(15,18,16,.72);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 0; gap: 1rem;
+    }
+    .logo {
+      font-family: Fraunces, Georgia, serif;
+      font-weight: 600; font-size: 1.15rem;
+      letter-spacing: .02em;
+    }
+    .logo span { color: var(--accent); font-weight: 500; }
+    .nav-links { display: flex; gap: 1.25rem; align-items: center; font-size: .92rem; color: var(--mute); }
+    .nav-links a { text-decoration: none; }
+    .nav-links a:hover { color: var(--ink); }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      gap: .5rem; text-decoration: none;
+      background: linear-gradient(135deg, #d4b484, var(--accent));
+      color: #1a140c; font-weight: 600; font-size: .92rem;
+      padding: .75rem 1.15rem; border-radius: 999px;
+      border: none; cursor: pointer;
+      box-shadow: 0 8px 28px rgba(196,165,116,.25);
+    }
+    .btn:hover { filter: brightness(1.05); }
+    .btn-ghost {
+      background: transparent; color: var(--ink);
+      border: 1px solid var(--line); box-shadow: none;
+    }
+    .btn-ghost:hover { border-color: rgba(243,239,230,.28); }
+    .hero { padding: 4.5rem 0 3.5rem; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: .5rem;
+      color: var(--accent-2); font-size: .8rem; font-weight: 500;
+      text-transform: uppercase; letter-spacing: .14em; margin-bottom: 1rem;
+    }
+    .hero h1 {
+      font-family: Fraunces, Georgia, serif;
+      font-weight: 600; font-size: clamp(2.2rem, 5vw, 3.6rem);
+      line-height: 1.08; margin: 0 0 1.1rem; max-width: 18ch;
+      letter-spacing: -.02em;
+    }
+    .hero-lead {
+      max-width: 38rem; color: var(--mute); font-size: 1.08rem;
+      margin: 0 0 1.75rem; font-weight: 300;
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-bottom: 2.5rem; }
+    .trust {
+      display: flex; flex-wrap: wrap; gap: 1.25rem 2rem;
+      color: var(--mute); font-size: .88rem; border-top: 1px solid var(--line);
+      padding-top: 1.25rem;
+    }
+    .trust strong { color: var(--ink); font-weight: 500; display: block; }
+    section { padding: 3.25rem 0; }
+    .section-title {
+      font-family: Fraunces, Georgia, serif;
+      font-size: clamp(1.6rem, 3vw, 2.15rem);
+      margin: 0 0 .5rem; letter-spacing: -.015em;
+    }
+    .section-sub { color: var(--mute); margin: 0 0 2rem; max-width: 36rem; font-weight: 300; }
+    .grid-3 {
+      display: grid; gap: 1rem;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 800px) {
+      .grid-3 { grid-template-columns: 1fr; }
+      .nav-links .hide-sm { display: none; }
+    }
+
+    .card-icon {
+      width: 2.25rem; height: 2.25rem; margin-bottom: .85rem;
+      display: block;
+    }
+    .card-icon img, .card-icon svg { width: 100%; height: 100%; display: block; }
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,.03), transparent), var(--card);
+      border: 1px solid var(--line); border-radius: var(--radius);
+      padding: 1.35rem 1.25rem;
+    }
+    .card h3 {
+      font-family: Fraunces, Georgia, serif; font-size: 1.15rem;
+      margin: 0 0 .55rem; font-weight: 600;
+    }
+    .card p { margin: 0; color: var(--mute); font-size: .95rem; font-weight: 300; }
+    .work-grid {
+      display: grid; gap: 1.25rem;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 720px) { .work-grid { grid-template-columns: 1fr; } }
+    .work {
+      background: var(--card); border: 1px solid var(--line);
+      border-radius: var(--radius); overflow: hidden;
+      display: flex; flex-direction: column;
+    }
+    .work-media {
+      position: relative;
+      aspect-ratio: 9 / 14;
+      max-height: 520px;
+      background: #050605;
+      overflow: hidden;
+      isolation: isolate;
+    }
+    .work-media::after {
+      content: "";
+      position: absolute; inset: 0;
+      pointer-events: none;
+      box-shadow: inset 0 0 0 1px rgba(196,165,116,.14);
+      border-radius: 0;
+      z-index: 2;
+    }
+    .work-media .yt-facade {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      padding: 0; border: 0; cursor: pointer;
+      background: #050605;
+      display: block;
+    }
+    .work-media .yt-facade img {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center 20%;
+      opacity: .9;
+      transform: scale(1.02);
+      transition: transform .55s ease, opacity .35s ease;
+      filter: saturate(1.05) contrast(1.04);
+    }
+    .work-media .yt-facade:hover img,
+    .work-media .yt-facade:focus-visible img {
+      transform: scale(1.06);
+      opacity: 1;
+    }
+    .work-media .yt-facade:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: -2px;
+    }
+    .yt-play {
+      position: absolute; left: 50%; top: 50%;
+      width: 3.4rem; height: 3.4rem;
+      margin: -1.7rem 0 0 -1.7rem;
+      border-radius: 999px;
+      background: rgba(15,18,16,.55);
+      border: 1.5px solid rgba(196,165,116,.85);
+      box-shadow: 0 10px 28px rgba(0,0,0,.45), inset 0 0 0 1px rgba(255,255,255,.06);
+      backdrop-filter: blur(8px);
+      display: grid; place-items: center;
+      transition: transform .25s ease, background .25s ease, border-color .25s ease;
+      z-index: 1;
+      pointer-events: none;
+    }
+    .yt-play::before {
+      content: "";
+      display: block;
+      width: 0; height: 0;
+      margin-left: .18rem;
+      border-style: solid;
+      border-width: .45rem 0 .45rem .75rem;
+      border-color: transparent transparent transparent var(--accent);
+    }
+    .work-media .yt-facade:hover .yt-play,
+    .work-media .yt-facade:focus-visible .yt-play {
+      transform: scale(1.06);
+      background: rgba(196,165,116,.18);
+      border-color: var(--accent);
+    }
+    .work-media.is-playing::after { box-shadow: inset 0 0 0 1px rgba(196,165,116,.08); }
+    .work-media iframe {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      border: 0; background: #000;
+    }
+    @media (max-width: 720px) {
+      .work-media { max-height: none; aspect-ratio: 9 / 13; }
+    }
+    .work-body { padding: 1.1rem 1.15rem 1.25rem; }
+    .work-body h3 {
+      font-family: Fraunces, Georgia, serif; font-size: 1.05rem;
+      margin: 0 0 .35rem;
+    }
+    .work-meta { color: var(--mute); font-size: .82rem; margin-bottom: .65rem; }
+    .work-body p { margin: 0 0 .9rem; color: var(--mute); font-size: .9rem; font-weight: 300; }
+    .link-row { display: flex; gap: .75rem; flex-wrap: wrap; font-size: .88rem; }
+    .link-row a { color: var(--accent); text-decoration: none; }
+    .link-row a:hover { text-decoration: underline; }
+    .offer {
+      background:
+        radial-gradient(600px 240px at 80% 0%, var(--glow), transparent 60%),
+        var(--bg-soft);
+      border: 1px solid var(--line); border-radius: calc(var(--radius) + 4px);
+      padding: 2rem 1.5rem;
+    }
+    .price {
+      font-family: Fraunces, Georgia, serif; font-size: 2.4rem;
+      margin: .4rem 0 .2rem; color: var(--accent);
+    }
+    .price small { font-size: 1rem; color: var(--mute); font-family: Outfit, sans-serif; }
+    .offer ul {
+      margin: 1.1rem 0 1.4rem; padding: 0; list-style: none;
+      display: grid; gap: .55rem; color: var(--mute);
+    }
+    .offer li::before {
+      content: "✓"; color: var(--accent-2); margin-right: .55rem; font-weight: 600;
+    }
+    .contact {
+      display: grid; gap: 1rem; grid-template-columns: 1.2fr .8fr;
+    }
+    .about-side { display: grid; gap: 1rem; align-content: start; }
+    .about-photo {
+      margin: 0; overflow: hidden; background: var(--card);
+      border: 1px solid var(--line); border-radius: var(--radius);
+      box-shadow: 0 16px 36px rgba(0,0,0,.22);
+    }
+    .about-photo img {
+      width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center;
+    }
+    .about-photo figcaption {
+      padding: .65rem 1rem .75rem; color: var(--mute); font-size: .82rem;
+      letter-spacing: .04em;
+    }
+    .about-side .card { padding: 1.1rem 1.15rem; }
+
+    .about-side .card.path-card {
+      position: relative;
+      overflow: hidden;
+      background-color: #162019;
+      background-image:
+        linear-gradient(180deg, rgba(22,32,25,.55), rgba(15,18,16,.82)),
+        url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22360%22%20height%3D%22280%22%20viewBox%3D%220%200%20360%20280%22%3E%20%3Cdefs%3E%20%3Cpattern%20id%3D%22grid%22%20width%3D%2224%22%20height%3D%2224%22%20patternUnits%3D%22userSpaceOnUse%22%3E%20%3Cpath%20d%3D%22M24%200H0V24%22%20fill%3D%22none%22%20stroke%3D%22%237d9b84%22%20stroke-opacity%3D%22.07%22%20stroke-width%3D%22.6%22/%3E%20%3C/pattern%3E%20%3C/defs%3E%20%3Crect%20width%3D%22360%22%20height%3D%22280%22%20fill%3D%22url%28%23grid%29%22/%3E%20%3C%21--%20faint%20contour%20squiggles%20--%3E%20%3Cpath%20d%3D%22M-10%2040%20Q40%2020%2080%2045%20T160%2035%20T240%2055%20T340%2040%22%20fill%3D%22none%22%20stroke%3D%22%237d9b84%22%20stroke-opacity%3D%22.08%22%20stroke-width%3D%221%22/%3E%20%3Cpath%20d%3D%22M-10%20120%20Q50%20100%20100%20130%20T200%20115%20T300%20140%20T380%20120%22%20fill%3D%22none%22%20stroke%3D%22%237d9b84%22%20stroke-opacity%3D%22.06%22%20stroke-width%3D%221%22/%3E%20%3Cpath%20d%3D%22M-10%20200%20Q60%20180%20110%20210%20T220%20195%20T340%20220%22%20fill%3D%22none%22%20stroke%3D%22%237d9b84%22%20stroke-opacity%3D%22.07%22%20stroke-width%3D%221%22/%3E%20%3C%21--%20old-school%20dashed%20travel%20route%20--%3E%20%3Cpath%20d%3D%22M28%20210%20C70%20170%2090%2090%20140%2070%20C190%2050%20210%20110%20250%20130%20C290%20150%20310%2090%20338%2055%22%20fill%3D%22none%22%20stroke%3D%22%23c4a574%22%20stroke-opacity%3D%22.38%22%20stroke-width%3D%221.6%22%20stroke-dasharray%3D%225%205%22%20stroke-linecap%3D%22round%22/%3E%20%3C%21--%20destination%20pins%20--%3E%20%3Ccircle%20cx%3D%2228%22%20cy%3D%22210%22%20r%3D%223.2%22%20fill%3D%22%23c4a574%22%20fill-opacity%3D%22.55%22/%3E%20%3Ccircle%20cx%3D%22140%22%20cy%3D%2270%22%20r%3D%222.6%22%20fill%3D%22%23c4a574%22%20fill-opacity%3D%22.4%22/%3E%20%3Ccircle%20cx%3D%22250%22%20cy%3D%22130%22%20r%3D%222.6%22%20fill%3D%22%23c4a574%22%20fill-opacity%3D%22.4%22/%3E%20%3Ccircle%20cx%3D%22338%22%20cy%3D%2255%22%20r%3D%223.4%22%20fill%3D%22%23c4a574%22%20fill-opacity%3D%22.65%22/%3E%20%3C%21--%20tiny%20compass%20rose%20hint%20--%3E%20%3Cg%20transform%3D%22translate%28320%20240%29%22%20opacity%3D%22.22%22%20stroke%3D%22%23c4a574%22%20fill%3D%22none%22%20stroke-width%3D%221%22%3E%20%3Ccircle%20r%3D%2210%22/%3E%20%3Cpath%20d%3D%22M0%20-10%20L2%200%20L0%2010%20L-2%200%20Z%22%20fill%3D%22%23c4a574%22%20fill-opacity%3D%22.35%22%20stroke%3D%22none%22/%3E%20%3Cpath%20d%3D%22M0%20-14%20V-11%20M0%2011%20V14%20M-14%200%20H-11%20M11%200%20H14%22/%3E%20%3C/g%3E%20%3C/svg%3E");
+      background-size: auto, 360px 280px;
+      background-repeat: no-repeat, repeat;
+      background-position: center, 0 0;
+      border: 1px solid rgba(196,165,116,.18);
+    }
+    .about-side .card.path-card h3,
+    .about-side .card.path-card p {
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 800px) { .contact { grid-template-columns: 1fr; } }
+    footer {
+      border-top: 1px solid var(--line); padding: 2rem 0 2.5rem;
+      color: var(--mute); font-size: .85rem;
+    }
+    footer .row { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+
+    footer .legal-links { display: flex; gap: .85rem; flex-wrap: wrap; align-items: center; }
+    footer .legal-links a { color: var(--mute); text-decoration: none; }
+    footer .legal-links a:hover { color: var(--ink); }
+    footer .legal-links .sep { opacity: .5; }
+    .pill {
+      display: inline-block; font-size: .72rem; letter-spacing: .08em;
+      text-transform: uppercase; color: var(--accent);
+      border: 1px solid rgba(196,165,116,.35); border-radius: 999px;
+      padding: .2rem .55rem; margin-bottom: .55rem;
+    }
+  
+    /* Drop injects a Powered by Netlify pill — kill it hard */
+    a[href*="netlify.com"],
+    a[href*="netlify.app"][title*="Netlify" i],
+    #netlify-watermark,
+    .netlify-watermark,
+    [data-nf-site],
+    iframe[src*="netlify"] {
+      display: none !important;
+      visibility: hidden !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+      width: 0 !important;
+      height: 0 !important;
+      overflow: hidden !important;
+    }
+
+
+    .contact-form {
+      background: linear-gradient(180deg, rgba(255,255,255,.03), transparent), var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.35rem 1.25rem 1.4rem;
+    }
+    .contact-form h3 {
+      font-family: Fraunces, Georgia, serif;
+      font-size: 1.15rem; margin: 0 0 .35rem; font-weight: 600;
+    }
+    .contact-form .hint {
+      margin: 0 0 1rem; color: var(--mute); font-size: .88rem; font-weight: 300;
+    }
+    .contact-form label {
+      display: block; font-size: .78rem; letter-spacing: .06em;
+      text-transform: uppercase; color: var(--mute); margin: 0 0 .35rem;
+    }
+    .contact-form .field { margin-bottom: .85rem; }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      background: rgba(0,0,0,.28);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      color: var(--ink);
+      font: inherit;
+      font-size: .95rem;
+      padding: .7rem .85rem;
+      outline: none;
+      transition: border-color .2s ease, box-shadow .2s ease;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: rgba(196,165,116,.55);
+      box-shadow: 0 0 0 3px rgba(196,165,116,.12);
+    }
+    .contact-form textarea { min-height: 7.5rem; resize: vertical; }
+    .contact-form .hp { position: absolute; left: -9999px; height: 0; overflow: hidden; }
+    .contact-form .btn { width: 100%; justify-content: center; border: 0; cursor: pointer; margin-top: .25rem; }
+    .contact-form .note {
+      margin: .75rem 0 0; color: var(--mute); font-size: .8rem; font-weight: 300;
+    }
+    .contact-form.is-sent .fields,
+    .contact-form.is-sent .btn { display: none; }
+    .contact-form .thanks { display: none; color: var(--accent); margin: 0; }
+    .contact-form.is-sent .thanks { display: block; }
+
+    .contact-form .checks {
+      display: grid; gap: .55rem;
+      margin: 0 0 1rem;
+    }
+    .contact-form .check {
+      display: flex; gap: .65rem; align-items: flex-start;
+      margin: 0; font-size: .9rem; color: var(--ink);
+      font-weight: 300; cursor: pointer;
+      text-transform: none; letter-spacing: 0;
+    }
+    .contact-form .check input {
+      width: 1.05rem; height: 1.05rem; margin: .15rem 0 0;
+      accent-color: var(--accent);
+      flex: 0 0 auto;
+      padding: 0;
+    }
+
+    .contact-grid {
+      display: grid; gap: 1.25rem;
+      grid-template-columns: 1.2fr .8fr;
+    }
+    @media (max-width: 800px) {
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <div class="logo">Elevated <span>Listing</span></div>
+      <nav class="nav-links">
+        <a class="hide-sm" href="#mind">Mind</a>
+        <a class="hide-sm" href="#work">Work</a>
+        <a class="hide-sm" href="#offer">Offer</a>
+        <a class="hide-sm" href="#about">About</a>
+        <a class="hide-sm" href="#contact">Contact</a>
+        <a class="btn" href="#contact">Get in touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div class="eyebrow">By Luis from Sweden · Films & original songs</div>
+        <h1>The trip starts in the theater of the mind.</h1>
+        <p class="hero-lead">
+          I’m Luis — Luis from Sweden on YouTube. Elevated Listing is the quiet side of that work:
+          a few handmade films each season for stays that already have heart. The best images of a place
+          aren’t on a screen; they’re private, individual, already building before anyone packs a bag.
+          A good cut doesn’t replace that. It lights it. Real photos only. An original song. No stock music.
+        </p>
+        <div class="hero-actions">
+          <a class="btn" href="#work">Watch the cuts</a>
+          <a class="btn btn-ghost" href="https://www.youtube.com/@LuisfromSweden" target="_blank" rel="noopener">YouTube · Luis from Sweden</a>
+        </div>
+        <div class="trust">
+          <div><strong>Few, not many</strong>Handmade picks with soul and nerve</div>
+          <div><strong>Your photos</strong>Faithful motion — nothing invented</div>
+          <div><strong>Your song</strong>Written for the stay, then you own it</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="mind">
+      <div class="wrap">
+        <h2 class="section-title">Theater of the mind</h2>
+        <p class="section-sub" style="max-width:40rem">
+          Joy for a trip often peaks before the wheels leave the ground — in the imagining.
+          That’s personal. Your guest’s version of the diner, the deck, the Hill Country dark
+          won’t match anyone else’s. A listing film can’t be that movie. It can be the match:
+          a trigger that lets them travel there in their own head, already half-arrived.
+        </p>
+        <div class="grid-3">
+          <article class="card">
+            <span class="card-icon" aria-hidden="true"><img src="assets/icons/private-cinema.svg" alt="" /></span>
+            <h3>Private cinema</h3>
+            <p>The richest travel reel is individual. We don’t overwrite it — we hand it a first frame and a song.</p>
+          </article>
+          <article class="card">
+            <span class="card-icon" aria-hidden="true"><img src="assets/icons/before-the-plane.svg" alt="" /></span>
+            <h3>Before the plane</h3>
+            <p>Anticipation is half the stay. The cut is for that hour on the couch when they’re already gone.</p>
+          </article>
+          <article class="card">
+            <span class="card-icon" aria-hidden="true"><img src="assets/icons/then-the-booking.svg" alt="" /></span>
+            <h3>Then the booking</h3>
+            <p>When the mind has walked the rooms, the click feels less like a purchase and more like following through.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="how">
+      <div class="wrap">
+        <h2 class="section-title">How I work</h2>
+        <p class="section-sub">Less sales deck. More short film. Built to spark a guest’s inner version of the stay — if the place doesn’t spark me first, I don’t force a cut.</p>
+        <div class="grid-3">
+          <article class="card">
+            <span class="card-icon" aria-hidden="true"><img src="assets/icons/find-the-spark.svg" alt="" /></span>
+            <h3>Find the spark</h3>
+            <p>I look for listings with human joy already in the photos — neon, paint, a fire pit at dusk — then build from there.</p>
+          </article>
+          <article class="card">
+            <span class="card-icon" aria-hidden="true"><img src="assets/icons/film-and-song.svg" alt="" /></span>
+            <h3>Film + song</h3>
+            <p>Motion from your gallery only. An original song that names what’s true about the stay — not a licensed loop.</p>
+          </article>
+          <article class="card">
+            <span class="card-icon" aria-hidden="true"><img src="assets/icons/one-strong-cut.svg" alt="" /></span>
+            <h3>One strong cut</h3>
+            <p>A finished piece for Airbnb, Instagram, or your site — aimed at the mind before the mattress. You own the buy-out.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+        <section id="work">
+      <div class="wrap">
+        <h2 class="section-title">Recent cuts</h2>
+        <p class="section-sub">Unlisted handmade films from public listing photos.</p>
+        <div class="work-grid">
+
+
+<article class="work">
+            <div class="work-media" data-yt="zf0wbonvAfI">
+              <button type="button" class="yt-facade" aria-label="Play I got a basement in Toronto">
+                <img src="https://i.ytimg.com/vi/zf0wbonvAfI/hqdefault.jpg" alt="" loading="lazy" decoding="async" />
+                <span class="yt-play" aria-hidden="true"></span>
+              </button>
+            </div>
+            <div class="work-body">
+              <div class="pill">Toronto</div>
+              <h3>I got a basement in Toronto</h3>
+              <div class="work-meta">Ivan · Cozy independent basement · Sega Rally den</div>
+              <p>Narrow alley home, a few careful steps down — check-out will be late.</p>
+              <div class="link-row">
+                <a href="https://youtu.be/zf0wbonvAfI" target="_blank" rel="noopener">youtu.be/zf0wbonvAfI</a>
+              </div>
+            </div>
+          </article>
+
+
+
+<article class="work">
+            <div class="work-media" data-yt="BZUdx_O-008">
+              <button type="button" class="yt-facade" aria-label="Play I will make you Yurt Casa de Marca">
+                <img src="https://i.ytimg.com/vi/BZUdx_O-008/hqdefault.jpg" alt="" loading="lazy" decoding="async" />
+                <span class="yt-play" aria-hidden="true"></span>
+              </button>
+            </div>
+            <div class="work-body">
+              <div class="pill">West Texas</div>
+              <h3>I will make you Yurt · Casa de Marca</h3>
+              <div class="work-meta">Casa de Marca · Skylight dome / clawfoot / chiminea</div>
+              <p>Desert night under the dome — clawfoot soak, outdoor shower stars, fire in the chiminea.</p>
+              <div class="link-row">
+                <a href="https://youtu.be/BZUdx_O-008" target="_blank" rel="noopener">youtu.be/BZUdx_O-008</a>
+              </div>
+            </div>
+          </article>
+
+
+<article class="work">
+            <div class="work-media" data-yt="EX0xMsigB8I">
+              <button type="button" class="yt-facade" aria-label="Play Pik Pak Pump up the Gas">
+                <img src="https://i.ytimg.com/vi/EX0xMsigB8I/hqdefault.jpg" alt="" loading="lazy" decoding="async" />
+                <span class="yt-play" aria-hidden="true"></span>
+              </button>
+            </div>
+            <div class="work-body">
+              <div class="pill">Marfa</div>
+              <h3>Pump up the gas · Pik Pak</h3>
+              <div class="work-meta">Technotronic-style club energy / restored gas station</div>
+              <p>Courtyard night, humming pumps, Coupe Cowboy through the garage door — pump up the gas.</p>
+              <div class="link-row">
+                <a href="https://youtu.be/EX0xMsigB8I" target="_blank" rel="noopener">youtu.be/EX0xMsigB8I</a>
+              </div>
+            </div>
+          </article>
+
+<article class="work">
+            <div class="work-media" data-yt="Xt8C4IvpJBo">
+              <button type="button" class="yt-facade" aria-label="Play Milky Wayfarer Puttin' on the Ritz">
+                <img src="https://i.ytimg.com/vi/Xt8C4IvpJBo/hqdefault.jpg" alt="" loading="lazy" decoding="async" />
+                <span class="yt-play" aria-hidden="true"></span>
+              </button>
+            </div>
+            <div class="work-body">
+              <div class="pill">Texas Hill Country</div>
+              <h3>Puttin’ on the Ritz · Milky Wayfarer</h3>
+              <div class="work-meta">Milky Wayfarer · Full cut · Mini-golf / dusk / fire</div>
+              <p>Pure dolly through the real stay — then the Ritz lift. Anticipation before the trip.</p>
+              <div class="link-row">
+                <a href="https://youtu.be/Xt8C4IvpJBo" target="_blank" rel="noopener">youtu.be/Xt8C4IvpJBo</a>
+              </div>
+            </div>
+          </article>
+
+
+
+<article class="work">
+            <div class="work-media" data-yt="dtyS5c5j9rI">
+              <button type="button" class="yt-facade" aria-label="Play ROAM Fredericksburg storyboard">
+                <img src="https://i.ytimg.com/vi/dtyS5c5j9rI/hqdefault.jpg" alt="" loading="lazy" decoding="async" />
+                <span class="yt-play" aria-hidden="true"></span>
+              </button>
+            </div>
+            <div class="work-body">
+              <div class="pill">Fredericksburg</div>
+              <h3>Two containers · ROAM</h3>
+              <div class="work-meta">ROAM · 2:43 · Storyboard · Wine trail / 290</div>
+              <p>Two black containers side by side. A bold melting storyboard over a country-rock roam.</p>
+              <div class="link-row">
+                <a href="https://youtu.be/dtyS5c5j9rI" target="_blank" rel="noopener">youtu.be/dtyS5c5j9rI</a>
+              </div>
+            </div>
+          </article>
+
+<article class="work">
+            <div class="work-media" data-yt="dwBMO4qtyFQ">
+              <button type="button" class="yt-facade" aria-label="Play Jamie East Austin bathhouse">
+                <img src="https://i.ytimg.com/vi/dwBMO4qtyFQ/hqdefault.jpg" alt="" loading="lazy" decoding="async" />
+                <span class="yt-play" aria-hidden="true"></span>
+              </button>
+            </div>
+            <div class="work-body">
+              <div class="pill">Austin</div>
+              <h3>Private bathhouse · East Austin</h3>
+              <div class="work-meta">Jamie · Short · Barrel sauna & cedar soaking tubs</div>
+              <p>Cedar steam, quiet water, a song about slowing down east of the highway.</p>
+              <div class="link-row">
+                <a href="https://youtu.be/dwBMO4qtyFQ" target="_blank" rel="noopener">youtu.be/dwBMO4qtyFQ</a>
+              </div>
+            </div>
+          </article>
+
+<article class="work">
+            <div class="work-media" data-yt="G3iRSuT5qB0">
+              <button type="button" class="yt-facade" aria-label="Play Llano Diner Tonight">
+                <img src="https://i.ytimg.com/vi/G3iRSuT5qB0/hqdefault.jpg" alt="" loading="lazy" decoding="async" />
+                <span class="yt-play" aria-hidden="true"></span>
+              </button>
+            </div>
+            <div class="work-body">
+              <div class="pill">Llano</div>
+              <h3>1950s Coca-Cola diner home</h3>
+              <div class="work-meta">Llano Diner Tonight · 1:50 · Rockabilly hop</div>
+              <p>Neon chrome, checkered floor, jukebox Saturday — theater of the mind with a slap bass.</p>
+              <div class="link-row">
+                <a href="https://youtu.be/G3iRSuT5qB0" target="_blank" rel="noopener">youtu.be/G3iRSuT5qB0</a>
+              </div>
+            </div>
+          </article>
+
+<article class="work">
+            <div class="work-media" data-yt="4Yon44P1Hyw">
+              <button type="button" class="yt-facade" aria-label="Play Art-filled Retreat">
+                <img src="https://i.ytimg.com/vi/4Yon44P1Hyw/hqdefault.jpg" alt="" loading="lazy" decoding="async" />
+                <span class="yt-play" aria-hidden="true"></span>
+              </button>
+            </div>
+            <div class="work-body">
+              <div class="pill">Austin</div>
+              <h3>Art-filled container retreat</h3>
+              <div class="work-meta">Lauren · 1:31 · Fire pit, giant deck, quiet country road</div>
+              <p>Murals, string lights, indie folk for paint drying in open air.</p>
+              <div class="link-row">
+                <a href="https://youtu.be/4Yon44P1Hyw" target="_blank" rel="noopener">youtu.be/4Yon44P1Hyw</a>
+              </div>
+            </div>
+          </article>
+
+<article class="work">
+            <div class="work-media" data-yt="Sy5VvSOGdHk">
+              <button type="button" class="yt-facade" aria-label="Play Grantham House Hill Country cabin">
+                <img src="https://i.ytimg.com/vi/Sy5VvSOGdHk/hqdefault.jpg" alt="" loading="lazy" decoding="async" />
+                <span class="yt-play" aria-hidden="true"></span>
+              </button>
+            </div>
+            <div class="work-body">
+              <div class="pill">San Antonio · Hill Country</div>
+              <h3>Grantham House cabin</h3>
+              <div class="work-meta">Paula · 1:28 · Secluded views, couples retreat</div>
+              <p>Hill Country deck light, hot tub steam, a ballad written for two.</p>
+              <div class="link-row">
+                <a href="https://youtu.be/Sy5VvSOGdHk" target="_blank" rel="noopener">youtu.be/Sy5VvSOGdHk</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+<section id="offer">
+      <div class="wrap">
+        <div class="offer">
+          <div class="pill">Buy-out</div>
+          <h2 class="section-title" style="margin-bottom:.25rem">One film. One song. Yours.</h2>
+          <div class="price">$249 <small>full buy-out</small></div>
+          <p style="color:var(--mute);margin:0;max-width:36rem;font-weight:300">
+            If I’ve already cut a draft for your place, you’ll feel it before we talk money.
+            One revision pass if you want notes. Deeper motion craft sits around $399–$499 when the stay asks for it.
+          </p>
+          <ul>
+            <li>A 60–90 second cut from your real photos</li>
+            <li>An original song written for that stay</li>
+            <li>Full ownership — Airbnb, site, ads</li>
+            <li>No crew day, no stock music</li>
+          </ul>
+          <a class="btn" href="#contact">Write me</a>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="contact">
+      <div class="wrap">
+        <h2 class="section-title">Get in touch</h2>
+        <p class="section-sub">Send a listing link or a note. I read these myself — no CRM, no autoresponder stack.</p>
+        <div class="contact-grid">
+          <form class="contact-form" name="contact" method="POST" action="https://formsubmit.co/sisyfosforever@gmail.com" id="contact-form">
+            <input type="hidden" name="_subject" value="Elevated Listing — site contact" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_next" value="https://elevatedlisting.co/#contact?sent=1" />
+            <p class="hp" aria-hidden="true">
+              <label>Don’t fill this out: <input name="_honey" tabindex="-1" autocomplete="off" /></label>
+            </p>
+            <h3>Write Luis</h3>
+            <p class="hint">Films, buy-outs, or a stay that sparked something.</p>
+            <div class="fields">
+              <div class="field">
+                <label for="c-name">Name</label>
+                <input id="c-name" name="name" type="text" autocomplete="name" required />
+              </div>
+              <div class="field">
+                <label for="c-email">Email</label>
+                <input id="c-email" name="email" type="email" autocomplete="email" required />
+              </div>
+              <div class="field">
+                <label for="c-listing">Listing URL</label>
+                <input id="c-listing" name="listing_url" type="url" placeholder="https://www.airbnb.com/rooms/…" />
+              </div>
+                                          <div class="field">
+                <label>Why you’re here</label>
+                <div class="checks">
+                  <label class="check">
+                    <input type="checkbox" name="reason" value="needs-elevating" />
+                    <span>My listing need elevating</span>
+                  </label>
+                  <label class="check">
+                    <input type="checkbox" name="reason" value="elevate-my-listing" />
+                    <span>Elevate my listing</span>
+                  </label>
+                  <label class="check">
+                    <input type="checkbox" name="reason" value="im-listening" />
+                    <span>im listening</span>
+                  </label>
+                  <label class="check">
+                    <input type="checkbox" name="reason" value="lets-talk" />
+                    <span>let’s talk</span>
+                  </label>
+                </div>
+              </div>
+              <div class="field">
+                <label for="c-song">If my listing were a song it would be <span style="color:var(--mute);font-weight:300;text-transform:none;letter-spacing:0">(optional)</span></label>
+                <input id="c-song" name="listing_as_song" type="text" placeholder="A slow duet in a kitchen with the lights low…" />
+              </div>
+              <div class="field">
+                <label for="c-message">Message</label>
+                <textarea id="c-message" name="message" required placeholder="What’s the stay, and what do you want the guest to feel?"></textarea>
+              </div>
+              <button class="btn" type="submit">Send message</button>
+              <p class="note">Goes to the Elevated Listing inbox. Or email <a href="mailto:luis@elevatedlisting.co" style="color:var(--accent)">luis@elevatedlisting.co</a>.</p>
+            </div>
+            <p class="thanks">Got it — I’ll reply from luis@elevatedlisting.co.</p>
+          </form>
+          <div class="card" style="align-self:start">
+            <h3>What helps</h3>
+            <p style="margin:0 0 .75rem">Your public listing link, a line on the vibe, and whether you already have a draft cut from me.</p>
+            <p style="margin:0;color:var(--mute);font-weight:300">Buy-out is $249 when the cut feels right. Deeper motion craft is $399–$499.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap contact">
+        <div>
+          <h2 class="section-title">Luis from Sweden</h2>
+          <p class="section-sub" style="margin-bottom:1rem">
+            Filmmaker and songwriter. Elevated Listing is where I take that craft to stays with character —
+            not volume outreach, not safe templates. If your place has soul, I want the film to open a door
+            in someone’s head and leave the rest to them.
+          </p>
+          <div class="link-row">
+            <a href="https://www.youtube.com/@LuisfromSweden" target="_blank" rel="noopener">YouTube @LuisfromSweden</a>
+            <a href="https://www.instagram.com/luisfromsweden/" target="_blank" rel="noopener">Instagram @luisfromsweden</a>
+            <a href="mailto:luis@elevatedlisting.co">luis@elevatedlisting.co</a>
+          </div>
+        </div>
+        <div class="about-side">
+          <figure class="about-photo">
+            <img src="assets/luis-from-sweden-patch.jpg" alt="Luis from Sweden — leather patch signature" />
+            <figcaption>Luis from Sweden</figcaption>
+          </figure>
+          <div class="card path-card">
+            <h3>Simple path</h3>
+            <p style="margin-bottom:.75rem">1. You get a cut from me — or you send a listing that sparked something.</p>
+            <p style="margin-bottom:.75rem">2. We talk like humans. Notes if you want them.</p>
+            <p style="margin:0">3. Buy-out when it feels right. You own the film and the song.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap row">
+      <div>© <span id="y"></span> Elevated Listing · Luis from Sweden</div>
+      <div class="legal-links">
+        <a href="/terms">Terms</a>
+        <span class="sep">·</span>
+        <a href="/privacy">Privacy</a>
+        <span class="sep">·</span>
+        <a href="/refund">Refund</a>
+      </div>
+    </div>
+  </footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+
+<script>
+    (function () {
+      function mount(media) {
+        if (media.classList.contains('is-playing')) return;
+        var id = media.getAttribute('data-yt');
+        if (!id) return;
+        var src = 'https://www.youtube-nocookie.com/embed/' + id
+          + '?autoplay=1&rel=0&modestbranding=1&playsinline=1&color=white';
+        var iframe = document.createElement('iframe');
+        iframe.src = src;
+        iframe.title = 'YouTube player';
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+        iframe.allowFullscreen = true;
+        iframe.setAttribute('loading', 'eager');
+        media.classList.add('is-playing');
+        media.innerHTML = '';
+        media.appendChild(iframe);
+      }
+      document.querySelectorAll('.work-media[data-yt]').forEach(function (media) {
+        var btn = media.querySelector('.yt-facade');
+        if (!btn) return;
+        btn.addEventListener('click', function () { mount(media); });
+      });
+    })();
+  </script>
+  <script>
+    (function () {
+      function nuke(el) {
+        if (!el || !el.style) return;
+        el.style.setProperty('display', 'none', 'important');
+        el.style.setProperty('visibility', 'hidden', 'important');
+        el.style.setProperty('opacity', '0', 'important');
+        el.style.setProperty('pointer-events', 'none', 'important');
+        try { el.remove(); } catch (e) {}
+      }
+      function killBadge() {
+        document.querySelectorAll('a[href*="netlify.com"], a[href*="netlify.app"]').forEach(function (a) {
+          var t = ((a.textContent || '') + ' ' + (a.getAttribute('aria-label') || '') + ' ' + (a.title || '')).toLowerCase();
+          var fixed = false;
+          try {
+            var cs = window.getComputedStyle(a);
+            fixed = cs.position === 'fixed' || cs.position === 'sticky';
+          } catch (e) {}
+          if (t.indexOf('netlify') !== -1 || t.indexOf('powered') !== -1 || a.querySelector('img') || fixed) {
+            nuke(a.closest('div') || a);
+            nuke(a);
+          }
+        });
+        document.querySelectorAll('#netlify-watermark, .netlify-watermark, [id*="nf-"], [class*="netlify-badge"]').forEach(nuke);
+      }
+      killBadge();
+      setTimeout(killBadge, 200);
+      setTimeout(killBadge, 1000);
+      setTimeout(killBadge, 3000);
+      new MutationObserver(killBadge).observe(document.documentElement, { childList: true, subtree: true });
+    })();
+  </script>
+
+
+  
+  <script>
+    (function () {
+      var form = document.getElementById('contact-form');
+      if (!form) return;
+      if (window.location.search.indexOf('sent=1') !== -1) {
+        form.classList.add('is-sent');
+        if (window.history && history.replaceState) {
+          history.replaceState(null, '', '#contact');
+        }
+        return;
+      }
+      // Native POST to FormSubmit — no Netlify dependency
+    })();
+  </script>
+
+</body>
+</html>
