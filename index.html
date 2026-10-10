@@ -880,14 +880,34 @@
     (function () {
       var form = document.getElementById('contact-form');
       if (!form) return;
-      if (window.location.search.indexOf('sent=1') !== -1) {
+      if ((window.location.search + window.location.hash).indexOf('sent=1') !== -1) {
         form.classList.add('is-sent');
         if (window.history && history.replaceState) {
           history.replaceState(null, '', '#contact');
         }
         return;
       }
-      // Native POST to FormSubmit — no Netlify dependency
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (form.querySelector('[name=_honey]').value) return;
+        var btn = form.querySelector('[type=submit]');
+        if (btn) { btn.disabled = true; btn.dataset.t = btn.textContent; btn.textContent = 'Sending…'; }
+        var fd = new FormData(form);
+        var reasons = fd.getAll('reason').join(', ');
+        function fallback() {
+          var lines = [];
+          fd.forEach(function (v, k) { if (k.charAt(0) !== '_') lines.push(k + ': ' + v); });
+          window.location.href = 'mailto:luis@elevatedlisting.co?subject=' + encodeURIComponent('Elevated Listing — site contact') + '&body=' + encodeURIComponent(lines.join('\n'));
+          if (btn) { btn.disabled = false; btn.textContent = btn.dataset.t; }
+        }
+        var data = {}; fd.forEach(function (v, k) { data[k] = v; }); if (reasons) data.reason = reasons;
+        fetch('https://formsubmit.co/ajax/f5238593f0f1a282c7691b9fc4166437', {
+          method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(data)
+        }).then(function (r) { return r.json(); }).then(function (j) {
+          if (j && (j.success === true || j.success === 'true')) { form.classList.add('is-sent'); form.reset(); if (btn) btn.textContent = 'Sent — thank you!'; }
+          else fallback();
+        }).catch(fallback);
+      });
     })();
   </script>
 
