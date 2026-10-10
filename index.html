@@ -58,6 +58,7 @@
       letter-spacing: .02em;
     }
     .logo span { color: var(--accent); font-weight: 500; }
+    a.logo { cursor: pointer; }
     .nav-links { display: flex; gap: 1.25rem; align-items: center; font-size: .92rem; color: var(--mute); }
     .nav-links a { text-decoration: none; }
     .nav-links a:hover { color: var(--ink); }
@@ -395,7 +396,7 @@
 <body>
   <header>
     <div class="wrap nav">
-      <div class="logo">Elevated <span>Listing</span></div>
+      <a href="/" class="logo" aria-label="Elevated Listing home" style="text-decoration:none;color:inherit" onclick="if(location.pathname==='/'||location.pathname==='/index.html'){window.scrollTo({top:0,behavior:'smooth'});history.replaceState(null,'','/');return false;}">Elevated <span>Listing</span></a>
       <nav class="nav-links">
         <a class="hide-sm" href="#mind">Mind</a>
         <a class="hide-sm" href="#work">Work</a>
