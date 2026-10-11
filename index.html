@@ -407,6 +407,10 @@
     @media (max-width: 800px) { .tiers { grid-template-columns:1fr; } }
     .work-media.hero-film { aspect-ratio: 16 / 9; max-height: none; border-radius: var(--radius); border:1px solid var(--line); margin: .5rem 0 1.75rem; box-shadow: 0 30px 80px rgba(0,0,0,.45), 0 0 60px var(--glow); }
     .work-media.hero-film .yt-play { width: 4.6rem; height: 4.6rem; margin: -2.3rem 0 0 -2.3rem; }
+    .pkg-cue { grid-column:1/-1; margin:.25rem 0 0; font-size:.95rem; font-weight:300; }
+    .pkg-cue a { color:var(--mute); text-decoration:none; border-bottom:1px solid var(--line); }
+    .pkg-cue a:hover { color:var(--accent); }
+    .tier .sub { color:var(--mute); font-size:.9rem; margin:.25rem 0 0; }
     .hero-film + .hero-actions { margin-bottom: 2rem; }
   </style>
 </head>
@@ -417,7 +421,7 @@
       <nav class="nav-links">
         <a class="hide-sm" href="#mind">Mind</a>
         <a class="hide-sm" href="#work">Work</a>
-        <a class="hide-sm" href="#offer">Offer</a>
+        <a class="hide-sm" href="#packages">Packages</a>
         <a class="hide-sm" href="#about">About</a>
         <a class="hide-sm" href="#contact">Contact</a>
         <a class="btn" href="#contact">Get in touch</a>
@@ -430,7 +434,7 @@
       <div class="wrap">
         <div class="eyebrow">By Luis from Sweden · Films & original songs</div>
         <h1>Your house, in the middle of the feed.</h1>
-        <p class="hero-lead">Cinematic listing films set to an original song, written for your property. From $249.</p>
+        <p class="hero-lead">Cinematic listing films cut to a song, or set to an original one written for your property. See <a href="#packages" style="color:var(--accent)">packages</a>.</p>
         <div class="work-media hero-film" data-yt="FLXkCJTmrgQ">
           <button type="button" class="yt-facade" aria-label="Play Elevated Listing - elevatedlisting.co">
             <img src="https://i.ytimg.com/vi/FLXkCJTmrgQ/hqdefault.jpg" alt="" loading="lazy" decoding="async" />
@@ -438,9 +442,10 @@
           </button>
         </div>
         <div class="hero-actions">
-          <a class="btn" href="#offer">Book a film</a>
+          <a class="btn" href="#packages">Book a film</a>
           <a class="btn btn-ghost" href="#work">See more films</a>
         </div>
+        <p class="pkg-cue"><a href="#packages">Want this for your property? See packages →</a></p>
         <div class="trust">
           <div><strong>Few, not many</strong>Handmade picks with soul and nerve</div>
           <div><strong>Your photos</strong>Faithful motion — nothing invented</div>
@@ -508,7 +513,7 @@
         <section id="work">
       <div class="wrap">
         <h2 class="section-title">Recent cuts</h2>
-        <p class="section-sub">Unlisted handmade films from public listing photos.</p>
+        <p class="section-sub">Spec films: unlisted, handmade from public listing photos, not commissioned by the hosts.</p>
         <div class="work-grid">
 
 
@@ -568,6 +573,8 @@
               </div>
             </div>
           </article>
+<p class="pkg-cue"><a href="#packages">Want this for your property? See packages →</a></p>
+
 
 <article class="work">
             <div class="work-media" data-yt="Xt8C4IvpJBo">
@@ -606,6 +613,8 @@
               </div>
             </div>
           </article>
+<p class="pkg-cue"><a href="#packages">Want this for your property? See packages →</a></p>
+
 
 <article class="work">
             <div class="work-media" data-yt="dwBMO4qtyFQ">
@@ -660,6 +669,8 @@
               </div>
             </div>
           </article>
+<p class="pkg-cue"><a href="#packages">Want this for your property? See packages →</a></p>
+
 
 <article class="work">
             <div class="work-media" data-yt="Sy5VvSOGdHk">
@@ -706,50 +717,54 @@
       </div>
     </section>
 
-<section id="offer">
+<section id="packages">
       <div class="wrap">
-        <div class="pill">Pricing</div>
+        <div class="pill">Packages</div>
         <h2 class="section-title" style="margin-bottom:1.5rem">One film. One song. Yours.</h2>
         <div class="tiers">
           <div class="offer tier">
             <h3>Standard</h3>
             <div class="price">$249 <small>full buy-out</small></div>
             <ul>
-              <li>Listing film set to an original song</li>
-              <li>Full buy-out, usage on all platforms</li>
-              <li>16:9 + vertical</li>
-              <li>Delivered within 7 days</li>
+              <li>Listing film (60–90s) cut to a song</li>
+              <li>Full buy-out: use it on your website, Airbnb and socials</li>
+              <li>1 round of revisions</li>
+              <li>Delivered in 16:9 + 9:16</li>
             </ul>
-            <a class="btn book" href="#contact" data-msg="I'd like the Standard package ($249).">Book Standard</a>
+            <a class="btn book" href="#contact" data-msg="I want a film: Standard package ($249).">Book Standard</a>
           </div>
           <div class="offer tier featured">
             <h3>Elevated</h3>
-            <div class="price">$499 <small>full ownership</small></div>
+            <div class="price">$499 <small>full buy-out</small></div>
             <ul>
-              <li>Film + original song</li>
-              <li>Deeper motion craft</li>
-              <li>Full ownership of both</li>
-              <li>All platforms</li>
+              <li>Everything in Standard</li>
+              <li>An original song written for the place, full buy-out of the track</li>
+              <li>Extra Short cuts</li>
+              <li>2 rounds of revisions</li>
             </ul>
-            <a class="btn book" href="#contact" data-msg="Elevated package ($499)">Book Elevated</a>
+            <a class="btn book" href="#contact" data-msg="I want a film: Elevated package ($499).">Book Elevated</a>
           </div>
           <div class="offer tier">
             <h3>Maximus</h3>
             <div class="price">On request</div>
             <ul>
-              <li>Custom campaigns</li>
-              <li>Multi-property packages</li>
-              <li>Extended cuts</li>
+              <li>Multiple films</li>
+              <li>For property managers</li>
+              <li>Bespoke projects</li>
             </ul>
-            <a class="btn book" href="#contact" data-msg="Maximus – let's talk">Let's talk</a>
+            <a class="btn book" href="#contact" data-msg="I want a film: Maximus package (price on request)." data-reason="discuss-project">Ask about Maximus</a>
           </div>
         </div>
+        <p class="sub" style="margin-top:1rem;color:var(--mute);font-weight:300">Delivery: about 5–7 days after your go-ahead.</p>
         <div class="paynote">
+          <h3>First cut is on us</h3>
+          <p>First cut is on us: a short watermarked preview, usually within a few days. If you love it, pick a package and we finish and deliver it clean. If not, no charge and no hard feelings; the preview stays unlisted and is not used for your property commercially.</p>
+          <h3>You own it</h3>
+          <p>You own it. Use the film and song on your website, booking platforms and social channels, forever. Luis may show it in the portfolio unless you’d rather not.</p>
           <h3>How payment works</h3>
-          <p>After we agree on your film, you'll get an invoice payable in USDC (on Base) or USDT (on Arbitrum) to:</p>
+          <p>Payment today is by crypto invoice (USDC on Base or USDT on Arbitrum). <span style="color:var(--accent);font-weight:500;letter-spacing:.02em">Card and bank payments via Wise: coming soon.</span></p>
           <div class="addr"><code id="pay-addr">0xDC056F7a17797D7CD7B6D1c3DFeb2d898a88BDC4</code><button type="button" id="copy-addr">Copy</button></div>
           <p class="small">New to crypto? Most hosts buy USDC in minutes via Coinbase, Kraken or similar, and I'm happy to walk you through it.</p>
-          <p class="small" style="color:var(--accent);font-weight:500;letter-spacing:.02em">Card and bank payments via Wise: coming soon.</p>
         </div>
       </div>
     </section>
@@ -787,20 +802,16 @@
                 <label>Why you’re here</label>
                 <div class="checks">
                   <label class="check">
-                    <input type="checkbox" name="reason" value="needs-elevating" />
-                    <span>My listing need elevating</span>
+                    <input type="checkbox" name="reason" value="want-film" />
+                    <span>I want a film</span>
                   </label>
                   <label class="check">
-                    <input type="checkbox" name="reason" value="elevate-my-listing" />
-                    <span>Elevate my listing</span>
+                    <input type="checkbox" name="reason" value="question" />
+                    <span>I have a question</span>
                   </label>
                   <label class="check">
-                    <input type="checkbox" name="reason" value="im-listening" />
-                    <span>im listening</span>
-                  </label>
-                  <label class="check">
-                    <input type="checkbox" name="reason" value="lets-talk" />
-                    <span>let’s talk</span>
+                    <input type="checkbox" name="reason" value="discuss-project" />
+                    <span>I’d like to discuss a project</span>
                   </label>
                 </div>
               </div>
@@ -820,7 +831,7 @@
           <div class="card" style="align-self:start">
             <h3>What helps</h3>
             <p style="margin:0 0 .75rem">Your public listing link, a line on the vibe, and whether you already have a draft cut from me.</p>
-            <p style="margin:0;color:var(--mute);font-weight:300">Standard is $249, Elevated $499, Maximus on request.</p>
+            <p style="margin:0;color:var(--mute);font-weight:300">Standard $249, Elevated $499, Maximus on request. <a href="#packages" style="color:var(--accent)">See packages</a>.</p>
           </div>
         </div>
       </div>
@@ -967,7 +978,7 @@
   </script>
 
 <script>
-  document.querySelectorAll('.book').forEach(function(b){b.addEventListener('click',function(e){e.preventDefault();var m=document.getElementById('c-message');if(m){m.value=b.dataset.msg;}var f=document.getElementById('contact');if(f)f.scrollIntoView({behavior:'smooth'});setTimeout(function(){m&&m.focus({preventScroll:true})},500);});});
+  document.querySelectorAll('.book').forEach(function(b){b.addEventListener('click',function(e){e.preventDefault();var m=document.getElementById('c-message');if(m){m.value=b.dataset.msg;}var r=document.querySelector('#contact-form [name=reason][value="want-film"]');if(r)r.checked=true;var f=document.getElementById('contact');if(f)f.scrollIntoView({behavior:'smooth'});setTimeout(function(){m&&m.focus({preventScroll:true})},500);});});
   (function(){var c=document.getElementById('copy-addr');if(!c)return;c.addEventListener('click',function(){var t=document.getElementById('pay-addr').textContent;var done=function(){c.textContent='Copied';setTimeout(function(){c.textContent='Copy'},2000)};if(navigator.clipboard){navigator.clipboard.writeText(t).then(done)}else{var r=document.createRange();r.selectNode(document.getElementById('pay-addr'));getSelection().removeAllRanges();getSelection().addRange(r);document.execCommand('copy');done()}});})();
   </script>
 </body>
