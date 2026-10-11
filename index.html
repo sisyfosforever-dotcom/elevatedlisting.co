@@ -5,9 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Elevated Listing — Handmade films & songs by Luis from Sweden</title>
   <meta name="description" content="Handmade listing films that open the theater of the mind — before anyone boards the plane. By Luis from Sweden." />
-  <meta property="og:title" content="Elevated Listing" />
-  <meta property="og:description" content="The best travel film is the one already playing in your head. We just light the match." />
+  <link rel="canonical" href="https://elevatedlisting.co/" />
+  <meta property="og:title" content="Elevated Listing – Listing films set to a song" />
+  <meta property="og:description" content="Handmade listing films for Airbnb, VRBO and vacation rentals, cut to a song or set to an original one. Free watermarked preview first. By Luis from Sweden." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://elevatedlisting.co/" />
+  <meta property="og:image" content="https://elevatedlisting.co/og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Elevated Listing – Listing films set to a song" />
+  <meta name="twitter:image" content="https://elevatedlisting.co/og.jpg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"ProfessionalService","name":"Elevated Listing","url":"https://elevatedlisting.co/","image":"https://elevatedlisting.co/og.jpg","logo":"https://elevatedlisting.co/apple-touch-icon.png","email":"luis@elevatedlisting.co","founder":{"@type":"Person","name":"Luis Lindberg"},"description":"Handmade listing films for short-term and vacation rentals, cut to a song or set to an original one.","makesOffer":[{"@type":"Offer","name":"Standard","price":"249","priceCurrency":"USD","description":"Listing film (60–90s) cut to a song, 1 revision round, 16:9 + 9:16."},{"@type":"Offer","name":"Elevated","price":"499","priceCurrency":"USD","description":"Everything in Standard plus an original song written for the place, extra Short cuts, 2 revision rounds."}]}
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -302,21 +315,6 @@
       padding: .2rem .55rem; margin-bottom: .55rem;
     }
   
-    /* Drop injects a Powered by Netlify pill — kill it hard */
-    a[href*="netlify.com"],
-    a[href*="netlify.app"][title*="Netlify" i],
-    #netlify-watermark,
-    .netlify-watermark,
-    [data-nf-site],
-    iframe[src*="netlify"] {
-      display: none !important;
-      visibility: hidden !important;
-      opacity: 0 !important;
-      pointer-events: none !important;
-      width: 0 !important;
-      height: 0 !important;
-      overflow: hidden !important;
-    }
 
 
     .contact-form {
@@ -400,6 +398,11 @@
     .paynote { margin-top:2rem; padding:1.25rem 1.5rem; border:1px solid var(--line); border-radius:var(--radius); background:var(--card); max-width:44rem; }
     .paynote h3 { font-family: Fraunces, Georgia, serif; font-weight:400; margin:0 0 .5rem; }
     .paynote p { color:var(--mute); font-weight:300; margin:0 0 .75rem; }
+    section[id] { scroll-margin-top: 80px; }
+    .paycallout { margin:1rem 0; padding:1rem 1.25rem; border:1px solid var(--accent); border-left-width:4px; border-radius:var(--radius); background:rgba(196,165,116,.08); }
+    .paycallout h3 { color:var(--accent); }
+    .paycallout p { color:var(--ink); }
+    .avail { color:var(--accent); font-weight:500; letter-spacing:.02em; margin:.25rem 0 0; }
     .paynote .small { font-size:.9rem; margin:.75rem 0 0; }
     .addr { display:flex; gap:.5rem; align-items:center; flex-wrap:wrap; }
     .addr code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size:.85rem; background:var(--bg); border:1px solid var(--line); border-radius:10px; padding:.6rem .8rem; word-break:break-all; color:var(--ink); flex:1; min-width:0; }
@@ -434,22 +437,22 @@
       <div class="wrap">
         <div class="eyebrow">By Luis from Sweden · Films & original songs</div>
         <h1>Your house, in the middle of the feed.</h1>
-        <p class="hero-lead">Cinematic listing films cut to a song, or set to an original one written for your property. See <a href="#packages" style="color:var(--accent)">packages</a>.</p>
+        <p class="hero-lead">Cinematic listing films cut to a song, or set to an original one written for your property. Made for Airbnb, VRBO, short-term and vacation rentals, from Marfa and the Texas Hill Country to a basement in Toronto. See <a href="#packages" style="color:var(--accent)">packages</a>.</p>
         <div class="work-media hero-film" data-yt="FLXkCJTmrgQ">
           <button type="button" class="yt-facade" aria-label="Play Elevated Listing - elevatedlisting.co">
-            <img src="https://i.ytimg.com/vi/FLXkCJTmrgQ/hqdefault.jpg" alt="" loading="lazy" decoding="async" />
+            <img src="https://i.ytimg.com/vi/FLXkCJTmrgQ/hqdefault.jpg" alt="Elevated Listing showreel – listing film" loading="lazy" decoding="async" />
             <span class="yt-play" aria-hidden="true"></span>
           </button>
         </div>
         <div class="hero-actions">
-          <a class="btn" href="#packages">Book a film</a>
+          <a class="btn book" href="#contact" data-msg="I want a film: please start with a free preview.">Start with a free preview</a>
           <a class="btn btn-ghost" href="#work">See more films</a>
         </div>
         <p class="pkg-cue"><a href="#packages">Want this for your property? See packages →</a></p>
         <div class="trust">
           <div><strong>Few, not many</strong>Handmade picks with soul and nerve</div>
           <div><strong>Your photos</strong>Faithful motion — nothing invented</div>
-          <div><strong>Your song</strong>Written for the stay, then you own it</div>
+          <div><strong>Your song</strong>Written for the stay, yours to use everywhere</div>
         </div>
       </div>
     </section>
@@ -474,7 +477,7 @@
         <article class="work mind-film">
             <div class="work-media" data-yt="VKIYNr-CDbY">
               <button type="button" class="yt-facade" aria-label="Play Theater of the Mind">
-                <img src="https://i.ytimg.com/vi/VKIYNr-CDbY/hqdefault.jpg" alt="" loading="lazy" decoding="async" />
+                <img src="https://i.ytimg.com/vi/VKIYNr-CDbY/hqdefault.jpg" alt="Theater of the Mind – listing film" loading="lazy" decoding="async" />
                 <span class="yt-play" aria-hidden="true"></span>
               </button>
             </div>
@@ -513,14 +516,14 @@
         <section id="work">
       <div class="wrap">
         <h2 class="section-title">Recent cuts</h2>
-        <p class="section-sub">Spec films: unlisted, handmade from public listing photos, not commissioned by the hosts.</p>
+        <p class="section-sub">Spec films: unlisted, handmade from public listing photos, not commissioned by the hosts. Spec films made from publicly available listing images; removed promptly on owner request.</p>
         <div class="work-grid">
 
 
 <article class="work">
             <div class="work-media" data-yt="zf0wbonvAfI">
               <button type="button" class="yt-facade" aria-label="Play I got a basement in Toronto">
-                <img src="https://i.ytimg.com/vi/zf0wbonvAfI/hqdefault.jpg" alt="" loading="lazy" decoding="async" />
+                <img src="https://i.ytimg.com/vi/zf0wbonvAfI/hqdefault.jpg" alt="I got a basement in Toronto – listing film" loading="lazy" decoding="async" />
                 <span class="yt-play" aria-hidden="true"></span>
               </button>
             </div>
@@ -540,7 +543,7 @@
 <article class="work">
             <div class="work-media" data-yt="BZUdx_O-008">
               <button type="button" class="yt-facade" aria-label="Play I will make you Yurt Casa de Marca">
-                <img src="https://i.ytimg.com/vi/BZUdx_O-008/hqdefault.jpg" alt="" loading="lazy" decoding="async" />
+                <img src="https://i.ytimg.com/vi/BZUdx_O-008/hqdefault.jpg" alt="I will make you Yurt Casa de Marca – listing film" loading="lazy" decoding="async" />
                 <span class="yt-play" aria-hidden="true"></span>
               </button>
             </div>
@@ -559,7 +562,7 @@
 <article class="work">
             <div class="work-media" data-yt="EX0xMsigB8I">
               <button type="button" class="yt-facade" aria-label="Play Pik Pak Pump up the Gas">
-                <img src="https://i.ytimg.com/vi/EX0xMsigB8I/hqdefault.jpg" alt="" loading="lazy" decoding="async" />
+                <img src="https://i.ytimg.com/vi/EX0xMsigB8I/hqdefault.jpg" alt="Pik Pak Pump up the Gas – listing film" loading="lazy" decoding="async" />
                 <span class="yt-play" aria-hidden="true"></span>
               </button>
             </div>
@@ -579,7 +582,7 @@
 <article class="work">
             <div class="work-media" data-yt="Xt8C4IvpJBo">
               <button type="button" class="yt-facade" aria-label="Play Milky Wayfarer Puttin' on the Ritz">
-                <img src="https://i.ytimg.com/vi/Xt8C4IvpJBo/hqdefault.jpg" alt="" loading="lazy" decoding="async" />
+                <img src="https://i.ytimg.com/vi/Xt8C4IvpJBo/hqdefault.jpg" alt="Milky Wayfarer Puttin' on the Ritz – listing film" loading="lazy" decoding="async" />
                 <span class="yt-play" aria-hidden="true"></span>
               </button>
             </div>
@@ -599,7 +602,7 @@
 <article class="work">
             <div class="work-media" data-yt="dtyS5c5j9rI">
               <button type="button" class="yt-facade" aria-label="Play ROAM Fredericksburg storyboard">
-                <img src="https://i.ytimg.com/vi/dtyS5c5j9rI/hqdefault.jpg" alt="" loading="lazy" decoding="async" />
+                <img src="https://i.ytimg.com/vi/dtyS5c5j9rI/hqdefault.jpg" alt="ROAM Fredericksburg storyboard – listing film" loading="lazy" decoding="async" />
                 <span class="yt-play" aria-hidden="true"></span>
               </button>
             </div>
@@ -619,7 +622,7 @@
 <article class="work">
             <div class="work-media" data-yt="dwBMO4qtyFQ">
               <button type="button" class="yt-facade" aria-label="Play Jamie East Austin bathhouse">
-                <img src="https://i.ytimg.com/vi/dwBMO4qtyFQ/hqdefault.jpg" alt="" loading="lazy" decoding="async" />
+                <img src="https://i.ytimg.com/vi/dwBMO4qtyFQ/hqdefault.jpg" alt="Jamie East Austin bathhouse – listing film" loading="lazy" decoding="async" />
                 <span class="yt-play" aria-hidden="true"></span>
               </button>
             </div>
@@ -637,7 +640,7 @@
 <article class="work">
             <div class="work-media" data-yt="G3iRSuT5qB0">
               <button type="button" class="yt-facade" aria-label="Play Llano Diner Tonight">
-                <img src="https://i.ytimg.com/vi/G3iRSuT5qB0/hqdefault.jpg" alt="" loading="lazy" decoding="async" />
+                <img src="https://i.ytimg.com/vi/G3iRSuT5qB0/hqdefault.jpg" alt="Llano Diner Tonight – listing film" loading="lazy" decoding="async" />
                 <span class="yt-play" aria-hidden="true"></span>
               </button>
             </div>
@@ -655,7 +658,7 @@
 <article class="work">
             <div class="work-media" data-yt="4Yon44P1Hyw">
               <button type="button" class="yt-facade" aria-label="Play Art-filled Retreat">
-                <img src="https://i.ytimg.com/vi/4Yon44P1Hyw/hqdefault.jpg" alt="" loading="lazy" decoding="async" />
+                <img src="https://i.ytimg.com/vi/4Yon44P1Hyw/hqdefault.jpg" alt="Art-filled Retreat – listing film" loading="lazy" decoding="async" />
                 <span class="yt-play" aria-hidden="true"></span>
               </button>
             </div>
@@ -675,7 +678,7 @@
 <article class="work">
             <div class="work-media" data-yt="Sy5VvSOGdHk">
               <button type="button" class="yt-facade" aria-label="Play Grantham House Hill Country cabin">
-                <img src="https://i.ytimg.com/vi/Sy5VvSOGdHk/hqdefault.jpg" alt="" loading="lazy" decoding="async" />
+                <img src="https://i.ytimg.com/vi/Sy5VvSOGdHk/hqdefault.jpg" alt="Grantham House Hill Country cabin – listing film" loading="lazy" decoding="async" />
                 <span class="yt-play" aria-hidden="true"></span>
               </button>
             </div>
@@ -711,7 +714,7 @@
           <article class="card">
             <span class="card-icon" aria-hidden="true"><img src="assets/icons/one-strong-cut.svg" alt="" /></span>
             <h3>One strong cut</h3>
-            <p>A finished piece for Airbnb, Instagram, or your site — aimed at the mind before the mattress. You own the buy-out.</p>
+            <p>A finished piece for Airbnb, Instagram, or your site — aimed at the mind before the mattress. Yours to use, everywhere.</p>
           </article>
         </div>
       </div>
@@ -724,10 +727,10 @@
         <div class="tiers">
           <div class="offer tier">
             <h3>Standard</h3>
-            <div class="price">$249 <small>full buy-out</small></div>
+            <div class="price">$249 <small>one-time fee</small></div>
             <ul>
               <li>Listing film (60–90s) cut to a song</li>
-              <li>Full buy-out: use it on your website, Airbnb and socials</li>
+              <li>Yours to use, everywhere: website, Airbnb, VRBO, socials</li>
               <li>1 round of revisions</li>
               <li>Delivered in 16:9 + 9:16</li>
             </ul>
@@ -735,10 +738,10 @@
           </div>
           <div class="offer tier featured">
             <h3>Elevated</h3>
-            <div class="price">$499 <small>full buy-out</small></div>
+            <div class="price">$499 <small>one-time fee</small></div>
             <ul>
               <li>Everything in Standard</li>
-              <li>An original song written for the place, full buy-out of the track</li>
+              <li>An original song written for the place, yours to use alongside the film</li>
               <li>Extra Short cuts</li>
               <li>2 rounds of revisions</li>
             </ul>
@@ -755,16 +758,19 @@
             <a class="btn book" href="#contact" data-msg="I want a film: Maximus package (price on request)." data-reason="discuss-project">Ask about Maximus</a>
           </div>
         </div>
-        <p class="sub" style="margin-top:1rem;color:var(--mute);font-weight:300">Delivery: about 5–7 days after your go-ahead.</p>
+        <p class="sub" style="margin-top:1rem;color:var(--mute);font-weight:300">Delivery: about 5–7 days after your go-ahead and payment.</p>
+        <p class="avail">Taking 3 new films a week.</p>
         <div class="paynote">
           <h3>First cut is on us</h3>
           <p>First cut is on us: a short watermarked preview, usually within a few days. If you love it, pick a package and we finish and deliver it clean. If not, no charge and no hard feelings; the preview stays unlisted and is not used for your property commercially.</p>
-          <h3>You own it</h3>
-          <p>You own it. Use the film and song on your website, booking platforms and social channels, forever. Luis may show it in the portfolio unless you’d rather not.</p>
+          <h3>Yours to use, everywhere</h3>
+          <p>A perpetual, worldwide licence to use the film (and, on Elevated, the song) to market your property and business on any channel: your website, booking platforms, socials, ads. Use it across every unit you own or manage. The only thing you can’t do is resell or sublicense the film or song on its own. Luis may show it in the portfolio unless you’d rather not. Full details in the <a href="/terms" style="color:var(--accent)">terms</a>.</p>
+          <div class="paycallout">
           <h3>How payment works</h3>
           <p>Payment today is by crypto invoice (USDC on Base or USDT on Arbitrum). <span style="color:var(--accent);font-weight:500;letter-spacing:.02em">Card and bank payments via Wise: coming soon.</span></p>
           <div class="addr"><code id="pay-addr">0xDC056F7a17797D7CD7B6D1c3DFeb2d898a88BDC4</code><button type="button" id="copy-addr">Copy</button></div>
-          <p class="small">New to crypto? Most hosts buy USDC in minutes via Coinbase, Kraken or similar, and I'm happy to walk you through it.</p>
+          <p class="small">New to crypto? Most hosts buy USDC in minutes via Coinbase, Kraken or similar, and I'm happy to walk you through it. You only pay after you’ve seen the free preview and chosen a package.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -784,7 +790,7 @@
               <label>Don’t fill this out: <input name="_honey" tabindex="-1" autocomplete="off" /></label>
             </p>
             <h3>Write Luis</h3>
-            <p class="hint">Films, buy-outs, or a stay that sparked something.</p>
+            <p class="hint">Films, licences, or a stay that sparked something.</p>
             <div class="fields">
               <div class="field">
                 <label for="c-name">Name</label>
@@ -905,38 +911,6 @@
         if (!btn) return;
         btn.addEventListener('click', function () { mount(media); });
       });
-    })();
-  </script>
-  <script>
-    (function () {
-      function nuke(el) {
-        if (!el || !el.style) return;
-        el.style.setProperty('display', 'none', 'important');
-        el.style.setProperty('visibility', 'hidden', 'important');
-        el.style.setProperty('opacity', '0', 'important');
-        el.style.setProperty('pointer-events', 'none', 'important');
-        try { el.remove(); } catch (e) {}
-      }
-      function killBadge() {
-        document.querySelectorAll('a[href*="netlify.com"], a[href*="netlify.app"]').forEach(function (a) {
-          var t = ((a.textContent || '') + ' ' + (a.getAttribute('aria-label') || '') + ' ' + (a.title || '')).toLowerCase();
-          var fixed = false;
-          try {
-            var cs = window.getComputedStyle(a);
-            fixed = cs.position === 'fixed' || cs.position === 'sticky';
-          } catch (e) {}
-          if (t.indexOf('netlify') !== -1 || t.indexOf('powered') !== -1 || a.querySelector('img') || fixed) {
-            nuke(a.closest('div') || a);
-            nuke(a);
-          }
-        });
-        document.querySelectorAll('#netlify-watermark, .netlify-watermark, [id*="nf-"], [class*="netlify-badge"]').forEach(nuke);
-      }
-      killBadge();
-      setTimeout(killBadge, 200);
-      setTimeout(killBadge, 1000);
-      setTimeout(killBadge, 3000);
-      new MutationObserver(killBadge).observe(document.documentElement, { childList: true, subtree: true });
     })();
   </script>
 
