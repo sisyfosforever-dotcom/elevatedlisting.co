@@ -391,6 +391,20 @@
       .contact-grid { grid-template-columns: 1fr; }
     }
 
+    .tiers { display:grid; grid-template-columns:repeat(3,1fr); gap:1.25rem; }
+    .tier { display:flex; flex-direction:column; margin:0; }
+    .tier h3 { font-family: Fraunces, Georgia, serif; font-weight:400; font-size:1.4rem; margin:0 0 .25rem; }
+    .tier ul { flex:1; }
+    .tier .btn { align-self:flex-start; }
+    .tier.featured { border-color: var(--accent); box-shadow: 0 0 40px var(--glow); }
+    .paynote { margin-top:2rem; padding:1.25rem 1.5rem; border:1px solid var(--line); border-radius:var(--radius); background:var(--card); max-width:44rem; }
+    .paynote h3 { font-family: Fraunces, Georgia, serif; font-weight:400; margin:0 0 .5rem; }
+    .paynote p { color:var(--mute); font-weight:300; margin:0 0 .75rem; }
+    .paynote .small { font-size:.9rem; margin:.75rem 0 0; }
+    .addr { display:flex; gap:.5rem; align-items:center; flex-wrap:wrap; }
+    .addr code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size:.85rem; background:var(--bg); border:1px solid var(--line); border-radius:10px; padding:.6rem .8rem; word-break:break-all; color:var(--ink); flex:1; min-width:0; }
+    .addr button { font:inherit; cursor:pointer; background:transparent; color:var(--accent); border:1px solid var(--accent); border-radius:999px; padding:.5rem 1rem; }
+    @media (max-width: 800px) { .tiers { grid-template-columns:1fr; } }
   </style>
 </head>
 <body>
@@ -680,21 +694,47 @@
 
 <section id="offer">
       <div class="wrap">
-        <div class="offer">
-          <div class="pill">Buy-out</div>
-          <h2 class="section-title" style="margin-bottom:.25rem">One film. One song. Yours.</h2>
-          <div class="price"><small>from</small> $249 <small>full buy-out</small></div>
-          <p style="color:var(--mute);margin:0;max-width:36rem;font-weight:300">
-            If I’ve already cut a draft for your place, you’ll feel it before we talk money.
-            One revision pass if you want notes. Deeper motion craft sits around $399–$499 when the stay asks for it.
-          </p>
-          <ul>
-            <li>A 60–90 second cut from your real photos</li>
-            <li>An original song written for that stay</li>
-            <li>Full ownership — Airbnb, site, ads</li>
-            <li>No crew day, no stock music</li>
-          </ul>
-          <a class="btn" href="#contact">Write me</a>
+        <div class="pill">Pricing</div>
+        <h2 class="section-title" style="margin-bottom:1.5rem">One film. One song. Yours.</h2>
+        <div class="tiers">
+          <div class="offer tier">
+            <h3>Standard</h3>
+            <div class="price">$249 <small>full buy-out</small></div>
+            <ul>
+              <li>Listing film set to an original song</li>
+              <li>Full buy-out, usage on all platforms</li>
+              <li>16:9 + vertical</li>
+              <li>Delivered within 7 days</li>
+            </ul>
+            <a class="btn book" href="#contact" data-msg="I'd like the Standard package ($249).">Book Standard</a>
+          </div>
+          <div class="offer tier featured">
+            <h3>Elevated</h3>
+            <div class="price">$499 <small>full ownership</small></div>
+            <ul>
+              <li>Film + original song</li>
+              <li>Deeper motion craft</li>
+              <li>Full ownership of both</li>
+              <li>All platforms</li>
+            </ul>
+            <a class="btn book" href="#contact" data-msg="Elevated package ($499)">Book Elevated</a>
+          </div>
+          <div class="offer tier">
+            <h3>Maximus</h3>
+            <div class="price">On request</div>
+            <ul>
+              <li>Custom campaigns</li>
+              <li>Multi-property packages</li>
+              <li>Extended cuts</li>
+            </ul>
+            <a class="btn book" href="#contact" data-msg="Maximus – let's talk">Let's talk</a>
+          </div>
+        </div>
+        <div class="paynote">
+          <h3>How payment works</h3>
+          <p>After we agree on your film, you'll get an invoice payable in USDC (on Base) or USDT (on Arbitrum) to:</p>
+          <div class="addr"><code id="pay-addr">0xDC056F7a17797D7CD7B6D1c3DFeb2d898a88BDC4</code><button type="button" id="copy-addr">Copy</button></div>
+          <p class="small">New to crypto? Most hosts buy USDC in minutes via Coinbase, Kraken or similar, and I'm happy to walk you through it.</p>
         </div>
       </div>
     </section>
@@ -765,7 +805,7 @@
           <div class="card" style="align-self:start">
             <h3>What helps</h3>
             <p style="margin:0 0 .75rem">Your public listing link, a line on the vibe, and whether you already have a draft cut from me.</p>
-            <p style="margin:0;color:var(--mute);font-weight:300">Buy-out starts from $249 when the cut feels right. Deeper motion craft is $399–$499.</p>
+            <p style="margin:0;color:var(--mute);font-weight:300">Standard is $249, Elevated $499, Maximus on request.</p>
           </div>
         </div>
       </div>
@@ -911,5 +951,9 @@
     })();
   </script>
 
+<script>
+  document.querySelectorAll('.book').forEach(function(b){b.addEventListener('click',function(e){e.preventDefault();var m=document.getElementById('c-message');if(m){m.value=b.dataset.msg;}var f=document.getElementById('contact');if(f)f.scrollIntoView({behavior:'smooth'});setTimeout(function(){m&&m.focus({preventScroll:true})},500);});});
+  (function(){var c=document.getElementById('copy-addr');if(!c)return;c.addEventListener('click',function(){var t=document.getElementById('pay-addr').textContent;var done=function(){c.textContent='Copied';setTimeout(function(){c.textContent='Copy'},2000)};if(navigator.clipboard){navigator.clipboard.writeText(t).then(done)}else{var r=document.createRange();r.selectNode(document.getElementById('pay-addr'));getSelection().removeAllRanges();getSelection().addRange(r);document.execCommand('copy');done()}});})();
+  </script>
 </body>
 </html>
