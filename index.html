@@ -405,6 +405,9 @@
     .addr code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size:.85rem; background:var(--bg); border:1px solid var(--line); border-radius:10px; padding:.6rem .8rem; word-break:break-all; color:var(--ink); flex:1; min-width:0; }
     .addr button { font:inherit; cursor:pointer; background:transparent; color:var(--accent); border:1px solid var(--accent); border-radius:999px; padding:.5rem 1rem; }
     @media (max-width: 800px) { .tiers { grid-template-columns:1fr; } }
+    .work-media.hero-film { aspect-ratio: 16 / 9; max-height: none; border-radius: var(--radius); border:1px solid var(--line); margin: .5rem 0 1.75rem; box-shadow: 0 30px 80px rgba(0,0,0,.45), 0 0 60px var(--glow); }
+    .work-media.hero-film .yt-play { width: 4.6rem; height: 4.6rem; margin: -2.3rem 0 0 -2.3rem; }
+    .hero-film + .hero-actions { margin-bottom: 2rem; }
   </style>
 </head>
 <body>
@@ -426,16 +429,17 @@
     <section class="hero">
       <div class="wrap">
         <div class="eyebrow">By Luis from Sweden · Films & original songs</div>
-        <h1>The trip starts in the theater of the mind.</h1>
-        <p class="hero-lead">
-          I’m Luis — Luis from Sweden on YouTube. Elevated Listing is the quiet side of that work:
-          a few handmade films each season for stays that already have heart. The best images of a place
-          aren’t on a screen; they’re private, individual, already building before anyone packs a bag.
-          A good cut doesn’t replace that. It lights it. Real photos only. An original song. No stock music.
-        </p>
+        <h1>Your house, in the middle of the feed.</h1>
+        <p class="hero-lead">Cinematic listing films set to an original song, written for your property. From $249.</p>
+        <div class="work-media hero-film" data-yt="FLXkCJTmrgQ">
+          <button type="button" class="yt-facade" aria-label="Play Elevated Listing - elevatedlisting.co">
+            <img src="https://i.ytimg.com/vi/FLXkCJTmrgQ/hqdefault.jpg" alt="" loading="lazy" decoding="async" />
+            <span class="yt-play" aria-hidden="true"></span>
+          </button>
+        </div>
         <div class="hero-actions">
-          <a class="btn" href="#work">Watch the cuts</a>
-          <a class="btn btn-ghost" href="https://www.youtube.com/@LuisfromSweden" target="_blank" rel="noopener">YouTube · Luis from Sweden</a>
+          <a class="btn" href="#offer">Book a film</a>
+          <a class="btn btn-ghost" href="#work">See more films</a>
         </div>
         <div class="trust">
           <div><strong>Few, not many</strong>Handmade picks with soul and nerve</div>
@@ -444,10 +448,18 @@
         </div>
       </div>
     </section>
+    
 
     <section id="mind">
       <div class="wrap">
+        <div class="eyebrow">Why it works</div>
         <h2 class="section-title">Theater of the mind</h2>
+        <p class="section-sub" style="max-width:40rem">
+          I’m Luis — Luis from Sweden on YouTube. Elevated Listing is the quiet side of that work:
+          a few handmade films each season for stays that already have heart. The best images of a place
+          aren’t on a screen; they’re private, individual, already building before anyone packs a bag.
+          A good cut doesn’t replace that. It lights it. Real photos only. An original song. No stock music.
+        </p>
         <p class="section-sub" style="max-width:40rem">
           Joy for a trip often peaks before the wheels leave the ground — in the imagining.
           That’s personal. Your guest’s version of the diner, the deck, the Hill Country dark
@@ -491,29 +503,7 @@
       </div>
     </section>
 
-    <section id="how">
-      <div class="wrap">
-        <h2 class="section-title">How I work</h2>
-        <p class="section-sub">Less sales deck. More short film. Built to spark a guest’s inner version of the stay — if the place doesn’t spark me first, I don’t force a cut.</p>
-        <div class="grid-3">
-          <article class="card">
-            <span class="card-icon" aria-hidden="true"><img src="assets/icons/find-the-spark.svg" alt="" /></span>
-            <h3>Find the spark</h3>
-            <p>I look for listings with human joy already in the photos — neon, paint, a fire pit at dusk — then build from there.</p>
-          </article>
-          <article class="card">
-            <span class="card-icon" aria-hidden="true"><img src="assets/icons/film-and-song.svg" alt="" /></span>
-            <h3>Film + song</h3>
-            <p>Motion from your gallery only. An original song that names what’s true about the stay — not a licensed loop.</p>
-          </article>
-          <article class="card">
-            <span class="card-icon" aria-hidden="true"><img src="assets/icons/one-strong-cut.svg" alt="" /></span>
-            <h3>One strong cut</h3>
-            <p>A finished piece for Airbnb, Instagram, or your site — aimed at the mind before the mattress. You own the buy-out.</p>
-          </article>
-        </div>
-      </div>
-    </section>
+    
 
         <section id="work">
       <div class="wrap">
@@ -687,6 +677,30 @@
                 <a href="https://youtu.be/Sy5VvSOGdHk" target="_blank" rel="noopener">youtu.be/Sy5VvSOGdHk</a>
               </div>
             </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="how">
+      <div class="wrap">
+        <h2 class="section-title">How I work</h2>
+        <p class="section-sub">Less sales deck. More short film. Built to spark a guest’s inner version of the stay — if the place doesn’t spark me first, I don’t force a cut.</p>
+        <div class="grid-3">
+          <article class="card">
+            <span class="card-icon" aria-hidden="true"><img src="assets/icons/find-the-spark.svg" alt="" /></span>
+            <h3>Find the spark</h3>
+            <p>I look for listings with human joy already in the photos — neon, paint, a fire pit at dusk — then build from there.</p>
+          </article>
+          <article class="card">
+            <span class="card-icon" aria-hidden="true"><img src="assets/icons/film-and-song.svg" alt="" /></span>
+            <h3>Film + song</h3>
+            <p>Motion from your gallery only. An original song that names what’s true about the stay — not a licensed loop.</p>
+          </article>
+          <article class="card">
+            <span class="card-icon" aria-hidden="true"><img src="assets/icons/one-strong-cut.svg" alt="" /></span>
+            <h3>One strong cut</h3>
+            <p>A finished piece for Airbnb, Instagram, or your site — aimed at the mind before the mattress. You own the buy-out.</p>
           </article>
         </div>
       </div>
