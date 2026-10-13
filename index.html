@@ -451,6 +451,60 @@
     .reveal.on{opacity:1;transform:none}
     @media (max-width:640px){.jstep{width:100%}.jthread{display:none}.jlist{border-left:3px solid #c0392b;padding-left:1rem}}
     @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.fcard{transition:none}.jthread path{stroke-dashoffset:0!important}}
+
+    /* layout tidy: one container, consistent rhythm, equal tiles */
+    :root { --gutter: clamp(1.25rem, 4vw, 2.5rem); --gap: 1.25rem; --section: clamp(3rem, 6vw, 5rem); }
+    html, body { overflow-x: clip; }
+    .wrap { width: min(var(--max), 100% - 2 * var(--gutter)); }
+    section { padding: var(--section) 0; }
+    .hero { padding: clamp(3rem, 7vw, 5rem) 0 var(--section); }
+    .section-sub, .section-sub[style] { max-width: 40rem !important; }
+    .hero-lead, .section-sub, .card p, .work-body p { text-wrap: pretty; }
+    .hero h1, .section-title, .jstep h3 { text-wrap: balance; }
+    .grid-3, .tiers, .contact, .contact-grid, .about-side { gap: var(--gap); }
+    .hero-actions { align-items: center; }
+    .grid-3 > .card, .tiers > * { height: 100%; }
+    /* recent cuts: equal tiles */
+    .work-grid { gap: var(--gap); grid-template-columns: repeat(3, minmax(0, 1fr)); grid-auto-flow: row dense; }
+    .work-grid .work-media { aspect-ratio: 4 / 5; max-height: none; }
+    .work-grid .work-body { flex: 1; display: flex; flex-direction: column; }
+    .work-grid .work-body .link-row { margin-top: auto; }
+    .work-grid .pkg-cue { margin: 0; }
+    @media (max-width: 960px) {
+      .work-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .work-grid > .work:last-of-type { grid-column: 1 / -1; justify-self: center; width: calc(50% - var(--gap) / 2); }
+    }
+    @media (max-width: 600px) {
+      .work-grid { grid-template-columns: 1fr; }
+      .work-grid > .work:last-of-type { width: 100%; }
+      .work-grid .work-media { aspect-ratio: 9 / 11; }
+    }
+    /* films gallery: equal cards */
+    .fgrid { gap: var(--gap); grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .fgrid > li { display: flex; }
+    .fcard { height: 100%; }
+    .fcountry { margin-top: auto; }
+    @media (max-width: 960px) { .fgrid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+    @media (max-width: 600px) {
+      .fgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; }
+      .ftitle { font-size: 1rem; padding: .65rem .7rem 0; }
+      .fplace { font-size: .8rem; padding: .2rem .7rem 0; }
+      .fcountry { padding: .35rem .7rem .75rem; }
+    }
+    /* how it works: keep steps inside the thread's lane */
+    .jlist { gap: clamp(1.5rem, 3vw, 2.2rem); }
+    .jstep { width: min(460px, 48%); }
+    .jnote { max-width: 40rem; margin-left: auto; margin-right: auto; }
+    @media (max-width: 860px) { .jstep { width: min(460px, 62%); } }
+    @media (max-width: 640px) {
+      .jstep { width: 100%; padding: 1.2rem 1.1rem 1.2rem 4.6rem; }
+      .jicon { left: .8rem; width: 3rem; height: 3rem; }
+      .jnum { left: 2.9rem; }
+      .jstep h3 { font-size: 1.25rem; }
+      .jstep p, .jnote, #journey .jbig { font-size: 1.02rem; }
+    }
+    @media (max-width: 800px) { .about-side { max-width: 28rem; } }
+    @media (max-width: 480px) { .hero-actions .btn { flex: 1 1 100%; } }
   </style>
 </head>
 <body>
