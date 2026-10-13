@@ -5,6 +5,9 @@
     <xhtml:link rel="alternate" hreflang="sv" href="https://elevatedlisting.co/sv/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://elevatedlisting.co/es/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://elevatedlisting.co/fr/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://elevatedlisting.co/vi/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://elevatedlisting.co/fi/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://elevatedlisting.co/th/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://elevatedlisting.co/"/>
   </url>
   <url><loc>https://elevatedlisting.co/sv/</loc><lastmod>2026-10-13</lastmod>
@@ -12,6 +15,9 @@
     <xhtml:link rel="alternate" hreflang="sv" href="https://elevatedlisting.co/sv/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://elevatedlisting.co/es/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://elevatedlisting.co/fr/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://elevatedlisting.co/vi/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://elevatedlisting.co/fi/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://elevatedlisting.co/th/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://elevatedlisting.co/"/>
   </url>
   <url><loc>https://elevatedlisting.co/es/</loc><lastmod>2026-10-13</lastmod>
@@ -19,6 +25,9 @@
     <xhtml:link rel="alternate" hreflang="sv" href="https://elevatedlisting.co/sv/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://elevatedlisting.co/es/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://elevatedlisting.co/fr/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://elevatedlisting.co/vi/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://elevatedlisting.co/fi/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://elevatedlisting.co/th/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://elevatedlisting.co/"/>
   </url>
   <url><loc>https://elevatedlisting.co/fr/</loc><lastmod>2026-10-13</lastmod>
@@ -26,6 +35,39 @@
     <xhtml:link rel="alternate" hreflang="sv" href="https://elevatedlisting.co/sv/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://elevatedlisting.co/es/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://elevatedlisting.co/fr/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://elevatedlisting.co/vi/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://elevatedlisting.co/fi/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://elevatedlisting.co/th/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://elevatedlisting.co/"/>
+  </url>
+  <url><loc>https://elevatedlisting.co/vi/</loc><lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://elevatedlisting.co/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://elevatedlisting.co/sv/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://elevatedlisting.co/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://elevatedlisting.co/fr/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://elevatedlisting.co/vi/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://elevatedlisting.co/fi/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://elevatedlisting.co/th/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://elevatedlisting.co/"/>
+  </url>
+  <url><loc>https://elevatedlisting.co/fi/</loc><lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://elevatedlisting.co/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://elevatedlisting.co/sv/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://elevatedlisting.co/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://elevatedlisting.co/fr/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://elevatedlisting.co/vi/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://elevatedlisting.co/fi/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://elevatedlisting.co/th/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://elevatedlisting.co/"/>
+  </url>
+  <url><loc>https://elevatedlisting.co/th/</loc><lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://elevatedlisting.co/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://elevatedlisting.co/sv/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://elevatedlisting.co/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://elevatedlisting.co/fr/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://elevatedlisting.co/vi/"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://elevatedlisting.co/fi/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://elevatedlisting.co/th/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://elevatedlisting.co/"/>
   </url>
   <url><loc>https://elevatedlisting.co/terms</loc><lastmod>2026-10-11</lastmod></url>

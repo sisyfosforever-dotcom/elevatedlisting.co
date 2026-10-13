@@ -5,11 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Elevated Listing — Handmade films & songs by Luis from Sweden</title>
   <meta name="description" content="Handmade listing films that open the theater of the mind — before anyone boards the plane. By Luis from Sweden." />
+  <script id="el-lang">(function(){try{var L=['sv','es','fr','vi','fi','th'],p=location.pathname;if(p!=='/'&&p!=='/index.html')return;if(/bot|crawl|spider/i.test(navigator.userAgent||''))return;if(/[?&]lang=/.test(location.search)||/contact|sent/.test(location.hash))return;var s=null;try{s=localStorage.getItem('el_lang')}catch(e){}if(!s){var m=document.cookie.match(/(?:^|; )el_lang=([a-z]{2})/);s=m&&m[1]}if(s){if(L.indexOf(s)>-1)location.replace('/'+s+'/');return}var n=navigator.languages||[navigator.language||''];for(var i=0;i<n.length;i++){var c=String(n[i]).toLowerCase().slice(0,2);if(c==='en')return;if(L.indexOf(c)>-1){location.replace('/'+c+'/');return}}}catch(e){}})();</script>
   <link rel="canonical" href="https://elevatedlisting.co/" />
   <link rel="alternate" hreflang="en" href="https://elevatedlisting.co/" />
   <link rel="alternate" hreflang="sv" href="https://elevatedlisting.co/sv/" />
   <link rel="alternate" hreflang="es" href="https://elevatedlisting.co/es/" />
   <link rel="alternate" hreflang="fr" href="https://elevatedlisting.co/fr/" />
+  <link rel="alternate" hreflang="vi" href="https://elevatedlisting.co/vi/" />
+  <link rel="alternate" hreflang="fi" href="https://elevatedlisting.co/fi/" />
+  <link rel="alternate" hreflang="th" href="https://elevatedlisting.co/th/" />
   <link rel="alternate" hreflang="x-default" href="https://elevatedlisting.co/" />
   <meta property="og:title" content="Elevated Listing – Listing films set to a song" />
   <meta property="og:description" content="Handmade listing films for Airbnb, VRBO and vacation rentals, cut to a song or set to an original one. See the finished film first. $249 only if you love it. By Luis from Sweden." />
@@ -17,8 +21,11 @@
   <meta property="og:url" content="https://elevatedlisting.co/" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:locale:alternate" content="sv_SE" />
-  <meta property="og:locale:alternate" content="es_ES" />
+  <meta property="og:locale:alternate" content="es_LA" />
   <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:locale:alternate" content="vi_VN" />
+  <meta property="og:locale:alternate" content="fi_FI" />
+  <meta property="og:locale:alternate" content="th_TH" />
   <meta property="og:image" content="https://elevatedlisting.co/og.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -548,8 +555,8 @@
         <a class="hide-sm" href="#packages">Price</a>
         <a class="hide-sm" href="#about">About</a>
         <a class="hide-sm" href="#contact">Contact</a>
-        <div class="lang" role="navigation" aria-label="Language"><a href="/" hreflang="en" lang="en" title="English" aria-current="page">EN</a><span class="dot" aria-hidden="true">·</span><a href="/sv/" hreflang="sv" lang="sv" title="Svenska">SV</a><span class="dot" aria-hidden="true">·</span><a href="/es/" hreflang="es" lang="es" title="Español">ES</a><span class="dot" aria-hidden="true">·</span><a href="/fr/" hreflang="fr" lang="fr" title="Français">FR</a></div>
-        <details class="lang-sm"><summary aria-label="Language: English">EN</summary><div class="lang-menu"><a href="/" hreflang="en" lang="en" aria-current="page">English <span>EN</span></a><a href="/sv/" hreflang="sv" lang="sv">Svenska <span>SV</span></a><a href="/es/" hreflang="es" lang="es">Español <span>ES</span></a><a href="/fr/" hreflang="fr" lang="fr">Français <span>FR</span></a></div></details>
+        <div class="lang" role="navigation" aria-label="Language"><a href="/" hreflang="en" lang="en" title="English" aria-current="page">EN</a><span class="dot" aria-hidden="true">·</span><a href="/sv/" hreflang="sv" lang="sv" title="Svenska">SV</a><span class="dot" aria-hidden="true">·</span><a href="/es/" hreflang="es" lang="es" title="Español">ES</a><span class="dot" aria-hidden="true">·</span><a href="/fr/" hreflang="fr" lang="fr" title="Français">FR</a><span class="dot" aria-hidden="true">·</span><a href="/vi/" hreflang="vi" lang="vi" title="Tiếng Việt">VI</a><span class="dot" aria-hidden="true">·</span><a href="/fi/" hreflang="fi" lang="fi" title="Suomi">FI</a><span class="dot" aria-hidden="true">·</span><a href="/th/" hreflang="th" lang="th" title="ไทย">TH</a></div>
+        <details class="lang-sm"><summary aria-label="Language: English">EN</summary><div class="lang-menu"><a href="/" hreflang="en" lang="en" aria-current="page">English <span>EN</span></a><a href="/sv/" hreflang="sv" lang="sv">Svenska <span>SV</span></a><a href="/es/" hreflang="es" lang="es">Español <span>ES</span></a><a href="/fr/" hreflang="fr" lang="fr">Français <span>FR</span></a><a href="/vi/" hreflang="vi" lang="vi">Tiếng Việt <span>VI</span></a><a href="/fi/" hreflang="fi" lang="fi">Suomi <span>FI</span></a><a href="/th/" hreflang="th" lang="th">ไทย <span>TH</span></a></div></details>
         <a class="btn" href="#contact">Get in touch</a>
       </nav>
     </div>
@@ -1218,6 +1225,7 @@
 <script>
 document.addEventListener('click',function(e){document.querySelectorAll('.lang-sm[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open');});});
 document.addEventListener('keydown',function(e){if(e.key==='Escape')document.querySelectorAll('.lang-sm[open]').forEach(function(d){d.removeAttribute('open');d.querySelector('summary').focus();});});
+document.querySelectorAll('.lang a[hreflang],.lang-menu a[hreflang]').forEach(function(a){a.addEventListener('click',function(){var c=a.getAttribute('hreflang');try{localStorage.setItem('el_lang',c)}catch(e){}document.cookie='el_lang='+c+';path=/;max-age=31536000;SameSite=Lax';});});
 </script>
 </body>
 </html>
