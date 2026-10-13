@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Elevated Listing — Videos y canciones hechos a mano por Luis, desde Suecia</title>
+  <meta name="description" content="Videos hechos a mano de tu alojamiento, con su propia canción. Tus huéspedes viajan con la cabeza antes de subirse al avión. Por Luis, desde Suecia." />
+  <link rel="canonical" href="https://elevatedlisting.co/es/" />
+  <link rel="alternate" hreflang="en" href="https://elevatedlisting.co/" />
+  <link rel="alternate" hreflang="sv" href="https://elevatedlisting.co/sv/" />
+  <link rel="alternate" hreflang="es" href="https://elevatedlisting.co/es/" />
+  <link rel="alternate" hreflang="fr" href="https://elevatedlisting.co/fr/" />
+  <link rel="alternate" hreflang="x-default" href="https://elevatedlisting.co/" />
+  <meta property="og:title" content="Elevated Listing – Videos de tu alojamiento, con su propia canción" />
+  <meta property="og:description" content="Videos hechos a mano para Airbnb, VRBO y alquileres vacacionales, con una canción conocida o una original. Primero ves el video terminado. $249, solo si te encanta. Por Luis, desde Suecia." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://elevatedlisting.co/es/" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:locale:alternate" content="sv_SE" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:image" content="https://elevatedlisting.co/og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Elevated Listing – Videos de tu alojamiento, con su propia canción" />
+  <meta name="twitter:image" content="https://elevatedlisting.co/og.jpg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Elevated Listing", "url": "https://elevatedlisting.co/", "image": "https://elevatedlisting.co/og.jpg", "logo": "https://elevatedlisting.co/apple-touch-icon.png", "email": "luis@elevatedlisting.co", "founder": {"@type": "Person", "name": "Luis Lindberg"}, "description": "Handmade listing films for short-term and vacation rentals, cut to a song or set to an original one.", "makesOffer": [{"@type": "Offer", "name": "Listing film and song", "price": "249", "priceCurrency": "USD", "description": "One full-HD horizontal film, one vertical Reels version, the song as an MP3, one round of tweaks, delivered within 48 hours of payment. Paid only if you love it."}]}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0f1210;
+      --bg-soft: #171c18;
+      --card: #1c231e;
+      --ink: #f3efe6;
+      --mute: #a8b0a6;
+      --line: rgba(243,239,230,.12);
+      --accent: #c4a574;
+      --accent-2: #7d9b84;
+      --glow: rgba(196,165,116,.18);
+      --radius: 18px;
+      --max: 1080px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Outfit, system-ui, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(1200px 600px at 10% -10%, var(--glow), transparent 55%),
+        radial-gradient(900px 500px at 90% 0%, rgba(125,155,132,.12), transparent 50%),
+        var(--bg);
+      line-height: 1.55;
+      font-weight: 400;
+      letter-spacing: .01em;
+    }
+    a { color: inherit; }
+    img { max-width: 100%; display: block; }
+    .wrap { width: min(var(--max), calc(100% - 2.5rem)); margin: 0 auto; }
+    header {
+      position: sticky; top: 0; z-index: 20;
+      backdrop-filter: blur(14px);
+      background: rgba(15,18,16,.72);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 0; gap: 1rem;
+    }
+    .logo {
+      font-family: Fraunces, Georgia, serif;
+      font-weight: 600; font-size: 1.15rem;
+      letter-spacing: .02em;
+    }
+    .logo span { color: var(--accent); font-weight: 500; }
+    a.logo { cursor: pointer; }
+    .nav-links { display: flex; gap: 1.25rem; align-items: center; font-size: .92rem; color: var(--mute); }
+    .nav-links a { text-decoration: none; }
+    .nav-links a:hover { color: var(--ink); }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      gap: .5rem; text-decoration: none;
+      background: linear-gradient(135deg, #d4b484, var(--accent));
+      color: #1a140c; font-weight: 600; font-size: .92rem;
+      padding: .75rem 1.15rem; border-radius: 999px;
+      border: none; cursor: pointer;
+      box-shadow: 0 8px 28px rgba(196,165,116,.25);
+    }
+    .btn:hover { filter: brightness(1.05); }
+    .btn-ghost {
+      background: transparent; color: var(--ink);
+      border: 1px solid var(--line); box-shadow: none;
+    }
+    .btn-ghost:hover { border-color: rgba(243,239,230,.28); }
+    .hero { padding: 4.5rem 0 3.5rem; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: .5rem;
+      color: var(--accent-2); font-size: .8rem; font-weight: 500;
+      text-transform: uppercase; letter-spacing: .14em; margin-bottom: 1rem;
+    }
+    .hero h1 {
+      font-family: Fraunces, Georgia, serif;
+      font-weight: 600; font-size: clamp(2.2rem, 5vw, 3.6rem);
+      line-height: 1.08; margin: 0 0 1.1rem; max-width: 18ch;
+      letter-spacing: -.02em;
+    }
+    .hero-lead {
+      max-width: 38rem; color: var(--mute); font-size: 1.08rem;
+      margin: 0 0 1.75rem; font-weight: 300;
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-bottom: 2.5rem; }
+    .trust {
+      display: flex; flex-wrap: wrap; gap: 1.25rem 2rem;
+      color: var(--mute); font-size: .88rem; border-top: 1px solid var(--line);
+      padding-top: 1.25rem;
+    }
+    .trust strong { color: var(--ink); font-weight: 500; display: block; }
+    section { padding: 3.25rem 0; }
+    .section-title {
+      font-family: Fraunces, Georgia, serif;
+      font-size: clamp(1.6rem, 3vw, 2.15rem);
+      margin: 0 0 .5rem; letter-spacing: -.015em;
+    }
+    .section-sub { color: var(--mute); margin: 0 0 2rem; max-width: 36rem; font-weight: 300; }
+    .grid-3 {
+      display: grid; gap: 1rem;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 800px) {
+      .grid-3 { grid-template-columns: 1fr; }
+      .nav-links .hide-sm { display: none; }
+    }
+
+    .card-icon {
+      width: 2.25rem; height: 2.25rem; margin-bottom: .85rem;
+      display: block;
+    }
+    .card-icon img, .card-icon svg { width: 100%; height: 100%; display: block; }
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,.03), transparent), var(--card);
+      border: 1px solid var(--line); border-radius: var(--radius);
+      padding: 1.35rem 1.25rem;
+    }
+    .card h3 {
+      font-family: Fraunces, Georgia, serif; font-size: 1.15rem;
+      margin: 0 0 .55rem; font-weight: 600;
+    }
+    .card p { margin: 0; color: var(--mute); font-size: .95rem; font-weight: 300; }
+    .work-grid {
+      display: grid; gap: 1.25rem;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 720px) { .work-grid { grid-template-columns: 1fr; } }
+    .work {
+      background: var(--card); border: 1px solid var(--line);
+      border-radius: var(--radius); overflow: hidden;
+      display: flex; flex-direction: column;
+    }
+    .work-media {
+      position: relative;
+      aspect-ratio: 9 / 14;
+      max-height: 520px;
+      background: #050605;
+      overflow: hidden;
+      isolation: isolate;
+    }
+    .work-media::after {
+      content: "";
+      position: absolute; inset: 0;
+      pointer-events: none;
+      box-shadow: inset 0 0 0 1px rgba(196,165,116,.14);
+      border-radius: 0;
+      z-index: 2;
+    }
+    .work-media .yt-facade {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      padding: 0; border: 0; cursor: pointer;
+      background: #050605;
+      display: block;
+    }
+    .work-media .yt-facade img {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center 20%;
+      opacity: .9;
+      transform: scale(1.02);
+      transition: transform .55s ease, opacity .35s ease;
+      filter: saturate(1.05) contrast(1.04);
+    }
+    .work-media .yt-facade:hover img,
+    .work-media .yt-facade:focus-visible img {
+      transform: scale(1.06);
+      opacity: 1;
+    }
+    .work-media .yt-facade:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: -2px;
+    }
+    .yt-play {
+      position: absolute; left: 50%; top: 50%;
+      width: 3.4rem; height: 3.4rem;
+      margin: -1.7rem 0 0 -1.7rem;
+      border-radius: 999px;
+      background: rgba(15,18,16,.55);
+      border: 1.5px solid rgba(196,165,116,.85);
+      box-shadow: 0 10px 28px rgba(0,0,0,.45), inset 0 0 0 1px rgba(255,255,255,.06);
+      backdrop-filter: blur(8px);
+      display: grid; place-items: center;
+      transition: transform .25s ease, background .25s ease, border-color .25s ease;
+      z-index: 1;
+      pointer-events: none;
+    }
+    .yt-play::before {
+      content: "";
+      display: block;
+      width: 0; height: 0;
+      margin-left: .18rem;
+      border-style: solid;
+      border-width: .45rem 0 .45rem .75rem;
+      border-color: transparent transparent transparent var(--accent);
+    }
+    .work-media .yt-facade:hover .yt-play,
+    .work-media .yt-facade:focus-visible .yt-play {
+      transform: scale(1.06);
+      background: rgba(196,165,116,.18);
+      border-color: var(--accent);
+    }
+    .work-media.is-playing::after { box-shadow: inset 0 0 0 1px rgba(196,165,116,.08); }
+    .work-media iframe {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      border: 0; background: #000;
+    }
+    @media (max-width: 720px) {
+      .work-media { max-height: none; aspect-ratio: 9 / 13; }
+    }
+    .mind-film { max-width: 22rem; margin: 0 auto 2rem; }
+    .work-body { padding: 1.1rem 1.15rem 1.25rem; }
+    .work-body h3 {
+      font-family: Fraunces, Georgia, serif; font-size: 1.05rem;
+      margin: 0 0 .35rem;
+    }
+    .work-meta { color: var(--mute); font-size: .82rem; margin-bottom: .65rem; }
+    .work-body p { margin: 0 0 .9rem; color: var(--mute); font-size: .9rem; font-weight: 300; }
+    .link-row { display: flex; gap: .75rem; flex-wrap: wrap; font-size: .88rem; }
+    .link-row a { color: var(--accent); text-decoration: none; }
+    .link-row a:hover { text-decoration: underline; }
+    .offer {
+      background:
+        radial-gradient(600px 240px at 80% 0%, var(--glow), transparent 60%),
+        var(--bg-soft);
+      border: 1px solid var(--line); border-radius: calc(var(--radius) + 4px);
+      padding: 2rem 1.5rem;
+    }
+    .price {
+      font-family: Fraunces, Georgia, serif; font-size: 2.4rem;
+      margin: .4rem 0 .2rem; color: var(--accent);
+    }
+    .price small { font-size: 1rem; color: var(--mute); font-family: Outfit, sans-serif; }
+    .offer ul {
+      margin: 1.1rem 0 1.4rem; padding: 0; list-style: none;
+      display: grid; gap: .55rem; color: var(--mute);
+    }
+    .offer li::before {
+      content: "✓"; color: var(--accent-2); margin-right: .55rem; font-weight: 600;
+    }
+    .contact {
+      display: grid; gap: 1rem; grid-template-columns: 1.2fr .8fr;
+    }
+    .about-side { display: grid; gap: 1rem; align-content: start; }
+    .about-photo {
+      margin: 0; overflow: hidden; background: var(--card);
+      border: 1px solid var(--line); border-radius: var(--radius);
+      box-shadow: 0 16px 36px rgba(0,0,0,.22);
+    }
+    .about-photo img {
+      width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center;
+    }
+    .about-photo figcaption {
+      padding: .65rem 1rem .75rem; color: var(--mute); font-size: .82rem;
+      letter-spacing: .04em;
+    }
+    .about-side .card { padding: 1.1rem 1.15rem; }
+
+    .about-side .card.path-card {
+      position: relative;
+      overflow: hidden;
+      background-color: #162019;
+      background-image:
+        linear-gradient(180deg, rgba(22,32,25,.55), rgba(15,18,16,.82)),
+        url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22360%22%20height%3D%22280%22%20viewBox%3D%220%200%20360%20280%22%3E%20%3Cdefs%3E%20%3Cpattern%20id%3D%22grid%22%20width%3D%2224%22%20height%3D%2224%22%20patternUnits%3D%22userSpaceOnUse%22%3E%20%3Cpath%20d%3D%22M24%200H0V24%22%20fill%3D%22none%22%20stroke%3D%22%237d9b84%22%20stroke-opacity%3D%22.07%22%20stroke-width%3D%22.6%22/%3E%20%3C/pattern%3E%20%3C/defs%3E%20%3Crect%20width%3D%22360%22%20height%3D%22280%22%20fill%3D%22url%28%23grid%29%22/%3E%20%3C%21--%20faint%20contour%20squiggles%20--%3E%20%3Cpath%20d%3D%22M-10%2040%20Q40%2020%2080%2045%20T160%2035%20T240%2055%20T340%2040%22%20fill%3D%22none%22%20stroke%3D%22%237d9b84%22%20stroke-opacity%3D%22.08%22%20stroke-width%3D%221%22/%3E%20%3Cpath%20d%3D%22M-10%20120%20Q50%20100%20100%20130%20T200%20115%20T300%20140%20T380%20120%22%20fill%3D%22none%22%20stroke%3D%22%237d9b84%22%20stroke-opacity%3D%22.06%22%20stroke-width%3D%221%22/%3E%20%3Cpath%20d%3D%22M-10%20200%20Q60%20180%20110%20210%20T220%20195%20T340%20220%22%20fill%3D%22none%22%20stroke%3D%22%237d9b84%22%20stroke-opacity%3D%22.07%22%20stroke-width%3D%221%22/%3E%20%3C%21--%20old-school%20dashed%20travel%20route%20--%3E%20%3Cpath%20d%3D%22M28%20210%20C70%20170%2090%2090%20140%2070%20C190%2050%20210%20110%20250%20130%20C290%20150%20310%2090%20338%2055%22%20fill%3D%22none%22%20stroke%3D%22%23c4a574%22%20stroke-opacity%3D%22.38%22%20stroke-width%3D%221.6%22%20stroke-dasharray%3D%225%205%22%20stroke-linecap%3D%22round%22/%3E%20%3C%21--%20destination%20pins%20--%3E%20%3Ccircle%20cx%3D%2228%22%20cy%3D%22210%22%20r%3D%223.2%22%20fill%3D%22%23c4a574%22%20fill-opacity%3D%22.55%22/%3E%20%3Ccircle%20cx%3D%22140%22%20cy%3D%2270%22%20r%3D%222.6%22%20fill%3D%22%23c4a574%22%20fill-opacity%3D%22.4%22/%3E%20%3Ccircle%20cx%3D%22250%22%20cy%3D%22130%22%20r%3D%222.6%22%20fill%3D%22%23c4a574%22%20fill-opacity%3D%22.4%22/%3E%20%3Ccircle%20cx%3D%22338%22%20cy%3D%2255%22%20r%3D%223.4%22%20fill%3D%22%23c4a574%22%20fill-opacity%3D%22.65%22/%3E%20%3C%21--%20tiny%20compass%20rose%20hint%20--%3E%20%3Cg%20transform%3D%22translate%28320%20240%29%22%20opacity%3D%22.22%22%20stroke%3D%22%23c4a574%22%20fill%3D%22none%22%20stroke-width%3D%221%22%3E%20%3Ccircle%20r%3D%2210%22/%3E%20%3Cpath%20d%3D%22M0%20-10%20L2%200%20L0%2010%20L-2%200%20Z%22%20fill%3D%22%23c4a574%22%20fill-opacity%3D%22.35%22%20stroke%3D%22none%22/%3E%20%3Cpath%20d%3D%22M0%20-14%20V-11%20M0%2011%20V14%20M-14%200%20H-11%20M11%200%20H14%22/%3E%20%3C/g%3E%20%3C/svg%3E");
+      background-size: auto, 360px 280px;
+      background-repeat: no-repeat, repeat;
+      background-position: center, 0 0;
+      border: 1px solid rgba(196,165,116,.18);
+    }
+    .about-side .card.path-card h3,
+    .about-side .card.path-card p {
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 800px) { .contact { grid-template-columns: 1fr; } }
+    footer {
+      border-top: 1px solid var(--line); padding: 2rem 0 2.5rem;
+      color: var(--mute); font-size: .85rem;
+    }
+    footer .row { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+
+    footer .legal-links { display: flex; gap: .85rem; flex-wrap: wrap; align-items: center; }
+    footer .legal-links a { color: var(--mute); text-decoration: none; }
+    footer .legal-links a:hover { color: var(--ink); }
+    footer .legal-links .sep { opacity: .5; }
+    .pill {
+      display: inline-block; font-size: .72rem; letter-spacing: .08em;
+      text-transform: uppercase; color: var(--accent);
+      border: 1px solid rgba(196,165,116,.35); border-radius: 999px;
+      padding: .2rem .55rem; margin-bottom: .55rem;
+    }
+  
+
+
+    .contact-form {
+      background: linear-gradient(180deg, rgba(255,255,255,.03), transparent), var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.35rem 1.25rem 1.4rem;
+    }
+    .contact-form h3 {
+      font-family: Fraunces, Georgia, serif;
+      font-size: 1.15rem; margin: 0 0 .35rem; font-weight: 600;
+    }
+    .contact-form .hint {
+      margin: 0 0 1rem; color: var(--mute); font-size: .88rem; font-weight: 300;
+    }
+    .contact-form label {
+      display: block; font-size: .78rem; letter-spacing: .06em;
+      text-transform: uppercase; color: var(--mute); margin: 0 0 .35rem;
+    }
+    .contact-form .field { margin-bottom: .85rem; }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      background: rgba(0,0,0,.28);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      color: var(--ink);
+      font: inherit;
+      font-size: .95rem;
+      padding: .7rem .85rem;
+      outline: none;
+      transition: border-color .2s ease, box-shadow .2s ease;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: rgba(196,165,116,.55);
+      box-shadow: 0 0 0 3px rgba(196,165,116,.12);
+    }
+    .contact-form textarea { min-height: 7.5rem; resize: vertical; }
+    .contact-form .hp { position: absolute; left: -9999px; height: 0; overflow: hidden; }
+    .contact-form .btn { width: 100%; justify-content: center; border: 0; cursor: pointer; margin-top: .25rem; }
+    .contact-form .note {
+      margin: .75rem 0 0; color: var(--mute); font-size: .8rem; font-weight: 300;
+    }
+    .contact-form.is-sent .fields,
+    .contact-form.is-sent .btn { display: none; }
+    .contact-form .thanks { display: none; color: var(--accent); margin: 0; }
+    .contact-form.is-sent .thanks { display: block; }
+
+    .contact-form .checks {
+      display: grid; gap: .55rem;
+      margin: 0 0 1rem;
+    }
+    .contact-form .check {
+      display: flex; gap: .65rem; align-items: flex-start;
+      margin: 0; font-size: .9rem; color: var(--ink);
+      font-weight: 300; cursor: pointer;
+      text-transform: none; letter-spacing: 0;
+    }
+    .contact-form .check input {
+      width: 1.05rem; height: 1.05rem; margin: .15rem 0 0;
+      accent-color: var(--accent);
+      flex: 0 0 auto;
+      padding: 0;
+    }
+
+    .contact-grid {
+      display: grid; gap: 1.25rem;
+      grid-template-columns: 1.2fr .8fr;
+    }
+    @media (max-width: 800px) {
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+
+    .tiers { display:grid; grid-template-columns:repeat(3,1fr); gap:1.25rem; }
+    .tier { display:flex; flex-direction:column; margin:0; }
+    .tier h3 { font-family: Fraunces, Georgia, serif; font-weight:400; font-size:1.4rem; margin:0 0 .25rem; }
+    .tier ul { flex:1; }
+    .tier .btn { align-self:flex-start; }
+    .tier.featured { border-color: var(--accent); box-shadow: 0 0 40px var(--glow); }
+    .paynote { margin-top:2rem; padding:1.25rem 1.5rem; border:1px solid var(--line); border-radius:var(--radius); background:var(--card); max-width:44rem; }
+    .paynote h3 { font-family: Fraunces, Georgia, serif; font-weight:400; margin:0 0 .5rem; }
+    .paynote p { color:var(--mute); font-weight:300; margin:0 0 .75rem; }
+    section[id] { scroll-margin-top: 80px; }
+    .paycallout { margin:1rem 0; padding:1rem 1.25rem; border:1px solid var(--accent); border-left-width:4px; border-radius:var(--radius); background:rgba(196,165,116,.08); }
+    .paycallout h3 { color:var(--accent); }
+    .paycallout p { color:var(--ink); }
+    .avail { color:var(--accent); font-weight:500; letter-spacing:.02em; margin:.25rem 0 0; }
+    .paynote .small { font-size:.9rem; margin:.75rem 0 0; }
+    @media (max-width: 800px) { .tiers { grid-template-columns:1fr; } }
+    .work-media.hero-film { aspect-ratio: 16 / 9; max-height: none; border-radius: var(--radius); border:1px solid var(--line); margin: .5rem 0 1.75rem; box-shadow: 0 30px 80px rgba(0,0,0,.45), 0 0 60px var(--glow); }
+    .work-media.hero-film .yt-play { width: 4.6rem; height: 4.6rem; margin: -2.3rem 0 0 -2.3rem; }
+    .pkg-cue { grid-column:1/-1; margin:.25rem 0 0; font-size:.95rem; font-weight:300; }
+    .pkg-cue a { color:var(--mute); text-decoration:none; border-bottom:1px solid var(--line); }
+    .pkg-cue a:hover { color:var(--accent); }
+    .tier .sub { color:var(--mute); font-size:.9rem; margin:.25rem 0 0; }
+    .hero-film + .hero-actions { margin-bottom: 2rem; }
+  
+    /* films gallery */
+    .fgrid{list-style:none;padding:0;margin:1.5rem 0 0;display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(210px,1fr))}
+    .fcard{all:unset;cursor:pointer;display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;width:100%;box-sizing:border-box;transition:transform .2s,border-color .2s}
+    .fcard:hover,.fcard:focus-visible{transform:translateY(-3px);border-color:var(--accent)}
+    .fcard:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+    .fthumb{position:relative;aspect-ratio:16/9;overflow:hidden;background:var(--bg-soft)}
+    .fthumb img{width:100%;height:100%;object-fit:cover;display:block}
+    .fplay{position:absolute;left:50%;top:50%;width:46px;height:46px;margin:-23px 0 0 -23px;border-radius:50%;background:rgba(15,18,16,.7);border:1px solid rgba(243,239,230,.5)}
+    .fplay::after{content:"";position:absolute;left:18px;top:14px;border-left:14px solid var(--ink);border-top:9px solid transparent;border-bottom:9px solid transparent}
+    .ftitle{font-family:Fraunces,Georgia,serif;font-size:1.1rem;padding:.75rem .9rem 0;color:var(--ink)}
+    .fplace{font-size:.88rem;color:var(--mute);padding:.2rem .9rem 0;line-height:1.35}
+    .fcountry{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);padding:.35rem .9rem .85rem}
+    .flb{position:fixed;inset:0;z-index:1000;background:rgba(5,7,6,.9);display:flex;align-items:center;justify-content:center;padding:1rem}
+    .flb[hidden]{display:none}
+    .flb-box{width:min(960px,100%);aspect-ratio:16/9}
+    .flb-box iframe{width:100%;height:100%;border:0;border-radius:12px}
+    .flb-x{position:absolute;top:.6rem;right:1rem;font-size:2.4rem;line-height:1;background:none;border:0;color:var(--ink);cursor:pointer}
+    /* journey */
+    #journey .jbig{font-size:1.25rem}
+    .jwrap{position:relative;margin-top:2rem}
+    .jthread{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none}
+    .jthread path{fill:none;stroke:#c0392b;stroke-width:3;stroke-linecap:round;vector-effect:non-scaling-stroke;stroke-dasharray:1;stroke-dashoffset:var(--draw,0)}
+    .jlist{list-style:none;margin:0;padding:0;position:relative;display:flex;flex-direction:column;gap:2.2rem}
+    .jstep{position:relative;width:min(440px,86%);background:var(--card);border:1.5px solid var(--line);border-radius:28px 22px 30px 20px / 22px 30px 20px 28px;padding:1.4rem 1.5rem 1.4rem 5.4rem;box-sizing:border-box}
+    .jstep:nth-child(odd){align-self:flex-start}.jstep:nth-child(even){align-self:flex-end}
+    .jicon{position:absolute;left:1.1rem;top:1.2rem;width:3.4rem;height:3.4rem;border-radius:50%;background:var(--bg-soft);border:2px solid #c0392b;display:flex;align-items:center;justify-content:center}
+    .jicon svg{width:2.2rem;height:2.2rem;fill:none;stroke:var(--ink);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+    .jnum{position:absolute;left:3.6rem;top:.6rem;background:#c0392b;color:#fff;font-weight:700;border-radius:50%;width:1.6rem;height:1.6rem;font-size:.95rem;display:flex;align-items:center;justify-content:center}
+    .jstep h3{font-family:Fraunces,Georgia,serif;font-weight:400;font-size:1.5rem;margin:0 0 .4rem}
+    .jstep p{font-size:1.15rem;line-height:1.55;margin:0;color:var(--ink)}
+    .jstep p.jwink{font-size:.92rem;font-style:italic;font-weight:300;color:var(--mute);margin-top:.3rem;line-height:1.4}
+    .jnote{font-size:1.15rem;text-align:center;margin-top:2rem;color:var(--mute)}
+    .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.on{opacity:1;transform:none}
+    @media (max-width:640px){.jstep{width:100%}.jthread{display:none}.jlist{border-left:3px solid #c0392b;padding-left:1rem}}
+    @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.fcard{transition:none}.jthread path{stroke-dashoffset:0!important}}
+
+    /* layout tidy: one container, consistent rhythm, equal tiles */
+    :root { --gutter: clamp(1.25rem, 4vw, 2.5rem); --gap: 1.25rem; --section: clamp(3rem, 6vw, 5rem); }
+    html, body { overflow-x: clip; }
+    .wrap { width: min(var(--max), 100% - 2 * var(--gutter)); }
+    section { padding: var(--section) 0; }
+    .hero { padding: clamp(3rem, 7vw, 5rem) 0 var(--section); }
+    .section-sub, .section-sub[style] { max-width: 40rem !important; }
+    .hero-lead, .section-sub, .card p, .work-body p { text-wrap: pretty; }
+    .hero h1, .section-title, .jstep h3 { text-wrap: balance; }
+    .grid-3, .tiers, .contact, .contact-grid, .about-side { gap: var(--gap); }
+    .hero-actions { align-items: center; }
+    .grid-3 > .card, .tiers > * { height: 100%; }
+    /* recent cuts: equal tiles */
+    .work-grid { gap: var(--gap); grid-template-columns: repeat(3, minmax(0, 1fr)); grid-auto-flow: row dense; }
+    .work-grid .work-media { aspect-ratio: 4 / 5; max-height: none; }
+    .work-grid .work-body { flex: 1; display: flex; flex-direction: column; }
+    .work-grid .work-body .link-row { margin-top: auto; }
+    .work-grid .pkg-cue { margin: 0; }
+    @media (max-width: 960px) {
+      .work-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .work-grid > .work:last-of-type { grid-column: 1 / -1; justify-self: center; width: calc(50% - var(--gap) / 2); }
+    }
+    @media (max-width: 600px) {
+      .work-grid { grid-template-columns: 1fr; }
+      .work-grid > .work:last-of-type { width: 100%; }
+      .work-grid .work-media { aspect-ratio: 9 / 11; }
+    }
+    /* films gallery: equal cards */
+    .fgrid { gap: var(--gap); grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .fgrid > li { display: flex; }
+    .fcard { height: 100%; }
+    .fcountry { margin-top: auto; }
+    @media (max-width: 960px) { .fgrid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+    @media (max-width: 600px) {
+      .fgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; }
+      .ftitle { font-size: 1rem; padding: .65rem .7rem 0; }
+      .fplace { font-size: .8rem; padding: .2rem .7rem 0; }
+      .fcountry { padding: .35rem .7rem .75rem; }
+    }
+    /* how it works: keep steps inside the thread's lane */
+    .jlist { gap: clamp(1.5rem, 3vw, 2.2rem); }
+    .jstep { width: min(460px, 48%); }
+    .jnote { max-width: 40rem; margin-left: auto; margin-right: auto; }
+    @media (max-width: 860px) { .jstep { width: min(460px, 62%); } }
+    @media (max-width: 640px) {
+      .jstep { width: 100%; padding: 1.2rem 1.1rem 1.2rem 4.6rem; }
+      .jicon { left: .8rem; width: 3rem; height: 3rem; }
+      .jnum { left: 2.9rem; }
+      .jstep h3 { font-size: 1.25rem; }
+      .jstep p, .jnote, #journey .jbig { font-size: 1.02rem; }
+    }
+    @media (max-width: 800px) { .about-side { max-width: 28rem; } }
+    @media (max-width: 480px) { .hero-actions .btn { flex: 1 1 100%; } }
+    .tip-btn{position:fixed;top:5.6rem;right:1rem;z-index:30;display:inline-flex;align-items:center;gap:.45rem;padding:.45rem .85rem;border-radius:999px;background:rgba(23,28,24,.88);backdrop-filter:blur(10px);border:1px solid var(--line);color:var(--mute);font-family:Outfit,system-ui,sans-serif;font-size:.82rem;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.28);transition:color .2s,border-color .2s,transform .2s,box-shadow .2s}
+    .tip-btn svg{width:16px;height:16px;flex:none;color:var(--accent)}
+    .tip-btn:hover,.tip-btn:focus-visible{color:var(--ink);border-color:var(--accent);transform:translateY(-1px);box-shadow:0 6px 18px rgba(0,0,0,.35)}
+    @media (max-width:600px){.tip-btn{top:5.6rem;right:.75rem;padding:0;width:38px;height:38px;justify-content:center}.tip-btn span{display:none}}
+    /* language switcher */
+    .lang{display:flex;align-items:center;gap:.05rem;font-size:.74rem;font-weight:500;letter-spacing:.09em;margin-left:.25rem}
+    .lang a{color:var(--mute);padding:.3rem .32rem;text-decoration:none;line-height:1}
+    .lang a:hover{color:var(--ink)}
+    .lang a[aria-current="page"]{color:var(--accent);box-shadow:inset 0 -1.5px 0 var(--accent)}
+    .lang .dot{opacity:.35;font-size:.7rem}
+    .lang-sm{display:none;position:relative}
+    .lang-sm summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:.35rem;font-size:.74rem;font-weight:500;letter-spacing:.09em;color:var(--accent);padding:.42rem .6rem;border:1px solid var(--line);border-radius:999px;line-height:1;user-select:none}
+    .lang-sm summary::-webkit-details-marker{display:none}
+    .lang-sm summary::after{content:"";width:.3rem;height:.3rem;border:solid currentColor;border-width:0 1.5px 1.5px 0;transform:translateY(-2px) rotate(45deg)}
+    .lang-sm[open] summary::after{transform:translateY(1px) rotate(-135deg)}
+    .lang-sm summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+    .lang-menu{position:absolute;right:0;top:calc(100% + .5rem);z-index:40;display:grid;gap:.1rem;min-width:9rem;padding:.35rem;background:rgba(23,28,24,.98);border:1px solid var(--line);border-radius:12px;box-shadow:0 14px 34px rgba(0,0,0,.45)}
+    .lang-menu a{display:flex;justify-content:space-between;align-items:center;gap:.75rem;padding:.5rem .65rem;border-radius:8px;font-size:.88rem;color:var(--ink);text-decoration:none}
+    .lang-menu a span{color:var(--mute);font-size:.72rem;letter-spacing:.09em}
+    .lang-menu a:hover{background:rgba(243,239,230,.06)}
+    .lang-menu a[aria-current="page"]{background:rgba(196,165,116,.12);color:var(--accent)}
+    @media (max-width:999px){.lang{display:none}.lang-sm{display:block}}
+    @media (max-width:600px){.nav-links{gap:.6rem}.nav-links .btn{padding:.62rem .95rem;font-size:.86rem}}
+    @media (max-width:360px){.logo{font-size:1.02rem}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a href="/es/" class="logo" aria-label="Elevated Listing, inicio" style="text-decoration:none;color:inherit" onclick="if(location.pathname==='/es/'||location.pathname==='/es/index.html'){window.scrollTo({top:0,behavior:'smooth'});history.replaceState(null,'','/es/');return false;}">Elevated <span>Listing</span></a>
+      <nav class="nav-links">
+        <a class="hide-sm" href="#mind">La idea</a>
+        <a class="hide-sm" href="#work">Videos</a>
+        <a class="hide-sm" href="#packages">Precio</a>
+        <a class="hide-sm" href="#about">Sobre mí</a>
+        <a class="hide-sm" href="#contact">Contacto</a>
+        <div class="lang" role="navigation" aria-label="Idioma"><a href="/" hreflang="en" lang="en" title="English">EN</a><span class="dot" aria-hidden="true">·</span><a href="/sv/" hreflang="sv" lang="sv" title="Svenska">SV</a><span class="dot" aria-hidden="true">·</span><a href="/es/" hreflang="es" lang="es" title="Español" aria-current="page">ES</a><span class="dot" aria-hidden="true">·</span><a href="/fr/" hreflang="fr" lang="fr" title="Français">FR</a></div>
+        <details class="lang-sm"><summary aria-label="Idioma: Español">ES</summary><div class="lang-menu"><a href="/" hreflang="en" lang="en">English <span>EN</span></a><a href="/sv/" hreflang="sv" lang="sv">Svenska <span>SV</span></a><a href="/es/" hreflang="es" lang="es" aria-current="page">Español <span>ES</span></a><a href="/fr/" hreflang="fr" lang="fr">Français <span>FR</span></a></div></details>
+        <a class="btn" href="#contact">Escríbeme</a>
+      </nav>
+    </div>
+  </header>
+
+  <a class="tip-btn" href="https://ko-fi.com/luisfromsweden" target="_blank" rel="noopener" aria-label="Invítame a un café en Ko-fi (se abre en una pestaña nueva)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 8h1a4 4 0 0 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4z"/><path d="M7 2v2M11 2v2M15 2v2"/></svg><span>Invítame a un café</span></a>
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div class="eyebrow">Por Luis, desde Suecia · Videos y canciones originales</div>
+        <h1>Tu casa, en medio del feed.</h1>
+        <p class="hero-lead" style="color:var(--ink);font-weight:400">Hago un video corto de tu alojamiento, con su propia canción. Primero ves el video terminado. Si te encanta, es tuyo por $249.</p>
+        <div class="hero-actions" style="margin-bottom:.5rem">
+          <a class="btn book" href="#contact" data-msg="¡Hola, Luis! Me gustaría un video gratis de mi alojamiento. Este es el enlace de mi anuncio:">Pide un video gratis de tu alojamiento</a>
+        </div>
+        <p class="hero-lead" style="font-size:.95rem;margin-bottom:1.75rem">Mándame el enlace de tu anuncio. No pagas nada si no te encanta.</p>
+        <p class="hero-lead">Para Airbnb, VRBO y alquileres vacacionales o de corta estancia, desde Marfa y el Hill Country de Texas hasta un sótano en Toronto.</p>
+        <div class="work-media hero-film" data-yt="FLXkCJTmrgQ">
+          <button type="button" class="yt-facade" aria-label="Reproducir Elevated Listing - elevatedlisting.co">
+            <img src="https://i.ytimg.com/vi/FLXkCJTmrgQ/hqdefault.jpg" alt="Elevated Listing showreel – video" loading="lazy" decoding="async" />
+            <span class="yt-play" aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-ghost" href="#work">Ver más videos</a>
+        </div>
+        <p class="pkg-cue"><a href="#packages">¿Quieres uno así para tu alojamiento? Mira la oferta →</a></p>
+        <div class="trust">
+          <div><strong>Pocos, no muchos</strong>Lugares elegidos a mano, con alma y carácter</div>
+          <div><strong>Tus fotos</strong>Movimiento fiel a tus fotos, nada inventado</div>
+          <div><strong>Tu canción</strong>Escrita para tu alojamiento, tuya para usarla donde quieras, para siempre</div>
+        </div>
+      </div>
+    </section>
+    
+
+    <section id="mind">
+      <div class="wrap">
+        <div class="eyebrow">Por qué funciona</div>
+        <h2 class="section-title">El cine en la cabeza</h2>
+        <p class="section-sub" style="max-width:40rem">
+          Soy Luis, Luis from Sweden en YouTube. Elevated Listing es el lado tranquilo de ese trabajo: unos pocos videos hechos a mano cada temporada, para lugares que ya tienen corazón. Las mejores imágenes de un lugar no están en una pantalla. Están en la cabeza de cada huésped, y empiezan a formarse mucho antes de hacer la maleta. Un buen video no las reemplaza. Las enciende. Solo fotos reales. Una canción original. Nada de música de catálogo.
+        </p>
+        <p class="section-sub" style="max-width:40rem">
+          La ilusión de un viaje muchas veces llega a lo más alto antes de despegar, mientras uno se lo imagina. Eso es muy personal. La versión que tu huésped tiene del diner, de la terraza, de la noche cerrada del Hill Country, no se parece a la de nadie más. Un video de tu anuncio no puede ser esa película. Pero sí puede ser la chispa: lo que hace que viaje hasta allí en su propia cabeza y sienta que ya casi llegó.
+        </p>
+        <article class="work mind-film">
+            <div class="work-media" data-yt="VKIYNr-CDbY">
+              <button type="button" class="yt-facade" aria-label="Reproducir Theater of the Mind">
+                <img src="https://i.ytimg.com/vi/VKIYNr-CDbY/hqdefault.jpg" alt="Theater of the Mind – video" loading="lazy" decoding="async" />
+                <span class="yt-play" aria-hidden="true"></span>
+              </button>
+            </div>
+            <div class="work-body">
+              <div class="pill">La idea</div>
+              <h3>Theater of the Mind</h3>
+              <div class="work-meta">Luis from Sweden · elevatedlisting.co · 3:38</div>
+              <p>Un escenario vacío, una silla, un foco. La función privada que cada huésped ve en su cabeza antes de llegar.</p>
+              <div class="link-row">
+                <a href="https://youtu.be/VKIYNr-CDbY" target="_blank" rel="noopener">youtu.be/VKIYNr-CDbY</a>
+              </div>
+            </div>
+          </article>
+        <div class="grid-3">
+          <article class="card">
+            <span class="card-icon" aria-hidden="true"><img src="../assets/icons/private-cinema.svg" alt="" /></span>
+            <h3>Cine privado</h3>
+            <p>La mejor película de un viaje es la que cada uno se hace. No la tapamos: le damos una primera imagen y una canción.</p>
+          </article>
+          <article class="card">
+            <span class="card-icon" aria-hidden="true"><img src="../assets/icons/before-the-plane.svg" alt="" /></span>
+            <h3>Antes del avión</h3>
+            <p>Las ganas son la mitad del viaje. El video es para esa hora en el sofá en la que uno ya se fue con la cabeza.</p>
+          </article>
+          <article class="card">
+            <span class="card-icon" aria-hidden="true"><img src="../assets/icons/then-the-booking.svg" alt="" /></span>
+            <h3>Y luego, la reserva</h3>
+            <p>Cuando la cabeza ya recorrió las habitaciones, reservar se siente menos como una compra y más como seguir el plan.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    
+
+        <section id="work">
+      <div class="wrap">
+        <h2 class="section-title">Videos recientes</h2>
+        <p class="section-sub">Videos que hice para lugares que me gustaron, sin que nadie me lo pidiera. Los hice con las fotos públicas del anuncio, y si el dueño me lo pide, lo quito enseguida.</p>
+        <div class="work-grid">
+
+
+<article class="work">
+            <div class="work-media" data-yt="zf0wbonvAfI">
+              <button type="button" class="yt-facade" aria-label="Reproducir I got a basement in Toronto">
+                <img src="https://i.ytimg.com/vi/zf0wbonvAfI/hqdefault.jpg" alt="I got a basement in Toronto – video" loading="lazy" decoding="async" />
+                <span class="yt-play" aria-hidden="true"></span>
+              </button>
+            </div>
+            <div class="work-body">
+              <div class="pill">Toronto</div>
+              <h3>I got a basement in Toronto</h3>
+              <div class="work-meta">Ivan · Sótano acogedor e independiente · Rincón de Sega Rally</div>
+              <p>De vuelta por un callejón estrecho, unos escalones con cuidado hacia abajo. El check-out será tarde.</p>
+              <div class="link-row">
+                <a href="https://youtu.be/zf0wbonvAfI" target="_blank" rel="noopener">youtu.be/zf0wbonvAfI</a>
+              </div>
+            </div>
+          </article>
+
+
+
+<article class="work">
+            <div class="work-media" data-yt="BZUdx_O-008">
+              <button type="button" class="yt-facade" aria-label="Reproducir I will make you Yurt Casa de Marca">
+                <img src="https://i.ytimg.com/vi/BZUdx_O-008/hqdefault.jpg" alt="I will make you Yurt Casa de Marca – video" loading="lazy" decoding="async" />
+                <span class="yt-play" aria-hidden="true"></span>
+              </button>
+            </div>
+            <div class="work-body">
+              <div class="pill">Oeste de Texas</div>
+              <h3>I will make you Yurt · Casa de Marca</h3>
+              <div class="work-meta">Casa de Marca · Cúpula con tragaluz / bañera de patas / chimenea de exterior</div>
+              <p>Noche de desierto bajo la cúpula: baño en la bañera de patas, estrellas sobre la ducha al aire libre, fuego en la chimenea.</p>
+              <div class="link-row">
+                <a href="https://youtu.be/BZUdx_O-008" target="_blank" rel="noopener">youtu.be/BZUdx_O-008</a>
+              </div>
+            </div>
+          </article>
+
+
+<article class="work">
+            <div class="work-media" data-yt="EX0xMsigB8I">
+              <button type="button" class="yt-facade" aria-label="Reproducir Pik Pak Pump up the Gas">
+                <img src="https://i.ytimg.com/vi/EX0xMsigB8I/hqdefault.jpg" alt="Pik Pak Pump up the Gas – video" loading="lazy" decoding="async" />
+                <span class="yt-play" aria-hidden="true"></span>
+              </button>
+            </div>
+            <div class="work-body">
+              <div class="pill">Marfa</div>
+              <h3>Pump up the gas · Pik Pak</h3>
+              <div class="work-meta">Energía de club estilo Technotronic / gasolinera restaurada</div>
+              <p>Noche en el patio, surtidores zumbando, Coupe Cowboy por la puerta del garaje. Pump up the gas.</p>
+              <div class="link-row">
+                <a href="https://youtu.be/EX0xMsigB8I" target="_blank" rel="noopener">youtu.be/EX0xMsigB8I</a>
+              </div>
+            </div>
+          </article>
+<p class="pkg-cue"><a href="#packages">¿Quieres uno así para tu alojamiento? Mira la oferta →</a></p>
+
+
+<article class="work">
+            <div class="work-media" data-yt="Xt8C4IvpJBo">
+              <button type="button" class="yt-facade" aria-label="Reproducir Milky Wayfarer Puttin' on the Ritz">
+                <img src="https://i.ytimg.com/vi/Xt8C4IvpJBo/hqdefault.jpg" alt="Milky Wayfarer Puttin' on the Ritz – video" loading="lazy" decoding="async" />
+                <span class="yt-play" aria-hidden="true"></span>
+              </button>
+            </div>
+            <div class="work-body">
+              <div class="pill">Texas Hill Country</div>
+              <h3>Puttin’ on the Ritz · Milky Wayfarer</h3>
+              <div class="work-meta">Milky Wayfarer · Versión completa · Minigolf / atardecer / fuego</div>
+              <p>Un recorrido de cámara tranquilo por el alojamiento real, y luego el subidón del Ritz. Las ganas antes del viaje.</p>
+              <div class="link-row">
+                <a href="https://youtu.be/Xt8C4IvpJBo" target="_blank" rel="noopener">youtu.be/Xt8C4IvpJBo</a>
+              </div>
+            </div>
+          </article>
+
+
+
+<article class="work">
+            <div class="work-media" data-yt="dtyS5c5j9rI">
+              <button type="button" class="yt-facade" aria-label="Reproducir ROAM Fredericksburg storyboard">
+                <img src="https://i.ytimg.com/vi/dtyS5c5j9rI/hqdefault.jpg" alt="ROAM Fredericksburg storyboard – video" loading="lazy" decoding="async" />
+                <span class="yt-play" aria-hidden="true"></span>
+              </button>
+            </div>
+            <div class="work-body">
+              <div class="pill">Fredericksburg</div>
+              <h3>Dos contenedores · ROAM</h3>
+              <div class="work-meta">ROAM · 2:43 · Storyboard · Ruta del vino / 290</div>
+              <p>Dos contenedores negros, uno al lado del otro. Un storyboard atrevido que se derrite, sobre un country-rock de carretera.</p>
+              <div class="link-row">
+                <a href="https://youtu.be/dtyS5c5j9rI" target="_blank" rel="noopener">youtu.be/dtyS5c5j9rI</a>
+              </div>
+            </div>
+          </article>
+<p class="pkg-cue"><a href="#packages">¿Quieres uno así para tu alojamiento? Mira la oferta →</a></p>
+
+
+<article class="work">
+            <div class="work-media" data-yt="dwBMO4qtyFQ">
+              <button type="button" class="yt-facade" aria-label="Reproducir Jamie East Austin bathhouse">
+                <img src="https://i.ytimg.com/vi/dwBMO4qtyFQ/hqdefault.jpg" alt="Jamie East Austin bathhouse – video" loading="lazy" decoding="async" />
+                <span class="yt-play" aria-hidden="true"></span>
+              </button>
+            </div>
+            <div class="work-body">
+              <div class="pill">Austin</div>
+              <h3>Baños privados · East Austin</h3>
+              <div class="work-meta">Jamie · Versión corta · Sauna de barril y tinas de cedro</div>
+              <p>Vapor de cedro, agua tranquila, una canción sobre bajar el ritmo al este de la autopista.</p>
+              <div class="link-row">
+                <a href="https://youtu.be/dwBMO4qtyFQ" target="_blank" rel="noopener">youtu.be/dwBMO4qtyFQ</a>
+              </div>
+            </div>
+          </article>
+
+<article class="work">
+            <div class="work-media" data-yt="G3iRSuT5qB0">
+              <button type="button" class="yt-facade" aria-label="Reproducir Llano Diner Tonight">
+                <img src="https://i.ytimg.com/vi/G3iRSuT5qB0/hqdefault.jpg" alt="Llano Diner Tonight – video" loading="lazy" decoding="async" />
+                <span class="yt-play" aria-hidden="true"></span>
+              </button>
+            </div>
+            <div class="work-body">
+              <div class="pill">Llano</div>
+              <h3>Casa diner Coca-Cola de los años 50</h3>
+              <div class="work-meta">Llano Diner Tonight · 1:50 · Ritmo rockabilly</div>
+              <p>Cromo brillante, piso a cuadros, jukebox de sábado. El cine en la cabeza, con contrabajo slap.</p>
+              <div class="link-row">
+                <a href="https://youtu.be/G3iRSuT5qB0" target="_blank" rel="noopener">youtu.be/G3iRSuT5qB0</a>
+              </div>
+            </div>
+          </article>
+
+<article class="work">
+            <div class="work-media" data-yt="4Yon44P1Hyw">
+              <button type="button" class="yt-facade" aria-label="Reproducir Art-filled Retreat">
+                <img src="https://i.ytimg.com/vi/4Yon44P1Hyw/hqdefault.jpg" alt="Art-filled Retreat – video" loading="lazy" decoding="async" />
+                <span class="yt-play" aria-hidden="true"></span>
+              </button>
+            </div>
+            <div class="work-body">
+              <div class="pill">Austin</div>
+              <h3>Contenedor lleno de arte</h3>
+              <div class="work-meta">Lauren · 1:31 · Fogata, terraza enorme, camino rural tranquilo</div>
+              <p>Murales, guirnaldas de luces y folk indie mientras la pintura se seca al aire libre.</p>
+              <div class="link-row">
+                <a href="https://youtu.be/4Yon44P1Hyw" target="_blank" rel="noopener">youtu.be/4Yon44P1Hyw</a>
+              </div>
+            </div>
+          </article>
+<p class="pkg-cue"><a href="#packages">¿Quieres uno así para tu alojamiento? Mira la oferta →</a></p>
+
+
+<article class="work">
+            <div class="work-media" data-yt="Sy5VvSOGdHk">
+              <button type="button" class="yt-facade" aria-label="Reproducir Grantham House Hill Country cabin">
+                <img src="https://i.ytimg.com/vi/Sy5VvSOGdHk/hqdefault.jpg" alt="Grantham House Hill Country cabin – video" loading="lazy" decoding="async" />
+                <span class="yt-play" aria-hidden="true"></span>
+              </button>
+            </div>
+            <div class="work-body">
+              <div class="pill">San Antonio · Hill Country</div>
+              <h3>Cabaña Grantham House</h3>
+              <div class="work-meta">Paula · 1:28 · Vistas sin vecinos, escapada en pareja</div>
+              <p>Luz sobre la terraza en el Hill Country, vapor del jacuzzi, una balada para dos.</p>
+              <div class="link-row">
+                <a href="https://youtu.be/Sy5VvSOGdHk" target="_blank" rel="noopener">youtu.be/Sy5VvSOGdHk</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="films">
+      <div class="wrap">
+        <h2 class="section-title">Videos que hice para lugares que me gustaron</h2>
+        <p class="section-sub">Nadie me los pidió, los hice igual. Cada uno empieza con las fotos del propio anuncio y una canción escrita para ese lugar. Toca una imagen para verlo.</p>
+        <ul class="fgrid">
+          <li><button class="fcard" type="button" data-yt="A4msgpOs3TA" aria-label="Reproducir Too Much Mirror – Notestone Reserve, Hocking Hills, Ohio">
+            <span class="fthumb"><img src="https://img.youtube.com/vi/A4msgpOs3TA/hqdefault.jpg" alt="" loading="lazy" decoding="async" width="480" height="360"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Too Much Mirror</span><span class="fplace">Notestone Reserve, Hocking Hills, Ohio</span><span class="fcountry">EE. UU.</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="MrU4V8dQ9S8" aria-label="Reproducir Make You Sweat – Toutosen smoke sauna">
+            <span class="fthumb"><img src="https://img.youtube.com/vi/MrU4V8dQ9S8/hqdefault.jpg" alt="" loading="lazy" decoding="async" width="480" height="360"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Make You Sweat</span><span class="fplace">Sauna de humo Toutosen</span><span class="fcountry">Finlandia</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="EX0xMsigB8I" aria-label="Reproducir Pump Up the Gas – Pik Pak, Marfa, Texas">
+            <span class="fthumb"><img src="https://img.youtube.com/vi/EX0xMsigB8I/hqdefault.jpg" alt="" loading="lazy" decoding="async" width="480" height="360"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Pump Up the Gas</span><span class="fplace">Pik Pak, Marfa, Texas</span><span class="fcountry">EE. UU.</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="HgZ8F30TqR8" aria-label="Reproducir Hammock on the Bay – Bamboo Bay Eco Resort, Koh Phangan">
+            <span class="fthumb"><img src="https://img.youtube.com/vi/HgZ8F30TqR8/hqdefault.jpg" alt="" loading="lazy" decoding="async" width="480" height="360"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Hammock on the Bay</span><span class="fplace">Bamboo Bay Eco Resort, Koh Phangan</span><span class="fcountry">Tailandia</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="_pLDw5KINKY" aria-label="Reproducir Ranch&#x27;s World – Montana Hill Guest Ranch, South Cariboo, BC">
+            <span class="fthumb"><img src="https://img.youtube.com/vi/_pLDw5KINKY/hqdefault.jpg" alt="" loading="lazy" decoding="async" width="480" height="360"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Ranch&#x27;s World</span><span class="fplace">Montana Hill Guest Ranch, South Cariboo, BC</span><span class="fcountry">Canadá</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="bJaVf5Z6sAg" aria-label="Reproducir Tree House Jamboree – Crazy House, Da Lat">
+            <span class="fthumb"><img src="https://img.youtube.com/vi/bJaVf5Z6sAg/hqdefault.jpg" alt="" loading="lazy" decoding="async" width="480" height="360"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Tree House Jamboree</span><span class="fplace">Crazy House, Da Lat</span><span class="fcountry">Vietnam</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="PreyE2su3-0" aria-label="Reproducir As Time Goes By – Featherbed Railroad B&amp;B, Clear Lake, California">
+            <span class="fthumb"><img src="https://img.youtube.com/vi/PreyE2su3-0/hqdefault.jpg" alt="" loading="lazy" decoding="async" width="480" height="360"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">As Time Goes By</span><span class="fplace">Featherbed Railroad B&amp;B, Clear Lake, California</span><span class="fcountry">EE. UU.</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="1X17NE9sTTQ" aria-label="Reproducir Smile, Smile, Smile – Double R Guest Ranch, Elgin, Arizona">
+            <span class="fthumb"><img src="https://img.youtube.com/vi/1X17NE9sTTQ/hqdefault.jpg" alt="" loading="lazy" decoding="async" width="480" height="360"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Smile, Smile, Smile</span><span class="fplace">Double R Guest Ranch, Elgin, Arizona</span><span class="fcountry">EE. UU.</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="4R1-kjGwPBc" aria-label="Reproducir This Is My House – Rødkærgård B&amp;B, Kerteminde">
+            <span class="fthumb"><img src="https://img.youtube.com/vi/4R1-kjGwPBc/hqdefault.jpg" alt="" loading="lazy" decoding="async" width="480" height="360"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">This Is My House</span><span class="fplace">Rødkærgård B&amp;B, Kerteminde</span><span class="fcountry">Dinamarca</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="rxbjy8QPbsg" aria-label="Reproducir Honey, I&#x27;m Coming Home – 13 Bees, Confolens">
+            <span class="fthumb"><img src="https://img.youtube.com/vi/rxbjy8QPbsg/hqdefault.jpg" alt="" loading="lazy" decoding="async" width="480" height="360"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Honey, I&#x27;m Coming Home</span><span class="fplace">13 Bees, Confolens</span><span class="fcountry">Francia</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="Gy5infV4EKY" aria-label="Reproducir Stardust – Stardust Retreat, Coleman, Texas">
+            <span class="fthumb"><img src="https://img.youtube.com/vi/Gy5infV4EKY/hqdefault.jpg" alt="" loading="lazy" decoding="async" width="480" height="360"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Stardust</span><span class="fplace">Stardust Retreat, Coleman, Texas</span><span class="fcountry">EE. UU.</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="gv_lCJEfjI0" aria-label="Reproducir Drummond Tower – Victorian folly, County Louth">
+            <span class="fthumb"><img src="https://img.youtube.com/vi/gv_lCJEfjI0/hqdefault.jpg" alt="" loading="lazy" decoding="async" width="480" height="360"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Drummond Tower</span><span class="fplace">Torre victoriana, County Louth</span><span class="fcountry">Irlanda</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="fWPwq5pPP1M" aria-label="Reproducir 2423 Prytania Street – Garden District, New Orleans, Louisiana">
+            <span class="fthumb"><img src="https://img.youtube.com/vi/fWPwq5pPP1M/hqdefault.jpg" alt="" loading="lazy" decoding="async" width="480" height="360"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">2423 Prytania Street</span><span class="fplace">Garden District, New Orleans, Louisiana</span><span class="fcountry">EE. UU.</span>
+          </button></li>
+        </ul>
+      </div>
+      <div class="flb" id="flb" hidden role="dialog" aria-modal="true" aria-label="Reproductor de video">
+        <button class="flb-x" type="button" aria-label="Cerrar">×</button>
+        <div class="flb-box"></div>
+      </div>
+    </section>
+
+    <section id="journey">
+      <div class="wrap">
+        <h2 class="section-title">Cómo funciona</h2>
+        <p class="section-sub jbig">Cinco pasos sencillos. Un hilo rojo de principio a fin.</p>
+        <p class="section-sub jbig">Cada canción esconde un pequeño guiño para ti, el anfitrión. Puede ser tu nombre, o una manía tuya que solo tú vas a notar.</p>
+        <div class="jwrap">
+          <svg class="jthread" viewBox="0 0 100 1000" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M50 0 C 90 100, 10 200, 50 300 S 90 500, 50 600 S 10 800, 50 1000"/></svg>
+          <ol class="jlist">
+          <li class="jstep reveal"><span class="jicon" aria-hidden="true"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="22"/><path d="M27 22 L44 32 L27 42 Z"/></svg></span><span class="jnum" aria-hidden="true">1</span>
+            <h3>Mira tu video</h3><p>Lo hice con tus propias fotos y una canción sobre tu alojamiento. Lo que ves es el video de verdad.</p></li>
+          <li class="jstep reveal"><span class="jicon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M14 34 L27 46 L50 18"/></svg></span><span class="jnum" aria-hidden="true">2</span>
+            <h3>Di que sí</h3><p>Solo responde a mi correo. Con un «sí» basta.</p></li>
+          <li class="jstep reveal"><span class="jicon" aria-hidden="true"><svg viewBox="0 0 64 64"><rect x="10" y="20" width="44" height="28" rx="5"/><circle cx="32" cy="34" r="6"/></svg></span><span class="jnum" aria-hidden="true">3</span>
+            <h3>$249, un solo pago</h3><p>Te mando una factura por correo. Pagas con cripto (USDC o USDT) o por Western Union. Sin suscripción. Nada más después.</p></li>
+          <li class="jstep reveal"><span class="jicon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M10 22 L32 36 L54 22"/><rect x="10" y="18" width="44" height="30" rx="4"/></svg></span><span class="jnum" aria-hidden="true">4</span>
+            <h3>Tus videos en 48 horas</h3><p>En las 48 horas siguientes a que me llegue tu pago: el video en full HD sin marca de agua, una versión vertical para Reels y la canción en MP3. ¿Quieres un pequeño cambio? Incluye una ronda de ajustes.</p></li>
+          <li class="jstep reveal"><span class="jicon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M32 50 C14 38 10 28 18 20 C24 14 30 18 32 23 C34 18 40 14 46 20 C54 28 50 38 32 50 Z"/></svg></span><span class="jnum" aria-hidden="true">5</span>
+            <h3>Compártelo donde quieras</h3><p>Ponlo en tu anuncio, tu web, Instagram, publicidad, donde sea. El video y la canción son tuyos para usarlos donde quieras, para siempre.</p><p class="jwink">Forever ever? Forever ever.</p></li>
+          </ol>
+        </div>
+        <p class="jnote">¿Preguntas? Escríbeme. Te responde una persona de verdad: yo, Luis.</p>
+      </div>
+    </section>
+
+    <section id="how">
+      <div class="wrap">
+        <h2 class="section-title">Cómo trabajo</h2>
+        <p class="section-sub">Menos presentación de ventas. Más cortometraje. La idea es encender la versión que el huésped se imagina de su estancia. Y si el lugar no me enciende a mí primero, no fuerzo un video.</p>
+        <div class="grid-3">
+          <article class="card">
+            <span class="card-icon" aria-hidden="true"><img src="../assets/icons/find-the-spark.svg" alt="" /></span>
+            <h3>Encontrar la chispa</h3>
+            <p>Busco lugares donde las fotos ya muestran algo de alegría, como una pared de color vivo o una fogata al atardecer, y empiezo por ahí.</p>
+          </article>
+          <article class="card">
+            <span class="card-icon" aria-hidden="true"><img src="../assets/icons/film-and-song.svg" alt="" /></span>
+            <h3>Video + canción</h3>
+            <p>Movimiento solo con tus fotos. Una canción original que cuenta lo que de verdad tiene tu alojamiento, no una pista de catálogo.</p>
+          </article>
+          <article class="card">
+            <span class="card-icon" aria-hidden="true"><img src="../assets/icons/one-strong-cut.svg" alt="" /></span>
+            <h3>Un buen video</h3>
+            <p>Una pieza terminada para Airbnb, Instagram o tu web, pensada para la cabeza antes que para la cama. Tuya para usarla donde quieras, para siempre.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+<section id="packages">
+      <div class="wrap">
+        <div class="pill">Precio</div>
+        <h2 class="section-title" style="margin-bottom:1.5rem">Un video. Una canción. Tuyos.</h2>
+        <div class="offer tier featured" style="max-width:32rem">
+          <h3>Tu video</h3>
+          <div class="price">$249 <small>un solo pago, sin suscripción</small></div>
+          <ul>
+            <li>Un video horizontal en full HD (16:9), sin marca de agua</li>
+            <li>Una versión vertical para Reels (9:16)</li>
+            <li>La canción en MP3</li>
+            <li>Una ronda de ajustes</li>
+            <li>Entregado en 48 horas desde tu pago</li>
+          </ul>
+          <a class="btn book" href="#contact" data-msg="¡Hola, Luis! Me gustaría un video gratis de mi alojamiento. Este es el enlace de mi anuncio:">Pide un video gratis de tu alojamiento</a>
+        </div>
+        <p class="avail" style="margin-top:1rem">Hago 3 videos nuevos por semana.</p>
+        <div class="paynote">
+          <h3>Primero lo ves</h3>
+          <p>Hago el video y te lo mando, con marca de agua. Lo que ves es el video de verdad. Si te encanta, dices que sí y pagas $249. Si no, no pagas nada, sin ningún problema. El video queda oculto y no lo uso para promocionar tu alojamiento.</p>
+          <h3>Tuyo para usarlo donde quieras, para siempre</h3>
+          <p>Una vez que pagas, recibes una licencia perpetua, mundial y libre de regalías para usar el video y la canción para lo que quieras: tu anuncio, tu web, redes sociales, publicidad, todos los alojamientos que tengas. Sin costos extra, nunca. Puede que muestre el video en mi portafolio, a menos que prefieras que no. Solo dímelo. Todos los detalles están en los <a href="/terms" style="color:var(--accent)">términos</a> (en inglés).</p>
+          <div class="paycallout">
+          <h3>Cómo se paga</h3>
+          <p>Cuando dices que sí, te mando una factura por correo. Pagas con cripto (USDC en Base o USDT en Arbitrum) o por Western Union. Las 48 horas empiezan cuando me llega tu pago, y te escribo en cuanto llegue. El pago con tarjeta llegará más adelante.</p>
+          <p style="margin:.6rem 0 0"><img src="/img/western-union.svg" alt="Western Union" height="28" style="background:#fff;border-radius:6px;padding:6px 10px;vertical-align:middle"></p>
+          <p class="small">¿Es tu primera vez con cripto? La mayoría de los anfitriones compra USDC en minutos con Coinbase, Kraken o algo parecido, y con gusto te explico paso a paso. Solo pagas después de ver tu video y decir que sí.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="contact">
+      <div class="wrap">
+        <h2 class="section-title">Escríbeme</h2>
+        <p class="section-sub">Mándame el enlace de tu anuncio o unas líneas. Lo leo todo yo mismo, sin CRM ni respuestas automáticas.</p>
+        <div class="contact-grid">
+          <form class="contact-form" name="contact" method="POST" action="https://formsubmit.co/f5238593f0f1a282c7691b9fc4166437" id="contact-form">
+            <input type="hidden" name="_subject" value="Elevated Listing — site contact (ES)" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_next" value="https://elevatedlisting.co/es/#contact?sent=1" />
+            <p class="hp" aria-hidden="true">
+              <label>No rellenes esto: <input name="_honey" tabindex="-1" autocomplete="off" /></label>
+            </p>
+            <h3>Escríbele a Luis</h3>
+            <p class="hint">Videos, licencias o un lugar que te despertó algo.</p>
+            <div class="fields">
+              <div class="field">
+                <label for="c-name">Nombre</label>
+                <input id="c-name" name="name" type="text" autocomplete="name" required />
+              </div>
+              <div class="field">
+                <label for="c-email">Correo</label>
+                <input id="c-email" name="email" type="email" autocomplete="email" required />
+              </div>
+              <div class="field">
+                <label for="c-listing">Enlace del anuncio</label>
+                <input id="c-listing" name="listing_url" type="url" placeholder="https://www.airbnb.com/rooms/…" />
+              </div>
+                                          <div class="field">
+                <label>Por qué escribes</label>
+                <div class="checks">
+                  <label class="check">
+                    <input type="checkbox" name="reason" value="want-film" />
+                    <span>Quiero un video</span>
+                  </label>
+                  <label class="check">
+                    <input type="checkbox" name="reason" value="question" />
+                    <span>Tengo una pregunta</span>
+                  </label>
+                  <label class="check">
+                    <input type="checkbox" name="reason" value="discuss-project" />
+                    <span>Quiero hablar de un proyecto</span>
+                  </label>
+                </div>
+              </div>
+              <div class="field">
+                <label for="c-song">Si mi alojamiento fuera una canción, sería <span style="color:var(--mute);font-weight:300;text-transform:none;letter-spacing:0">(opcional)</span></label>
+                <input id="c-song" name="listing_as_song" type="text" placeholder="Un dueto lento en una cocina, con la luz bajita…" />
+              </div>
+              <div class="field">
+                <label for="c-message">Mensaje</label>
+                <textarea id="c-message" name="message" required placeholder="¿Cómo es tu alojamiento y qué quieres que sienta el huésped?"></textarea>
+              </div>
+              <button class="btn" type="submit">Enviar mensaje</button>
+              <p class="note">Llega a la bandeja de entrada de Elevated Listing. O escribe a <a href="mailto:luis@elevatedlisting.co" style="color:var(--accent)">luis@elevatedlisting.co</a>.</p>
+            </div>
+            <p class="thanks">¡Recibido! Te respondo desde luis@elevatedlisting.co.</p>
+          </form>
+          <div class="card" style="align-self:start">
+            <h3>Lo que ayuda</h3>
+            <p style="margin:0 0 .75rem">El enlace público de tu anuncio, una línea sobre el ambiente y si ya tienes un borrador mío.</p>
+            <p style="margin:0;color:var(--mute);font-weight:300">Un video, $249, solo si te encanta. <a href="#packages" style="color:var(--accent)">Mira lo que incluye</a>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap contact">
+        <div>
+          <h2 class="section-title">Luis from Sweden</h2>
+          <p class="section-sub" style="margin-bottom:1rem">
+            Cineasta y compositor. Elevated Listing es donde llevo ese oficio a lugares con carácter. Nada de mensajes en masa, nada de plantillas seguras. Si tu alojamiento tiene alma, quiero que el video abra una puerta en la cabeza de alguien y deje el resto en sus manos.
+          </p>
+          <div class="link-row">
+            <a href="https://www.youtube.com/@LuisfromSweden" target="_blank" rel="noopener">YouTube @LuisfromSweden</a>
+            <a href="https://www.instagram.com/luisfromsweden/" target="_blank" rel="noopener">Instagram @luisfromsweden</a>
+            <a href="mailto:luis@elevatedlisting.co">luis@elevatedlisting.co</a>
+          </div>
+        </div>
+        <div class="about-side">
+          <figure class="about-photo">
+            <img src="../assets/luis-from-sweden-patch.jpg" alt="Luis from Sweden, firma en un parche de cuero" />
+            <figcaption>Luis from Sweden</figcaption>
+          </figure>
+          <div class="card path-card">
+            <h3>Así de simple</h3>
+            <p style="margin-bottom:.75rem">1. Te llega un video mío, o tú me mandas un anuncio que te despertó algo.</p>
+            <p style="margin-bottom:.75rem">2. Hablamos como personas normales. Comentarios, si quieres.</p>
+            <p style="margin:0">3. Lo compras cuando te parezca bien. El video y la canción son tuyos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap row">
+      <div>© <span id="y"></span> Elevated Listing · Luis from Sweden</div>
+      <div class="legal-links">
+        <a href="/terms" hreflang="en">Términos</a>
+        <span class="sep">·</span>
+        <a href="/privacy" hreflang="en">Privacidad</a>
+        <span class="sep">·</span>
+        <a href="/refund" hreflang="en">Reembolsos</a>
+      </div>
+    </div>
+  </footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+
+<script>
+    (function () {
+      function mount(media) {
+        if (media.classList.contains('is-playing')) return;
+        var id = media.getAttribute('data-yt');
+        if (!id) return;
+        var src = 'https://www.youtube-nocookie.com/embed/' + id
+          + '?autoplay=1&rel=0&modestbranding=1&playsinline=1&color=white';
+        var iframe = document.createElement('iframe');
+        iframe.src = src;
+        iframe.title = 'YouTube player';
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+        iframe.allowFullscreen = true;
+        iframe.setAttribute('loading', 'eager');
+        media.classList.add('is-playing');
+        media.innerHTML = '';
+        media.appendChild(iframe);
+      }
+      document.querySelectorAll('.work-media[data-yt]').forEach(function (media) {
+        var btn = media.querySelector('.yt-facade');
+        if (!btn) return;
+        btn.addEventListener('click', function () { mount(media); });
+      });
+    })();
+  </script>
+
+
+  
+  <script>
+    (function () {
+      var form = document.getElementById('contact-form');
+      if (!form) return;
+      if ((window.location.search + window.location.hash).indexOf('sent=1') !== -1) {
+        form.classList.add('is-sent');
+        if (window.history && history.replaceState) {
+          history.replaceState(null, '', '#contact');
+        }
+        return;
+      }
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (form.querySelector('[name=_honey]').value) return;
+        var btn = form.querySelector('[type=submit]');
+        if (btn) { btn.disabled = true; btn.dataset.t = btn.textContent; btn.textContent = 'Enviando…'; }
+        var fd = new FormData(form);
+        var reasons = fd.getAll('reason').join(', ');
+        function fallback() {
+          var lines = [];
+          fd.forEach(function (v, k) { if (k.charAt(0) !== '_') lines.push(k + ': ' + v); });
+          window.location.href = 'mailto:luis@elevatedlisting.co?subject=' + encodeURIComponent('Elevated Listing — site contact') + '&body=' + encodeURIComponent(lines.join('\n'));
+          if (btn) { btn.disabled = false; btn.textContent = btn.dataset.t; }
+        }
+        var data = {}; fd.forEach(function (v, k) { data[k] = v; }); if (reasons) data.reason = reasons;
+        fetch('https://formsubmit.co/ajax/f5238593f0f1a282c7691b9fc4166437', {
+          method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(data)
+        }).then(function (r) { return r.json(); }).then(function (j) {
+          if (j && (j.success === true || j.success === 'true')) { form.classList.add('is-sent'); form.reset(); if (btn) btn.textContent = '¡Enviado, gracias!'; }
+          else fallback();
+        }).catch(fallback);
+      });
+    })();
+  </script>
+
+<script>
+  document.querySelectorAll('.book').forEach(function(b){b.addEventListener('click',function(e){e.preventDefault();var m=document.getElementById('c-message');if(m){m.value=b.dataset.msg;}var r=document.querySelector('#contact-form [name=reason][value="want-film"]');if(r)r.checked=true;var f=document.getElementById('contact');if(f)f.scrollIntoView({behavior:'smooth'});setTimeout(function(){m&&m.focus({preventScroll:true})},500);});});
+  </script>
+
+<script>
+(function(){
+  var lb=document.getElementById('flb'),box=lb.querySelector('.flb-box'),last;
+  function close(){box.innerHTML='';lb.hidden=true;if(last)last.focus();}
+  document.querySelectorAll('.fcard').forEach(function(b){b.addEventListener('click',function(){
+    last=b;var f=document.createElement('iframe');
+    f.src='https://www.youtube-nocookie.com/embed/'+b.dataset.yt+'?autoplay=1&rel=0&playsinline=1';
+    f.title=b.getAttribute('aria-label');f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.allowFullscreen=true;
+    box.innerHTML='';box.appendChild(f);lb.hidden=false;lb.querySelector('.flb-x').focus();});});
+  lb.addEventListener('click',function(e){if(e.target===lb||e.target.classList.contains('flb-x'))close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!lb.hidden)close();});
+  var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var steps=document.querySelectorAll('.reveal');
+  if(rm||!('IntersectionObserver' in window)){steps.forEach(function(s){s.classList.add('on')});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}})},{threshold:.2});
+  steps.forEach(function(s){io.observe(s)});
+  var wrap=document.querySelector('.jwrap'),path=document.querySelector('.jthread path');
+  function draw(){var r=wrap.getBoundingClientRect(),v=innerHeight;var p=Math.min(1,Math.max(0,(v*.8-r.top)/r.height));path.style.setProperty('--draw',1-p);}
+  draw();addEventListener('scroll',draw,{passive:true});addEventListener('resize',draw);
+})();
+</script>
+<script>
+document.addEventListener('click',function(e){document.querySelectorAll('.lang-sm[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open');});});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')document.querySelectorAll('.lang-sm[open]').forEach(function(d){d.removeAttribute('open');d.querySelector('summary').focus();});});
+</script>
+</body>
+</html>
