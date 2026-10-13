@@ -404,9 +404,6 @@
     .paycallout p { color:var(--ink); }
     .avail { color:var(--accent); font-weight:500; letter-spacing:.02em; margin:.25rem 0 0; }
     .paynote .small { font-size:.9rem; margin:.75rem 0 0; }
-    .addr { display:flex; gap:.5rem; align-items:center; flex-wrap:wrap; }
-    .addr code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size:.85rem; background:var(--bg); border:1px solid var(--line); border-radius:10px; padding:.6rem .8rem; word-break:break-all; color:var(--ink); flex:1; min-width:0; }
-    .addr button { font:inherit; cursor:pointer; background:transparent; color:var(--accent); border:1px solid var(--accent); border-radius:999px; padding:.5rem 1rem; }
     @media (max-width: 800px) { .tiers { grid-template-columns:1fr; } }
     .work-media.hero-film { aspect-ratio: 16 / 9; max-height: none; border-radius: var(--radius); border:1px solid var(--line); margin: .5rem 0 1.75rem; box-shadow: 0 30px 80px rgba(0,0,0,.45), 0 0 60px var(--glow); }
     .work-media.hero-film .yt-play { width: 4.6rem; height: 4.6rem; margin: -2.3rem 0 0 -2.3rem; }
@@ -936,7 +933,6 @@
           <h3>How payment works</h3>
           <p>After you say yes, I email you an invoice. You pay by crypto (USDC on Base or USDT on Arbitrum) or by Western Union. The 48 hours start when your payment reaches me, and I’ll email you when it does. Card payment is coming later.</p>
           <p style="margin:.6rem 0 0"><img src="/img/western-union.svg" alt="Western Union" height="28" style="background:#fff;border-radius:6px;padding:6px 10px;vertical-align:middle"></p>
-          <div class="addr"><code id="pay-addr">0xDC056F7a17797D7CD7B6D1c3DFeb2d898a88BDC4</code><button type="button" id="copy-addr">Copy</button></div>
           <p class="small">New to crypto? Most hosts buy USDC in minutes via Coinbase, Kraken or similar, and I'm happy to walk you through it. You only pay after you’ve seen your film and said yes.</p>
           </div>
         </div>
@@ -1121,7 +1117,6 @@
 
 <script>
   document.querySelectorAll('.book').forEach(function(b){b.addEventListener('click',function(e){e.preventDefault();var m=document.getElementById('c-message');if(m){m.value=b.dataset.msg;}var r=document.querySelector('#contact-form [name=reason][value="want-film"]');if(r)r.checked=true;var f=document.getElementById('contact');if(f)f.scrollIntoView({behavior:'smooth'});setTimeout(function(){m&&m.focus({preventScroll:true})},500);});});
-  (function(){var c=document.getElementById('copy-addr');if(!c)return;c.addEventListener('click',function(){var t=document.getElementById('pay-addr').textContent;var done=function(){c.textContent='Copied';setTimeout(function(){c.textContent='Copy'},2000)};if(navigator.clipboard){navigator.clipboard.writeText(t).then(done)}else{var r=document.createRange();r.selectNode(document.getElementById('pay-addr'));getSelection().removeAllRanges();getSelection().addRange(r);document.execCommand('copy');done()}});})();
   </script>
 
 <script>
