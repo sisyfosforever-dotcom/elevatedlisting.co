@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>How to pay · Elevated Listing</title>
+  <meta name="description" content="How to pay for your Elevated Listing song film. $249, one payment." />
+  <meta name="robots" content="noindex" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root{--bg:#0f1210;--bg-soft:#171c18;--card:#1c231e;--ink:#f3efe6;--mute:#a8b0a6;--line:rgba(243,239,230,.12);--accent:#c4a574;--accent-2:#7d9b84;--radius:18px;--max:760px}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:Outfit,system-ui,sans-serif;font-size:1.25rem;line-height:1.6;-webkit-font-smoothing:antialiased}
+    a{color:var(--accent)}
+    .wrap{max-width:var(--max);margin:0 auto;padding:1.25rem 1.25rem 4rem}
+    .back{display:inline-flex;align-items:center;gap:.5rem;min-height:56px;padding:.75rem 1.4rem;border:2px solid var(--line);border-radius:999px;color:var(--ink);text-decoration:none;font-size:1.15rem;font-weight:500}
+    .back:hover,.back:focus{border-color:var(--accent);color:var(--accent)}
+    h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:500;line-height:1.2}
+    h1{font-size:clamp(2.2rem,6vw,3.2rem);margin:1.75rem 0 .5rem}
+    .lead{color:var(--mute);font-size:1.3rem;margin:0 0 1.5rem}
+    .price{font-family:Fraunces,Georgia,serif;font-size:2.4rem;color:var(--accent);margin:0}
+    .price small{font-family:Outfit,sans-serif;font-size:1.1rem;color:var(--mute)}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1.5rem;margin:1.5rem 0}
+    .card h2{font-size:clamp(1.6rem,4.5vw,2rem);margin:.25rem 0 .75rem;display:flex;flex-wrap:wrap;align-items:center;gap:.75rem}
+    .num{display:inline-flex;align-items:center;justify-content:center;width:2.4rem;height:2.4rem;border-radius:50%;background:var(--accent);color:#1a1712;font-family:Outfit,sans-serif;font-weight:600;font-size:1.2rem;flex:none}
+    .tag{font-family:Outfit,sans-serif;font-size:1rem;color:var(--accent-2);font-weight:500}
+    .badge{display:inline-flex;align-items:center;justify-content:center;vertical-align:middle;background:#fff;border-radius:10px;padding:10px 14px;line-height:0;box-sizing:border-box;height:calc(1.1rem*1.3 + .7rem + 8px);min-height:46px}
+    .badge img{display:block;height:26px;width:auto;max-width:100%;object-fit:contain}
+    .tbadge{display:inline-block;background:#fff;color:#003087;font-family:Outfit,sans-serif;font-weight:600;font-size:1.1rem;border-radius:8px;padding:.35rem .8rem;line-height:1.3}
+    ol.steps{padding-left:0;list-style:none;counter-reset:s;margin:1rem 0}
+    ol.steps li{counter-increment:s;position:relative;padding:.9rem 0 .9rem 3.2rem;border-top:1px solid var(--line)}
+    ol.steps li::before{content:counter(s);position:absolute;left:0;top:.9rem;width:2.2rem;height:2.2rem;border-radius:50%;border:2px solid var(--accent);color:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:600}
+    .field{display:block;font-size:1rem;color:var(--mute);margin-top:.4rem}
+    .val{display:inline-block;font-weight:600;color:var(--ink);word-break:break-all}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:60px;padding:.9rem 1.6rem;border-radius:14px;border:0;background:var(--accent);color:#1a1712;font-family:Outfit,sans-serif;font-size:1.25rem;font-weight:600;text-decoration:none;cursor:pointer;width:100%;max-width:420px}
+    .btn:hover,.btn:focus{filter:brightness(1.08)}
+    .btn.ghost{background:transparent;color:var(--ink);border:2px solid var(--accent)}
+    .copyrow{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;margin:.4rem 0}
+    .copy{min-height:48px;padding:.5rem 1.1rem;border-radius:12px;border:2px solid var(--accent);background:transparent;color:var(--accent);font:600 1.05rem Outfit,sans-serif;cursor:pointer}
+    .copy.done{background:var(--accent-2);border-color:var(--accent-2);color:#0f1210}
+    code.addr{display:block;background:var(--bg-soft);border:1px solid var(--line);border-radius:12px;padding:.9rem 1rem;font-size:1.05rem;word-break:break-all;color:var(--ink);width:100%}
+    .qr{background:#fff;border-radius:14px;padding:12px;width:220px;max-width:100%;display:block;margin:1rem 0}
+    .note{color:var(--mute);font-size:1.1rem}
+    .calm{border-color:rgba(125,155,132,.45)}
+    .calm ul{padding-left:1.2rem;margin:.5rem 0}
+    .calm li{margin:.4rem 0}
+    footer{color:var(--mute);font-size:1rem;text-align:center;margin-top:2rem}
+    @media (min-width:768px){body{font-size:1.3rem}.wrap{padding:2rem 2rem 5rem}.card{padding:2rem 2.25rem}.crypto-grid{display:grid;grid-template-columns:240px 1fr;gap:1.5rem;align-items:start}}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <a class="back" href="/">&larr; Back to the homepage</a>
+
+    <h1>How to pay</h1>
+    <p class="price">$249 <small>one payment, nothing more later</small></p>
+    <p class="lead">Take your time. Pick the way that feels easiest for you. If anything is unclear, just email me and I will help.</p>
+
+    <section class="card calm" aria-label="Before you pay">
+      <h2>Good to know</h2>
+      <ul>
+        <li>You see a <strong>free preview</strong> first. You only pay if you like it.</li>
+        <li>Your finished film arrives <strong>within 48 hours</strong> after your payment reaches me.</li>
+        <li>Questions? Email <a href="mailto:luis@elevatedlisting.co">luis@elevatedlisting.co</a></li>
+        <li>Read the <a href="/terms">terms</a> and the <a href="/refund">refund policy</a>.</li>
+      </ul>
+    </section>
+
+    <!-- PayPal: hidden until PAYPAL_URL (in the script at the bottom) is set -->
+    <section class="card" id="pay-paypal" hidden>
+      <h2><span class="num">1</span> Pay by card or PayPal <span class="tag">Easiest</span></h2>
+      <p><span class="tbadge">PayPal</span></p>
+      <p>Press the button below. A secure PayPal page opens. You can pay with a normal bank card. You do not need a PayPal account.</p>
+      <p><a class="btn" id="paypal-link" href="#">Pay $249 by card or PayPal</a></p>
+    </section>
+
+    <section class="card" id="pay-wu">
+      <h2><span class="num" data-n>2</span> Western Union</h2>
+      <p><span class="badge"><img src="/img/western-union.svg" alt="Western Union" width="117" height="26"></span></p>
+      <p>You can do this on the Western Union website, or at any Western Union shop.</p>
+      <ol class="steps">
+        <li>Go to <a href="https://www.westernunion.com" target="_self">westernunion.com</a>.</li>
+        <li>Choose to send <span class="val">$249</span> to <span class="val">Vietnam</span>, for <span class="val">cash pickup</span>.</li>
+        <li>Receiver name:
+          <div class="copyrow"><span class="val">Mats Ludvig Lindberg</span> <button class="copy" type="button" data-copy="Mats Ludvig Lindberg">Copy</button></div>
+          <span class="field">Write the name exactly like this.</span></li>
+        <li>Receiver email:
+          <div class="copyrow"><span class="val">luisfromsweden@gmail.com</span> <button class="copy" type="button" data-copy="luisfromsweden@gmail.com">Copy</button></div></li>
+        <li>When you have paid, you get a tracking number called the <strong>MTCN</strong>. Reply to my email and send me that number. That is all.</li>
+      </ol>
+      <p><a class="btn ghost" href="https://www.westernunion.com" target="_self">Go to westernunion.com</a></p>
+    </section>
+
+    <section class="card" id="pay-crypto">
+      <h2><span class="num" data-n>3</span> Crypto</h2>
+      <p>Send <span class="val">$249</span> in <span class="val">USDC on Base</span> or <span class="val">USDT on Arbitrum</span> to this address. Please use only these two options.</p>
+      <div class="crypto-grid">
+        <img class="qr" src="/img/pay-wallet-qr.svg" alt="QR code of the wallet address" width="220" height="220">
+        <div>
+          <code class="addr" id="wallet">0xDC056F7a17797D7CD7B6D1c3DFeb2d898a88BDC4</code>
+          <div class="copyrow"><button class="copy" type="button" data-copy="0xDC056F7a17797D7CD7B6D1c3DFeb2d898a88BDC4">Copy address</button></div>
+          <p class="note">New to crypto? Most people buy USDC in a few minutes on Coinbase, Kraken or similar. I am happy to walk you through it. After you send, reply to my email so I can confirm.</p>
+        </div>
+      </div>
+    </section>
+
+    <p style="text-align:center;margin-top:2rem"><a class="back" href="/">&larr; Back to the homepage</a></p>
+    <footer>Elevated Listing · <a href="mailto:luis@elevatedlisting.co">luis@elevatedlisting.co</a> · <a href="/terms">Terms</a></footer>
+  </main>
+  <script>
+    /* Set this to your PayPal payment link to show the PayPal option. Empty = hidden. */
+    var PAYPAL_URL = "";
+
+    if (PAYPAL_URL) {
+      document.getElementById('paypal-link').href = PAYPAL_URL;
+      document.getElementById('pay-paypal').hidden = false;
+    } else {
+      document.querySelectorAll('[data-n]').forEach(function (el) { el.textContent = Number(el.textContent) - 1; });
+    }
+    document.querySelectorAll('.copy').forEach(function (b) {
+      var label = b.textContent;
+      b.addEventListener('click', function () {
+        var t = b.getAttribute('data-copy');
+        var ok = function () { b.textContent = 'Copied ✓'; b.classList.add('done'); setTimeout(function () { b.textContent = label; b.classList.remove('done'); }, 2500); };
+        if (navigator.clipboard) navigator.clipboard.writeText(t).then(ok, function () { prompt('Copy this:', t); });
+        else prompt('Copy this:', t);
+      });
+    });
+  </script>
+</body>
+</html>
