@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Användarvillkor — Elevated Listing</title>
+  <link rel="canonical" href="https://elevatedlisting.co/sv/terms" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="description" content="Villkor för Elevated Listing: en film och en låt, $249, gratis förhandsvisning först." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0f1210;
+      --bg-soft: #171c18;
+      --card: #1c231e;
+      --ink: #f3efe6;
+      --mute: #a8b0a6;
+      --line: rgba(243,239,230,.12);
+      --accent: #c4a574;
+      --accent-2: #7d9b84;
+      --glow: rgba(196,165,116,.18);
+      --radius: 18px;
+      --max: 1080px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Outfit, system-ui, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(1200px 600px at 10% -10%, var(--glow), transparent 55%),
+        radial-gradient(900px 500px at 90% 0%, rgba(125,155,132,.12), transparent 50%),
+        var(--bg);
+      line-height: 1.55;
+      font-weight: 400;
+      letter-spacing: .01em;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    a { color: inherit; }
+    .wrap { width: min(var(--max), calc(100% - 2.5rem)); margin: 0 auto; }
+    header {
+      position: sticky; top: 0; z-index: 20;
+      backdrop-filter: blur(14px);
+      background: rgba(15,18,16,.72);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 0; gap: 1rem;
+    }
+    .logo {
+      font-family: Fraunces, Georgia, serif;
+      font-weight: 600; font-size: 1.15rem;
+      letter-spacing: .02em; text-decoration: none;
+    }
+    .logo span { color: var(--accent); font-weight: 500; }
+    .nav-links { display: flex; gap: 1.25rem; align-items: center; font-size: .92rem; color: var(--mute); }
+    .nav-links a { text-decoration: none; }
+    .nav-links a:hover { color: var(--ink); }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      gap: .5rem; text-decoration: none;
+      background: linear-gradient(135deg, #d4b484, var(--accent));
+      color: #1a140c; font-weight: 600; font-size: .92rem;
+      padding: .75rem 1.15rem; border-radius: 999px;
+      border: none; cursor: pointer;
+      box-shadow: 0 8px 28px rgba(196,165,116,.25);
+    }
+    .btn:hover { filter: brightness(1.05); }
+    main { flex: 1; }
+    .legal { padding: 3.25rem 0 4rem; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: .5rem;
+      color: var(--accent-2); font-size: .8rem; font-weight: 500;
+      text-transform: uppercase; letter-spacing: .14em; margin-bottom: 1rem;
+    }
+    .legal h1 {
+      font-family: Fraunces, Georgia, serif;
+      font-weight: 600; font-size: clamp(1.9rem, 4vw, 2.6rem);
+      line-height: 1.12; margin: 0 0 .75rem;
+      letter-spacing: -.02em;
+    }
+    .legal .updated { color: var(--mute); font-size: .9rem; margin: 0 0 2rem; font-weight: 300; }
+    .legal-card {
+      background: linear-gradient(180deg, rgba(255,255,255,.03), transparent), var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.75rem 1.6rem 1.9rem;
+      max-width: 42rem;
+    }
+    .legal-card h2 {
+      font-family: Fraunces, Georgia, serif;
+      font-size: 1.2rem; font-weight: 600;
+      margin: 1.6rem 0 .55rem;
+    }
+    .legal-card h2:first-child { margin-top: 0; }
+    .legal-card p, .legal-card li {
+      margin: 0 0 .85rem; color: var(--mute); font-size: .98rem; font-weight: 300;
+    }
+    .legal-card ul { margin: 0 0 1rem; padding-left: 1.2rem; }
+    .legal-card a { color: var(--accent); text-decoration: none; }
+    .legal-card a:hover { text-decoration: underline; }
+    .legal-card strong { color: var(--ink); font-weight: 500; }
+    footer {
+      border-top: 1px solid var(--line); padding: 2rem 0 2.5rem;
+      color: var(--mute); font-size: .85rem;
+    }
+    footer .row { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; align-items: center; }
+    footer .legal-links { display: flex; gap: .85rem; flex-wrap: wrap; }
+    footer .legal-links a { color: var(--mute); text-decoration: none; }
+    footer .legal-links a:hover { color: var(--ink); }
+    footer .legal-links .sep { color: var(--line); }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="logo" href="/sv/">Elevated <span>Listing</span></a>
+      <nav class="nav-links">
+        <a href="/#packages">Price</a>
+        <a href="/#contact">Contact</a>
+        <a class="btn" href="/#contact">Get in touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="legal">
+      <div class="wrap">
+        <div class="eyebrow">Juridiskt</div>
+        <h1>Användarvillkor</h1>
+        <p class="updated">Senast uppdaterad: 14 oktober 2026</p>
+        <div class="legal-card">
+          <h2>Vem vi är</h2>
+          <p>Elevated Listing drivs av Luis Lindberg, enskild näringsidkare (känd som Luis från Sverige). Kontakt: <a href="mailto:luis@elevatedlisting.co">luis@elevatedlisting.co</a>.</p>
+
+          <h2>Vad du får</h2>
+          <p>En film för ett boende, $249, betalt en gång. Ingen prenumeration. Du får:</p>
+          <ul>
+            <li>den färdiga filmen i full HD, liggande 16:9, utan vattenstämpel;</li>
+            <li>en stående 9:16-version för Reels, Stories och Shorts;</li>
+            <li>originallåten skriven om ditt boende, som ljudfil.</li>
+          </ul>
+
+          <h2>Gratis förhandsvisning först</h2>
+          <p>Innan du betalar något skickar jag ett utkast av filmen, med vattenstämpel, utan kostnad. Du betalar bara om du vill ha filmen. Vill du inte det kostar det ingenting, och utkastet används inte kommersiellt för ditt boende.</p>
+
+          <h2>Leverans: 48 timmar</h2>
+          <p>Leveransen sker digitalt, via länk i mejl, inom 48 timmar från att din betalning har tagits emot och bekräftats. De 48 timmarna räknas i kalenderdagar, helger inräknade. Klockan startar när betalningen har kommit fram (krypto i min plånbok, eller en Western Union-överföring redo att hämtas) och jag har bekräftat det till dig via mejl.</p>
+
+          <h2>Ändringar</h2>
+          <p>En runda mindre ändringar ingår: en lista med ändringar i ett mejl, till exempel tajming, ordning eller val av bilder, eller text i bild. Nya koncept, en ny låt eller fler rundor ingår inte, men kan avtalas separat.</p>
+
+          <h2>Licens</h2>
+          <p>När du har betalat får du använda filmen och låten för att marknadsföra ditt boende: i dina annonser, på din hemsida, i sociala medier och i reklam, i hela världen, utan extra avgifter och utan tidsgräns. Luis behåller upphovsrätten och får visa filmen i sin portfolio, om du inte avböjer via mejl. Omnämnande uppskattas men krävs inte.</p>
+
+          <h2>Inga garantier för ranking eller bokningar</h2>
+          <p>En bra film kan sätta igång fantasin. Den garanterar <strong>inte</strong> ranking, placering i sökresultat, bokningar, intäkter eller omdömen.</p>
+
+          <h2>Betalning och återbetalning</h2>
+          <p>En betalning på $249, ingen prenumeration. Betalning sker endast med krypto (USDC på Base eller USDT på Arbitrum) eller Western Union. Jag skickar en faktura via mejl när du har sagt ja. Kortbetalning finns inte ännu. Återbetalningar beskrivs i <a href="/sv/refund">återbetalningspolicyn</a>.</p>
+
+          <h2>Konsumenter inom EU</h2>
+          <p>Filmen är digitalt innehåll. Leveransen påbörjas när du har sagt ja och betalat, och du godkänner att din ångerrätt upphör vid leverans.</p>
+
+          <h2>Schysst användning av sajten</h2>
+          <p>Missbruka inte kontaktformuläret, skrapa inte sajten på ett otillbörligt sätt och försök inte störa tjänsten. Vi kan tacka nej till eller pausa ett uppdrag om samarbetet inte fungerar.</p>
+
+          <h2>Lag och kontakt</h2>
+          <p>Dessa villkor regleras av svensk lag. Frågor: <a href="mailto:luis@elevatedlisting.co">luis@elevatedlisting.co</a>. Se även: <a href="/privacy" hreflang="en">Integritet</a> · <a href="/sv/refund">Återbetalning</a>.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap row">
+      <div>© <span id="y"></span> Elevated Listing · Luis from Sweden</div>
+      <div class="legal-links">
+        <a href="/sv/terms">Villkor</a>
+        <span class="sep">·</span>
+        <a href="/privacy" hreflang="en">Integritet</a>
+        <span class="sep">·</span>
+        <a href="/sv/refund">Återbetalning</a>
+      </div>
+    </div>
+  </footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+</body>
+</html>

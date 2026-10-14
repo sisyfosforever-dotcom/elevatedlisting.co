@@ -423,6 +423,12 @@
     @media (max-width: 800px) { .tiers { grid-template-columns:1fr; } }
     .work-media.hero-film { aspect-ratio: 16 / 9; max-height: none; border-radius: var(--radius); border:1px solid var(--line); margin: .5rem 0 1.75rem; box-shadow: 0 30px 80px rgba(0,0,0,.45), 0 0 60px var(--glow); }
     .work-media.hero-film .yt-play { width: 4.6rem; height: 4.6rem; margin: -2.3rem 0 0 -2.3rem; }
+    .hero-benefits { list-style:none; margin:.25rem 0 1rem; padding:0; display:grid; gap:.35rem; }
+    .hero-benefits li { position:relative; padding-left:1.1rem; font-weight:300; color:var(--ink); }
+    .hero-benefits li::before { content:""; position:absolute; left:0; top:.65em; width:.4rem; height:1px; background:var(--accent); }
+    .hero-offer { margin:0 0 .75rem; font-weight:300; color:var(--mute); }
+    .hero-offer strong { color:var(--ink); font-weight:500; }
+    .films-real { margin:-.5rem 0 1.25rem; font-size:.92rem; font-weight:300; color:var(--mute); }
     .pkg-cue { grid-column:1/-1; margin:.25rem 0 0; font-size:.95rem; font-weight:300; }
     .pkg-cue a { color:var(--mute); text-decoration:none; border-bottom:1px solid var(--line); }
     .pkg-cue a:hover { color:var(--accent); }
@@ -568,10 +574,16 @@
       <div class="wrap">
         <div class="eyebrow">Por Luis, desde Suecia · Videos y canciones originales</div>
         <h1>Tu casa, en pleno feed.</h1>
-        <p class="hero-lead" style="color:var(--ink);font-weight:400">Convierto tu alojamiento en un cortometraje con canción propia. Primero ves el video terminado. Si te encanta, es tuyo por $249.</p>
+        <ul class="hero-benefits">
+          <li>Las fotos reales de tu alojamiento, convertidas en un video de cine</li>
+          <li>Una canción original, escrita sobre tu alojamiento</li>
+          <li>Versiones horizontal y vertical, listas para tus anuncios y redes sociales</li>
+        </ul>
+        <p class="hero-offer"><strong>$249, pago único.</strong> Vista previa gratis primero: ves el video antes de pagar.</p>
         <div class="hero-actions" style="margin-bottom:.5rem">
           <a class="btn book" href="#contact" data-msg="¡Hola, Luis! Me encantaría un video gratis de mi alojamiento. Te paso el enlace de mi anuncio:">Pide tu video gratis</a>
         </div>
+        <p class="hero-lead" style="color:var(--ink);font-weight:400">Convierto tu alojamiento en un cortometraje con canción propia. Primero ves el video terminado. Si te encanta, es tuyo por $249.</p>
         <p class="hero-lead" style="font-size:.95rem;margin-bottom:1.75rem">Mándame el enlace de tu anuncio. Si no te encanta, no pagas nada.</p>
         <p class="hero-lead">Para Airbnb, VRBO y cualquier alquiler vacacional o de temporada corta, desde Marfa y el Hill Country de Texas hasta un sótano en Toronto.</p>
         <div class="work-media hero-film" data-yt="FLXkCJTmrgQ">
@@ -830,6 +842,7 @@
       <div class="wrap">
         <h2 class="section-title">Videos para lugares que me enamoraron</h2>
         <p class="section-sub">Nadie me los pidió; los hice igual. Cada uno parte de las fotos del anuncio y de una canción escrita para ese lugar. Toca una imagen para verlo.</p>
+        <p class="films-real">Estos videos usan solo las fotos reales de cada alojamiento. Agrego movimiento, ritmo y música, nunca comodidades inventadas.</p>
         <ul class="fgrid">
           <li><button class="fcard" type="button" data-yt="A4msgpOs3TA" aria-label="Reproducir Too Much Mirror – Notestone Reserve, Hocking Hills, Ohio">
             <span class="fthumb"><img src="https://img.youtube.com/vi/A4msgpOs3TA/hqdefault.jpg" alt="" loading="lazy" decoding="async" width="480" height="360"><span class="fplay" aria-hidden="true"></span></span>
@@ -1033,8 +1046,8 @@
             <p class="hint">Videos, licencias o un lugar que te inspiró.</p>
             <div class="fields">
               <div class="field">
-                <label for="c-name">Nombre</label>
-                <input id="c-name" name="name" type="text" autocomplete="name" required />
+                <label for="c-name">Nombre <span style="color:var(--mute);font-weight:300;text-transform:none;letter-spacing:0">(opcional)</span></label>
+                <input id="c-name" name="name" type="text" autocomplete="name" />
               </div>
               <div class="field">
                 <label for="c-email">Correo</label>
@@ -1042,7 +1055,7 @@
               </div>
               <div class="field">
                 <label for="c-listing">Enlace del anuncio</label>
-                <input id="c-listing" name="listing_url" type="url" placeholder="https://www.airbnb.com/rooms/…" />
+                <input id="c-listing" name="listing_url" type="url" required placeholder="https://www.airbnb.com/rooms/…" />
               </div>
                                           <div class="field">
                 <label>¿Por qué escribes?</label>
@@ -1066,8 +1079,8 @@
                 <input id="c-song" name="listing_as_song" type="text" placeholder="Un dueto lento en la cocina, con la luz bajita…" />
               </div>
               <div class="field">
-                <label for="c-message">Mensaje</label>
-                <textarea id="c-message" name="message" required placeholder="¿Cómo es tu lugar y qué quieres que sienta el huésped?"></textarea>
+                <label for="c-message">Mensaje <span style="color:var(--mute);font-weight:300;text-transform:none;letter-spacing:0">(opcional)</span></label>
+                <textarea id="c-message" name="message" placeholder="¿Cómo es tu lugar y qué quieres que sienta el huésped?"></textarea>
               </div>
               <button class="btn" type="submit">Enviar mensaje</button>
               <p class="note">Llega directo a la bandeja de Elevated Listing. O escribe a <a href="mailto:luis@elevatedlisting.co" style="color:var(--accent)">luis@elevatedlisting.co</a>.</p>
@@ -1116,11 +1129,11 @@
     <div class="wrap row">
       <div>© <span id="y"></span> Elevated Listing · Luis from Sweden</div>
       <div class="legal-links">
-        <a href="/terms" hreflang="en">Términos</a>
+        <a href="/es/terms">Términos</a>
         <span class="sep">·</span>
         <a href="/privacy" hreflang="en">Privacidad</a>
         <span class="sep">·</span>
-        <a href="/refund" hreflang="en">Reembolsos</a>
+        <a href="/es/refund">Reembolsos</a>
       </div>
     </div>
   </footer>

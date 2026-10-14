@@ -423,6 +423,12 @@
     @media (max-width: 800px) { .tiers { grid-template-columns:1fr; } }
     .work-media.hero-film { aspect-ratio: 16 / 9; max-height: none; border-radius: var(--radius); border:1px solid var(--line); margin: .5rem 0 1.75rem; box-shadow: 0 30px 80px rgba(0,0,0,.45), 0 0 60px var(--glow); }
     .work-media.hero-film .yt-play { width: 4.6rem; height: 4.6rem; margin: -2.3rem 0 0 -2.3rem; }
+    .hero-benefits { list-style:none; margin:.25rem 0 1rem; padding:0; display:grid; gap:.35rem; }
+    .hero-benefits li { position:relative; padding-left:1.1rem; font-weight:300; color:var(--ink); }
+    .hero-benefits li::before { content:""; position:absolute; left:0; top:.65em; width:.4rem; height:1px; background:var(--accent); }
+    .hero-offer { margin:0 0 .75rem; font-weight:300; color:var(--mute); }
+    .hero-offer strong { color:var(--ink); font-weight:500; }
+    .films-real { margin:-.5rem 0 1.25rem; font-size:.92rem; font-weight:300; color:var(--mute); }
     .pkg-cue { grid-column:1/-1; margin:.25rem 0 0; font-size:.95rem; font-weight:300; }
     .pkg-cue a { color:var(--mute); text-decoration:none; border-bottom:1px solid var(--line); }
     .pkg-cue a:hover { color:var(--accent); }
@@ -568,10 +574,16 @@
       <div class="wrap">
         <div class="eyebrow">Av Luis från Sverige · Filmer och egna låtar</div>
         <h1>Ditt hus, mitt i flödet.</h1>
-        <p class="hero-lead" style="color:var(--ink);font-weight:400">Jag gör en kortfilm av ditt boende, med en alldeles egen låt. Du får se den färdiga filmen först. Faller du för den är den din för $249.</p>
+        <ul class="hero-benefits">
+          <li>Dina riktiga bilder på boendet, gjorda till en filmisk kortfilm</li>
+          <li>En egen låt, skriven om just ditt boende</li>
+          <li>Liggande och stående versioner, klara för annonsen och sociala medier</li>
+        </ul>
+        <p class="hero-offer"><strong>$249, en gång.</strong> Gratis förhandsvisning först: du ser filmen innan du betalar.</p>
         <div class="hero-actions" style="margin-bottom:.5rem">
           <a class="btn book" href="#contact" data-msg="Hej Luis! Jag skulle gärna vilja ha en gratis film om mitt boende. Här är länken till annonsen:">Få en gratis film av ditt ställe</a>
         </div>
+        <p class="hero-lead" style="color:var(--ink);font-weight:400">Jag gör en kortfilm av ditt boende, med en alldeles egen låt. Du får se den färdiga filmen först. Faller du för den är den din för $249.</p>
         <p class="hero-lead" style="font-size:.95rem;margin-bottom:1.75rem">Skicka länken till din annons. Du betalar inget om du inte faller för den.</p>
         <p class="hero-lead">För Airbnb, VRBO och alla sorters korttids- och semesterboenden, från Marfa och Texas Hill Country till en källare i Toronto.</p>
         <div class="work-media hero-film" data-yt="FLXkCJTmrgQ">
@@ -830,6 +842,7 @@
       <div class="wrap">
         <h2 class="section-title">Filmer till ställen jag fastnat för</h2>
         <p class="section-sub">Ingen bad mig om dem, jag gjorde dem ändå. Varje film börjar med annonsens egna bilder och en låt skriven för just det stället. Tryck på en bild för att titta.</p>
+        <p class="films-real">Filmerna bygger bara på boendets riktiga bilder. Jag lägger till rörelse, tempo och musik, aldrig påhittade bekvämligheter.</p>
         <ul class="fgrid">
           <li><button class="fcard" type="button" data-yt="A4msgpOs3TA" aria-label="Spela upp Too Much Mirror – Notestone Reserve, Hocking Hills, Ohio">
             <span class="fthumb"><img src="https://img.youtube.com/vi/A4msgpOs3TA/hqdefault.jpg" alt="" loading="lazy" decoding="async" width="480" height="360"><span class="fplay" aria-hidden="true"></span></span>
@@ -1033,8 +1046,8 @@
             <p class="hint">Filmer, licenser eller ett ställe som väckte något hos dig.</p>
             <div class="fields">
               <div class="field">
-                <label for="c-name">Namn</label>
-                <input id="c-name" name="name" type="text" autocomplete="name" required />
+                <label for="c-name">Namn <span style="color:var(--mute);font-weight:300;text-transform:none;letter-spacing:0">(frivilligt)</span></label>
+                <input id="c-name" name="name" type="text" autocomplete="name" />
               </div>
               <div class="field">
                 <label for="c-email">E-post</label>
@@ -1042,7 +1055,7 @@
               </div>
               <div class="field">
                 <label for="c-listing">Länk till annonsen</label>
-                <input id="c-listing" name="listing_url" type="url" placeholder="https://www.airbnb.com/rooms/…" />
+                <input id="c-listing" name="listing_url" type="url" required placeholder="https://www.airbnb.com/rooms/…" />
               </div>
                                           <div class="field">
                 <label>Varför du hör av dig</label>
@@ -1066,8 +1079,8 @@
                 <input id="c-song" name="listing_as_song" type="text" placeholder="En långsam duett i ett kök, med lamporna nerdimmade…" />
               </div>
               <div class="field">
-                <label for="c-message">Meddelande</label>
-                <textarea id="c-message" name="message" required placeholder="Vad är det för ställe, och vad vill du att gästen ska känna?"></textarea>
+                <label for="c-message">Meddelande <span style="color:var(--mute);font-weight:300;text-transform:none;letter-spacing:0">(frivilligt)</span></label>
+                <textarea id="c-message" name="message" placeholder="Vad är det för ställe, och vad vill du att gästen ska känna?"></textarea>
               </div>
               <button class="btn" type="submit">Skicka</button>
               <p class="note">Hamnar direkt i Elevated Listings inkorg. Eller mejla <a href="mailto:luis@elevatedlisting.co" style="color:var(--accent)">luis@elevatedlisting.co</a>.</p>
@@ -1116,11 +1129,11 @@
     <div class="wrap row">
       <div>© <span id="y"></span> Elevated Listing · Luis from Sweden</div>
       <div class="legal-links">
-        <a href="/terms" hreflang="en">Villkor</a>
+        <a href="/sv/terms">Villkor</a>
         <span class="sep">·</span>
         <a href="/privacy" hreflang="en">Integritet</a>
         <span class="sep">·</span>
-        <a href="/refund" hreflang="en">Återbetalning</a>
+        <a href="/sv/refund">Återbetalning</a>
       </div>
     </div>
   </footer>

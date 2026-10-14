@@ -423,6 +423,12 @@
     @media (max-width: 800px) { .tiers { grid-template-columns:1fr; } }
     .work-media.hero-film { aspect-ratio: 16 / 9; max-height: none; border-radius: var(--radius); border:1px solid var(--line); margin: .5rem 0 1.75rem; box-shadow: 0 30px 80px rgba(0,0,0,.45), 0 0 60px var(--glow); }
     .work-media.hero-film .yt-play { width: 4.6rem; height: 4.6rem; margin: -2.3rem 0 0 -2.3rem; }
+    .hero-benefits { list-style:none; margin:.25rem 0 1rem; padding:0; display:grid; gap:.35rem; }
+    .hero-benefits li { position:relative; padding-left:1.1rem; font-weight:300; color:var(--ink); }
+    .hero-benefits li::before { content:""; position:absolute; left:0; top:.65em; width:.4rem; height:1px; background:var(--accent); }
+    .hero-offer { margin:0 0 .75rem; font-weight:300; color:var(--mute); }
+    .hero-offer strong { color:var(--ink); font-weight:500; }
+    .films-real { margin:-.5rem 0 1.25rem; font-size:.92rem; font-weight:300; color:var(--mute); }
     .pkg-cue { grid-column:1/-1; margin:.25rem 0 0; font-size:.95rem; font-weight:300; }
     .pkg-cue a { color:var(--mute); text-decoration:none; border-bottom:1px solid var(--line); }
     .pkg-cue a:hover { color:var(--accent); }
@@ -568,10 +574,16 @@
       <div class="wrap">
         <div class="eyebrow">Par Luis, depuis la Suède · Films et chansons originales</div>
         <h1>Votre maison, en plein fil d’actu.</h1>
-        <p class="hero-lead" style="color:var(--ink);font-weight:400">Je fais de votre logement un court-métrage, avec sa propre chanson. Vous voyez d’abord le film terminé. Coup de cœur ? Il est à vous pour $249.</p>
+        <ul class="hero-benefits">
+          <li>Les vraies photos de votre logement, transformées en film cinématographique</li>
+          <li>Une chanson originale, écrite sur votre logement</li>
+          <li>Versions horizontale et verticale, prêtes pour vos annonces et les réseaux sociaux</li>
+        </ul>
+        <p class="hero-offer"><strong>$249, paiement unique.</strong> Aperçu gratuit d’abord : vous voyez le film avant de payer.</p>
         <div class="hero-actions" style="margin-bottom:.5rem">
           <a class="btn book" href="#contact" data-msg="Bonjour Luis, j’aimerais bien un film gratuit de mon logement. Voici le lien de mon annonce :">Demandez votre film gratuit</a>
         </div>
+        <p class="hero-lead" style="color:var(--ink);font-weight:400">Je fais de votre logement un court-métrage, avec sa propre chanson. Vous voyez d’abord le film terminé. Coup de cœur ? Il est à vous pour $249.</p>
         <p class="hero-lead" style="font-size:.95rem;margin-bottom:1.75rem">Envoyez-moi le lien de votre annonce. Pas de coup de cœur, pas de paiement.</p>
         <p class="hero-lead">Pour Airbnb, VRBO et toutes les locations saisonnières, de Marfa et du Hill Country texan jusqu’à un sous-sol à Toronto.</p>
         <div class="work-media hero-film" data-yt="FLXkCJTmrgQ">
@@ -830,6 +842,7 @@
       <div class="wrap">
         <h2 class="section-title">Des lieux coups de cœur, en films</h2>
         <p class="section-sub">Personne ne me les a demandés, je les ai faits quand même. Chacun part des photos de l’annonce et d’une chanson écrite pour ce lieu. Touchez une image pour lancer le film.</p>
+        <p class="films-real">Ces films n’utilisent que les vraies photos de chaque logement. J’ajoute le mouvement, le rythme et la musique, jamais d’équipements inventés.</p>
         <ul class="fgrid">
           <li><button class="fcard" type="button" data-yt="A4msgpOs3TA" aria-label="Lire Too Much Mirror – Notestone Reserve, Hocking Hills, Ohio">
             <span class="fthumb"><img src="https://img.youtube.com/vi/A4msgpOs3TA/hqdefault.jpg" alt="" loading="lazy" decoding="async" width="480" height="360"><span class="fplay" aria-hidden="true"></span></span>
@@ -1033,8 +1046,8 @@
             <p class="hint">Films, licences, ou un lieu qui vous a inspiré.</p>
             <div class="fields">
               <div class="field">
-                <label for="c-name">Nom</label>
-                <input id="c-name" name="name" type="text" autocomplete="name" required />
+                <label for="c-name">Nom <span style="color:var(--mute);font-weight:300;text-transform:none;letter-spacing:0">(facultatif)</span></label>
+                <input id="c-name" name="name" type="text" autocomplete="name" />
               </div>
               <div class="field">
                 <label for="c-email">E-mail</label>
@@ -1042,7 +1055,7 @@
               </div>
               <div class="field">
                 <label for="c-listing">Lien de l’annonce</label>
-                <input id="c-listing" name="listing_url" type="url" placeholder="https://www.airbnb.com/rooms/…" />
+                <input id="c-listing" name="listing_url" type="url" required placeholder="https://www.airbnb.com/rooms/…" />
               </div>
                                           <div class="field">
                 <label>Pourquoi vous écrivez</label>
@@ -1066,8 +1079,8 @@
                 <input id="c-song" name="listing_as_song" type="text" placeholder="Un slow à deux dans une cuisine, lumière tamisée…" />
               </div>
               <div class="field">
-                <label for="c-message">Message</label>
-                <textarea id="c-message" name="message" required placeholder="Parlez-moi de votre logement : que voulez-vous que le voyageur ressente ?"></textarea>
+                <label for="c-message">Message <span style="color:var(--mute);font-weight:300;text-transform:none;letter-spacing:0">(facultatif)</span></label>
+                <textarea id="c-message" name="message" placeholder="Parlez-moi de votre logement : que voulez-vous que le voyageur ressente ?"></textarea>
               </div>
               <button class="btn" type="submit">Envoyer</button>
               <p class="note">Arrive directement dans la boîte de réception d’Elevated Listing. Ou écrivez à <a href="mailto:luis@elevatedlisting.co" style="color:var(--accent)">luis@elevatedlisting.co</a>.</p>
@@ -1116,11 +1129,11 @@
     <div class="wrap row">
       <div>© <span id="y"></span> Elevated Listing · Luis from Sweden</div>
       <div class="legal-links">
-        <a href="/terms" hreflang="en">Conditions</a>
+        <a href="/fr/terms">Conditions</a>
         <span class="sep">·</span>
         <a href="/privacy" hreflang="en">Confidentialité</a>
         <span class="sep">·</span>
-        <a href="/refund" hreflang="en">Remboursement</a>
+        <a href="/fr/refund">Remboursement</a>
       </div>
     </div>
   </footer>

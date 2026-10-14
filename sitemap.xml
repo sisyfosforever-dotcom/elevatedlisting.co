@@ -70,7 +70,13 @@
     <xhtml:link rel="alternate" hreflang="th" href="https://elevatedlisting.co/th/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://elevatedlisting.co/"/>
   </url>
-  <url><loc>https://elevatedlisting.co/terms</loc><lastmod>2026-10-11</lastmod></url>
+  <url><loc>https://elevatedlisting.co/terms</loc><lastmod>2026-10-14</lastmod></url>
   <url><loc>https://elevatedlisting.co/privacy</loc><lastmod>2026-10-11</lastmod></url>
-  <url><loc>https://elevatedlisting.co/refund</loc><lastmod>2026-10-11</lastmod></url>
+  <url><loc>https://elevatedlisting.co/refund</loc><lastmod>2026-10-14</lastmod></url>
+  <url><loc>https://elevatedlisting.co/sv/terms</loc><lastmod>2026-10-14</lastmod></url>
+  <url><loc>https://elevatedlisting.co/es/terms</loc><lastmod>2026-10-14</lastmod></url>
+  <url><loc>https://elevatedlisting.co/fr/terms</loc><lastmod>2026-10-14</lastmod></url>
+  <url><loc>https://elevatedlisting.co/sv/refund</loc><lastmod>2026-10-14</lastmod></url>
+  <url><loc>https://elevatedlisting.co/es/refund</loc><lastmod>2026-10-14</lastmod></url>
+  <url><loc>https://elevatedlisting.co/fr/refund</loc><lastmod>2026-10-14</lastmod></url>
 </urlset>
