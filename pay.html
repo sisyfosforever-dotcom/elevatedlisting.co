@@ -31,6 +31,8 @@
     .badge{display:inline-flex;align-items:center;justify-content:center;vertical-align:middle;background:#fff;border-radius:10px;padding:10px 14px;line-height:0;box-sizing:border-box;height:calc(1.1rem*1.3 + .7rem + 8px);min-height:46px}
     .badge img{display:block;height:26px;width:auto;max-width:100%;object-fit:contain}
     .tbadge{display:inline-block;background:#fff;color:#003087;font-family:Outfit,sans-serif;font-weight:600;font-size:1.1rem;border-radius:8px;padding:.35rem .8rem;line-height:1.3}
+    .ppbadge{line-height:1;font-family:Verdana,"DejaVu Sans",Arial,sans-serif;font-weight:700;font-style:italic;font-size:1.45rem;letter-spacing:-.02em}
+    .ppbadge .pp1{color:#003087}.ppbadge .pp2{color:#009cde}
     ol.steps{padding-left:0;list-style:none;counter-reset:s;margin:1rem 0}
     ol.steps li{counter-increment:s;position:relative;padding:.9rem 0 .9rem 3.2rem;border-top:1px solid var(--line)}
     ol.steps li::before{content:counter(s);position:absolute;left:0;top:.9rem;width:2.2rem;height:2.2rem;border-radius:50%;border:2px solid var(--accent);color:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:600}
@@ -70,16 +72,31 @@
       </ul>
     </section>
 
-    <!-- PayPal: hidden until PAYPAL_URL (in the script at the bottom) is set -->
-    <section class="card" id="pay-paypal" hidden>
-      <h2><span class="num">1</span> Pay by card or PayPal <span class="tag">Easiest</span></h2>
-      <p><span class="tbadge">PayPal</span></p>
-      <p>Press the button below. A secure PayPal page opens. You can pay with a normal bank card. You do not need a PayPal account.</p>
-      <p><a class="btn" id="paypal-link" href="#">Pay $249 by card or PayPal</a></p>
+    <!-- PayPal: option 1. Email steps show by default. To switch to a paypal.me button later,
+         set PAYPAL_URL in the script at the bottom: the button appears and the email steps hide. -->
+    <section class="card" id="pay-paypal">
+      <h2><span class="num">1</span> PayPal <span class="tag">Easiest</span></h2>
+      <p><span class="badge ppbadge" aria-label="PayPal"><span class="pp1">Pay</span><span class="pp2">Pal</span></span></p>
+      <p class="note">Payments go to our US partner, <strong>Antonio Borjas</strong>, so you will see his name in PayPal.</p>
+      <div id="paypal-steps">
+        <ol class="steps">
+          <li>Open PayPal: <a href="https://www.paypal.com/myaccount/transfer/homepage/pay" target="_self">press here</a>, or go to <a href="https://www.paypal.com" target="_self">paypal.com</a> and log in.</li>
+          <li>Choose <strong>Send</strong>, and enter this email:
+            <div class="copyrow"><span class="val">antonio.borjas48@gmail.com</span> <button class="copy" type="button" data-copy="antonio.borjas48@gmail.com">Copy</button></div></li>
+          <li>Amount: <span class="val">$249 USD</span>. Choose <strong>Paying for goods or services</strong>. This protects you as a buyer.</li>
+          <li>In the note, write your <strong>property name</strong>.</li>
+          <li>Then reply to my email. We deliver within <strong>48 hours</strong>.</li>
+        </ol>
+        <p><a class="btn ghost" href="https://www.paypal.com/myaccount/transfer/homepage/pay" target="_self">Open PayPal</a></p>
+      </div>
+      <div id="paypal-button" hidden>
+        <p>Press the button below. A secure PayPal page opens. You can pay with a normal bank card.</p>
+        <p><a class="btn" id="paypal-link" href="#">Pay $249 with PayPal</a></p>
+      </div>
     </section>
 
     <section class="card" id="pay-wu">
-      <h2><span class="num" data-n>2</span> Western Union</h2>
+      <h2><span class="num">2</span> Western Union</h2>
       <p><span class="badge"><img src="/img/western-union.svg" alt="Western Union" width="117" height="26"></span></p>
       <p>You can do this on the Western Union website, or at any Western Union shop.</p>
       <ol class="steps">
@@ -96,7 +113,7 @@
     </section>
 
     <section class="card" id="pay-crypto">
-      <h2><span class="num" data-n>3</span> Crypto</h2>
+      <h2><span class="num">3</span> Crypto</h2>
       <p>Send <span class="val">$249</span> in <span class="val">USDC on Base</span> or <span class="val">USDT on Arbitrum</span> to this address. Please use only these two options.</p>
       <div class="crypto-grid">
         <img class="qr" src="/img/pay-wallet-qr.svg" alt="QR code of the wallet address" width="220" height="220">
@@ -112,14 +129,14 @@
     <footer>Elevated Listing · <a href="mailto:luis@elevatedlisting.co">luis@elevatedlisting.co</a> · <a href="/terms">Terms</a></footer>
   </main>
   <script>
-    /* Set this to your PayPal payment link to show the PayPal option. Empty = hidden. */
+    /* PayPal: set this to a paypal.me link (e.g. "https://paypal.me/name/249USD") to show a button
+       instead of the email steps. Empty = email steps. */
     var PAYPAL_URL = "";
 
     if (PAYPAL_URL) {
       document.getElementById('paypal-link').href = PAYPAL_URL;
-      document.getElementById('pay-paypal').hidden = false;
-    } else {
-      document.querySelectorAll('[data-n]').forEach(function (el) { el.textContent = Number(el.textContent) - 1; });
+      document.getElementById('paypal-button').hidden = false;
+      document.getElementById('paypal-steps').hidden = true;
     }
     document.querySelectorAll('.copy').forEach(function (b) {
       var label = b.textContent;
