@@ -18,7 +18,7 @@
 <style>
 :root{
   --linen:#f6f1e7; --cream:#efe7d6; --ink:#2a2620; --muted:#6b6457;
-  --green:#2f3b2c; --green-2:#3e4e39; --wood:#8a5a3b; --line:#ddd2bd;
+  --green:#2f3b2c; --green-2:#3e4e39; --wood:#8a5a3b; --line:#ddd2bd; --accent:#d9773a; --accent-2:#f0a46a;
   --serif:"Fraunces",Georgia,serif; --sans:"Outfit",system-ui,-apple-system,"Segoe UI",sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
@@ -107,12 +107,62 @@ footer a{text-decoration:none;border-bottom:1px solid var(--line)}
 footer a:hover{color:var(--ink)}
 .note{margin-top:32px;padding-top:16px;border-top:1px solid var(--line);font-size:12.5px;text-align:center;letter-spacing:.02em}
 
+
+/* sticky scroll nav */
+.snav{position:fixed;left:0;right:0;top:0;z-index:40;display:flex;justify-content:center;gap:6px;padding:10px 12px;pointer-events:none;opacity:0;transform:translateY(-12px);transition:opacity .25s ease,transform .25s ease}
+.snav.on{opacity:1;transform:none;pointer-events:auto}
+.snav a{pointer-events:auto;text-decoration:none;font:500 13px/1 var(--sans);letter-spacing:.04em;color:var(--ink);background:rgba(246,241,231,.92);border:1px solid var(--line);border-radius:999px;padding:10px 14px;backdrop-filter:blur(8px);box-shadow:0 8px 24px rgba(0,0,0,.08)}
+.snav a:hover{background:#fff}
+.snav a.anthem-pill{background:linear-gradient(135deg,var(--accent),#c45c26);color:#fff;border-color:transparent;box-shadow:0 10px 28px rgba(217,119,58,.35)}
+.snav a.anthem-pill:hover{filter:brightness(1.05)}
+@media(max-width:520px){.snav a.hide-sm{display:none}}
+
+/* anthem */
+.anthem{position:relative;padding:88px 0 72px;background:
+  radial-gradient(1200px 480px at 10% -10%,rgba(217,119,58,.22),transparent 60%),
+  radial-gradient(900px 420px at 100% 20%,rgba(47,59,44,.12),transparent 55%),
+  linear-gradient(180deg,#fbf6ec 0%,#f3e7d4 100%);
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.anthem .kicker{display:inline-flex;align-items:center;gap:8px;font:600 12px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+.anthem .kicker::before{content:"";width:28px;height:2px;background:var(--accent);border-radius:2px}
+.anthem h2{font:500 clamp(34px,6vw,56px)/1.05 var(--serif);color:var(--green);max-width:16ch;margin-bottom:10px}
+.anthem .sub{color:var(--muted);max-width:46ch;margin-bottom:28px;font-size:17px}
+.anthem-grid{display:grid;gap:28px}
+@media(min-width:900px){.anthem-grid{grid-template-columns:1fr 1.15fr;align-items:start;gap:40px}}
+.player{background:#fffdf8;border:1px solid var(--line);border-radius:18px;padding:22px 22px 18px;box-shadow:0 18px 40px rgba(42,38,32,.06)}
+.player .song{font:500 22px/1.2 var(--serif);color:var(--ink);margin-bottom:4px}
+.player .by{font-size:13px;color:var(--muted);margin-bottom:16px}
+.player audio{width:100%;height:40px}
+.film-frame{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#1a1f18;aspect-ratio:16/9;box-shadow:0 22px 48px rgba(42,38,32,.12)}
+.film-frame iframe,.film-frame video{position:absolute;inset:0;width:100%;height:100%;border:0}
+.film-fallback{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:center/cover no-repeat url(poster.jpg);color:#fff;text-align:center;padding:24px}
+.film-fallback::before{content:"";position:absolute;inset:0;background:rgba(12,16,10,.55)}
+.film-fallback > *{position:relative;z-index:1}
+.film-fallback a{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:#fff;text-decoration:none;border-radius:999px;padding:14px 22px;font:500 15px var(--sans);box-shadow:0 12px 28px rgba(217,119,58,.4)}
+
+.lyrics{margin-top:40px;padding-top:8px}
+.lyrics h3{font:500 15px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:28px;text-align:center}
+.lyrics-sheet{max-width:520px;margin:0 auto;text-align:center}
+.lyrics-block{margin:0 0 28px}
+.lyrics-block .label{display:block;font:600 11px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--wood);opacity:.85;margin-bottom:10px}
+.lyrics-block p{font:400 clamp(17px,2.4vw,20px)/1.65 var(--serif);color:var(--ink);margin:0 0 .35em}
+.lyrics-block p.soft{color:var(--muted);font-style:italic}
+.lyrics-block.chorus p{color:var(--green)}
+.lyrics-block.chorus{padding:18px 16px;margin:8px 0 32px;border-radius:14px;background:rgba(217,119,58,.08);border:1px solid rgba(217,119,58,.18)}
+
 @media(prefers-reduced-motion:reduce){.hero video{display:none}}
 </style>
 </head>
 <body>
 
 <div class="preview">Preview for <b>Elaine</b> · Elevated Listing sandbox</div>
+
+<nav class="snav" id="snav" aria-label="On this page">
+  <a class="hide-sm" href="#top">Top</a>
+  <a class="anthem-pill" href="#anthem">Hear our anthem</a>
+  <a class="hide-sm" href="#hosts">Hosts</a>
+  <a href="https://resnexus.com/resnexus/reservations/book/8A35D45A-6B25-4D33-8158-BC98421E0A4D" target="_blank" rel="noopener">Book</a>
+</nav>
 
 <header class="bar">
   <a class="brand" href="#top">Montana Hill<small>Guest Ranch</small></a>
@@ -129,7 +179,7 @@ footer a:hover{color:var(--ink)}
     <p class="lede">A working cattle ranch where the coffee is always on and the day moves at the pace of the horses.</p>
     <div class="actions">
       <a class="btn btn-primary" href="https://resnexus.com/resnexus/reservations/book/8A35D45A-6B25-4D33-8158-BC98421E0A4D" target="_blank" rel="noopener">Book your stay</a>
-      <a class="btn btn-ghost" href="https://youtu.be/_pLDw5KINKY" target="_blank" rel="noopener">
+      <a class="btn btn-ghost" href="#anthem">
         <svg viewBox="0 0 14 14" fill="currentColor" aria-hidden="true"><path d="M3 1.5v11l9-5.5z"/></svg>Play the film
       </a>
     </div>
@@ -166,6 +216,108 @@ footer a:hover{color:var(--ink)}
     </article>
   </section>
 
+
+  <section class="anthem" id="anthem">
+    <div class="wrap">
+      <div class="kicker">Original song</div>
+      <h2>Hear our anthem</h2>
+      <p class="sub">The song Elaine loved — written for Montana Hill — and the short film cut to it. Press play, then follow along.</p>
+      <div class="anthem-grid">
+        <div class="player">
+          <div class="song">Ranch’s World</div>
+          <div class="by">Montana Hill Guest Ranch · original listing song</div>
+          <audio controls preload="metadata" src="anthem.mp3">Your browser doesn’t play audio here — open the film instead.</audio>
+        </div>
+        <div class="film-frame" id="filmbox">
+          <div class="film-fallback">
+            <div style="font:500 22px/1.2 var(--serif)">The Montana Hill film</div>
+            <a href="https://youtu.be/_pLDw5KINKY" target="_blank" rel="noopener">▶ Play the film</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="lyrics">
+        <h3>Lyrics</h3>
+        <div class="lyrics-sheet">
+          <div class="lyrics-block">
+            <span class="label">Intro</span>
+            <p class="soft">Oh… oh yeah…</p>
+          </div>
+          <div class="lyrics-block">
+            <span class="label">Verse</span>
+            <p>This is a ranch’s world, this is a ranch’s world</p>
+            <p>Four log cabins on the hill, hot tub steamin’ on every deck</p>
+            <p>Al saddles up the geldings, slow and steady, gentle on your neck</p>
+            <p>Cattle on the rolling hills, pine and aspen, fir and sky</p>
+            <p>But it wouldn’t be nothing, nothing, without a woman to say “come inside”</p>
+          </div>
+          <div class="lyrics-block">
+            <span class="label">Verse</span>
+            <p>This is a ranch’s world</p>
+            <p>Kids out milkin’ cows at sunup, little hands in the pail</p>
+            <p>Cheese in the kitchen, eggs warm from the hen, mud on every trail</p>
+            <p>Bridge Lake fifteen minutes, a Hundred Mile an hour down the road</p>
+            <p>But it wouldn’t be nothing, nothing, without Elaine to lighten the load</p>
+          </div>
+          <div class="lyrics-block">
+            <span class="label">Pre-chorus</span>
+            <p class="soft">She’s lost… she’s lost in the hills…</p>
+            <p class="soft">(and the coffee’s always on)</p>
+          </div>
+          <div class="lyrics-block chorus">
+            <span class="label">Chorus</span>
+            <p>Country roads, take me home</p>
+            <p>To the place I belong, South Cariboo</p>
+            <p>Montana Hill, take me home</p>
+            <p>Country roads</p>
+          </div>
+          <div class="lyrics-block">
+            <span class="label">Verse</span>
+            <p>This is a ranch’s world</p>
+            <p>Steak on the table in her own home, beef raised right on this land</p>
+            <p>River rock fireplace crackin’, billiards, a cold drink in your hand</p>
+            <p>Montana Hill Lake under the mountains, you can see it from the deck</p>
+            <p>But it wouldn’t be nothing, nothing, without a woman who never forgets your name</p>
+          </div>
+          <div class="lyrics-block">
+            <span class="label">Bridge</span>
+            <p>All my memories gather ’round the hot tub</p>
+            <p>Snowmobile tracks out on the frozen lake</p>
+            <p>Steam in the cold air, stars all the way up</p>
+            <p>Ride the snowshoe trail and stay till the morning breaks</p>
+          </div>
+          <div class="lyrics-block chorus">
+            <span class="label">Chorus</span>
+            <p>Country roads, take me home</p>
+            <p>To the place I belong, South Cariboo</p>
+            <p>Montana Hill, take me home</p>
+            <p>Country roads</p>
+          </div>
+          <div class="lyrics-block">
+            <span class="label">Final verse</span>
+            <p>This is a ranch’s world, this is a ranch’s world</p>
+            <p>She came up from the Island, back in twenty-sixteen</p>
+            <p>She and Al put up the fences, they let the whole world know</p>
+            <p>But it wouldn’t be nothing, nothing, nothing without a woman</p>
+            <p class="soft">Lost in the hills… and she brought us home</p>
+          </div>
+          <div class="lyrics-block chorus">
+            <span class="label">Final chorus</span>
+            <p>Country roads, take me home</p>
+            <p>To the place I belong, South Cariboo</p>
+            <p>Montana Hill, take me home</p>
+            <p>Country roads, take me home</p>
+            <p class="soft">Country roads… take me home</p>
+          </div>
+          <div class="lyrics-block">
+            <span class="label">Outro</span>
+            <p class="soft">This is a ranch’s world… oh, take me home</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="review">
     <div class="wrap">
       <div class="stars" aria-label="5 stars">★★★★★</div>
@@ -175,7 +327,7 @@ footer a:hover{color:var(--ink)}
     </div>
   </section>
 
-  <section class="hosts wrap">
+  <section class="hosts wrap" id="hosts">
     <div class="grid">
       <img src="owners-fireplace.jpg" alt="Elaine and Al by the river rock fireplace" loading="lazy">
       <div>
@@ -224,6 +376,13 @@ footer a:hover{color:var(--ink)}
     if(v.paused){v.play();i.innerHTML=P;b.setAttribute('aria-label','Pause background video');}
     else{v.pause();i.innerHTML=R;b.setAttribute('aria-label','Play background video');}
   });
+})();
+
+(function(){
+  var n=document.getElementById('snav');
+  if(!n)return;
+  var on=function(){ n.classList.toggle('on', window.scrollY>320); };
+  on(); window.addEventListener('scroll', on, {passive:true});
 })();
 </script>
 </body>
