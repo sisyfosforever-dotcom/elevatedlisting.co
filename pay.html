@@ -72,26 +72,29 @@
       </ul>
     </section>
 
-    <!-- PayPal: option 1. Email steps show by default. To switch to a paypal.me button later,
-         set PAYPAL_URL in the script at the bottom: the button appears and the email steps hide. -->
+    <!-- PayPal: option 1. Manual "send to email" steps show by default.
+         No paypal.me link exists yet for sisyfosforever@gmail.com. When Luis creates one,
+         set PAYPAL_URL in the script at the bottom: the button appears and these steps hide. -->
     <section class="card" id="pay-paypal">
       <h2><span class="num">1</span> PayPal <span class="tag">Easiest</span></h2>
       <p><span class="badge ppbadge" aria-label="PayPal"><span class="pp1">Pay</span><span class="pp2">Pal</span></span></p>
-      <p class="note">Pay via PayPal to <strong>sisyfosforever@gmail.com</strong> as <strong>Goods and Services</strong>. Amount: whatever we agreed on the invoice (Standard <strong>$249</strong>, Elevated <strong>$499</strong>, or a custom quote).</p>
       <div id="paypal-steps">
+        <p class="note">Send the invoiced amount to my PayPal email. It takes about two minutes. You can pay from your PayPal balance or a linked bank card.</p>
         <ol class="steps">
-          <li>Open PayPal: <a href="https://www.paypal.com/myaccount/transfer/homepage/pay" target="_self">press here</a>, or go to <a href="https://www.paypal.com" target="_self">paypal.com</a> and log in.</li>
-          <li>Choose <strong>Send</strong>, and enter this email:
-            <div class="copyrow"><span class="val">sisyfosforever@gmail.com</span> <button class="copy" type="button" data-copy="sisyfosforever@gmail.com">Copy</button></div></li>
-          <li>Amount: the USD total on your invoice (usually <span class="val">$249</span> or <span class="val">$499</span>). Choose <strong>Goods and Services</strong> (not Friends and Family). This protects you as a buyer.</li>
-          <li>In the note, write your <strong>property name</strong>.</li>
-          <li>Then reply to my email. We deliver within <strong>48 hours</strong>.</li>
+          <li>Log in at <a href="https://www.paypal.com/myaccount/transfer/homepage/pay" target="_self">paypal.com &rarr; Send</a>.</li>
+          <li>Send to this email:
+            <div class="copyrow"><span class="val">sisyfosforever@gmail.com</span> <button class="copy" type="button" data-copy="sisyfosforever@gmail.com">Copy</button></div>
+            <span class="field">The PayPal account is in my legal name, Mats Ludvig Lindberg.</span></li>
+          <li>Amount: the USD total on your invoice (Standard <span class="val">$249</span>, Elevated <span class="val">$499</span>, or your custom quote).</li>
+          <li>If PayPal asks, choose <strong>Goods and Services</strong> (not Friends and Family). That keeps PayPal&rsquo;s buyer protection on your side.</li>
+          <li>In the note, write your <strong>property name</strong>. Then reply to my email so I can match the payment. Your film arrives within <strong>48 hours</strong>.</li>
         </ol>
         <p><a class="btn ghost" href="https://www.paypal.com/myaccount/transfer/homepage/pay" target="_self">Open PayPal</a></p>
       </div>
       <div id="paypal-button" hidden>
         <p>Press the button below. A secure PayPal page opens. You can pay with a normal bank card.</p>
         <p><a class="btn" id="paypal-link" href="#">Pay with PayPal</a></p>
+        <p class="note">In the note, write your <strong>property name</strong>. Your film arrives within <strong>48 hours</strong>.</p>
       </div>
     </section>
 
@@ -129,8 +132,9 @@
     <footer>Elevated Listing · <a href="mailto:luis@elevatedlisting.co">luis@elevatedlisting.co</a> · <a href="/terms">Terms</a></footer>
   </main>
   <script>
-    /* PayPal: set this to a paypal.me link (e.g. "https://paypal.me/name/249USD") to show a button
-       instead of the email steps. Empty = email steps. */
+    /* PayPal: set this to Luis's own paypal.me link for sisyfosforever@gmail.com
+       (e.g. "https://paypal.me/<handle>") to show a button instead of the email steps.
+       Empty = email steps. Do not use anyone else's link. */
     var PAYPAL_URL = "";
 
     if (PAYPAL_URL) {
