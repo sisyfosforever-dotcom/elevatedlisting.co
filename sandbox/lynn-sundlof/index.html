@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="sv">
+<html lang="gsw">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Lynn Sundlöf · Kraniosakral terapi (förhandsvisning)</title>
-<meta name="description" content="Kraniosakral terapi med närvaro, riktning och modet att släppa taget. En trygg plats att återknyta kontakten med kroppen.">
+<title>Lynn Sundlöf · Craniosacral Therapie · Basel</title>
+<meta name="description" content="Craniosacral Therapie in Basel — lande, find dini Richtig, looss los. Soft touch, presence, and the courage to let go.">
 <meta name="robots" content="noindex,nofollow">
 <meta name="theme-color" content="#3d5a45">
 <link rel="icon" href="/favicon.png">
@@ -15,7 +15,7 @@
 :root{
   --paper:#f7f4ee; --paper-2:#efece4; --ink:#2a322c; --muted:#5c6b60;
   --green:#3d5a45; --green-2:#2f4636; --sage:#7a9a82; --leaf:#5f7d66;
-  --line:#d8ddd4; --gold:#a68b5b;
+  --line:#d8ddd4;
   --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
   --sans:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
 }
@@ -25,168 +25,135 @@ body{background:var(--paper);color:var(--ink);font:400 17px/1.65 var(--sans);-we
 img{display:block;max-width:100%}
 a{color:inherit}
 .wrap{width:min(920px,100% - 40px);margin-inline:auto}
-
-.preview{background:var(--green-2);color:#e8efe9;font-size:13px;text-align:center;padding:9px 14px;letter-spacing:.02em}
+.preview{background:var(--green-2);color:#e8efe9;font-size:13px;text-align:center;padding:9px 14px}
 .preview b{font-weight:600;color:#fff}
-
-/* HERO — logo dominant */
+.lang-bar{position:absolute;top:48px;right:16px;z-index:6;display:flex;gap:6px}
+.lang-bar button{
+  font:500 12px var(--sans);letter-spacing:.06em;text-transform:uppercase;
+  border:1px solid rgba(61,90,69,.35);background:rgba(247,244,238,.85);
+  color:var(--green-2);border-radius:999px;padding:6px 12px;cursor:pointer;backdrop-filter:blur(6px)
+}
+.lang-bar button[aria-pressed="true"]{background:var(--green);color:var(--paper);border-color:var(--green)}
+[data-lang="en"] .t-gsw{display:none}
+[data-lang="gsw"] .t-en{display:none}
 .hero{
   position:relative;min-height:min(92vh,900px);min-height:min(92svh,900px);
   display:flex;flex-direction:column;align-items:center;justify-content:center;
-  text-align:center;padding:48px 20px 56px;
+  text-align:center;padding:64px 20px 56px;
   background:
     radial-gradient(ellipse 80% 60% at 50% 40%, rgba(122,154,130,.18), transparent 70%),
     linear-gradient(180deg, #faf8f3 0%, var(--paper) 55%, var(--paper-2) 100%);
 }
-.hero-logo{
-  width:min(420px,78vw);height:auto;margin:0 auto 28px;
-  filter:drop-shadow(0 12px 40px rgba(61,90,69,.12));
-}
-.hero .eyebrow{
-  font-size:12px;letter-spacing:.28em;text-transform:uppercase;
-  color:var(--sage);font-weight:500;margin-bottom:14px;
-}
-.hero h1{
-  font:500 clamp(32px,6.5vw,52px)/1.12 var(--serif);
-  color:var(--green-2);letter-spacing:-.01em;max-width:16ch;margin:0 auto 14px;
-}
-.hero .tag{
-  font:italic 400 clamp(18px,3vw,24px)/1.4 var(--serif);
-  color:var(--leaf);max-width:28ch;margin:0 auto 28px;
-}
-.hero .lede{color:var(--muted);max-width:42ch;margin:0 auto 28px;font-weight:300;font-size:17px}
+.hero-logo{width:min(420px,78vw);height:auto;margin:0 auto 28px;filter:drop-shadow(0 12px 40px rgba(61,90,69,.12))}
+.hero .eyebrow{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--sage);font-weight:500;margin-bottom:14px}
+.hero h1{font:500 clamp(32px,6.5vw,52px)/1.12 var(--serif);color:var(--green-2);letter-spacing:-.01em;max-width:16ch;margin:0 auto 14px}
+.hero .tag{font:italic 400 clamp(18px,3vw,24px)/1.4 var(--serif);color:var(--leaf);max-width:30ch;margin:0 auto 28px}
+.hero .lede{color:var(--muted);max-width:44ch;margin:0 auto 28px;font-weight:300;font-size:17px}
 .actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;
-  font:500 15px var(--sans);text-decoration:none;border-radius:999px;
-  padding:13px 26px;transition:transform .15s ease,background .2s ease,color .2s;
-}
+.btn{display:inline-flex;align-items:center;justify-content:center;font:500 15px var(--sans);text-decoration:none;border-radius:999px;padding:13px 26px;transition:transform .15s ease,background .2s}
 .btn:active{transform:scale(.98)}
 .btn-primary{background:var(--green);color:var(--paper)}
 .btn-primary:hover{background:var(--green-2)}
 .btn-ghost{border:1px solid var(--leaf);color:var(--green-2);background:transparent}
 .btn-ghost:hover{background:rgba(61,90,69,.06)}
-
 .section{padding:72px 0}
 .section h2{font:500 clamp(28px,4.5vw,40px)/1.15 var(--serif);color:var(--green-2);margin-bottom:14px;text-align:center}
-.section .sub{text-align:center;color:var(--muted);max-width:48ch;margin:0 auto 36px;font-weight:300}
+.section .sub{text-align:center;color:var(--muted);max-width:50ch;margin:0 auto 36px;font-weight:300}
 .rule{width:40px;height:2px;background:var(--sage);margin:0 auto 22px;border-radius:2px;opacity:.7}
-
-/* pillars */
 .pillars{display:grid;gap:18px}
 @media(min-width:720px){.pillars{grid-template-columns:repeat(3,1fr);gap:22px}}
-.pillar{
-  background:#fffef9;border:1px solid var(--line);border-radius:16px;padding:28px 24px;
-  text-align:center;
-}
-.pillar .mark{
-  width:56px;height:56px;margin:0 auto 16px;border-radius:50%;
-  background:rgba(61,90,69,.08);display:grid;place-items:center;
-  font:500 22px var(--serif);color:var(--green);
-}
+.pillar{background:#fffef9;border:1px solid var(--line);border-radius:16px;padding:28px 24px;text-align:center}
+.pillar .mark{width:56px;height:56px;margin:0 auto 16px;border-radius:50%;background:rgba(61,90,69,.08);display:grid;place-items:center;font:500 22px var(--serif);color:var(--green)}
 .pillar h3{font:500 22px/1.2 var(--serif);color:var(--green-2);margin-bottom:8px}
 .pillar p{font-size:15px;color:var(--muted);line-height:1.55}
-
-/* quote band */
-.band{
-  background:var(--green);color:#eef3ef;padding:64px 0;text-align:center;
-}
-.band blockquote{
-  font:italic 400 clamp(22px,3.5vw,30px)/1.4 var(--serif);
-  max-width:28ch;margin:0 auto 16px;
-}
+.band{background:var(--green);color:#eef3ef;padding:64px 0;text-align:center}
+.band blockquote{font:italic 400 clamp(22px,3.5vw,30px)/1.4 var(--serif);max-width:28ch;margin:0 auto 16px}
 .band cite{font-style:normal;font-size:13px;letter-spacing:.08em;text-transform:uppercase;opacity:.75}
-
-/* values */
 .values{display:grid;gap:14px}
 @media(min-width:640px){.values{grid-template-columns:1fr 1fr}}
-.value{
-  border-top:1px solid var(--line);padding:18px 4px 8px;
-}
+.value{border-top:1px solid var(--line);padding:18px 4px 8px}
 .value h3{font:500 20px var(--serif);color:var(--green);margin-bottom:6px}
 .value p{font-size:15px;color:var(--muted)}
-
-/* about */
 .about{background:var(--paper-2)}
 .about .grid{display:grid;gap:32px;align-items:center}
 @media(min-width:760px){.about .grid{grid-template-columns:0.9fr 1.1fr;gap:48px}}
-.about .photo-wrap{
-  position:relative;border-radius:18px;overflow:hidden;
-  box-shadow:0 20px 50px rgba(42,50,44,.12);
-}
+.about .photo-wrap{position:relative;border-radius:18px;overflow:hidden;box-shadow:0 20px 50px rgba(42,50,44,.12)}
 .about .photo-wrap img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;object-position:50% 20%}
-.about .photo-wrap::after{
-  content:"";position:absolute;inset:auto 0 0 0;height:35%;
-  background:linear-gradient(transparent, rgba(47,70,54,.35));
-  pointer-events:none;
-}
+.about .photo-wrap::after{content:"";position:absolute;inset:auto 0 0 0;height:35%;background:linear-gradient(transparent, rgba(47,70,54,.35));pointer-events:none}
 .about h2{text-align:left;margin-bottom:10px}
 .about .rule{margin:0 0 18px}
 .about p{color:var(--muted);margin-bottom:14px}
-.about .note{font-size:14px;color:var(--sage);font-style:italic}
-
-/* how */
+.about .note{font-size:15px;color:var(--sage);font-style:italic}
 .how ol{list-style:none;counter-reset:step;max-width:560px;margin:0 auto;display:grid;gap:20px}
-.how li{
-  counter-increment:step;display:grid;grid-template-columns:48px 1fr;gap:16px;align-items:start;
-}
-.how li::before{
-  content:counter(step, decimal-leading-zero);
-  font:500 20px var(--serif);color:var(--sage);line-height:1.2;padding-top:2px;
-}
+.how li{counter-increment:step;display:grid;grid-template-columns:48px 1fr;gap:16px;align-items:start}
+.how li::before{content:counter(step, decimal-leading-zero);font:500 20px var(--serif);color:var(--sage);line-height:1.2;padding-top:2px}
 .how h3{font:500 20px var(--serif);color:var(--green-2);margin-bottom:4px}
 .how p{font-size:15px;color:var(--muted)}
-
-/* cta */
 .cta{text-align:center;padding:80px 0 96px}
 .cta h2{margin-bottom:12px}
-.cta p{color:var(--muted);max-width:40ch;margin:0 auto 28px}
+.cta p{color:var(--muted);max-width:42ch;margin:0 auto 28px}
 .cta .fine{margin-top:18px;font-size:13px;color:var(--sage)}
-
-footer{
-  border-top:1px solid var(--line);padding:28px 20px;text-align:center;
-  font-size:13px;color:var(--muted);
-}
+.place{display:inline-block;margin-top:8px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--sage)}
+footer{border-top:1px solid var(--line);padding:28px 20px;text-align:center;font-size:13px;color:var(--muted)}
 footer .logo-mini{width:48px;height:48px;margin:0 auto 12px;opacity:.85}
-footer a{color:var(--green);text-decoration:none}
 </style>
 </head>
-<body>
+<body data-lang="gsw">
 
-<div class="preview">Förhandsvisning åt Luis · <b>skicka inte till Lynn ännu</b> · sandbox</div>
+<div class="preview"><span class="t-gsw">Vorschau für Luis · <b>nooch nid a Lynn schicke</b> · sandbox</span><span class="t-en">Preview for Luis · <b>don’t send to Lynn yet</b> · sandbox</span></div>
 
 <header class="hero">
-  <img class="hero-logo" src="img/logo-web.png" width="720" height="720" alt="Lynn Sundlöf — logotyp med båge, pil och stilla profil">
-  <p class="eyebrow">Kraniosakral terapi</p>
-  <h1>Lynn Sundlöf</h1>
-  <p class="tag">Att landa. Hitta riktningen. Släppa taget.</p>
-  <p class="lede">En trygg plats där du får återknyta kontakten med kroppen — utan att något ska skyndas på, korrigeras eller tvingas fram.</p>
-  <div class="actions">
-    <a class="btn btn-primary" href="#om">Om Lynn</a>
-    <a class="btn btn-ghost" href="#behandling">Om behandlingen</a>
+  <div class="lang-bar" role="group" aria-label="Language">
+    <button type="button" data-set="gsw" aria-pressed="true">Baseldeutsch</button>
+    <button type="button" data-set="en" aria-pressed="false">English</button>
   </div>
+  <img class="hero-logo" src="img/logo-web.png" width="720" height="720" alt="Lynn Sundlöf Logo">
+  <p class="eyebrow"><span class="t-gsw">Craniosacral Therapie · Basel</span><span class="t-en">Craniosacral therapy · Basel</span></p>
+  <h1>Lynn Sundlöf</h1>
+  <p class="tag">
+    <span class="t-gsw">Lande. Find dini Richtig. Und denn: looss los.</span>
+    <span class="t-en">Land. Find your aim. Then: let go.</span>
+  </p>
+  <p class="lede">
+    <span class="t-gsw">En sichere Ort, wo du wider bi dir aachunnsch — ohni dass öppis muss gschwind go, korrigiert oder erzwunge wärde. Sacht, menschlich, uss Basel.</span>
+    <span class="t-en">A safe place to come back to yourself — nothing has to be rushed, fixed, or forced. Soft, human, from Basel.</span>
+  </p>
+  <div class="actions">
+    <a class="btn btn-primary" href="#om"><span class="t-gsw">Über d’Lynn</span><span class="t-en">About Lynn</span></a>
+    <a class="btn btn-ghost" href="#behandlig"><span class="t-gsw">D’Behandlig</span><span class="t-en">The treatment</span></a>
+  </div>
+  <span class="place">Basel · Schweiz</span>
 </header>
 
-<section class="section" id="behandling">
+<section class="section" id="behandlig">
   <div class="wrap">
     <div class="rule"></div>
-    <h2>Lyssna i stället för att korrigera</h2>
-    <p class="sub">Kraniosakral terapi (CST) växer ur osteopatin. Genom varsam, nästan viktlös beröring får det kraniosakrala systemet — skalle, korsben, hinnor och cerebrospinalvätska — utrymme att återfinna sin rytm.</p>
+    <h2>
+      <span class="t-gsw">Zueghöre statt korrigiere</span>
+      <span class="t-en">Listen instead of correcting</span>
+    </h2>
+    <p class="sub">
+      <span class="t-gsw">Craniosacral Therapie (CST) chunnt uss de Osteopathie. Mit ere fascht gwichtlose Berüehrig bechunnt s’System — Schädel, Chrüzbei, Hüütli und Gehirnwasser — Ruum, dass sini eigeni Rytmus wider cha flüsse.</span>
+      <span class="t-en">Craniosacral therapy (CST) grows out of osteopathy. With an almost weightless touch, the system — skull, sacrum, membranes, and cerebrospinal fluid — gets room for its own rhythm to move again.</span>
+    </p>
     <div class="pillars">
       <article class="pillar">
         <div class="mark">01</div>
-        <h3>Kroppen</h3>
-        <p>Spänningar minskar. Cirkulation och rörlighet får mjukna. Kroppens egen återhämtning stimuleras längs längdaxeln.</p>
+        <h3><span class="t-gsw">Körper</span><span class="t-en">Body</span></h3>
+        <p class="t-gsw">Spannige chönne weicher wärde. D’Zirkulation und d’Bewegligkeit bechömme Luft. D’Erholig cha entlang vo de Längsachse wider aafange.</p>
+        <p class="t-en">Tension can soften. Circulation and mobility get air. Recovery can start again along the body’s long axis.</p>
       </article>
       <article class="pillar">
         <div class="mark">02</div>
-        <h3>Närvaro</h3>
-        <p>Stoicismen påminner: skilj på det du kan påverka och det du inte kan. Uppmärksamheten och nästa steg är alltid dina.</p>
+        <h3><span class="t-gsw">Aawäseheit</span><span class="t-en">Presence</span></h3>
+        <p class="t-gsw">Stoizismus säit: unterscheid zwüsche dem, wo du chaasch ändere, und dem, wo nöd. Dini Ufmerksamkeit und de nächst Schritt — die bliibe bi dir.</p>
+        <p class="t-en">Stoicism says: tell apart what you can change from what you can’t. Your attention and your next step — those stay yours.</p>
       </article>
       <article class="pillar">
         <div class="mark">03</div>
-        <h3>Riktning</h3>
-        <p>Som i bågskyttet: hitta stadgan, rikta in dig, håll spänningen — och ha modet att släppa taget. Pilen flyger själv.</p>
+        <h3><span class="t-gsw">Richtig</span><span class="t-en">Aim</span></h3>
+        <p class="t-gsw">Wie bim Bogeschiesse: find dini Standhaftigkeit, ziil i, halt d’Spannig — und häb de Mut, loszloo. De Pfyl fliegt sälber.</p>
+        <p class="t-en">Like archery: find your stance, take aim, hold the draw — and have the courage to release. The arrow flies on its own.</p>
       </article>
     </div>
   </div>
@@ -202,27 +169,27 @@ footer a{color:var(--green);text-decoration:none}
 <section class="section how">
   <div class="wrap">
     <div class="rule"></div>
-    <h2>Så möts vi</h2>
-    <p class="sub">Tålamod är det viktigaste verktyget. Mindre kraft kan leda till djupare förändring.</p>
+    <h2><span class="t-gsw">So begegne mir üs</span><span class="t-en">How we meet</span></h2>
+    <p class="sub">
+      <span class="t-gsw">Geduld isch s’wichtigscht Wärchzüüg. Weniger Chraft cha düeferi Veränderig bringe.</span>
+      <span class="t-en">Patience is the main tool. Less force can bring a deeper shift.</span>
+    </p>
     <ol>
-      <li>
-        <div>
-          <h3>Jag följer med — jag reparerar inte</h3>
-          <p>Ingen mekanisk korrigering. En dialog med vätskekroppen, i stillhet och lyhördhet.</p>
-        </div>
-      </li>
-      <li>
-        <div>
-          <h3>Systemiskt, inte bara lokalt</h3>
-          <p>Fokus på balansen i hela det centrala nervsystemet — inte enbart den plats där smärtan hörs först.</p>
-        </div>
-      </li>
-      <li>
-        <div>
-          <h3>Du går din egen väg</h3>
-          <p>Jag öppnar utrymmet och finns där som stöd. Kroppen bär redan förmågan att hitta tillbaka.</p>
-        </div>
-      </li>
+      <li><div>
+        <h3><span class="t-gsw">Ich folg mit — ich reparier nöd</span><span class="t-en">I follow — I don’t repair</span></h3>
+        <p class="t-gsw">Kei mechanischi Korrektur. En Dialog mit em Flüssigkörper, in Rue und Feingfühl.</p>
+        <p class="t-en">No mechanical correction. A dialogue with the fluid body, in quiet and fine listening.</p>
+      </div></li>
+      <li><div>
+        <h3><span class="t-gsw">S’systeemsich, nöd nur lokal</span><span class="t-en">Systemic, not only local</span></h3>
+        <p class="t-gsw">Es goht ums Gliichgwicht im ganze zentrale Nervesystem — nöd nur um d’Stell, wo de Schmerz zerscht lütt wird.</p>
+        <p class="t-en">It’s about balance in the whole central nervous system — not only the spot where pain speaks first.</p>
+      </div></li>
+      <li><div>
+        <h3><span class="t-gsw">Du gösch dini eigene Wäg</span><span class="t-en">You walk your own path</span></h3>
+        <p class="t-gsw">Ich öffne de Ruum und bi do as Unterschtützig. De Körper cha scho sälber zrugg finde.</p>
+        <p class="t-en">I open the space and stay as support. The body already knows how to find its way back.</p>
+      </div></li>
     </ol>
   </div>
 </section>
@@ -230,32 +197,41 @@ footer a{color:var(--green);text-decoration:none}
 <section class="section">
   <div class="wrap">
     <div class="rule"></div>
-    <h2>Värdegrund</h2>
-    <p class="sub">Inte att tala om för dig hur du ska vara — utan att stödja dig i att återfinna din egen riktning.</p>
+    <h2><span class="t-gsw">Was mir wärtvoll isch</span><span class="t-en">What matters here</span></h2>
+    <p class="sub">
+      <span class="t-gsw">Nöd dir säge, wie du söllsch sii — sondern dich understütze, dini eigene Richtig wider z’finde.</span>
+      <span class="t-en">Not telling you how to be — supporting you to find your own direction again.</span>
+    </p>
     <div class="values">
       <div class="value">
-        <h3>Närvaro</h3>
-        <p>Uppmärksamhet och öppet sinne. Lyssna med händer och lyhördhet — inte bara med öronen.</p>
+        <h3><span class="t-gsw">Aawäseheit</span><span class="t-en">Presence</span></h3>
+        <p class="t-gsw">Ufmerksamkeit und en offene Sinn. Zueghöre mit Händ und Feingfühl — nöd nur mit de Ohre.</p>
+        <p class="t-en">Attention and an open mind. Listening with hands and sensitivity — not only with the ears.</p>
       </div>
       <div class="value">
-        <h3>Medvetenhet</h3>
-        <p>Vad känner jag? Vad behöver jag? Var håller jag fast? Var kan något få mjukna?</p>
+        <h3><span class="t-gsw">Bewusstsi</span><span class="t-en">Awareness</span></h3>
+        <p class="t-gsw">Was spür i? Was bruchi? Wo halt i fescht? Wo derf öppis weicher wärde?</p>
+        <p class="t-en">What do I feel? What do I need? Where am I gripping? Where may something soften?</p>
       </div>
       <div class="value">
-        <h3>Eget ansvar</h3>
-        <p>Varje människa går sin egen väg. Terapeuten håller rummet — du bär stegen.</p>
+        <h3><span class="t-gsw">Eigeni Verantwortig</span><span class="t-en">Own responsibility</span></h3>
+        <p class="t-gsw">Jede Mensch goht sini eigene Wäg. D’Therapeutin hält de Ruum — du träisch d’Schritt.</p>
+        <p class="t-en">Everyone walks their own path. The therapist holds the room — you carry the steps.</p>
       </div>
       <div class="value">
-        <h3>Sinnesro</h3>
-        <p>Allt behöver inte lösas på en gång. Ibland uppstår rörelse just när vi slutar tvinga fram den.</p>
+        <h3><span class="t-gsw">Rue im Gmüet</span><span class="t-en">Ease of mind</span></h3>
+        <p class="t-gsw">Nöd alles muss uf eimal glöst si. Mängisch chunnt Bewegig grad denn, wänn mer ufhört z’erzwinge.</p>
+        <p class="t-en">Not everything needs solving at once. Sometimes movement comes exactly when we stop forcing it.</p>
       </div>
       <div class="value">
-        <h3>Riktning</h3>
-        <p>Är jag närvarande? I balans? Hjälper spänningen mig framåt — eller håller jag för hårt?</p>
+        <h3><span class="t-gsw">Richtig</span><span class="t-en">Direction</span></h3>
+        <p class="t-gsw">Bin i aawäsend? Im Gliichgwicht? Hilft mir d’Spannig vorwärts — oder halt i z’fescht?</p>
+        <p class="t-en">Am I present? In balance? Does this tension help me forward — or am I holding too tight?</p>
       </div>
       <div class="value">
-        <h3>Att släppa taget</h3>
-        <p>Det avgörande ögonblicket är inte att hålla fast, utan att våga lita på processen.</p>
+        <h3><span class="t-gsw">Losloo</span><span class="t-en">Letting go</span></h3>
+        <p class="t-gsw">De entscheidendi Moment isch nöd s’Festhalte, sondern de Mut, de Prozess z’vertraue.</p>
+        <p class="t-en">The decisive moment isn’t holding on — it’s trusting the process enough to release.</p>
       </div>
     </div>
   </div>
@@ -268,11 +244,14 @@ footer a{color:var(--green);text-decoration:none}
         <img src="img/lynn-web.jpg" width="750" height="1000" alt="Lynn Sundlöf" loading="lazy">
       </div>
       <div>
-        <h2>Om Lynn</h2>
+        <h2><span class="t-gsw">Über d’Lynn</span><span class="t-en">About Lynn</span></h2>
         <div class="rule"></div>
-        <p>Lynn utbildar sig till kraniosakral terapeut och bygger en praktik där kroppen, stoisk klarhet och bågskyttets bildspråk möts — jordnära, skolad, och med grönt som ledmotiv.</p>
-        <p>Hon vill erbjuda en skyddad plats att landa i: där subtila signaler får höras, och där hälsa ibland handlar mindre om att vara fri från spänning — och mer om att kunna känna den utan att gå vilse.</p>
-        <p class="note">»Jag hittar min riktning — utan att låsa mig vid den. Jag håller utrymmet öppet — och släpper taget.«</p>
+        <p class="t-gsw">Lynn chunnt uss Basel und bildet sich zur Craniosacral Therapeutin us. Si bout e Praxis, wo Körper, stoischi Klarheit und s’Bild vom Bogeschiesse zämmechömme — erdverbunden, gschuldet, mit Grün als Leitfadä.</p>
+        <p class="t-en">Lynn is from Basel and is training as a craniosacral therapist. She’s building a practice where body, stoic clarity, and the image of archery meet — grounded, schooled, with green as the through-line.</p>
+        <p class="t-gsw">Si will en gschützte Ort aabiete zum Lande: wo feini Signal chönne ghört wärde, und wo Gsundheit mängisch weniger heisst «frei vo Spannig» — und meh: d’Spannig chönne spüre, ohni sich z’verlüüre.</p>
+        <p class="t-en">She wants a sheltered place to land: where subtle signals can be heard, and where health sometimes means less “free of tension” — and more: feeling tension without getting lost in it.</p>
+        <p class="note t-gsw">«Ich find mini Richtig — ohni mi driizlocke. Ich halt de Ruum offe — und looss los.»</p>
+        <p class="note t-en">“I find my aim — without locking onto it. I keep the space open — and I let go.”</p>
       </div>
     </div>
   </div>
@@ -281,18 +260,34 @@ footer a{color:var(--green);text-decoration:none}
 <section class="cta" id="kontakt">
   <div class="wrap">
     <div class="rule"></div>
-    <h2>Nästa steg</h2>
-    <p>När praktiken öppnar bokas möten här. Just nu är detta en förhandsvisning — kontaktuppgifter och tider fylls i när Lynn är redo.</p>
-    <a class="btn btn-primary" href="mailto:lynnsundlof@gmail.com">Skriv till Lynn</a>
-    <p class="fine">Placeholder-länk · byt till bokning / telefon när du vill</p>
+    <h2><span class="t-gsw">Nächste Schritt</span><span class="t-en">Next step</span></h2>
+    <p class="t-gsw">Wänn d’Praxis ufgoot, chasch do bueche. Jetzt isch das e Vorschau — Kontakt und Zite chömme, wänn d’Lynn so wyt isch.</p>
+    <p class="t-en">When the practice opens, booking lives here. For now this is a preview — contact and times land when Lynn is ready.</p>
+    <a class="btn btn-primary" href="mailto:lynnsundlof@gmail.com"><span class="t-gsw">Schreib de Lynn</span><span class="t-en">Write to Lynn</span></a>
+    <p class="fine t-gsw">Placeholder · Telefon / Booking chönne mir no iisetze</p>
+    <p class="fine t-en">Placeholder · phone / booking can go here later</p>
   </div>
 </section>
 
 <footer>
   <img class="logo-mini" src="img/logo-web.png" alt="">
-  <div>Lynn Sundlöf · Kraniosakral terapi</div>
-  <div style="margin-top:6px">Sandbox · elevatedlisting.co · ej publikt indexerad</div>
+  <div>Lynn Sundlöf · Craniosacral Therapie · Basel</div>
+  <div style="margin-top:6px">Sandbox · elevatedlisting.co · noindex</div>
 </footer>
 
+<script>
+(function(){
+  var root=document.body;
+  var buttons=document.querySelectorAll('.lang-bar button');
+  function setLang(lang){
+    root.setAttribute('data-lang', lang);
+    root.setAttribute('lang', lang==='en'?'en':'gsw');
+    buttons.forEach(function(b){ b.setAttribute('aria-pressed', b.getAttribute('data-set')===lang?'true':'false'); });
+    try{ localStorage.setItem('lynn-lang', lang); }catch(e){}
+  }
+  buttons.forEach(function(b){ b.addEventListener('click', function(){ setLang(b.getAttribute('data-set')); }); });
+  try{ var saved=localStorage.getItem('lynn-lang'); if(saved==='en'||saved==='gsw') setLang(saved); }catch(e){}
+})();
+</script>
 </body>
 </html>
