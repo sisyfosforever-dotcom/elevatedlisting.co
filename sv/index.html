@@ -324,6 +324,11 @@
     footer .legal-links a { color: var(--mute); text-decoration: none; }
     footer .legal-links a:hover { color: var(--ink); }
     footer .legal-links .sep { opacity: .5; }
+    footer .contact-block { flex-basis: 100%; margin-top: .9rem; max-width: 46rem; line-height: 1.55; font-size: .82rem; color: var(--mute); }
+    footer .contact-block strong { color: var(--ink); font-weight: 500; }
+    footer .contact-block a { color: var(--accent); }
+    footer .contact-block p { margin: .35rem 0; }
+
     .pill {
       display: inline-block; font-size: .72rem; letter-spacing: .08em;
       text-transform: uppercase; color: var(--accent);
@@ -599,7 +604,7 @@
         <div class="trust">
           <div><strong>Få, men väl valda</strong>Handplockade ställen med själ och skinn på näsan</div>
           <div><strong>Dina bilder</strong>Bara rörelse i dina riktiga bilder, inget påhittat</div>
-          <div><strong>Din låt</strong>Skriven för just ditt ställe, din att använda var som helst, för alltid</div>
+          <div><strong>Din låt</strong>Skriven för just ditt ställe — licensierad så att du kan marknadsföra det</div>
         </div>
       </div>
     </section>
@@ -904,10 +909,6 @@
             <span class="fthumb"><img src="https://img.youtube.com/vi/rxbjy8QPbsg/hqdefault.jpg" alt="" loading="lazy" decoding="async" width="480" height="360"><span class="fplay" aria-hidden="true"></span></span>
             <span class="ftitle">Honey, I&#x27;m Coming Home</span><span class="fplace">13 Bees, Confolens</span><span class="fcountry">Frankrike</span>
           </button></li>
-          <li><button class="fcard" type="button" data-yt="te612JiIiGU" aria-label="Spela upp We&#x27;re from Circuns – Cal Masover de Circuns, Montclar, Berguedà">
-            <span class="fthumb"><img src="https://img.youtube.com/vi/te612JiIiGU/hqdefault.jpg" alt="" loading="lazy" decoding="async" width="480" height="360"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">We&#x27;re from Circuns</span><span class="fplace">Cal Masover de Circuns, Montclar, Berguedà</span><span class="fcountry">Spanien</span>
-          </button></li>
           <li><button class="fcard" type="button" data-yt="VtwfTjgevMw" aria-label="Spela upp Welcome to the Dow Hotel – Dow Hotel &amp; Dow Villa Motel, Lone Pine, California">
             <span class="fthumb"><img src="https://img.youtube.com/vi/VtwfTjgevMw/hqdefault.jpg" alt="" loading="lazy" decoding="async" width="480" height="360"><span class="fplay" aria-hidden="true"></span></span>
             <span class="ftitle">Welcome to the Dow Hotel</span><span class="fplace">Dow Hotel &amp; Dow Villa Motel, Lone Pine, California</span><span class="fcountry">USA</span>
@@ -945,11 +946,11 @@
           <li class="jstep reveal"><span class="jicon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M14 34 L27 46 L50 18"/></svg></span><span class="jnum" aria-hidden="true">2</span>
             <h3>Säg ja</h3><p>Svara bara på mitt mejl. Ett kort ”ja” räcker.</p></li>
           <li class="jstep reveal"><span class="jicon" aria-hidden="true"><svg viewBox="0 0 64 64"><rect x="10" y="20" width="44" height="28" rx="5"/><circle cx="32" cy="34" r="6"/></svg></span><span class="jnum" aria-hidden="true">3</span>
-            <h3>$249, en enda betalning</h3><p>Jag mejlar en faktura. Du betalar med krypto (USDC eller USDT) eller via Western Union. Ingen prenumeration. Inga fler kostnader sen.</p></li>
+            <h3>$249, en enda betalning</h3><p>Jag mejlar en faktura. Du betalar med PayPal (Goods and Services till sisyfosforever@gmail.com), krypto (USDC på Base eller USDT på Arbitrum) eller Western Union. Ingen prenumeration. Inga fler kostnader sen. Steg på <a href="/pay">elevatedlisting.co/pay</a>.</p></li>
           <li class="jstep reveal"><span class="jicon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M10 22 L32 36 L54 22"/><rect x="10" y="18" width="44" height="30" rx="4"/></svg></span><span class="jnum" aria-hidden="true">4</span>
             <h3>Dina filmer inom 48 timmar</h3><p>Inom 48 timmar från att din betalning kommit fram får du filmen i full-HD utan vattenstämpel, en stående version för Reels och låten som MP3. Vill du ändra något litet? En omgång justeringar ingår.</p></li>
           <li class="jstep reveal"><span class="jicon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M32 50 C14 38 10 28 18 20 C24 14 30 18 32 23 C34 18 40 14 46 20 C54 28 50 38 32 50 Z"/></svg></span><span class="jnum" aria-hidden="true">5</span>
-            <h3>Dela den överallt</h3><p>Lägg upp den i annonsen, på hemsidan, på Instagram, i reklam, var du vill. Filmen och låten är dina att använda var som helst, för alltid.</p><p class="jwink">Forever ever? Forever ever. Yes, Miss Jackson.</p></li>
+            <h3>Dela den överallt</h3><p>Lägg upp den i annonsen, på hemsidan, i sociala medier, på OTAs som tillåter video, i reklam och i tryck. Du får en evig kommersiell licens att marknadsföra det boendet; Luis / Elevated Listing behåller upphovsrätten.</p><p class="jwink">Forever ever? Forever ever. Yes, Miss Jackson.</p></li>
           </ol>
         </div>
         <p class="jnote">Frågor? Skriv bara. Det är en riktig människa som svarar: jag, Luis.</p>
@@ -974,7 +975,7 @@
           <article class="card">
             <span class="card-icon" aria-hidden="true"><img src="../assets/icons/one-strong-cut.svg" alt="" /></span>
             <h3>En film som sitter</h3>
-            <p>En färdig film för Airbnb, Instagram eller din hemsida, som får gästen att drömma innan hen ens sett sängen. Din att använda var som helst, för alltid.</p>
+            <p>En färdig film för Airbnb, Instagram eller din hemsida, som får gästen att drömma innan hen ens sett sängen. Licensierad så att du kan marknadsföra boendet, för alltid.</p>
           </article>
         </div>
       </div>
@@ -983,7 +984,7 @@
 <section id="packages">
       <div class="wrap">
         <div class="pill">Pris</div>
-        <h2 class="section-title" style="margin-bottom:1.5rem">En film. En låt. Din.</h2>
+        <h2 class="section-title" style="margin-bottom:1.5rem">En film. En låt. En kommersiell licens.</h2>
         <div class="offer tier featured" style="max-width:32rem">
           <h3>Din film</h3>
           <div class="price">$249 <small>en betalning, ingen prenumeration</small></div>
@@ -1000,11 +1001,11 @@
         <div class="paynote">
           <h3>Du ser den först</h3>
           <p>Jag gör filmen och skickar den till dig, med vattenstämpel. Det du ser är den riktiga filmen. Faller du för den säger du ja och betalar $249. Annars betalar du ingenting, och ingen blir sur. Filmen förblir olistad och jag använder den inte för att marknadsföra ditt boende.</p>
-          <h3>Din att använda var som helst, för alltid</h3>
-          <p>När du har betalat får du en evig, världsomfattande och royaltyfri licens att använda filmen och låten till vad du vill: annonsen, hemsidan, sociala medier, reklam, alla ställen du hyr ut. Inga extra avgifter, någonsin. Jag kan visa filmen i min portfolio, om du inte hellre vill att jag låter bli. Säg bara till. Alla detaljer står i <a href="/terms" style="color:var(--accent)">villkoren</a> (på engelska).</p>
+          <h3>En kommersiell licens att marknadsföra ditt boende</h3>
+          <p>När du har betalat får du en evig, världsomfattande licens att använda den färdiga filmen och låten för att marknadsföra det boendet — hemsida, sociala medier, OTAs som tillåter video, reklam och tryck. Luis / Elevated Listing behåller upphovsrätten till produktionen. Låten omfattas också av Sunos villkor för kommersiell användning av musik gjord med Pro- eller Premier-abonnemang. Inga extra avgifter, någonsin. Jag kan visa filmen i min portfolio, om du inte hellre vill att jag låter bli. Detaljer i <a href="/terms" style="color:var(--accent)">villkoren</a> (på engelska).</p>
           <div class="paycallout">
           <h3>Så funkar betalningen</h3>
-          <p>När du har sagt ja mejlar jag dig en faktura. Du betalar med krypto (USDC på Base eller USDT på Arbitrum) eller via Western Union. De 48 timmarna börjar när din betalning har kommit fram, och då mejlar jag dig. Kortbetalning kommer längre fram.</p>
+          <p>När du har sagt ja mejlar jag dig en faktura. Betala via PayPal till <strong>sisyfosforever@gmail.com</strong> som <strong>Goods and Services</strong>, med krypto (USDC på Base eller USDT på Arbitrum) eller via Western Union. Steg på <a href="/pay">elevatedlisting.co/pay</a>. De 48 timmarna börjar när din betalning har kommit fram, och då mejlar jag dig.</p>
           <p style="margin:.6rem 0 0"><img src="/img/western-union.svg" alt="Western Union" height="28" style="background:#fff;border-radius:6px;padding:6px 10px;vertical-align:middle"></p>
           <p class="small">Aldrig köpt krypto? De flesta värdar fixar USDC på några minuter via Coinbase, Kraken eller liknande, och jag guidar dig gärna steg för steg. Du betalar först när du har sett din film och sagt ja.</p>
           </div>
@@ -1102,7 +1103,7 @@
             <h3>Så enkelt är det</h3>
             <p style="margin-bottom:.75rem">1. Du får en film från mig, eller så skickar du ett ställe som väckte något.</p>
             <p style="margin-bottom:.75rem">2. Vi pratar som vanligt folk. Synpunkter om du har några.</p>
-            <p style="margin:0">3. Du köper loss den när det känns rätt. Filmen och låten är dina.</p>
+            <p style="margin:0">3. Du köper när det känns rätt. Du får en kommersiell licens; Luis behåller upphovsrätten.</p>
           </div>
         </div>
       </div>
@@ -1118,6 +1119,11 @@
         <a href="/privacy" hreflang="en">Integritet</a>
         <span class="sep">·</span>
         <a href="/sv/refund">Återbetalning</a>
+      </div>
+    <div class="contact-block">
+        <p><strong>Kontakt</strong> · <a href="mailto:luis@elevatedlisting.co">luis@elevatedlisting.co</a></p>
+        <p><strong>Postadress</strong><br>Mats Ludvig Lindberg<br>604 C. Hoare<br>San Juan, Puerto Rico 00907</p>
+        <p><strong>Avregistrering:</strong> Fått ett säljmejl från mig och vill inte ha fler? Svara <strong>STOP</strong>, eller mejla <a href="mailto:luis@elevatedlisting.co?subject=STOP">luis@elevatedlisting.co</a> med ämnet STOP, så hör jag inte av mig igen. Varje utgående säljmejl innehåller den här avregistreringsvägen.</p>
       </div>
     </div>
   </footer>

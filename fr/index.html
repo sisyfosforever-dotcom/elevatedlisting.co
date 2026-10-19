@@ -324,6 +324,11 @@
     footer .legal-links a { color: var(--mute); text-decoration: none; }
     footer .legal-links a:hover { color: var(--ink); }
     footer .legal-links .sep { opacity: .5; }
+    footer .contact-block { flex-basis: 100%; margin-top: .9rem; max-width: 46rem; line-height: 1.55; font-size: .82rem; color: var(--mute); }
+    footer .contact-block strong { color: var(--ink); font-weight: 500; }
+    footer .contact-block a { color: var(--accent); }
+    footer .contact-block p { margin: .35rem 0; }
+
     .pill {
       display: inline-block; font-size: .72rem; letter-spacing: .08em;
       text-transform: uppercase; color: var(--accent);
@@ -599,7 +604,7 @@
         <div class="trust">
           <div><strong>Peu, mais bien</strong>Des lieux choisis un par un, qui ont du cœur et du culot</div>
           <div><strong>Vos photos</strong>Mises en mouvement, rien d’inventé</div>
-          <div><strong>Votre chanson</strong>Écrite pour votre logement, à vous partout et pour toujours</div>
+          <div><strong>Votre chanson</strong>Écrite pour votre logement — sous licence pour le promouvoir</div>
         </div>
       </div>
     </section>
@@ -904,10 +909,6 @@
             <span class="fthumb"><img src="https://img.youtube.com/vi/rxbjy8QPbsg/hqdefault.jpg" alt="" loading="lazy" decoding="async" width="480" height="360"><span class="fplay" aria-hidden="true"></span></span>
             <span class="ftitle">Honey, I&#x27;m Coming Home</span><span class="fplace">13 Bees, Confolens</span><span class="fcountry">France</span>
           </button></li>
-          <li><button class="fcard" type="button" data-yt="te612JiIiGU" aria-label="Lire We&#x27;re from Circuns – Cal Masover de Circuns, Montclar, Berguedà">
-            <span class="fthumb"><img src="https://img.youtube.com/vi/te612JiIiGU/hqdefault.jpg" alt="" loading="lazy" decoding="async" width="480" height="360"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">We&#x27;re from Circuns</span><span class="fplace">Cal Masover de Circuns, Montclar, Berguedà</span><span class="fcountry">Espagne</span>
-          </button></li>
           <li><button class="fcard" type="button" data-yt="VtwfTjgevMw" aria-label="Lire Welcome to the Dow Hotel – Dow Hotel &amp; Dow Villa Motel, Lone Pine, California">
             <span class="fthumb"><img src="https://img.youtube.com/vi/VtwfTjgevMw/hqdefault.jpg" alt="" loading="lazy" decoding="async" width="480" height="360"><span class="fplay" aria-hidden="true"></span></span>
             <span class="ftitle">Welcome to the Dow Hotel</span><span class="fplace">Dow Hotel &amp; Dow Villa Motel, Lone Pine, California</span><span class="fcountry">États-Unis</span>
@@ -945,11 +946,11 @@
           <li class="jstep reveal"><span class="jicon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M14 34 L27 46 L50 18"/></svg></span><span class="jnum" aria-hidden="true">2</span>
             <h3>Dites oui</h3><p>Répondez simplement à mon e-mail. Un petit « oui » suffit.</p></li>
           <li class="jstep reveal"><span class="jicon" aria-hidden="true"><svg viewBox="0 0 64 64"><rect x="10" y="20" width="44" height="28" rx="5"/><circle cx="32" cy="34" r="6"/></svg></span><span class="jnum" aria-hidden="true">3</span>
-            <h3>$249, en un seul paiement</h3><p>Je vous envoie une facture par e-mail. Vous payez en crypto (USDC ou USDT) ou par Western Union. Pas d’abonnement. Rien d’autre à payer ensuite.</p></li>
+            <h3>$249, en un seul paiement</h3><p>Je vous envoie une facture par e-mail. Vous payez par PayPal (Goods and Services à sisyfosforever@gmail.com), en crypto (USDC sur Base ou USDT sur Arbitrum) ou par Western Union. Pas d’abonnement. Rien d’autre à payer ensuite. Les étapes : <a href="/pay">elevatedlisting.co/pay</a>.</p></li>
           <li class="jstep reveal"><span class="jicon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M10 22 L32 36 L54 22"/><rect x="10" y="18" width="44" height="30" rx="4"/></svg></span><span class="jnum" aria-hidden="true">4</span>
             <h3>Vos films en 48 heures</h3><p>Dans les 48 heures qui suivent la réception de votre paiement : le film en full HD sans filigrane, une version verticale pour les Reels et la chanson en MP3. Un petit détail à changer ? Une série de retouches est comprise.</p></li>
           <li class="jstep reveal"><span class="jicon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M32 50 C14 38 10 28 18 20 C24 14 30 18 32 23 C34 18 40 14 46 20 C54 28 50 38 32 50 Z"/></svg></span><span class="jnum" aria-hidden="true">5</span>
-            <h3>Partagez-le partout</h3><p>Mettez-le sur votre annonce, votre site, Instagram, vos pubs, où vous voulez. Le film et la chanson sont à vous, partout et pour toujours.</p><p class="jwink">Forever ever? Forever ever. Yes, Miss Jackson.</p></li>
+            <h3>Partagez-le partout</h3><p>Mettez-le sur votre annonce, site, réseaux, OTA qui acceptent la vidéo, pubs et print. Vous recevez une licence commerciale perpétuelle pour promouvoir ce logement ; Luis / Elevated Listing conserve le droit d’auteur.</p><p class="jwink">Forever ever? Forever ever. Yes, Miss Jackson.</p></li>
           </ol>
         </div>
         <p class="jnote">Des questions ? Écrivez-moi. C’est un vrai humain qui répond : moi, Luis.</p>
@@ -974,7 +975,7 @@
           <article class="card">
             <span class="card-icon" aria-hidden="true"><img src="../assets/icons/one-strong-cut.svg" alt="" /></span>
             <h3>Un film qui tient la route</h3>
-            <p>Un film terminé pour Airbnb, Instagram ou votre site, qui fait rêver avant même l’oreiller. À vous, partout et pour toujours.</p>
+            <p>Un film terminé pour Airbnb, Instagram ou votre site, qui fait rêver avant même l’oreiller. Sous licence pour promouvoir ce logement, pour toujours.</p>
           </article>
         </div>
       </div>
@@ -983,7 +984,7 @@
 <section id="packages">
       <div class="wrap">
         <div class="pill">Prix</div>
-        <h2 class="section-title" style="margin-bottom:1.5rem">Un film. Une chanson. À vous.</h2>
+        <h2 class="section-title" style="margin-bottom:1.5rem">Un film. Une chanson. Une licence commerciale.</h2>
         <div class="offer tier featured" style="max-width:32rem">
           <h3>Votre film</h3>
           <div class="price">$249 <small>en un seul paiement, sans abonnement</small></div>
@@ -1000,11 +1001,11 @@
         <div class="paynote">
           <h3>Vous le voyez d’abord</h3>
           <p>Je fais le film et je vous l’envoie, avec un filigrane. Ce que vous voyez, c’est le vrai film. Coup de cœur ? Dites oui et payez $249. Sinon, vous ne payez rien, et sans rancune. Le film reste non répertorié et je ne m’en sers pas pour promouvoir votre logement.</p>
-          <h3>À vous, partout, pour toujours</h3>
-          <p>Une fois le paiement fait, vous recevez une licence perpétuelle, mondiale et libre de droits pour utiliser le film et la chanson comme vous voulez : votre annonce, votre site, les réseaux sociaux, la pub, tous les logements que vous gérez. Aucuns frais en plus, jamais. Je peux montrer le film dans mon portfolio, sauf si vous préférez que non. Dites-le-moi, tout simplement. Tous les détails sont dans les <a href="/terms" style="color:var(--accent)">conditions</a> (en anglais).</p>
+          <h3>Une licence commerciale pour promouvoir votre logement</h3>
+          <p>Une fois le paiement fait, vous recevez une licence perpétuelle et mondiale pour utiliser le film et la chanson terminés pour promouvoir ce logement : site, réseaux, OTA qui acceptent la vidéo, pubs et print. Luis / Elevated Listing conserve le droit d’auteur de la production. La chanson est aussi soumise aux conditions d’usage commercial de Suno pour la musique créée avec un abonnement Pro ou Premier. Aucuns frais en plus, jamais. Je peux montrer le film dans mon portfolio, sauf si vous préférez que non. Détails dans les <a href="/terms" style="color:var(--accent)">conditions</a> (en anglais).</p>
           <div class="paycallout">
           <h3>Comment se passe le paiement</h3>
-          <p>Après votre oui, je vous envoie une facture par e-mail. Vous payez en crypto (USDC sur Base ou USDT sur Arbitrum) ou par Western Union. Les 48 heures démarrent à la réception de votre paiement, et je vous préviens par e-mail dès qu’il arrive. Le paiement par carte arrivera plus tard.</p>
+          <p>Après votre oui, je vous envoie une facture par e-mail. Payez via PayPal à <strong>sisyfosforever@gmail.com</strong> en <strong>Goods and Services</strong>, en crypto (USDC sur Base ou USDT sur Arbitrum) ou par Western Union. Les étapes : <a href="/pay">elevatedlisting.co/pay</a>. Les 48 heures démarrent à la réception de votre paiement, et je vous préviens par e-mail dès qu’il arrive.</p>
           <p style="margin:.6rem 0 0"><img src="/img/western-union.svg" alt="Western Union" height="28" style="background:#fff;border-radius:6px;padding:6px 10px;vertical-align:middle"></p>
           <p class="small">Novice en crypto ? La plupart des hôtes achètent de l’USDC en quelques minutes via Coinbase, Kraken ou équivalent, et je vous accompagne volontiers. Vous ne payez qu’après avoir vu votre film et dit oui.</p>
           </div>
@@ -1102,7 +1103,7 @@
             <h3>Tout simplement</h3>
             <p style="margin-bottom:.75rem">1. Vous recevez un film de ma part, ou vous m’envoyez une annonce qui vous a inspiré.</p>
             <p style="margin-bottom:.75rem">2. On se parle simplement, d’humain à humain. Vos remarques sont les bienvenues.</p>
-            <p style="margin:0">3. Vous l’achetez quand vous le sentez. Le film et la chanson sont à vous.</p>
+            <p style="margin:0">3. Vous l’achetez quand vous le sentez. Vous recevez une licence commerciale ; Luis conserve le droit d’auteur.</p>
           </div>
         </div>
       </div>
@@ -1118,6 +1119,11 @@
         <a href="/privacy" hreflang="en">Confidentialité</a>
         <span class="sep">·</span>
         <a href="/fr/refund">Remboursement</a>
+      </div>
+    <div class="contact-block">
+        <p><strong>Contact</strong> · <a href="mailto:luis@elevatedlisting.co">luis@elevatedlisting.co</a></p>
+        <p><strong>Adresse postale</strong><br>Mats Ludvig Lindberg<br>604 C. Hoare<br>San Juan, Puerto Rico 00907</p>
+        <p><strong>Désinscription :</strong> Vous avez reçu un e-mail commercial de ma part et n’en voulez plus ? Répondez <strong>STOP</strong>, ou écrivez à <a href="mailto:luis@elevatedlisting.co?subject=STOP">luis@elevatedlisting.co</a> avec l’objet STOP, et je ne vous recontacterai pas. Chaque e-mail commercial envoyé inclut ce moyen de désinscription.</p>
       </div>
     </div>
   </footer>
