@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Montana Hill Guest Ranch · Bridge Lake, BC (preview)</title>
+<meta name="description" content="A working cattle ranch in BC's South Cariboo. Four private log cabins with hot tubs, ranch horses, farm-to-table meals. Hosted by Elaine and Al.">
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:title" content="Montana Hill Guest Ranch · Bridge Lake, BC">
+<meta property="og:description" content="Slow down on a real Cariboo ranch. Private log cabins, hot tubs, horses, and beef raised right here.">
+<meta property="og:image" content="https://elevatedlisting.co/sandbox/montana-hill/poster.jpg">
+<meta name="theme-color" content="#2f3b2c">
+<link rel="icon" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="poster.jpg">
+<style>
+:root{
+  --linen:#f6f1e7; --cream:#efe7d6; --ink:#2a2620; --muted:#6b6457;
+  --green:#2f3b2c; --green-2:#3e4e39; --wood:#8a5a3b; --line:#ddd2bd;
+  --serif:"Fraunces",Georgia,serif; --sans:"Outfit",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--linen);color:var(--ink);font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+img,video{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:min(1080px,100% - 40px);margin-inline:auto}
+
+/* preview strip */
+.preview{background:var(--green);color:#e9e2d0;font-size:13px;letter-spacing:.02em;text-align:center;padding:8px 14px}
+.preview b{font-weight:500;color:#fff}
+
+/* top bar */
+.bar{position:absolute;left:0;right:0;top:36px;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:16px 20px;color:#fff}
+.brand{font:500 18px/1.1 var(--serif);letter-spacing:.01em;text-decoration:none}
+.brand small{display:block;font:400 11px var(--sans);letter-spacing:.18em;text-transform:uppercase;opacity:.8;margin-top:3px}
+.bar .call{font-size:14px;text-decoration:none;border:1px solid rgba(255,255,255,.55);border-radius:999px;padding:7px 14px;backdrop-filter:blur(4px);background:rgba(0,0,0,.12)}
+
+/* hero */
+.hero{position:relative;min-height:min(88vh,860px);min-height:min(88svh,860px);display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:#1f261d url(poster.jpg) 68% 50%/cover no-repeat}
+.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:68% 50%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,24,18,.45) 0%,rgba(20,24,18,0) 28%,rgba(20,24,18,0) 45%,rgba(20,24,18,.72) 100%)}
+.hero .inner{position:relative;z-index:2;padding:0 20px 56px;width:100%}
+.eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;opacity:.9}
+.hero h1{font:500 clamp(38px,8vw,76px)/1.02 var(--serif);letter-spacing:-.01em;margin:10px 0 10px;max-width:12ch}
+.hero p.lede{font-size:clamp(16px,2.2vw,19px);font-weight:300;max-width:34ch;opacity:.95}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn{display:inline-flex;align-items:center;gap:10px;font:500 16px var(--sans);text-decoration:none;border-radius:999px;padding:14px 24px;transition:transform .15s ease,background .2s ease}
+.btn:active{transform:scale(.98)}
+.btn-primary{background:var(--linen);color:var(--green)}
+.btn-primary:hover{background:#fff}
+.btn-ghost{color:#fff;border:1px solid rgba(255,255,255,.6);background:rgba(0,0,0,.15);backdrop-filter:blur(4px)}
+.btn-ghost:hover{background:rgba(0,0,0,.3)}
+.btn-ghost svg{width:14px;height:14px}
+.offer{margin-top:18px;font-size:14px;opacity:.85}
+.motion{position:absolute;right:16px;bottom:16px;z-index:3;width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.5);background:rgba(0,0,0,.25);color:#fff;display:grid;place-items:center;cursor:pointer}
+.motion svg{width:14px;height:14px}
+
+/* intro */
+.intro{padding:72px 0 28px;text-align:center}
+.intro h2{font:500 clamp(28px,4.6vw,42px)/1.15 var(--serif);max-width:20ch;margin:0 auto 14px}
+.intro p{color:var(--muted);max-width:56ch;margin:0 auto}
+.rule{width:48px;height:2px;background:var(--wood);margin:0 auto 22px;border-radius:2px}
+
+/* cards */
+.cards{display:grid;gap:18px;padding:36px 0 72px;grid-template-columns:1fr}
+@media(min-width:640px){.cards{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.cards{grid-template-columns:repeat(4,1fr)}}
+.card{background:#fffdf8;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.card img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+.card div{padding:18px 18px 22px}
+.card h3{font:500 21px/1.25 var(--serif);margin-bottom:6px;color:var(--green)}
+.card p{font-size:15.5px;color:var(--muted)}
+
+/* review */
+.review{background:var(--green);color:#f1ead9;padding:72px 0}
+.review .wrap{max-width:760px;text-align:center}
+.stars{color:#d9b56b;letter-spacing:4px;font-size:16px}
+.review blockquote{font:400 clamp(21px,3.2vw,28px)/1.45 var(--serif);margin:16px 0 18px}
+.review cite{font-style:normal;font-size:14px;letter-spacing:.06em;opacity:.8}
+.review .count{display:block;margin-top:6px;font-size:13px;opacity:.65}
+
+/* hosts */
+.hosts{padding:72px 0}
+.hosts .grid{display:grid;gap:28px;align-items:center}
+@media(min-width:760px){.hosts .grid{grid-template-columns:1fr 1.2fr;gap:48px}}
+.hosts img{border-radius:14px;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+.hosts h2{font:500 clamp(26px,4vw,36px)/1.2 var(--serif);margin-bottom:12px}
+.hosts p{color:var(--muted);margin-bottom:12px}
+.facts{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px 18px;margin:18px 0 24px;font-size:15px}
+.facts li{border-top:1px solid var(--line);padding-top:8px}
+.facts b{display:block;font:500 18px var(--serif);color:var(--green)}
+.btn-dark{background:var(--green);color:var(--linen)}
+.btn-dark:hover{background:var(--green-2)}
+
+/* footer */
+footer{background:var(--cream);border-top:1px solid var(--line);padding:44px 0 28px;font-size:15px;color:var(--muted)}
+footer .cols{display:grid;gap:22px}
+@media(min-width:760px){footer .cols{grid-template-columns:1.4fr 1fr 1fr}}
+footer h4{font:500 18px var(--serif);color:var(--ink);margin-bottom:6px}
+footer a{text-decoration:none;border-bottom:1px solid var(--line)}
+footer a:hover{color:var(--ink)}
+.note{margin-top:32px;padding-top:16px;border-top:1px solid var(--line);font-size:12.5px;text-align:center;letter-spacing:.02em}
+
+@media(prefers-reduced-motion:reduce){.hero video{display:none}}
+</style>
+</head>
+<body>
+
+<div class="preview">Preview for <b>Elaine</b> · Elevated Listing sandbox</div>
+
+<header class="bar">
+  <a class="brand" href="#top">Montana Hill<small>Guest Ranch</small></a>
+  <a class="call" href="tel:+12505939807">Call 1.250.593.9807</a>
+</header>
+
+<section class="hero" id="top">
+  <video id="film" autoplay muted loop playsinline preload="auto" poster="poster.jpg" aria-hidden="true">
+    <source src="hero-loop.mp4" type="video/mp4">
+  </video>
+  <div class="inner wrap">
+    <div class="eyebrow">Bridge Lake · South Cariboo, BC</div>
+    <h1>Montana Hill Guest Ranch</h1>
+    <p class="lede">A working cattle ranch where the coffee is always on and the day moves at the pace of the horses.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="https://resnexus.com/resnexus/reservations/book/8A35D45A-6B25-4D33-8158-BC98421E0A4D" target="_blank" rel="noopener">Book your stay</a>
+      <a class="btn btn-ghost" href="https://youtu.be/_pLDw5KINKY" target="_blank" rel="noopener">
+        <svg viewBox="0 0 14 14" fill="currentColor" aria-hidden="true"><path d="M3 1.5v11l9-5.5z"/></svg>Play the film
+      </a>
+    </div>
+    <div class="offer">From $199 a night for two, until June 30, 2027</div>
+  </div>
+  <button class="motion" id="motion" aria-label="Pause background video">
+    <svg id="ico" viewBox="0 0 14 14" fill="currentColor"><path d="M3 2h3v10H3zM8 2h3v10H8z"/></svg>
+  </button>
+</section>
+
+<main>
+  <section class="intro wrap">
+    <div class="rule"></div>
+    <h2>More than a vacation. A few days of real ranch life.</h2>
+    <p>Hundreds of acres of rolling hills, pine and aspen, four private log cabins and a lodge deck over Montana Hill Lake. Come to unplug, stay for the people.</p>
+  </section>
+
+  <section class="cards wrap" aria-label="What to expect">
+    <article class="card">
+      <img src="misty-horses.jpg" alt="Horses grazing in morning mist" loading="lazy">
+      <div><h3>Unplug</h3><p>No rush, no crowds. Mornings in the mist, evenings by the fire, and room to breathe.</p></div>
+    </article>
+    <article class="card">
+      <img style="object-position:50% 12%" src="milking.jpg" alt="Child bottle-feeding a young ranch animal" loading="lazy">
+      <div><h3>Ranch life, hands-on</h3><p>Milk a cow, make cheese, collect eggs, and ride calm ranch horses. Al teaches beginners.</p></div>
+    </article>
+    <article class="card">
+      <img style="object-position:50% 30%" src="hot-tub-snow.jpg" alt="Couple in robes by a steaming hot tub in winter" loading="lazy">
+      <div><h3>Cabins with hot tubs</h3><p>Four private log cabins, each with its own hot tub on the deck, plus an ensuite, kitchenette and BBQ.</p></div>
+    </article>
+    <article class="card">
+      <img src="steak.jpg" alt="Ranch-raised steak dinner on a wooden table" loading="lazy">
+      <div><h3>Farm to table</h3><p>Beef and chicken raised right here. Evening BBQs, and burgers guests still write home about.</p></div>
+    </article>
+  </section>
+
+  <section class="review">
+    <div class="wrap">
+      <div class="stars" aria-label="5 stars">★★★★★</div>
+      <blockquote>“Elaine and Al were amazing hosts, so warm, friendly, and thoughtful in every detail. Peaceful and relaxing, the perfect place to unwind. Truly a 5-star getaway!”</blockquote>
+      <cite>Amy C. · Google Review</cite>
+      <span class="count">One of 260+ guest reviews</span>
+    </div>
+  </section>
+
+  <section class="hosts wrap">
+    <div class="grid">
+      <img src="owners-fireplace.jpg" alt="Elaine and Al by the river rock fireplace" loading="lazy">
+      <div>
+        <h2>Hosted by Elaine and Al</h2>
+        <p>They bought the ranch in 2016, renovated it and reopened the gate to guests. Before that, they ran an inn and working farm on Vancouver Island.</p>
+        <p>Come summer for trail rides by the lake, or winter for snowshoeing, snowmobiling and a hot tub under falling snow.</p>
+        <ul class="facts">
+          <li><b>4</b>private log cabins</li>
+          <li><b>260+</b>guest reviews</li>
+          <li><b>15 min</b>from Bridge Lake</li>
+          <li><b>All year</b>summer &amp; winter</li>
+        </ul>
+        <a class="btn btn-dark" href="https://resnexus.com/resnexus/reservations/book/8A35D45A-6B25-4D33-8158-BC98421E0A4D" target="_blank" rel="noopener">Book your stay</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h4>Montana Hill Guest Ranch</h4>
+        7915 Machete Lake Rd<br>Bridge Lake, BC, Canada
+      </div>
+      <div>
+        <h4>Call</h4>
+        <a href="tel:+12505939807">1.250.593.9807</a>
+      </div>
+      <div>
+        <h4>Email</h4>
+        <a href="mailto:montanahill5445@gmail.com">montanahill5445@gmail.com</a>
+      </div>
+    </div>
+    <p class="note">Preview for Elaine · Elevated Listing sandbox · Your live site is still <a href="https://montanahillguestranch.com/" target="_blank" rel="noopener">montanahillguestranch.com</a></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var v=document.getElementById('film'),b=document.getElementById('motion'),i=document.getElementById('ico');
+  var P='<path d="M3 2h3v10H3zM8 2h3v10H8z"/>',R='<path d="M3 1.5v11l9-5.5z"/>';
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches){v.pause();b.hidden=true;return;}
+  var p=v.play&&v.play(); if(p&&p.catch)p.catch(function(){i.innerHTML=R;b.setAttribute('aria-label','Play background video');});
+  b.addEventListener('click',function(){
+    if(v.paused){v.play();i.innerHTML=P;b.setAttribute('aria-label','Pause background video');}
+    else{v.pause();i.innerHTML=R;b.setAttribute('aria-label','Play background video');}
+  });
+})();
+</script>
+</body>
+</html>
