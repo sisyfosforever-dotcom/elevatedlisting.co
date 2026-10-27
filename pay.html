@@ -95,19 +95,25 @@
       </ul>
     </section>
 
-    <!-- PayPal checkout. Replace #PAYPAL_CHECKOUT_LINK with the real PayPal Business checkout / payment link once Luis has created and approved it. -->
+    <!-- PayPal: send-to-email steps (temporary, until the PayPal Business checkout link is ready). -->
     <section class="card" id="pay-paypal">
       <h2><span class="num">1</span> Card or PayPal <span class="tag">Preferred</span></h2>
-      <dl class="payee"><dt>Seller in PayPal</dt><dd>Elevated Listing <span class="tag">PayPal Business account</span></dd></dl>
-      <p><a class="btn pp-checkout" href="#PAYPAL_CHECKOUT_LINK" rel="noopener"><span class="ppword" role="img" aria-label="PayPal"><b>Pay</b><b>Pal</b></span>&nbsp; Pay securely with PayPal (Elevated Listing)</a></p>
-      <p class="note" style="margin-top:-.4rem">Card or PayPal account. A secure PayPal page opens, and you can pay with a normal debit or credit card even without a PayPal account where PayPal offers that.</p>
-      <p class="pp-secure"><svg class="lock" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 10.5V7.8a3.5 3.5 0 0 1 7 0v2.7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="t">PayPal handles your card details, so I never see them. Payments through PayPal checkout may be eligible for PayPal’s Purchase Protection, under PayPal’s own terms.</span></p>
-      <ol class="steps">
-        <li>Press the button above, or use the PayPal link in the invoice I email you.</li>
-        <li>Pay the USD total on your invoice. The seller you see in PayPal is <strong>Elevated Listing</strong>. That’s me.</li>
-        <li>Add your <strong>property name</strong> in the note if PayPal asks. Then reply to my email so I can match the payment. Your film arrives within <strong>48 hours</strong>.</li>
-      </ol>
-      <p class="note">If the button doesn’t work for you, reply to my invoice email and I’ll send you a PayPal payment request instead.</p>
+      <dl class="payee"><dt>Recipient</dt><dd>Elevated Listing <span class="tag">PayPal Business account</span></dd><dt>PayPal email</dt><dd>sisyfosforever@gmail.com</dd></dl>
+      <p class="pp-secure"><svg class="lock" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 10.5V7.8a3.5 3.5 0 0 1 7 0v2.7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="ppword" role="img" aria-label="PayPal"><b>Pay</b><b>Pal</b></span><span class="t">Secure payment via PayPal. Pay with a card or your PayPal balance. PayPal handles your card details, so I never see them.</span></p>
+      <div id="paypal-steps">
+        <p class="note">Card payment is preferred when it’s available to you. Today it runs through PayPal: you can pay with a normal debit or credit card linked to PayPal, or from your PayPal balance. It takes about two minutes.</p>
+        <p class="note"><strong>Please choose Goods and Services.</strong> That is PayPal’s option for paying for something you bought, and it keeps PayPal’s buyer protection on your side. Please don’t use Friends and Family for this payment.</p>
+        <ol class="steps">
+          <li>Log in at <a href="https://www.paypal.com/myaccount/transfer/homepage/pay" target="_self">paypal.com &rarr; Send</a>.</li>
+          <li>Send to this email:
+            <div class="copyrow"><span class="val">sisyfosforever@gmail.com</span> <button class="copy" type="button" data-copy="sisyfosforever@gmail.com">Copy</button></div>
+            <span class="field">PayPal shows the recipient as <strong>Elevated Listing</strong>, my PayPal Business account. That’s me.</span></li>
+          <li>Amount: the USD total on your invoice (Standard <span class="val">$249</span>, Elevated <span class="val">$499</span>, or your custom quote).</li>
+          <li>When PayPal asks what the payment is for, choose <strong>Goods and Services</strong> (paying for an item or service), not Friends and Family. That keeps PayPal&rsquo;s buyer protection on your side.</li>
+          <li>In the note, write your <strong>property name</strong>. Then reply to my email so I can match the payment. Your film arrives within <strong>48 hours</strong>.</li>
+        </ol>
+        <p><a class="btn ghost" href="https://www.paypal.com/myaccount/transfer/homepage/pay" target="_self">Open PayPal</a></p>
+      </div>
     </section>
 
     <h2 style="margin:2rem 0 .5rem">Other ways to pay</h2>
