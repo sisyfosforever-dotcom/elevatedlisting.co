@@ -600,6 +600,7 @@
     details.more-films,details.more-cuts{margin-top:1.5rem}
     details.more-films>summary,details.more-cuts>summary{cursor:pointer;color:var(--accent);font-weight:500;padding:.6rem 0;list-style-position:inside}
     details.more-films>.fgrid{margin-top:1rem}
+    .tip-btn{display:none!important}
   </style>
 </head>
 <body>
@@ -619,7 +620,7 @@
     </div>
   </header>
 
-  <a class="tip-btn" href="https://ko-fi.com/luisfromsweden" target="_blank" rel="noopener" aria-label="Invítame un cafecito en Ko-fi (se abre en una pestaña nueva)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 8h1a4 4 0 0 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4z"/><path d="M7 2v2M11 2v2M15 2v2"/></svg><span>Invítame un cafecito</span></a>
+  <a class="tip-btn" hidden aria-hidden="true" tabindex="-1" href="https://ko-fi.com/luisfromsweden" target="_blank" rel="noopener" aria-label="Invítame un cafecito en Ko-fi (se abre en una pestaña nueva)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 8h1a4 4 0 0 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4z"/><path d="M7 2v2M11 2v2M15 2v2"/></svg><span>Invítame un cafecito</span></a>
   <main>
     <section class="hero">
       <div class="wrap">
@@ -706,10 +707,6 @@
         <p class="section-sub">Algunos favoritos. Cada uno parte de las fotos del anuncio y de una canción escrita para ese lugar. Toca una imagen para verlo.</p>
         <p class="films-real">Estos videos usan solo las fotos reales de cada alojamiento. Agrego movimiento, ritmo y música, nunca comodidades inventadas.</p>
         <ul class="fgrid">
-          <li><button class="fcard" type="button" data-yt="S7OBQ2Mx6G0" aria-label="Reproducir Porch Light on the Chilcotin – The Historic Chilcotin Lodge, Riske Creek, British Columbia">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/S7OBQ2Mx6G0/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">Porch Light on the Chilcotin</span><span class="fplace">The Historic Chilcotin Lodge, Riske Creek, British Columbia</span><span class="fcountry">Canadá</span>
-          </button></li>
           <li><button class="fcard" type="button" data-yt="_pLDw5KINKY" aria-label="Reproducir Ranch&#x27;s World – Montana Hill Guest Ranch, South Cariboo, British Columbia">
             <span class="fthumb"><img src="https://i.ytimg.com/vi/_pLDw5KINKY/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
             <span class="ftitle">Ranch&#x27;s World</span><span class="fplace">Montana Hill Guest Ranch, South Cariboo, British Columbia</span><span class="fcountry">Canadá</span>
