@@ -77,17 +77,18 @@
          No paypal.me link exists yet for sisyfosforever@gmail.com. When Luis creates one,
          set PAYPAL_URL in the script at the bottom: the button appears and these steps hide. -->
     <section class="card" id="pay-paypal">
-      <h2><span class="num">1</span> PayPal <span class="tag">Easiest</span></h2>
+      <h2><span class="num">1</span> Card or PayPal <span class="tag">Preferred</span></h2>
       <p><span class="badge ppbadge" aria-label="PayPal"><span class="pp1">Pay</span><span class="pp2">Pal</span></span></p>
       <div id="paypal-steps">
-        <p class="note">Send the invoiced amount to my PayPal email. It takes about two minutes. You can pay from your PayPal balance or a linked bank card.</p>
+        <p class="note">Card payment is preferred when it’s available to you. Today it runs through PayPal: you can pay with a normal debit or credit card linked to PayPal, or from your PayPal balance. It takes about two minutes.</p>
+        <p class="note"><strong>Please choose Goods and Services.</strong> That is PayPal’s option for paying for something you bought, and it keeps PayPal’s buyer protection on your side. Please don’t use Friends and Family for this payment.</p>
         <ol class="steps">
           <li>Log in at <a href="https://www.paypal.com/myaccount/transfer/homepage/pay" target="_self">paypal.com &rarr; Send</a>.</li>
           <li>Send to this email:
             <div class="copyrow"><span class="val">sisyfosforever@gmail.com</span> <button class="copy" type="button" data-copy="sisyfosforever@gmail.com">Copy</button></div>
             <span class="field">The PayPal account is in my legal name, Mats Ludvig Lindberg.</span></li>
           <li>Amount: the USD total on your invoice (Standard <span class="val">$249</span>, Elevated <span class="val">$499</span>, or your custom quote).</li>
-          <li>If PayPal asks, choose <strong>Goods and Services</strong> (not Friends and Family). That keeps PayPal&rsquo;s buyer protection on your side.</li>
+          <li>When PayPal asks what the payment is for, choose <strong>Goods and Services</strong> (paying for an item or service), not Friends and Family. That keeps PayPal&rsquo;s buyer protection on your side.</li>
           <li>In the note, write your <strong>property name</strong>. Then reply to my email so I can match the payment. Your film arrives within <strong>48 hours</strong>.</li>
         </ol>
         <p><a class="btn ghost" href="https://www.paypal.com/myaccount/transfer/homepage/pay" target="_self">Open PayPal</a></p>
@@ -100,9 +101,25 @@
     </section>
 
     <h2 style="margin:2rem 0 .5rem">Other ways to pay</h2>
-    <p class="note" style="margin:0 0 1rem">PayPal is the main way. If PayPal doesn’t work for you, these also work.</p>
-    <section class="card" id="pay-wu">
-      <h2><span class="num">2</span> Western Union</h2>
+    <p class="note" style="margin:0 0 1rem">Card or PayPal is the main way. If that doesn’t work for you, crypto works too. Western Union is a last resort.</p>
+
+    <section class="card" id="pay-crypto">
+      <h2><span class="num">2</span> Crypto</h2>
+      <p>Send the invoiced amount in <span class="val">USDC on Base</span> or <span class="val">USDT on Arbitrum</span> to this address (usually <span class="val">$249</span> or <span class="val">$499</span>). Please use only these two options.</p>
+      <div class="crypto-grid">
+        <img class="qr" src="/img/pay-wallet-qr.svg" alt="QR code of the wallet address" width="220" height="220">
+        <div>
+          <code class="addr" id="wallet">0xDC056F7a17797D7CD7B6D1c3DFeb2d898a88BDC4</code>
+          <div class="copyrow"><button class="copy" type="button" data-copy="0xDC056F7a17797D7CD7B6D1c3DFeb2d898a88BDC4">Copy address</button></div>
+          <p class="note">New to crypto? Most people buy USDC in a few minutes on Coinbase, Kraken or similar. I am happy to walk you through it. After you send, reply to my email so I can confirm.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="pay-wu" style="opacity:.85;font-size:.92rem">
+      <h2 style="font-size:1rem"><span class="num">3</span> Western Union <span class="note" style="font-weight:400">(last resort)</span></h2>
+      <details>
+      <summary>Only if card, PayPal and crypto don’t work for you. Show Western Union steps.</summary>
       <p><span class="badge"><img src="/img/western-union.svg" alt="Western Union" width="117" height="26"></span></p>
       <p>You can do this on the Western Union website, or at any Western Union shop.</p>
       <ol class="steps">
@@ -116,19 +133,7 @@
         <li>When you have paid, you get a tracking number called the <strong>MTCN</strong>. Reply to my email and send me that number. That is all.</li>
       </ol>
       <p><a class="btn ghost" href="https://www.westernunion.com" target="_self">Go to westernunion.com</a></p>
-    </section>
-
-    <section class="card" id="pay-crypto">
-      <h2><span class="num">3</span> Crypto</h2>
-      <p>Send the invoiced amount in <span class="val">USDC on Base</span> or <span class="val">USDT on Arbitrum</span> to this address (usually <span class="val">$249</span> or <span class="val">$499</span>). Please use only these two options.</p>
-      <div class="crypto-grid">
-        <img class="qr" src="/img/pay-wallet-qr.svg" alt="QR code of the wallet address" width="220" height="220">
-        <div>
-          <code class="addr" id="wallet">0xDC056F7a17797D7CD7B6D1c3DFeb2d898a88BDC4</code>
-          <div class="copyrow"><button class="copy" type="button" data-copy="0xDC056F7a17797D7CD7B6D1c3DFeb2d898a88BDC4">Copy address</button></div>
-          <p class="note">New to crypto? Most people buy USDC in a few minutes on Coinbase, Kraken or similar. I am happy to walk you through it. After you send, reply to my email so I can confirm.</p>
-        </div>
-      </div>
+      </details>
     </section>
 
     <p style="text-align:center;margin-top:2rem"><a class="back" href="/">&larr; Back to the homepage</a></p>

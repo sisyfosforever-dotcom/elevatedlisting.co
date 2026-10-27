@@ -433,6 +433,13 @@
     .hero-benefits li::before { content:""; position:absolute; left:0; top:.65em; width:.4rem; height:1px; background:var(--accent); }
     .hero-offer { margin:0 0 .75rem; font-weight:300; color:var(--mute); }
     .hero-offer strong { color:var(--ink); font-weight:500; }
+    .hero-note { margin:.25rem 0 1.25rem; max-width:40rem; font-size:.92rem; font-weight:300; color:var(--mute); border-left:2px solid var(--accent); padding-left:.8rem; }
+    .hero-note strong { color:var(--ink); font-weight:500; }
+    .faq { margin-top:2rem; max-width:44rem; }
+    .faq details { border:1px solid var(--line); border-radius:var(--radius); background:var(--card); padding:.9rem 1.25rem; margin:.6rem 0; }
+    .faq summary { cursor:pointer; font-weight:500; color:var(--ink); }
+    .faq details p { margin:.6rem 0 0; font-weight:300; }
+    .paynote .small-wu { font-size:.85rem; color:var(--mute); }
     .films-real { margin:-.5rem 0 1.25rem; font-size:.92rem; font-weight:300; color:var(--mute); }
     .pkg-cue { grid-column:1/-1; margin:.25rem 0 0; font-size:.95rem; font-weight:300; }
     .pkg-cue a { color:var(--mute); text-decoration:none; border-bottom:1px solid var(--line); }
@@ -568,7 +575,7 @@
         <a class="hide-sm" href="#contact">Contact</a>
         <div class="lang" role="navigation" aria-label="Language"><a href="/" hreflang="en" lang="en" title="English" aria-current="page">EN</a><span class="dot" aria-hidden="true">·</span><a href="/sv/" hreflang="sv" lang="sv" title="Svenska">SV</a><span class="dot" aria-hidden="true">·</span><a href="/es/" hreflang="es" lang="es" title="Español">ES</a><span class="dot" aria-hidden="true">·</span><a href="/fr/" hreflang="fr" lang="fr" title="Français">FR</a><span class="dot" aria-hidden="true">·</span><a href="/vi/" hreflang="vi" lang="vi" title="Tiếng Việt">VI</a><span class="dot" aria-hidden="true">·</span><a href="/fi/" hreflang="fi" lang="fi" title="Suomi">FI</a><span class="dot" aria-hidden="true">·</span><a href="/th/" hreflang="th" lang="th" title="ไทย">TH</a></div>
         <details class="lang-sm"><summary aria-label="Language: English">EN</summary><div class="lang-menu"><a href="/" hreflang="en" lang="en" aria-current="page">English <span>EN</span></a><a href="/sv/" hreflang="sv" lang="sv">Svenska <span>SV</span></a><a href="/es/" hreflang="es" lang="es">Español <span>ES</span></a><a href="/fr/" hreflang="fr" lang="fr">Français <span>FR</span></a><a href="/vi/" hreflang="vi" lang="vi">Tiếng Việt <span>VI</span></a><a href="/fi/" hreflang="fi" lang="fi">Suomi <span>FI</span></a><a href="/th/" hreflang="th" lang="th">ไทย <span>TH</span></a></div></details>
-        <a class="navpay" href="/pay" style="color:var(--accent);font-weight:500;margin-right:.75rem">Pay</a><a class="btn" href="#contact">Get in touch</a>
+        <a class="navpay" href="/pay" style="color:var(--accent);font-weight:500;margin-right:.75rem">Pay</a><a class="btn" href="#contact">Send your listing link</a>
       </nav>
     </div>
   </header>
@@ -578,18 +585,13 @@
     <section class="hero">
       <div class="wrap">
         <div class="eyebrow">By Luis from Sweden · Films & original songs</div>
-        <h1>Your house, in the middle of the feed.</h1>
-        <ul class="hero-benefits">
-          <li>Your real property photos, made into a cinematic film</li>
-          <li>An original song, written about your stay</li>
-          <li>Horizontal and vertical versions, ready for listings and social media</li>
-        </ul>
-        <p class="hero-offer"><strong>$249, one-time.</strong> Free preview first: you see the film before you pay.</p>
+        <h1>Your listing, as a short film with its own song.</h1>
+        <p class="hero-lead" style="color:var(--ink);font-weight:400">I take your real property photos and turn them into a cinematic film, then write an original song about the stay. You get horizontal and vertical versions, ready for your listing, site, and socials.</p>
+        <p class="hero-offer"><strong>$249 one-time.</strong> Free preview first — you see the finished film before you pay anything.</p>
         <div class="hero-actions" style="margin-bottom:.5rem">
-          <a class="btn book" href="#contact" data-msg="I'd like a free film of my place. Here's my listing link:">Get a free film of your place</a>
+          <a class="btn book" href="#contact" data-msg="I'd like a free preview film of my place. Here's my listing link:">Send me your listing link</a>
         </div>
-        <p class="hero-lead" style="color:var(--ink);font-weight:400">I turn your stay into a short film with its own song. You see the finished film first. If you love it, it’s yours for $249.</p>
-        <p class="hero-lead" style="font-size:.95rem;margin-bottom:1.75rem">Send me your listing link. No payment unless you love it.</p>
+        <p class="hero-note" id="ai-note"><strong>Honest note:</strong> The song is AI-assisted (Suno) and comes with a perpetual commercial licence for marketing your property. Real photos only. No invented rooms or amenities.</p>
         <p class="hero-lead">Made for Airbnb, VRBO, short-term and vacation rentals, from Marfa and the Texas Hill Country to a basement in Toronto.</p>
         <div class="work-media hero-film" data-yt="FLXkCJTmrgQ">
           <button type="button" class="yt-facade" aria-label="Play Elevated Listing - elevatedlisting.co">
@@ -682,7 +684,7 @@
             <div class="work-body">
               <div class="pill">Toronto</div>
               <h3>I got a basement in Toronto</h3>
-              <div class="work-meta">Ivan · Cozy independent basement · Sega Rally den</div>
+              <div class="work-meta">Cozy independent basement · Sega Rally den</div>
               <p>Narrow alley home, a few careful steps down — check-out will be late.</p>
               <div class="link-row">
                 <a href="https://www.youtube.com/watch?v=zf0wbonvAfI" target="_blank" rel="noopener">Watch on YouTube ↗</a>
@@ -751,37 +753,20 @@
 
 
 
-<article class="work">
-            <div class="work-media" data-yt="dtyS5c5j9rI">
-              <button type="button" class="yt-facade" aria-label="Play ROAM Fredericksburg storyboard">
-                <img src="https://i.ytimg.com/vi/dtyS5c5j9rI/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="ROAM Fredericksburg storyboard – listing film" loading="lazy" decoding="async" />
-                <span class="yt-play" aria-hidden="true"></span>
-              </button>
-            </div>
-            <div class="work-body">
-              <div class="pill">Fredericksburg</div>
-              <h3>Two containers · ROAM</h3>
-              <div class="work-meta">ROAM · 2:43 · Storyboard · Wine trail / 290</div>
-              <p>Two black containers side by side. A bold melting storyboard over a country-rock roam.</p>
-              <div class="link-row">
-                <a href="https://www.youtube.com/watch?v=dtyS5c5j9rI" target="_blank" rel="noopener">Watch on YouTube ↗</a>
-              </div>
-            </div>
-          </article>
-<p class="pkg-cue"><a href="#packages">Want this for your place? See the offer →</a></p>
+
 
 
 <article class="work">
             <div class="work-media" data-yt="dwBMO4qtyFQ">
-              <button type="button" class="yt-facade" aria-label="Play Jamie East Austin bathhouse">
-                <img src="https://i.ytimg.com/vi/dwBMO4qtyFQ/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="Jamie East Austin bathhouse – listing film" loading="lazy" decoding="async" />
+              <button type="button" class="yt-facade" aria-label="Play Private bathhouse East Austin">
+                <img src="https://i.ytimg.com/vi/dwBMO4qtyFQ/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="Private bathhouse East Austin – listing film" loading="lazy" decoding="async" />
                 <span class="yt-play" aria-hidden="true"></span>
               </button>
             </div>
             <div class="work-body">
               <div class="pill">Austin</div>
               <h3>Private bathhouse · East Austin</h3>
-              <div class="work-meta">Jamie · Short · Barrel sauna & cedar soaking tubs</div>
+              <div class="work-meta">Short · Barrel sauna &amp; cedar soaking tubs</div>
               <p>Cedar steam, quiet water, a song about slowing down east of the highway.</p>
               <div class="link-row">
                 <a href="https://www.youtube.com/watch?v=dwBMO4qtyFQ" target="_blank" rel="noopener">Watch on YouTube ↗</a>
@@ -817,7 +802,7 @@
             <div class="work-body">
               <div class="pill">Austin</div>
               <h3>Art-filled container retreat</h3>
-              <div class="work-meta">Lauren · 1:31 · Fire pit, giant deck, quiet country road</div>
+              <div class="work-meta">1:31 · Fire pit, giant deck, quiet country road</div>
               <p>Murals, string lights, indie folk for paint drying in open air.</p>
               <div class="link-row">
                 <a href="https://www.youtube.com/watch?v=4Yon44P1Hyw" target="_blank" rel="noopener">Watch on YouTube ↗</a>
@@ -837,7 +822,7 @@
             <div class="work-body">
               <div class="pill">San Antonio · Hill Country</div>
               <h3>Grantham House cabin</h3>
-              <div class="work-meta">Paula · 1:28 · Secluded views, couples retreat</div>
+              <div class="work-meta">1:28 · Secluded views, couples retreat</div>
               <p>Hill Country deck light, hot tub steam, a ballad written for two.</p>
               <div class="link-row">
                 <a href="https://www.youtube.com/watch?v=Sy5VvSOGdHk" target="_blank" rel="noopener">Watch on YouTube ↗</a>
@@ -952,11 +937,11 @@
           <li class="jstep reveal"><span class="jicon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M14 34 L27 46 L50 18"/></svg></span><span class="jnum" aria-hidden="true">2</span>
             <h3>Say yes</h3><p>Just reply to my email. A short “yes” is enough.</p></li>
           <li class="jstep reveal"><span class="jicon" aria-hidden="true"><svg viewBox="0 0 64 64"><rect x="10" y="20" width="44" height="28" rx="5"/><circle cx="32" cy="34" r="6"/></svg></span><span class="jnum" aria-hidden="true">3</span>
-            <h3>$249, one payment</h3><p>I email you an invoice. Pay by PayPal (Goods and Services to sisyfosforever@gmail.com), crypto (USDC on Base or USDT on Arbitrum), or Western Union. No subscription. Nothing more later. Steps at <a href="/pay">elevatedlisting.co/pay</a>.</p></li>
+            <h3>$249, one payment</h3><p>I email you an invoice. Pay by card or PayPal (as Goods and Services to sisyfosforever@gmail.com), or by crypto (USDC on Base or USDT on Arbitrum). No subscription. Nothing more later. Steps at <a href="/pay">elevatedlisting.co/pay</a>.</p></li>
           <li class="jstep reveal"><span class="jicon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M10 22 L32 36 L54 22"/><rect x="10" y="18" width="44" height="30" rx="4"/></svg></span><span class="jnum" aria-hidden="true">4</span>
             <h3>Get your films in 48 hours</h3><p>Within 48 hours of your payment reaching me: the full-HD film with no watermark, a vertical version for Reels, and the song as an MP3. Want a small change? One round of tweaks is included.</p></li>
           <li class="jstep reveal"><span class="jicon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M32 50 C14 38 10 28 18 20 C24 14 30 18 32 23 C34 18 40 14 46 20 C54 28 50 38 32 50 Z"/></svg></span><span class="jnum" aria-hidden="true">5</span>
-            <h3>Share it everywhere</h3><p>Put it on your listing, website, socials, OTAs that allow video, ads, and print. After payment the film is yours, and the song comes with a perpetual commercial licence for your property.</p><p class="jwink">Forever ever? Forever ever. Yes, Miss Jackson.</p></li>
+            <h3>Share it everywhere</h3><p>Put it on your listing, website, socials, OTAs that allow video, ads, and print. After payment the film is yours, and the song comes with a perpetual commercial licence for your property.</p></li>
           </ol>
         </div>
         <p class="jnote">Questions? Just write to me. A real person answers – me, Luis.</p>
@@ -990,7 +975,8 @@
 <section id="packages">
       <div class="wrap">
         <div class="pill">Price</div>
-        <h2 class="section-title" style="margin-bottom:1.5rem">Film + song. Full commercial licence.</h2>
+        <h2 class="section-title" style="margin-bottom:.75rem">Film + song. Full commercial licence.</h2>
+        <p class="section-sub" style="margin-bottom:1.5rem"><strong>Free preview first:</strong> you see the finished film before you pay anything. After payment the film is yours, and the song comes with a <strong>perpetual commercial licence</strong> for marketing your property.</p>
         <div class="tiers">
           <div class="offer tier featured">
             <h3>Standard</h3>
@@ -1002,7 +988,7 @@
               <li>One round of small tweaks</li>
               <li>Delivered within 48 hours of payment</li>
             </ul>
-            <a class="btn book" href="#contact" data-msg="I'd like the $249 Standard (film + song, full commercial licence). Here's my listing link:">Book Standard $249</a>
+            <a class="btn book" href="#contact" data-msg="I'd like the $249 Standard (film + song, full commercial licence). Here's my listing link:">Send your listing link</a>
           </div>
           <div class="offer tier">
             <h3>Elevated</h3>
@@ -1016,7 +1002,7 @@
               <li>Same full commercial licence for film + song</li>
               <li>Delivered within 48 hours of payment</li>
             </ul>
-            <a class="btn book" href="#contact" data-msg="I'd like the $499 Elevated package (film up to 3 min, 15s + 30s cutdowns, three rounds of changes, alternate song version).">Book Elevated $499</a>
+            <a class="btn book" href="#contact" data-msg="I'd like the $499 Elevated package (film up to 3 min, 15s + 30s cutdowns, three rounds of changes, alternate song version). Here's my listing link:">Send your listing link</a>
           </div>
           <div class="offer tier">
             <h3>Maximus</h3>
@@ -1026,10 +1012,9 @@
               <li>Multi-property or custom scope</li>
               <li>Price and timeline after we talk</li>
             </ul>
-            <a class="btn book" href="#contact" data-msg="Maximus / custom — let's talk about scope.">Let's talk</a>
+            <a class="btn book" href="#contact" data-msg="Maximus / custom — let's talk about scope. Here's my listing link:">Send your listing link</a>
           </div>
         </div>
-        <p class="avail" style="margin-top:1rem">Taking 3 new films a week.</p>
         <div class="paynote">
           <h3>You see it first</h3>
           <p>I make the film and send it to you, with a watermark. What you see is the real film. If you love it, say yes and pay — Standard $249, or Elevated $499 for a film up to 3 minutes, 15- and 30-second cutdowns, three rounds of changes and an alternate version of the song. If not, you pay nothing, no hard feelings. The film stays unlisted and I don’t use it to sell your place.</p>
@@ -1037,10 +1022,38 @@
           <p>Once you’ve paid, the finished film is yours: Luis assigns to you all rights he holds in the film, the edit and any lyrics he wrote. The song is made with Suno on a paid Pro or Premier plan, and the file you receive is an official Suno Download; Remixes of other users’ songs are never used. Under Suno’s Terms (effective 3 September 2026) you get all rights Luis holds in the song, plus a perpetual, worldwide, royalty-free licence to use it commercially to market the property (website, socials, OTAs that allow video, ads, print) with no further fees. Because the song is AI-generated, no one can promise that copyright exists in it or that no similar song exists elsewhere, and each platform applies its own rules to AI music. I may show the film in my portfolio unless you’d rather I didn’t. Full details in the <a href="/terms" style="color:var(--accent)">terms</a>.</p>
           <div class="paycallout">
           <h3>How payment works</h3>
-          <p>After you say yes, I email you an invoice. Pay via PayPal to <strong>sisyfosforever@gmail.com</strong> as <strong>Goods and Services</strong>, or by crypto (USDC on Base or USDT on Arbitrum), or by Western Union. Full steps at <a href="/pay">elevatedlisting.co/pay</a>. The 48 hours start when your payment reaches me, and I’ll email you when it does.</p>
-          <p style="margin:.6rem 0 0"><img src="/img/western-union.svg" alt="Western Union" height="28" style="background:#fff;border-radius:6px;padding:6px 10px;vertical-align:middle"></p>
+          <p>After you say yes, I email you an invoice. <strong>Preferred: card or PayPal.</strong> Pay with a card through PayPal or from your PayPal balance, sent to <strong>sisyfosforever@gmail.com</strong> as <strong>Goods and Services</strong> (not Friends and Family), which keeps PayPal’s buyer protection on your side. You can also pay by crypto (USDC on Base or USDT on Arbitrum). Full steps at <a href="/pay">elevatedlisting.co/pay</a>. The 48 hours start when your payment reaches me, and I’ll email you when it does.</p>
           <p class="small">New to crypto? Most hosts buy USDC in minutes via Coinbase, Kraken or similar, and I'm happy to walk you through it. You only pay after you’ve seen your film and said yes.</p>
+          <p class="small small-wu">If neither works for you, Western Union is possible as a last resort. See <a href="/pay">/pay</a>.</p>
           </div>
+        </div>
+
+        <div class="faq" id="faq">
+          <h3>Questions hosts ask</h3>
+          <details>
+            <summary>Where can I use the film?</summary>
+            <p>Anywhere you market the property: your own website, Instagram, TikTok, Facebook, YouTube, ads and print, and listing platforms that allow video. Airbnb’s own support for listing video is limited, so check what your platform accepts. The vertical version is made for Reels and Stories.</p>
+          </details>
+          <details>
+            <summary>Is the music AI?</summary>
+            <p>Yes. The song is AI-assisted, made with Suno on a paid Pro or Premier plan, and written about your stay. You get a perpetual, worldwide, royalty-free licence to use it commercially to market your property. Because it is AI-generated, no one can promise that copyright exists in it, and each platform applies its own rules to AI music. Details in the <a href="/terms" style="color:var(--accent)">terms</a>.</p>
+          </details>
+          <details>
+            <summary>How does the free preview work?</summary>
+            <p>Send me your listing link. I make the film from your real listing photos and send it to you with a watermark. What you see is the real film. If you love it, say yes and I email you an invoice. If not, you pay nothing. The film stays unlisted and I don’t use it to sell your place.</p>
+          </details>
+          <details>
+            <summary>Can I ask for changes?</summary>
+            <p>Standard includes one round of small tweaks: one list of changes in one email, such as timing, the order or choice of your photos, or on-screen text. Elevated includes three rounds of changes. A new concept or a new song isn’t included, but we can agree it separately.</p>
+          </details>
+          <details>
+            <summary>What about refunds?</summary>
+            <p>Because you see the film before you pay, payments aren’t refundable once the film has been delivered. If I don’t deliver within 48 hours of your payment being received and confirmed, you get a full refund. See the <a href="/refund" style="color:var(--accent)">refund policy</a>.</p>
+          </details>
+          <details>
+            <summary>How do I pay?</summary>
+            <p>After you say yes, I email you an invoice. Card or PayPal (Goods and Services) is preferred, and crypto (USDC on Base or USDT on Arbitrum) also works. Delivery is within 48 hours of your payment reaching me. Steps at <a href="/pay" style="color:var(--accent)">elevatedlisting.co/pay</a>.</p>
+          </details>
         </div>
       </div>
     </section>
@@ -1100,7 +1113,7 @@
                 <label for="c-message">Message <span style="color:var(--mute);font-weight:300;text-transform:none;letter-spacing:0">(optional)</span></label>
                 <textarea id="c-message" name="message" placeholder="What’s the stay, and what do you want the guest to feel?"></textarea>
               </div>
-              <button class="btn" type="submit">Send message</button>
+              <button class="btn" type="submit">Send me your listing link</button>
               <p class="note">Goes to the Elevated Listing inbox. Or email <a href="mailto:luis@elevatedlisting.co" style="color:var(--accent)">luis@elevatedlisting.co</a>.</p>
             </div>
             <p class="thanks">Got it — I’ll reply from luis@elevatedlisting.co.</p>
