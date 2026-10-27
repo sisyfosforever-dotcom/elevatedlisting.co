@@ -581,6 +581,23 @@
     @media (max-width:600px) { .logo { gap:.45rem; } .logo-mark { width:24px; height:24px; } .logo-text { line-height:1.12; } .nav-links .navpay { margin-right:0 !important; } }
     @media (max-width:389px) { .logo-mark { display:none; } }
   </style>
+  <style id="trust-fixes-1027">
+    .pk-facts{display:grid;gap:.55rem;max-width:46rem;margin:-.5rem 0 1.6rem}
+    .pk-facts p{margin:0;font-size:.95rem;line-height:1.55;color:var(--mute)}
+    .pk-facts strong{color:var(--ink);font-weight:500}
+    .pp-cta{display:flex;flex-direction:column;align-items:flex-start;gap:.35rem;margin:1rem 0}
+    .pp-checkout{display:inline-flex;align-items:center;gap:.65rem;text-align:left}
+    .pp-checkout .ppword{font-size:.85rem}
+    .pp-sub{font-size:.85rem;color:var(--mute)}
+    .other-pay{margin:1.4rem 0 .4rem;font-size:1rem;font-weight:500;color:var(--ink)}
+    .next-step{margin:0 0 1.75rem;max-width:46rem}
+    .next-step h3{margin-top:0}
+    .next-step ol{margin:.5rem 0 .75rem;padding-left:1.2rem;line-height:1.55}
+    .next-step li{margin:.35rem 0}
+    details.more-films,details.more-cuts{margin-top:1.5rem}
+    details.more-films>summary,details.more-cuts>summary{cursor:pointer;color:var(--accent);font-weight:500;padding:.6rem 0;list-style-position:inside}
+    details.more-films>.fgrid{margin-top:1rem}
+  </style>
 </head>
 <body>
   <header>
@@ -588,7 +605,7 @@
       <a href="/th/" class="logo" aria-label="Elevated Listing หน้าแรก" style="text-decoration:none;color:inherit" onclick="if(location.pathname==='/th/'||location.pathname==='/th/index.html'){window.scrollTo({top:0,behavior:'smooth'});history.replaceState(null,'','/th/');return false;}"><img class="logo-mark" src="/img/logo-mark.svg" alt="" width="28" height="28" /><span class="logo-text">Elevated <span>Listing</span></span></a>
       <nav class="nav-links">
         <a class="hide-sm" href="#mind">แนวคิด</a>
-        <a class="hide-sm" href="#work">ผลงาน</a>
+        <a class="hide-sm" href="#films">ผลงาน</a>
         <a class="hide-sm" href="#packages">ราคา</a>
         <a class="hide-sm" href="#about">เกี่ยวกับผม</a>
         <a class="hide-sm" href="#contact">ติดต่อ</a>
@@ -619,7 +636,7 @@
           </button>
         </div>
         <div class="hero-actions">
-          <a class="btn btn-ghost" href="#work">ดูผลงานเพิ่ม</a>
+          <a class="btn btn-ghost" href="#films">ดูผลงานเพิ่ม</a>
         </div>
         <p class="pkg-cue"><a href="#packages">อยากได้แบบนี้ให้ที่พักคุณบ้างไหม? ดูรายละเอียด →</a></p>
         <div class="trust">
@@ -680,10 +697,112 @@
 
     
 
+    <section id="films">
+      <div class="wrap">
+        <h2 class="section-title">ผลงานคัดสรร</h2>
+        <p class="section-sub">ผลงานโปรดไม่กี่ชิ้น ทุกชิ้นเริ่มจากรูปในประกาศของที่พักเอง กับเพลงที่แต่งให้ที่นั่นโดยเฉพาะ แตะที่รูปเพื่อดูได้เลย</p>
+        <ul class="fgrid">
+          <li><button class="fcard" type="button" data-yt="S7OBQ2Mx6G0" aria-label="เล่น Porch Light on the Chilcotin – The Historic Chilcotin Lodge, Riske Creek, British Columbia">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/S7OBQ2Mx6G0/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Porch Light on the Chilcotin</span><span class="fplace">The Historic Chilcotin Lodge, Riske Creek, British Columbia</span><span class="fcountry">แคนาดา</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="_pLDw5KINKY" aria-label="เล่น Ranch&#x27;s World – Montana Hill Guest Ranch, South Cariboo, British Columbia">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/_pLDw5KINKY/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Ranch&#x27;s World</span><span class="fplace">Montana Hill Guest Ranch, South Cariboo, British Columbia</span><span class="fcountry">แคนาดา</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="EX0xMsigB8I" aria-label="เล่น Pump Up the Gas – Pik Pak, Marfa, Texas">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/EX0xMsigB8I/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Pump Up the Gas</span><span class="fplace">Pik Pak, Marfa, Texas</span><span class="fcountry">สหรัฐฯ</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="HJNe1U8_L2w" aria-label="เล่น Light My Fire – Saugerties Lighthouse B&amp;B, Hudson River, New York">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/HJNe1U8_L2w/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Light My Fire</span><span class="fplace">Saugerties Lighthouse B&amp;B, Hudson River, New York</span><span class="fcountry">สหรัฐฯ</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="Gy5infV4EKY" aria-label="เล่น Stardust – Stardust Retreat, Coleman, Texas">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/Gy5infV4EKY/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Stardust</span><span class="fplace">Stardust Retreat, Coleman, Texas</span><span class="fcountry">สหรัฐฯ</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="A4msgpOs3TA" aria-label="เล่น Too Much Mirror – Notestone Reserve, Hocking Hills, Ohio">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/A4msgpOs3TA/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Too Much Mirror</span><span class="fplace">Notestone Reserve, Hocking Hills, Ohio</span><span class="fcountry">สหรัฐฯ</span>
+          </button></li>
+        </ul>
+        <details class="more-films"><summary>วิดีโอเพิ่มเติมที่ผมทำให้ที่พักที่ชอบ ก่อนที่ใครจะขอ (15)</summary>
+        <ul class="fgrid">
+          <li><button class="fcard" type="button" data-yt="MrU4V8dQ9S8" aria-label="เล่น Make You Sweat – Toutosen smoke sauna">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/MrU4V8dQ9S8/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Make You Sweat</span><span class="fplace">ซาวน่ารมควัน Toutosen</span><span class="fcountry">ฟินแลนด์</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="QS8EtZkXTr4" aria-label="เล่น Purple Row – Lavender Row B&amp;B, Outram, Otago">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/QS8EtZkXTr4/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Purple Row</span><span class="fplace">Lavender Row B&amp;B, Outram, Otago</span><span class="fcountry">นิวซีแลนด์</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="HgZ8F30TqR8" aria-label="เล่น Hammock on the Bay – Bamboo Bay Eco Resort, Koh Phangan">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/HgZ8F30TqR8/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Hammock on the Bay</span><span class="fplace">Bamboo Bay Eco Resort, Koh Phangan</span><span class="fcountry">ไทย</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="ESzXXZeJpEg" aria-label="เล่น Dryhead! – Dryhead Ranch, Pryor Mountains, Montana">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/ESzXXZeJpEg/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Dryhead!</span><span class="fplace">Dryhead Ranch, Pryor Mountains, Montana</span><span class="fcountry">สหรัฐฯ</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="bJaVf5Z6sAg" aria-label="เล่น Tree House Jamboree – Crazy House, Da Lat">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/bJaVf5Z6sAg/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Tree House Jamboree</span><span class="fplace">Crazy House, Da Lat</span><span class="fcountry">เวียดนาม</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="Si9_9n-1RPc" aria-label="เล่น The Creagan Carriage-Motion – The Carriage at Creagan, Appin, Argyll">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/Si9_9n-1RPc/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">The Creagan Carriage-Motion</span><span class="fplace">The Carriage at Creagan, Appin, Argyll</span><span class="fcountry">สกอตแลนด์</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="J5uGGgk7J_o" aria-label="เล่น Windmills of Your Dreams – B&amp;B De Ouwe Meule, Nieuwdorp, Zeeland">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/J5uGGgk7J_o/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Windmills of Your Dreams</span><span class="fplace">B&amp;B De Ouwe Meule, Nieuwdorp, Zeeland</span><span class="fcountry">เนเธอร์แลนด์</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="-k3zWRS72Js" aria-label="เล่น Lemon Grove – Agriturismo Villa Maria, Minori, Amalfi Coast">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/-k3zWRS72Js/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Lemon Grove</span><span class="fplace">Agriturismo Villa Maria, Minori, Amalfi Coast</span><span class="fcountry">อิตาลี</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="UF2WhPcN0-M" aria-label="เล่น Tiny Farmer – Aria&#x27;s Farm Tiny House, Rotorua">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/UF2WhPcN0-M/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Tiny Farmer</span><span class="fplace">Aria&#x27;s Farm Tiny House, Rotorua</span><span class="fcountry">นิวซีแลนด์</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="pkOUdc5xWvA" aria-label="เล่น Paperback Sleeper – Amblongus Books, Chester">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/pkOUdc5xWvA/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Paperback Sleeper</span><span class="fplace">Amblongus Books, Chester</span><span class="fcountry">อังกฤษ</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="4R1-kjGwPBc" aria-label="เล่น This Is My House – Rødkærgård B&amp;B, Kerteminde">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/4R1-kjGwPBc/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">This Is My House</span><span class="fplace">Rødkærgård B&amp;B, Kerteminde</span><span class="fcountry">เดนมาร์ก</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="rxbjy8QPbsg" aria-label="เล่น Honey, I&#x27;m Coming Home – 13 Bees, Confolens">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/rxbjy8QPbsg/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Honey, I&#x27;m Coming Home</span><span class="fplace">13 Bees, Confolens</span><span class="fcountry">ฝรั่งเศส</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="VtwfTjgevMw" aria-label="เล่น Welcome to the Dow Hotel – Dow Hotel &amp; Dow Villa Motel, Lone Pine, California">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/VtwfTjgevMw/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Welcome to the Dow Hotel</span><span class="fplace">Dow Hotel &amp; Dow Villa Motel, Lone Pine, California</span><span class="fcountry">สหรัฐฯ</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="saoqzTnSdkU" aria-label="เล่น The Long Way Home – Forest Springs Getaway, Burney, California">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/saoqzTnSdkU/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">The Long Way Home</span><span class="fplace">Forest Springs Getaway, Burney, California</span><span class="fcountry">สหรัฐฯ</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="fWPwq5pPP1M" aria-label="เล่น 2423 Prytania Street – Garden District, New Orleans, Louisiana">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/fWPwq5pPP1M/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">2423 Prytania Street</span><span class="fplace">Garden District, New Orleans, Louisiana</span><span class="fcountry">สหรัฐฯ</span>
+          </button></li>
+        </ul>
+        </details>
+      </div>
+      <div class="flb" id="flb" hidden role="dialog" aria-modal="true" aria-label="เครื่องเล่นวิดีโอ">
+        <button class="flb-x" type="button" aria-label="ปิด">×</button>
+        <div class="flb-box"></div>
+      </div>
+    </section>
+
         <section id="work">
       <div class="wrap">
         <h2 class="section-title">ผลงานล่าสุด</h2>
         <p class="section-sub">วิดีโอที่ผมทำให้ที่พักที่ผมชอบ ก่อนที่ใครจะขอเสียอีก ผมใช้รูปจากประกาศที่เปิดสาธารณะ และถ้าเจ้าของอยากให้ลบ ผมลบให้ทันที</p>
+        <details class="more-cuts"><summary>ดูผลงาน</summary>
         <div class="work-grid">
 
 
@@ -842,99 +961,12 @@
               </div>
             </div>
           </article>
-        </div>
+        </div></details>
       </div>
     </section>
 
 
-    <section id="films">
-      <div class="wrap">
-        <h2 class="section-title">วิดีโอที่ผมทำให้ที่พักที่ชอบ</h2>
-        <p class="section-sub">ไม่มีใครขอ แต่ผมก็ทำอยู่ดี ทุกชิ้นเริ่มจากรูปในประกาศของที่พักเอง กับเพลงที่แต่งให้ที่นั่นโดยเฉพาะ แตะที่รูปเพื่อดูได้เลย</p>
-        <ul class="fgrid">
-          <li><button class="fcard" type="button" data-yt="A4msgpOs3TA" aria-label="เล่น Too Much Mirror – Notestone Reserve, Hocking Hills, Ohio">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/A4msgpOs3TA/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">Too Much Mirror</span><span class="fplace">Notestone Reserve, Hocking Hills, Ohio</span><span class="fcountry">สหรัฐฯ</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="MrU4V8dQ9S8" aria-label="เล่น Make You Sweat – Toutosen smoke sauna">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/MrU4V8dQ9S8/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">Make You Sweat</span><span class="fplace">ซาวน่ารมควัน Toutosen</span><span class="fcountry">ฟินแลนด์</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="EX0xMsigB8I" aria-label="เล่น Pump Up the Gas – Pik Pak, Marfa, Texas">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/EX0xMsigB8I/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">Pump Up the Gas</span><span class="fplace">Pik Pak, Marfa, Texas</span><span class="fcountry">สหรัฐฯ</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="HJNe1U8_L2w" aria-label="เล่น Light My Fire – Saugerties Lighthouse B&amp;B, Hudson River, New York">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/HJNe1U8_L2w/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">Light My Fire</span><span class="fplace">Saugerties Lighthouse B&amp;B, Hudson River, New York</span><span class="fcountry">สหรัฐฯ</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="QS8EtZkXTr4" aria-label="เล่น Purple Row – Lavender Row B&amp;B, Outram, Otago">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/QS8EtZkXTr4/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">Purple Row</span><span class="fplace">Lavender Row B&amp;B, Outram, Otago</span><span class="fcountry">นิวซีแลนด์</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="HgZ8F30TqR8" aria-label="เล่น Hammock on the Bay – Bamboo Bay Eco Resort, Koh Phangan">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/HgZ8F30TqR8/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">Hammock on the Bay</span><span class="fplace">Bamboo Bay Eco Resort, Koh Phangan</span><span class="fcountry">ไทย</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="ESzXXZeJpEg" aria-label="เล่น Dryhead! – Dryhead Ranch, Pryor Mountains, Montana">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/ESzXXZeJpEg/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">Dryhead!</span><span class="fplace">Dryhead Ranch, Pryor Mountains, Montana</span><span class="fcountry">สหรัฐฯ</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="bJaVf5Z6sAg" aria-label="เล่น Tree House Jamboree – Crazy House, Da Lat">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/bJaVf5Z6sAg/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">Tree House Jamboree</span><span class="fplace">Crazy House, Da Lat</span><span class="fcountry">เวียดนาม</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="Si9_9n-1RPc" aria-label="เล่น The Creagan Carriage-Motion – The Carriage at Creagan, Appin, Argyll">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/Si9_9n-1RPc/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">The Creagan Carriage-Motion</span><span class="fplace">The Carriage at Creagan, Appin, Argyll</span><span class="fcountry">สกอตแลนด์</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="J5uGGgk7J_o" aria-label="เล่น Windmills of Your Dreams – B&amp;B De Ouwe Meule, Nieuwdorp, Zeeland">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/J5uGGgk7J_o/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">Windmills of Your Dreams</span><span class="fplace">B&amp;B De Ouwe Meule, Nieuwdorp, Zeeland</span><span class="fcountry">เนเธอร์แลนด์</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="-k3zWRS72Js" aria-label="เล่น Lemon Grove – Agriturismo Villa Maria, Minori, Amalfi Coast">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/-k3zWRS72Js/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">Lemon Grove</span><span class="fplace">Agriturismo Villa Maria, Minori, Amalfi Coast</span><span class="fcountry">อิตาลี</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="UF2WhPcN0-M" aria-label="เล่น Tiny Farmer – Aria&#x27;s Farm Tiny House, Rotorua">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/UF2WhPcN0-M/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">Tiny Farmer</span><span class="fplace">Aria&#x27;s Farm Tiny House, Rotorua</span><span class="fcountry">นิวซีแลนด์</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="pkOUdc5xWvA" aria-label="เล่น Paperback Sleeper – Amblongus Books, Chester">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/pkOUdc5xWvA/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">Paperback Sleeper</span><span class="fplace">Amblongus Books, Chester</span><span class="fcountry">อังกฤษ</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="4R1-kjGwPBc" aria-label="เล่น This Is My House – Rødkærgård B&amp;B, Kerteminde">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/4R1-kjGwPBc/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">This Is My House</span><span class="fplace">Rødkærgård B&amp;B, Kerteminde</span><span class="fcountry">เดนมาร์ก</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="rxbjy8QPbsg" aria-label="เล่น Honey, I&#x27;m Coming Home – 13 Bees, Confolens">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/rxbjy8QPbsg/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">Honey, I&#x27;m Coming Home</span><span class="fplace">13 Bees, Confolens</span><span class="fcountry">ฝรั่งเศส</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="VtwfTjgevMw" aria-label="เล่น Welcome to the Dow Hotel – Dow Hotel &amp; Dow Villa Motel, Lone Pine, California">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/VtwfTjgevMw/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">Welcome to the Dow Hotel</span><span class="fplace">Dow Hotel &amp; Dow Villa Motel, Lone Pine, California</span><span class="fcountry">สหรัฐฯ</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="saoqzTnSdkU" aria-label="เล่น The Long Way Home – Forest Springs Getaway, Burney, California">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/saoqzTnSdkU/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">The Long Way Home</span><span class="fplace">Forest Springs Getaway, Burney, California</span><span class="fcountry">สหรัฐฯ</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="Gy5infV4EKY" aria-label="เล่น Stardust – Stardust Retreat, Coleman, Texas">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/Gy5infV4EKY/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">Stardust</span><span class="fplace">Stardust Retreat, Coleman, Texas</span><span class="fcountry">สหรัฐฯ</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="fWPwq5pPP1M" aria-label="เล่น 2423 Prytania Street – Garden District, New Orleans, Louisiana">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/fWPwq5pPP1M/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">2423 Prytania Street</span><span class="fplace">Garden District, New Orleans, Louisiana</span><span class="fcountry">สหรัฐฯ</span>
-          </button></li>
-        </ul>
-      </div>
-      <div class="flb" id="flb" hidden role="dialog" aria-modal="true" aria-label="เครื่องเล่นวิดีโอ">
-        <button class="flb-x" type="button" aria-label="ปิด">×</button>
-        <div class="flb-box"></div>
-      </div>
-    </section>
+    
 
     <section id="journey">
       <div class="wrap">
@@ -949,11 +981,11 @@
           <li class="jstep reveal"><span class="jicon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M14 34 L27 46 L50 18"/></svg></span><span class="jnum" aria-hidden="true">2</span>
             <h3>ตอบตกลง</h3><p>แค่ตอบอีเมลผมกลับมา พิมพ์สั้นๆ ว่า “โอเค” ก็พอ</p></li>
           <li class="jstep reveal"><span class="jicon" aria-hidden="true"><svg viewBox="0 0 64 64"><rect x="10" y="20" width="44" height="28" rx="5"/><circle cx="32" cy="34" r="6"/></svg></span><span class="jnum" aria-hidden="true">3</span>
-            <h3>$249 จ่ายครั้งเดียวจบ</h3><p>ผมส่งใบแจ้งหนี้ทางอีเมล จ่ายด้วยบัตรหรือ PayPal เข้าบัญชี PayPal Business ชื่อ <strong>Elevated Listing</strong> ของผม (sisyfosforever@gmail.com เลือก Goods and Services) หรือคริปโต (USDC บน Base หรือ USDT บน Arbitrum) ไม่มีสมัครสมาชิก ไม่มีค่าใช้จ่ายเพิ่มภายหลัง ดูขั้นตอนที่ <a href="/pay">elevatedlisting.co/pay</a></p></li>
+            <h3>จ่ายครั้งเดียวจบ</h3><p>ผมส่งใบแจ้งหนี้ทางอีเมล ชำระเงินอย่างปลอดภัยผ่านหน้าชำระเงิน PayPal (<strong>Elevated Listing</strong>) ด้วยบัตรหรือบัญชี PayPal หรือจะใช้คริปโตหรือ Western Union ก็ได้ ไม่มีสมัครสมาชิก ไม่มีค่าใช้จ่ายเพิ่มภายหลัง ดูขั้นตอนที่ <a href="/pay">elevatedlisting.co/pay</a></p></li>
           <li class="jstep reveal"><span class="jicon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M10 22 L32 36 L54 22"/><rect x="10" y="18" width="44" height="30" rx="4"/></svg></span><span class="jnum" aria-hidden="true">4</span>
             <h3>ได้วิดีโอภายใน 48 ชั่วโมง</h3><p>ภายใน 48 ชั่วโมงหลังผมได้รับเงิน คุณจะได้วิดีโอ Full HD ไม่มีลายน้ำ เวอร์ชันแนวตั้งสำหรับ Reels และเพลงไฟล์ MP3 อยากแก้นิดหน่อย? แก้ได้หนึ่งรอบ ไม่มีค่าใช้จ่ายเพิ่ม</p></li>
           <li class="jstep reveal"><span class="jicon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M32 50 C14 38 10 28 18 20 C24 14 30 18 32 23 C34 18 40 14 46 20 C54 28 50 38 32 50 Z"/></svg></span><span class="jnum" aria-hidden="true">5</span>
-            <h3>แชร์ได้ทุกที่</h3><p>ใส่ในประกาศ เว็บไซต์ โซเชียล OTA ที่รับวิดีโอ โฆษณา และสื่อพิมพ์ หลังชำระเงิน วิดีโอเป็นของคุณ ส่วนเพลงได้สิทธิ์ใช้เชิงพาณิชย์ถาวรสำหรับที่พักของคุณ</p></li>
+            <h3>แชร์ได้ทุกที่</h3><p>ใช้ได้บนเว็บไซต์ของคุณเองและหน้าจองตรง Instagram และ Reels, TikTok, YouTube โฆษณา และสื่อพิมพ์ Airbnb และ VRBO รองรับวิดีโอไม่สม่ำเสมอ ลองเช็กว่าประกาศของคุณรับวิดีโอได้หรือไม่ หลังชำระเงิน วิดีโอเป็นของคุณ ส่วนเพลงได้สิทธิ์ใช้เชิงพาณิชย์ถาวรสำหรับที่พักของคุณ</p></li>
           </ol>
         </div>
         <p class="jnote">มีคำถาม? ทักมาได้เลย คนจริงๆ ตอบเอง ก็ผมนี่แหละ Luis</p>
@@ -989,18 +1021,22 @@
         <div class="pill">ราคา</div>
         <h2 class="section-title" style="margin-bottom:.75rem">วิดีโอ + เพลง สิทธิ์ใช้งานเชิงพาณิชย์เต็มรูปแบบ</h2>
         <p class="section-sub" style="margin-bottom:1.5rem"><strong>ดูตัวอย่างฟรีก่อน:</strong> คุณได้ดูวิดีโอฉบับสมบูรณ์ก่อนจ่ายเงินใดๆ หลังชำระเงิน วิดีโอเป็นของคุณ และเพลงมาพร้อม<strong>สิทธิ์ใช้งานเชิงพาณิชย์แบบถาวร</strong>สำหรับโปรโมตที่พักของคุณ</p>
+        <div class="pk-facts" id="ai-disclosure">
+          <p><strong>ทำอย่างไร:</strong> เพลงแต่งขึ้นเพื่อที่พักของคุณและผลิตด้วยเครื่องมือทำเพลง AI (Suno) ส่วนวิดีโอตัดต่อจากรูปในประกาศของคุณเอง</p>
+          <p><strong>ใช้ได้ที่ไหน:</strong> Instagram และ Reels, TikTok, YouTube, เว็บไซต์ของคุณเอง, หน้าจองตรง และโฆษณา Airbnb และ VRBO รองรับวิดีโอไม่สม่ำเสมอ ผมจึงสัญญาไม่ได้ว่าจะเล่นบนประกาศของคุณที่นั่นได้</p>
+        </div>
         <div class="tiers">
           <div class="offer tier featured">
             <h3>Standard</h3>
             <div class="price">$249 <small>สิทธิ์ใช้งานเชิงพาณิชย์เต็มรูปแบบ</small></div>
             <ul>
               <li>วิดีโอที่ส่งให้คุณ เวอร์ชันจบ — full HD 16:9 + แนวตั้ง ไม่มีลายน้ำ</li>
-              <li>เพลงต้นฉบับเป็น MP3 — รวมในราคา $249</li>
+              <li>เพลงต้นฉบับเป็น MP3 รวมอยู่แล้ว</li>
               <li>วิดีโอเป็นของคุณ ส่วนเพลงได้สิทธิ์ใช้เชิงพาณิชย์ถาวรสำหรับที่พักของคุณ</li>
               <li>ปรับแก้เล็กน้อยหนึ่งรอบ</li>
               <li>ส่งมอบภายใน 48 ชั่วโมงหลังชำระเงิน</li>
             </ul>
-            <a class="btn book" href="#contact" data-msg="อยากได้ Standard $249 (วิดีโอ + เพลง สิทธิ์ใช้งานเชิงพาณิชย์เต็มรูปแบบ) นี่คือลิงก์ประกาศ:">ส่งลิงก์ประกาศที่พัก</a>
+            <a class="btn book" href="#next-step" data-msg="อยากได้ Standard $249 (วิดีโอ + เพลง สิทธิ์ใช้งานเชิงพาณิชย์เต็มรูปแบบ) นี่คือลิงก์ประกาศ:">ส่งลิงก์ประกาศที่พัก</a>
           </div>
           <div class="offer tier">
             <h3>Elevated</h3>
@@ -1014,7 +1050,7 @@
               <li>สิทธิ์ใช้งานเชิงพาณิชย์เต็มรูปแบบสำหรับวิดีโอ + เพลงเช่นกัน</li>
               <li>ส่งมอบภายใน 48 ชั่วโมงหลังชำระเงิน</li>
             </ul>
-            <a class="btn book" href="#contact" data-msg="อยากได้ Elevated $499 (วิดีโอสูงสุด 3 นาที คลิปสั้น 15 + 30 วินาที แก้ไข 3 รอบ เพลงเวอร์ชันทางเลือก)">ส่งลิงก์ประกาศที่พัก</a>
+            <a class="btn book" href="#next-step" data-msg="อยากได้ Elevated $499 (วิดีโอสูงสุด 3 นาที คลิปสั้น 15 + 30 วินาที แก้ไข 3 รอบ เพลงเวอร์ชันทางเลือก)">ส่งลิงก์ประกาศที่พัก</a>
           </div>
           <div class="offer tier">
             <h3>Maximus</h3>
@@ -1024,21 +1060,22 @@
               <li>หลายที่พักหรืองานสั่งทำ</li>
               <li>ราคาและเวลาหลังคุยกัน</li>
             </ul>
-            <a class="btn book" href="#contact" data-msg="Maximus / สั่งทำ — คุยขอบเขตงานกัน">ส่งลิงก์ประกาศที่พัก</a>
+            <a class="btn book" href="#next-step" data-msg="Maximus / สั่งทำ — คุยขอบเขตงานกัน">ส่งลิงก์ประกาศที่พัก</a>
           </div>
         </div>
         <ul class="trustrow" aria-label="Elevated Listing"><li>ดูตัวอย่างฟรีก่อนจ่าย</li><li>ส่งมอบภายใน 48 ชั่วโมงหลังชำระเงิน</li><li>ชำระเงินปลอดภัยผ่าน PayPal: บัตรหรือยอดเงิน PayPal</li><li>คุยกับคนจริง: ผมเอง Luis</li></ul>
         <div class="paynote">
           <h3>ดูก่อน จ่ายทีหลัง</h3>
-          <p>ผมทำวิดีโอเสร็จแล้วส่งให้คุณดูแบบมีลายน้ำ เห็นแบบไหน ได้แบบนั้น ถ้าชอบ ตอบตกลงแล้วจ่าย — Standard $249 หรือ Elevated $499 ถ้าอยากได้วิดีโอยาวสูงสุด 3 นาที คลิปสั้น 15 และ 30 วินาที แก้ไขได้ 3 รอบ และเพลงเวอร์ชันทางเลือก ถ้าไม่ชอบ ไม่ต้องจ่าย วิดีโอจะไม่เปิดสาธารณะ และผมจะไม่เอาไปโปรโมตที่พักของคุณ</p>
+          <p>ผมทำวิดีโอเสร็จแล้วส่งให้คุณดูแบบมีลายน้ำ เห็นแบบไหน ได้แบบนั้น ถ้าชอบ ตอบตกลงแล้วจ่ายตามแพ็กเกจที่เลือก ถ้าไม่ชอบ ไม่ต้องจ่าย วิดีโอจะไม่เปิดสาธารณะ และผมจะไม่เอาไปโปรโมตที่พักของคุณ</p>
           <h3>สิทธิ์ใช้งานเชิงพาณิชย์เต็มรูปแบบสำหรับวิดีโอและเพลง</h3>
           <p>พอชำระเงินแล้ว วิดีโอจบเป็นของคุณ Luis โอนสิทธิ์ทั้งหมดที่เขามีในวิดีโอ การตัดต่อ และเนื้อเพลงที่เขาเขียนให้คุณ เพลงทำด้วย Suno แผนเสียเงิน Pro หรือ Premier และไฟล์ที่คุณได้รับเป็นไฟล์ดาวน์โหลดอย่างเป็นทางการจาก Suno ไม่เคยใช้รีมิกซ์จากเพลงของผู้ใช้อื่น ตามข้อกำหนดของ Suno (มีผล 3 ก.ย. 2026) คุณได้สิทธิ์ทั้งหมดที่ Luis มีในเพลง พร้อมสิทธิ์ใช้เชิงพาณิชย์ถาวร ทั่วโลก ไม่มีค่าลิขสิทธิ์ เพื่อโปรโมตที่พัก (เว็บไซต์ โซเชียล OTA ที่รับวิดีโอ โฆษณา สื่อพิมพ์) โดยไม่มีค่าใช้จ่ายเพิ่ม เพราะเพลงสร้างด้วย AI จึงไม่มีใครรับประกันได้ว่ามีลิขสิทธิ์ในเพลง หรือไม่มีเพลงคล้ายกันที่อื่น และแต่ละแพลตฟอร์มมีกฎของตัวเองสำหรับเพลง AI ผมอาจลงพอร์ตโฟลิโอ ถ้าไม่สะดวกบอกได้ รายละเอียดใน<a href="/terms" style="color:var(--accent)">ข้อตกลง</a> (ภาษาอังกฤษ)</p>
-          <div class="paycallout">
+          <div class="paycallout" id="pay-now">
           <h3>วิธีชำระเงิน</h3>
-          <p>พอคุณตอบตกลง ผมจะส่งใบแจ้งหนี้ทางอีเมล <strong>แนะนำ: บัตรหรือ PayPal</strong> จ่ายด้วยบัตรผ่าน PayPal หรือจากยอดเงินใน PayPal เข้าบัญชี PayPal Business ชื่อ <strong>Elevated Listing</strong> ของผม (sisyfosforever@gmail.com) โดยเลือก <strong>Goods and Services</strong> (ไม่ใช่ Friends and Family) เพื่อให้คุณได้รับการคุ้มครองผู้ซื้อของ PayPal หรือจะจ่ายด้วยคริปโต (USDC บน Base หรือ USDT บน Arbitrum) ก็ได้ ดูขั้นตอนที่ <a href="/pay">elevatedlisting.co/pay</a> นับ 48 ชั่วโมงตั้งแต่เงินถึงผม และผมจะอีเมลแจ้งคุณ</p>
-          <p class="pp-secure"><svg class="lock" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 10.5V7.8a3.5 3.5 0 0 1 7 0v2.7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="ppword" role="img" aria-label="PayPal"><b>Pay</b><b>Pal</b></span><span class="t">ชำระเงินปลอดภัยผ่าน PayPal จ่ายด้วยบัตรหรือยอดเงินใน PayPal ก็ได้ ข้อมูลบัตรของคุณอยู่กับ PayPal ผมไม่เคยเห็นเลย ชื่อผู้รับที่แสดงใน PayPal คือ <strong>Elevated Listing</strong> ซึ่งเป็นบัญชี PayPal Business ของผม</span></p>
-          <p class="small">ใหม่กับคริปโต? เจ้าของที่พักส่วนใหญ่ซื้อ USDC ได้ในไม่กี่นาทีผ่าน Coinbase, Kraken หรือที่คล้ายกัน ผมยินดีพาทีละขั้น จ่ายหลังดูวิดีโอและตอบตกลงเท่านั้น</p>
-          <p class="small small-wu">ถ้าทั้งสองวิธีไม่สะดวก ใช้ Western Union ได้เป็นทางเลือกสุดท้าย ดูที่ <a href="/pay">/pay</a></p>
+          <p>พอคุณตอบตกลง ผมจะส่งใบแจ้งหนี้ทางอีเมล จากนั้นชำระผ่านหน้าชำระเงิน PayPal ด้วยบัตรหรือบัญชี PayPal ชื่อผู้ขายที่แสดงใน PayPal คือ <strong>Elevated Listing</strong> นับ 48 ชั่วโมงตั้งแต่เงินถึงผม และผมจะอีเมลแจ้งคุณ</p>
+          <p class="pp-cta"><a class="btn pp-checkout" href="#PAYPAL_CHECKOUT_LINK" rel="noopener"><span class="ppword" role="img" aria-label="PayPal"><b>Pay</b><b>Pal</b></span><span>ชำระเงินอย่างปลอดภัยผ่าน PayPal (Elevated Listing)</span></a><span class="pp-sub">บัตรหรือบัญชี PayPal</span></p>
+          <p class="pp-secure"><svg class="lock" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 10.5V7.8a3.5 3.5 0 0 1 7 0v2.7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="t">ข้อมูลบัตรของคุณอยู่กับ PayPal ผมไม่เคยเห็นเลย การชำระผ่าน PayPal อาจได้รับความคุ้มครองผู้ซื้อของ PayPal ตามเงื่อนไขของ PayPal</span></p>
+          <h4 class="other-pay">วิธีชำระเงินอื่น</h4>
+          <p class="small">คริปโต: USDC บน Base หรือ USDT บน Arbitrum ใหม่กับคริปโต? เจ้าของที่พักส่วนใหญ่ซื้อ USDC ได้ในไม่กี่นาทีผ่าน Coinbase, Kraken หรือที่คล้ายกัน ผมยินดีช่วย Western Union ใช้ได้เป็นทางเลือกสุดท้าย ความคุ้มครองผู้ซื้อของ PayPal ไม่ครอบคลุมวิธีเหล่านี้ ดูขั้นตอนที่ <a href="/pay">elevatedlisting.co/pay</a></p>
           </div>
         </div>
 
@@ -1066,7 +1103,7 @@
           </details>
           <details>
             <summary>จ่ายเงินอย่างไร?</summary>
-            <p>พอคุณตอบตกลง ผมจะส่งใบแจ้งหนี้ทางอีเมล แนะนำบัตรหรือ PayPal (Goods and Services เข้าบัญชี PayPal Business ชื่อ Elevated Listing) และคริปโต (USDC บน Base หรือ USDT บน Arbitrum) ก็ใช้ได้ ส่งมอบภายใน 48 ชั่วโมงหลังเงินถึงผม ดูขั้นตอนที่ <a href="/pay" style="color:var(--accent)">elevatedlisting.co/pay</a></p>
+            <p>พอคุณตอบตกลง ผมจะส่งใบแจ้งหนี้ทางอีเมล ชำระผ่าน PayPal (Elevated Listing) ด้วยบัตรหรือบัญชี PayPal ส่วนคริปโต (USDC บน Base หรือ USDT บน Arbitrum) และ Western Union เป็นวิธีอื่น ส่งมอบภายใน 48 ชั่วโมงหลังเงินถึงผม ดูขั้นตอนที่ <a href="/pay" style="color:var(--accent)">elevatedlisting.co/pay</a></p>
           </details>
         </div>
       </div>
@@ -1078,6 +1115,11 @@
       <div class="wrap">
         <h2 class="section-title">ติดต่อผม</h2>
         <p class="section-sub">ส่งลิงก์ประกาศหรือข้อความสั้นๆ มาได้เลย ผมอ่านเองทุกข้อความ ไม่มี CRM ไม่มีระบบตอบอัตโนมัติ</p>
+        <div class="card next-step" id="next-step">
+          <h3>ขั้นตอนต่อไปของคุณ</h3>
+          <ol><li><strong>ยังไม่มีวิดีโอ?</strong> ส่งลิงก์ประกาศผ่านฟอร์มด้านล่าง ผมจะทำตัวอย่างฟรีจากรูปในประกาศของคุณและส่งให้ทางอีเมล แบบมีลายน้ำ</li><li><strong>ดูตัวอย่างแล้วและอยากได้?</strong> ตอบ “ตกลง” ในอีเมลของผม หรือชำระเงินที่นี่ วิดีโอจะส่งถึงคุณภายใน 48 ชั่วโมงหลังชำระเงิน</li></ol>
+          <p class="pp-cta" style="margin-bottom:0"><a class="btn pp-checkout" href="#PAYPAL_CHECKOUT_LINK" rel="noopener"><span class="ppword" role="img" aria-label="PayPal"><b>Pay</b><b>Pal</b></span><span>ชำระเงินอย่างปลอดภัยผ่าน PayPal (Elevated Listing)</span></a><span class="pp-sub">บัตรหรือบัญชี PayPal</span></p>
+        </div>
         <div class="contact-grid">
           <form class="contact-form" name="contact" method="POST" action="https://formsubmit.co/f5238593f0f1a282c7691b9fc4166437" id="contact-form">
             <input type="hidden" name="_subject" value="Elevated Listing — site contact (TH)" />
@@ -1135,7 +1177,7 @@
           <div class="card" style="align-self:start">
             <h3>ส่งมาด้วยจะดีมาก</h3>
             <p style="margin:0 0 .75rem">ลิงก์ประกาศสาธารณะ บอกฟีลที่อยากได้สักบรรทัด และบอกด้วยว่าเคยได้ดราฟต์จากผมแล้วหรือยัง</p>
-            <p style="margin:0;color:var(--mute);font-weight:300">Standard $249 (วิดีโอ + เพลง สิทธิ์ใช้งานเชิงพาณิชย์เต็มรูปแบบ), Elevated $499, Maximus สอบถาม — จ่ายเฉพาะเมื่อถูกใจ <a href="#packages" style="color:var(--accent)">ดูว่าได้อะไรบ้าง</a></p>
+            <p style="margin:0;color:var(--mute);font-weight:300">จ่ายเฉพาะเมื่อถูกใจ <a href="#packages" style="color:var(--accent)">ดูว่าได้อะไรบ้าง</a></p>
           </div>
         </div>
       </div>
@@ -1173,7 +1215,7 @@
 
   <footer>
     <div class="wrap row">
-      <div class="foot-brand"><a class="foot-logo" href="/th/"><img src="/img/logo-mark.svg" alt="" width="34" height="34" /><span>Elevated <em>Listing</em></span></a><div class="foot-tag">วิดีโอที่พักของคุณ พร้อมเพลงประจำบ้าน</div><div>© <span id="y"></span> Elevated Listing · Mats Ludvig Lindberg (Luis from Sweden)</div></div>
+      <div class="foot-brand"><a class="foot-logo" href="/th/"><img src="/img/logo-mark.svg" alt="" width="34" height="34" /><span>Elevated <em>Listing</em></span></a><div class="foot-tag">วิดีโอที่พักของคุณ พร้อมเพลงประจำบ้าน</div><div>© <span id="y"></span> Elevated Listing · Sole proprietor: Mats Ludvig Lindberg (Luis from Sweden)</div></div>
       <div class="legal-links">
         <a href="/terms" hreflang="en">ข้อตกลง</a>
         <span class="sep">·</span>

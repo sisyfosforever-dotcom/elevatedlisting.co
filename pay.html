@@ -66,6 +66,7 @@
     .pp-secure .t{flex:1 1 16rem}
     .ppword{display:inline-block;background:#fff;border-radius:6px;padding:.18rem .5rem;font-family:Verdana,"DejaVu Sans",Arial,sans-serif;font-weight:700;font-style:italic;font-size:.95rem;letter-spacing:-.02em;line-height:1.25;white-space:nowrap}
     .ppword b:first-child{color:#003087}.ppword b+b{color:#009cde}
+    .btn.pp-checkout{gap:.5rem;max-width:520px;text-align:left}
     footer.site{border-top:1px solid var(--line);margin-top:3rem;padding-top:1.75rem;text-align:left;display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem 2rem;font-size:.95rem}
     footer.site .brand{font-size:1.15rem}
     footer.site .links{display:flex;flex-wrap:wrap;gap:.4rem 1rem;align-items:center}
@@ -94,36 +95,23 @@
       </ul>
     </section>
 
-    <!-- PayPal: option 1. Manual "send to email" steps show by default.
-         No paypal.me link exists yet for sisyfosforever@gmail.com. When Luis creates one,
-         set PAYPAL_URL in the script at the bottom: the button appears and these steps hide. -->
+    <!-- PayPal checkout. Replace #PAYPAL_CHECKOUT_LINK with the real PayPal Business checkout / payment link once Luis has created and approved it. -->
     <section class="card" id="pay-paypal">
       <h2><span class="num">1</span> Card or PayPal <span class="tag">Preferred</span></h2>
-      <dl class="payee"><dt>Recipient</dt><dd>Elevated Listing <span class="tag">PayPal Business account</span></dd><dt>PayPal email</dt><dd>sisyfosforever@gmail.com</dd></dl>
-      <p class="pp-secure"><svg class="lock" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 10.5V7.8a3.5 3.5 0 0 1 7 0v2.7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="ppword" role="img" aria-label="PayPal"><b>Pay</b><b>Pal</b></span><span class="t">Secure payment via PayPal. Pay with a card or your PayPal balance. PayPal handles your card details, so I never see them.</span></p>
-      <div id="paypal-steps">
-        <p class="note">Card payment is preferred when it’s available to you. Today it runs through PayPal: you can pay with a normal debit or credit card linked to PayPal, or from your PayPal balance. It takes about two minutes.</p>
-        <p class="note"><strong>Please choose Goods and Services.</strong> That is PayPal’s option for paying for something you bought, and it keeps PayPal’s buyer protection on your side. Please don’t use Friends and Family for this payment.</p>
-        <ol class="steps">
-          <li>Log in at <a href="https://www.paypal.com/myaccount/transfer/homepage/pay" target="_self">paypal.com &rarr; Send</a>.</li>
-          <li>Send to this email:
-            <div class="copyrow"><span class="val">sisyfosforever@gmail.com</span> <button class="copy" type="button" data-copy="sisyfosforever@gmail.com">Copy</button></div>
-            <span class="field">PayPal shows the recipient as <strong>Elevated Listing</strong>, my PayPal Business account. That’s me.</span></li>
-          <li>Amount: the USD total on your invoice (Standard <span class="val">$249</span>, Elevated <span class="val">$499</span>, or your custom quote).</li>
-          <li>When PayPal asks what the payment is for, choose <strong>Goods and Services</strong> (paying for an item or service), not Friends and Family. That keeps PayPal&rsquo;s buyer protection on your side.</li>
-          <li>In the note, write your <strong>property name</strong>. Then reply to my email so I can match the payment. Your film arrives within <strong>48 hours</strong>.</li>
-        </ol>
-        <p><a class="btn ghost" href="https://www.paypal.com/myaccount/transfer/homepage/pay" target="_self">Open PayPal</a></p>
-      </div>
-      <div id="paypal-button" hidden>
-        <p>Press the button below. A secure PayPal page opens. You can pay with a normal bank card.</p>
-        <p><a class="btn" id="paypal-link" href="#">Pay with PayPal</a></p>
-        <p class="note">In the note, write your <strong>property name</strong>. Your film arrives within <strong>48 hours</strong>.</p>
-      </div>
+      <dl class="payee"><dt>Seller in PayPal</dt><dd>Elevated Listing <span class="tag">PayPal Business account</span></dd></dl>
+      <p><a class="btn pp-checkout" href="#PAYPAL_CHECKOUT_LINK" rel="noopener"><span class="ppword" role="img" aria-label="PayPal"><b>Pay</b><b>Pal</b></span>&nbsp; Pay securely with PayPal (Elevated Listing)</a></p>
+      <p class="note" style="margin-top:-.4rem">Card or PayPal account. A secure PayPal page opens, and you can pay with a normal debit or credit card even without a PayPal account where PayPal offers that.</p>
+      <p class="pp-secure"><svg class="lock" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 10.5V7.8a3.5 3.5 0 0 1 7 0v2.7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="t">PayPal handles your card details, so I never see them. Payments through PayPal checkout may be eligible for PayPal’s Purchase Protection, under PayPal’s own terms.</span></p>
+      <ol class="steps">
+        <li>Press the button above, or use the PayPal link in the invoice I email you.</li>
+        <li>Pay the USD total on your invoice. The seller you see in PayPal is <strong>Elevated Listing</strong>. That’s me.</li>
+        <li>Add your <strong>property name</strong> in the note if PayPal asks. Then reply to my email so I can match the payment. Your film arrives within <strong>48 hours</strong>.</li>
+      </ol>
+      <p class="note">If the button doesn’t work for you, reply to my invoice email and I’ll send you a PayPal payment request instead.</p>
     </section>
 
     <h2 style="margin:2rem 0 .5rem">Other ways to pay</h2>
-    <p class="note" style="margin:0 0 1rem">Card or PayPal is the main way. If that doesn’t work for you, crypto works too. Western Union is a last resort.</p>
+    <p class="note" style="margin:0 0 1rem">Card or PayPal is the main way. If that doesn’t work for you, crypto works too. Western Union is a last resort. PayPal’s buyer protection doesn’t apply to crypto or Western Union.</p>
 
     <section class="card" id="pay-crypto">
       <h2><span class="num">2</span> Crypto</h2>
@@ -159,19 +147,9 @@
     </section>
 
     <p style="text-align:center;margin-top:2rem"><a class="back" href="/">&larr; Back to the homepage</a></p>
-    <footer class="site"><a class="brand" href="/"><img src="/img/logo-mark.svg" alt="" width="34" height="34" /><span>Elevated <em>Listing</em></span></a><nav class="links" aria-label="Legal"><a href="/terms">Terms</a><a href="/privacy">Privacy</a><a href="/refund">Refund</a><a href="mailto:luis@elevatedlisting.co">luis@elevatedlisting.co</a></nav><p class="small">© 2026 Elevated Listing · Mats Ludvig Lindberg (Luis from Sweden). Payments: PayPal (Business account: Elevated Listing), crypto (USDC / USDT) or Western Union. Questions? <a href="mailto:luis@elevatedlisting.co">luis@elevatedlisting.co</a></p></footer>
+    <footer class="site"><a class="brand" href="/"><img src="/img/logo-mark.svg" alt="" width="34" height="34" /><span>Elevated <em>Listing</em></span></a><nav class="links" aria-label="Legal"><a href="/terms">Terms</a><a href="/privacy">Privacy</a><a href="/refund">Refund</a><a href="mailto:luis@elevatedlisting.co">luis@elevatedlisting.co</a></nav><p class="small">© 2026 Elevated Listing · Sole proprietor: Mats Ludvig Lindberg (Luis from Sweden). Payments: PayPal (Business account: Elevated Listing), crypto (USDC / USDT) or Western Union. Questions? <a href="mailto:luis@elevatedlisting.co">luis@elevatedlisting.co</a></p></footer>
   </main>
   <script>
-    /* PayPal: set this to Luis's own paypal.me link for sisyfosforever@gmail.com
-       (e.g. "https://paypal.me/<handle>") to show a button instead of the email steps.
-       Empty = email steps. Do not use anyone else's link. */
-    var PAYPAL_URL = "";
-
-    if (PAYPAL_URL) {
-      document.getElementById('paypal-link').href = PAYPAL_URL;
-      document.getElementById('paypal-button').hidden = false;
-      document.getElementById('paypal-steps').hidden = true;
-    }
     document.querySelectorAll('.copy').forEach(function (b) {
       var label = b.textContent;
       b.addEventListener('click', function () {

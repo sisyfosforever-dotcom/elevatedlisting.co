@@ -579,6 +579,23 @@
     @media (max-width:600px) { .logo { gap:.45rem; } .logo-mark { width:24px; height:24px; } .logo-text { line-height:1.12; } .nav-links .navpay { margin-right:0 !important; } }
     @media (max-width:389px) { .logo-mark { display:none; } }
   </style>
+  <style id="trust-fixes-1027">
+    .pk-facts{display:grid;gap:.55rem;max-width:46rem;margin:-.5rem 0 1.6rem}
+    .pk-facts p{margin:0;font-size:.95rem;line-height:1.55;color:var(--mute)}
+    .pk-facts strong{color:var(--ink);font-weight:500}
+    .pp-cta{display:flex;flex-direction:column;align-items:flex-start;gap:.35rem;margin:1rem 0}
+    .pp-checkout{display:inline-flex;align-items:center;gap:.65rem;text-align:left}
+    .pp-checkout .ppword{font-size:.85rem}
+    .pp-sub{font-size:.85rem;color:var(--mute)}
+    .other-pay{margin:1.4rem 0 .4rem;font-size:1rem;font-weight:500;color:var(--ink)}
+    .next-step{margin:0 0 1.75rem;max-width:46rem}
+    .next-step h3{margin-top:0}
+    .next-step ol{margin:.5rem 0 .75rem;padding-left:1.2rem;line-height:1.55}
+    .next-step li{margin:.35rem 0}
+    details.more-films,details.more-cuts{margin-top:1.5rem}
+    details.more-films>summary,details.more-cuts>summary{cursor:pointer;color:var(--accent);font-weight:500;padding:.6rem 0;list-style-position:inside}
+    details.more-films>.fgrid{margin-top:1rem}
+  </style>
 </head>
 <body>
   <header>
@@ -586,7 +603,7 @@
       <a href="/vi/" class="logo" aria-label="Elevated Listing, trang chủ" style="text-decoration:none;color:inherit" onclick="if(location.pathname==='/vi/'||location.pathname==='/vi/index.html'){window.scrollTo({top:0,behavior:'smooth'});history.replaceState(null,'','/vi/');return false;}"><img class="logo-mark" src="/img/logo-mark.svg" alt="" width="28" height="28" /><span class="logo-text">Elevated <span>Listing</span></span></a>
       <nav class="nav-links">
         <a class="hide-sm" href="#mind">Ý tưởng</a>
-        <a class="hide-sm" href="#work">Phim</a>
+        <a class="hide-sm" href="#films">Phim</a>
         <a class="hide-sm" href="#packages">Giá</a>
         <a class="hide-sm" href="#about">Về mình</a>
         <a class="hide-sm" href="#contact">Liên hệ</a>
@@ -617,7 +634,7 @@
           </button>
         </div>
         <div class="hero-actions">
-          <a class="btn btn-ghost" href="#work">Xem thêm phim</a>
+          <a class="btn btn-ghost" href="#films">Xem thêm phim</a>
         </div>
         <p class="pkg-cue"><a href="#packages">Muốn có một phim như vậy cho chỗ của bạn? Xem gói dịch vụ →</a></p>
         <div class="trust">
@@ -678,10 +695,112 @@
 
     
 
+    <section id="films">
+      <div class="wrap">
+        <h2 class="section-title">Phim chọn lọc</h2>
+        <p class="section-sub">Vài phim mình thích nhất. Phim nào cũng bắt đầu từ chính ảnh trên bài đăng và một bài hát viết riêng cho nơi đó. Chạm vào ảnh để xem.</p>
+        <ul class="fgrid">
+          <li><button class="fcard" type="button" data-yt="S7OBQ2Mx6G0" aria-label="Phát Porch Light on the Chilcotin – The Historic Chilcotin Lodge, Riske Creek, British Columbia">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/S7OBQ2Mx6G0/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Porch Light on the Chilcotin</span><span class="fplace">The Historic Chilcotin Lodge, Riske Creek, British Columbia</span><span class="fcountry">Canada</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="_pLDw5KINKY" aria-label="Phát Ranch&#x27;s World – Montana Hill Guest Ranch, South Cariboo, British Columbia">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/_pLDw5KINKY/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Ranch&#x27;s World</span><span class="fplace">Montana Hill Guest Ranch, South Cariboo, British Columbia</span><span class="fcountry">Canada</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="EX0xMsigB8I" aria-label="Phát Pump Up the Gas – Pik Pak, Marfa, Texas">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/EX0xMsigB8I/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Pump Up the Gas</span><span class="fplace">Pik Pak, Marfa, Texas</span><span class="fcountry">Mỹ</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="HJNe1U8_L2w" aria-label="Phát Light My Fire – Saugerties Lighthouse B&amp;B, Hudson River, New York">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/HJNe1U8_L2w/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Light My Fire</span><span class="fplace">Saugerties Lighthouse B&amp;B, Hudson River, New York</span><span class="fcountry">Mỹ</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="Gy5infV4EKY" aria-label="Phát Stardust – Stardust Retreat, Coleman, Texas">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/Gy5infV4EKY/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Stardust</span><span class="fplace">Stardust Retreat, Coleman, Texas</span><span class="fcountry">Mỹ</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="A4msgpOs3TA" aria-label="Phát Too Much Mirror – Notestone Reserve, Hocking Hills, Ohio">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/A4msgpOs3TA/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Too Much Mirror</span><span class="fplace">Notestone Reserve, Hocking Hills, Ohio</span><span class="fcountry">Mỹ</span>
+          </button></li>
+        </ul>
+        <details class="more-films"><summary>Thêm phim mình tự làm cho những chỗ mình thích, chưa ai nhờ (15)</summary>
+        <ul class="fgrid">
+          <li><button class="fcard" type="button" data-yt="MrU4V8dQ9S8" aria-label="Phát Make You Sweat – Toutosen smoke sauna">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/MrU4V8dQ9S8/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Make You Sweat</span><span class="fplace">Phòng xông khói Toutosen</span><span class="fcountry">Phần Lan</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="QS8EtZkXTr4" aria-label="Phát Purple Row – Lavender Row B&amp;B, Outram, Otago">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/QS8EtZkXTr4/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Purple Row</span><span class="fplace">Lavender Row B&amp;B, Outram, Otago</span><span class="fcountry">New Zealand</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="HgZ8F30TqR8" aria-label="Phát Hammock on the Bay – Bamboo Bay Eco Resort, Koh Phangan">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/HgZ8F30TqR8/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Hammock on the Bay</span><span class="fplace">Bamboo Bay Eco Resort, Koh Phangan</span><span class="fcountry">Thái Lan</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="ESzXXZeJpEg" aria-label="Phát Dryhead! – Dryhead Ranch, Pryor Mountains, Montana">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/ESzXXZeJpEg/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Dryhead!</span><span class="fplace">Dryhead Ranch, Pryor Mountains, Montana</span><span class="fcountry">Mỹ</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="bJaVf5Z6sAg" aria-label="Phát Tree House Jamboree – Crazy House, Da Lat">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/bJaVf5Z6sAg/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Tree House Jamboree</span><span class="fplace">Crazy House, Da Lat</span><span class="fcountry">Việt Nam</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="Si9_9n-1RPc" aria-label="Phát The Creagan Carriage-Motion – The Carriage at Creagan, Appin, Argyll">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/Si9_9n-1RPc/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">The Creagan Carriage-Motion</span><span class="fplace">The Carriage at Creagan, Appin, Argyll</span><span class="fcountry">Scotland</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="J5uGGgk7J_o" aria-label="Phát Windmills of Your Dreams – B&amp;B De Ouwe Meule, Nieuwdorp, Zeeland">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/J5uGGgk7J_o/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Windmills of Your Dreams</span><span class="fplace">B&amp;B De Ouwe Meule, Nieuwdorp, Zeeland</span><span class="fcountry">Hà Lan</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="-k3zWRS72Js" aria-label="Phát Lemon Grove – Agriturismo Villa Maria, Minori, Amalfi Coast">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/-k3zWRS72Js/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Lemon Grove</span><span class="fplace">Agriturismo Villa Maria, Minori, Amalfi Coast</span><span class="fcountry">Ý</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="UF2WhPcN0-M" aria-label="Phát Tiny Farmer – Aria&#x27;s Farm Tiny House, Rotorua">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/UF2WhPcN0-M/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Tiny Farmer</span><span class="fplace">Aria&#x27;s Farm Tiny House, Rotorua</span><span class="fcountry">New Zealand</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="pkOUdc5xWvA" aria-label="Phát Paperback Sleeper – Amblongus Books, Chester">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/pkOUdc5xWvA/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Paperback Sleeper</span><span class="fplace">Amblongus Books, Chester</span><span class="fcountry">Anh</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="4R1-kjGwPBc" aria-label="Phát This Is My House – Rødkærgård B&amp;B, Kerteminde">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/4R1-kjGwPBc/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">This Is My House</span><span class="fplace">Rødkærgård B&amp;B, Kerteminde</span><span class="fcountry">Đan Mạch</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="rxbjy8QPbsg" aria-label="Phát Honey, I&#x27;m Coming Home – 13 Bees, Confolens">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/rxbjy8QPbsg/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Honey, I&#x27;m Coming Home</span><span class="fplace">13 Bees, Confolens</span><span class="fcountry">Pháp</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="VtwfTjgevMw" aria-label="Phát Welcome to the Dow Hotel – Dow Hotel &amp; Dow Villa Motel, Lone Pine, California">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/VtwfTjgevMw/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Welcome to the Dow Hotel</span><span class="fplace">Dow Hotel &amp; Dow Villa Motel, Lone Pine, California</span><span class="fcountry">Mỹ</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="saoqzTnSdkU" aria-label="Phát The Long Way Home – Forest Springs Getaway, Burney, California">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/saoqzTnSdkU/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">The Long Way Home</span><span class="fplace">Forest Springs Getaway, Burney, California</span><span class="fcountry">Mỹ</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="fWPwq5pPP1M" aria-label="Phát 2423 Prytania Street – Garden District, New Orleans, Louisiana">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/fWPwq5pPP1M/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">2423 Prytania Street</span><span class="fplace">Garden District, New Orleans, Louisiana</span><span class="fcountry">Mỹ</span>
+          </button></li>
+        </ul>
+        </details>
+      </div>
+      <div class="flb" id="flb" hidden role="dialog" aria-modal="true" aria-label="Trình phát phim">
+        <button class="flb-x" type="button" aria-label="Đóng">×</button>
+        <div class="flb-box"></div>
+      </div>
+    </section>
+
         <section id="work">
       <div class="wrap">
         <h2 class="section-title">Phim mới làm</h2>
         <p class="section-sub">Những phim mình tự làm cho các chỗ mình thích, chưa ai nhờ cả. Mình dùng ảnh công khai trên bài đăng, và chủ nhà muốn gỡ thì mình gỡ ngay.</p>
+        <details class="more-cuts"><summary>Xem các phim</summary>
         <div class="work-grid">
 
 
@@ -840,99 +959,12 @@
               </div>
             </div>
           </article>
-        </div>
+        </div></details>
       </div>
     </section>
 
 
-    <section id="films">
-      <div class="wrap">
-        <h2 class="section-title">Phim mình làm cho những chỗ mình thích</h2>
-        <p class="section-sub">Chẳng ai nhờ, mình cứ làm thôi. Phim nào cũng bắt đầu từ chính ảnh trên bài đăng và một bài hát viết riêng cho nơi đó. Chạm vào ảnh để xem.</p>
-        <ul class="fgrid">
-          <li><button class="fcard" type="button" data-yt="A4msgpOs3TA" aria-label="Phát Too Much Mirror – Notestone Reserve, Hocking Hills, Ohio">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/A4msgpOs3TA/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">Too Much Mirror</span><span class="fplace">Notestone Reserve, Hocking Hills, Ohio</span><span class="fcountry">Mỹ</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="MrU4V8dQ9S8" aria-label="Phát Make You Sweat – Toutosen smoke sauna">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/MrU4V8dQ9S8/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">Make You Sweat</span><span class="fplace">Phòng xông khói Toutosen</span><span class="fcountry">Phần Lan</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="EX0xMsigB8I" aria-label="Phát Pump Up the Gas – Pik Pak, Marfa, Texas">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/EX0xMsigB8I/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">Pump Up the Gas</span><span class="fplace">Pik Pak, Marfa, Texas</span><span class="fcountry">Mỹ</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="HJNe1U8_L2w" aria-label="Phát Light My Fire – Saugerties Lighthouse B&amp;B, Hudson River, New York">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/HJNe1U8_L2w/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">Light My Fire</span><span class="fplace">Saugerties Lighthouse B&amp;B, Hudson River, New York</span><span class="fcountry">Mỹ</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="QS8EtZkXTr4" aria-label="Phát Purple Row – Lavender Row B&amp;B, Outram, Otago">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/QS8EtZkXTr4/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">Purple Row</span><span class="fplace">Lavender Row B&amp;B, Outram, Otago</span><span class="fcountry">New Zealand</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="HgZ8F30TqR8" aria-label="Phát Hammock on the Bay – Bamboo Bay Eco Resort, Koh Phangan">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/HgZ8F30TqR8/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">Hammock on the Bay</span><span class="fplace">Bamboo Bay Eco Resort, Koh Phangan</span><span class="fcountry">Thái Lan</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="ESzXXZeJpEg" aria-label="Phát Dryhead! – Dryhead Ranch, Pryor Mountains, Montana">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/ESzXXZeJpEg/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">Dryhead!</span><span class="fplace">Dryhead Ranch, Pryor Mountains, Montana</span><span class="fcountry">Mỹ</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="bJaVf5Z6sAg" aria-label="Phát Tree House Jamboree – Crazy House, Da Lat">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/bJaVf5Z6sAg/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">Tree House Jamboree</span><span class="fplace">Crazy House, Da Lat</span><span class="fcountry">Việt Nam</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="Si9_9n-1RPc" aria-label="Phát The Creagan Carriage-Motion – The Carriage at Creagan, Appin, Argyll">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/Si9_9n-1RPc/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">The Creagan Carriage-Motion</span><span class="fplace">The Carriage at Creagan, Appin, Argyll</span><span class="fcountry">Scotland</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="J5uGGgk7J_o" aria-label="Phát Windmills of Your Dreams – B&amp;B De Ouwe Meule, Nieuwdorp, Zeeland">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/J5uGGgk7J_o/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">Windmills of Your Dreams</span><span class="fplace">B&amp;B De Ouwe Meule, Nieuwdorp, Zeeland</span><span class="fcountry">Hà Lan</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="-k3zWRS72Js" aria-label="Phát Lemon Grove – Agriturismo Villa Maria, Minori, Amalfi Coast">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/-k3zWRS72Js/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">Lemon Grove</span><span class="fplace">Agriturismo Villa Maria, Minori, Amalfi Coast</span><span class="fcountry">Ý</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="UF2WhPcN0-M" aria-label="Phát Tiny Farmer – Aria&#x27;s Farm Tiny House, Rotorua">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/UF2WhPcN0-M/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">Tiny Farmer</span><span class="fplace">Aria&#x27;s Farm Tiny House, Rotorua</span><span class="fcountry">New Zealand</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="pkOUdc5xWvA" aria-label="Phát Paperback Sleeper – Amblongus Books, Chester">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/pkOUdc5xWvA/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">Paperback Sleeper</span><span class="fplace">Amblongus Books, Chester</span><span class="fcountry">Anh</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="4R1-kjGwPBc" aria-label="Phát This Is My House – Rødkærgård B&amp;B, Kerteminde">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/4R1-kjGwPBc/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">This Is My House</span><span class="fplace">Rødkærgård B&amp;B, Kerteminde</span><span class="fcountry">Đan Mạch</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="rxbjy8QPbsg" aria-label="Phát Honey, I&#x27;m Coming Home – 13 Bees, Confolens">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/rxbjy8QPbsg/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">Honey, I&#x27;m Coming Home</span><span class="fplace">13 Bees, Confolens</span><span class="fcountry">Pháp</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="VtwfTjgevMw" aria-label="Phát Welcome to the Dow Hotel – Dow Hotel &amp; Dow Villa Motel, Lone Pine, California">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/VtwfTjgevMw/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">Welcome to the Dow Hotel</span><span class="fplace">Dow Hotel &amp; Dow Villa Motel, Lone Pine, California</span><span class="fcountry">Mỹ</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="saoqzTnSdkU" aria-label="Phát The Long Way Home – Forest Springs Getaway, Burney, California">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/saoqzTnSdkU/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">The Long Way Home</span><span class="fplace">Forest Springs Getaway, Burney, California</span><span class="fcountry">Mỹ</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="Gy5infV4EKY" aria-label="Phát Stardust – Stardust Retreat, Coleman, Texas">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/Gy5infV4EKY/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">Stardust</span><span class="fplace">Stardust Retreat, Coleman, Texas</span><span class="fcountry">Mỹ</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="fWPwq5pPP1M" aria-label="Phát 2423 Prytania Street – Garden District, New Orleans, Louisiana">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/fWPwq5pPP1M/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">2423 Prytania Street</span><span class="fplace">Garden District, New Orleans, Louisiana</span><span class="fcountry">Mỹ</span>
-          </button></li>
-        </ul>
-      </div>
-      <div class="flb" id="flb" hidden role="dialog" aria-modal="true" aria-label="Trình phát phim">
-        <button class="flb-x" type="button" aria-label="Đóng">×</button>
-        <div class="flb-box"></div>
-      </div>
-    </section>
+    
 
     <section id="journey">
       <div class="wrap">
@@ -947,11 +979,11 @@
           <li class="jstep reveal"><span class="jicon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M14 34 L27 46 L50 18"/></svg></span><span class="jnum" aria-hidden="true">2</span>
             <h3>Gật đầu</h3><p>Chỉ cần trả lời email của mình. Một chữ “ok” là đủ.</p></li>
           <li class="jstep reveal"><span class="jicon" aria-hidden="true"><svg viewBox="0 0 64 64"><rect x="10" y="20" width="44" height="28" rx="5"/><circle cx="32" cy="34" r="6"/></svg></span><span class="jnum" aria-hidden="true">3</span>
-            <h3>$249, trả một lần</h3><p>Mình gửi hóa đơn qua email. Bạn thanh toán bằng thẻ hoặc PayPal tới tài khoản PayPal Business <strong>Elevated Listing</strong> của mình (sisyfosforever@gmail.com, chọn Goods and Services), hoặc bằng crypto (USDC trên Base hoặc USDT trên Arbitrum). Không thuê bao. Không phát sinh thêm. Các bước tại <a href="/pay">elevatedlisting.co/pay</a>.</p></li>
+            <h3>Trả một lần</h3><p>Mình gửi hóa đơn qua email. Bạn thanh toán an toàn qua trang thanh toán PayPal (<strong>Elevated Listing</strong>) bằng thẻ hoặc tài khoản PayPal. Crypto và Western Union cũng được. Không thuê bao. Không phát sinh thêm. Các bước tại <a href="/pay">elevatedlisting.co/pay</a>.</p></li>
           <li class="jstep reveal"><span class="jicon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M10 22 L32 36 L54 22"/><rect x="10" y="18" width="44" height="30" rx="4"/></svg></span><span class="jnum" aria-hidden="true">4</span>
             <h3>Nhận phim trong 48 giờ</h3><p>Trong vòng 48 giờ kể từ khi mình nhận được tiền: phim full HD không watermark, một bản dọc cho Reels và bài hát dạng MP3. Muốn chỉnh chút xíu? Có sẵn một lần chỉnh sửa.</p></li>
           <li class="jstep reveal"><span class="jicon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M32 50 C14 38 10 28 18 20 C24 14 30 18 32 23 C34 18 40 14 46 20 C54 28 50 38 32 50 Z"/></svg></span><span class="jnum" aria-hidden="true">5</span>
-            <h3>Chia sẻ khắp nơi</h3><p>Gắn vào trang cho thuê, website, mạng xã hội, OTA cho phép video, quảng cáo và ấn phẩm. Sau khi thanh toán, phim là của bạn, còn bài hát đi kèm giấy phép thương mại vĩnh viễn cho chỗ ở của bạn.</p></li>
+            <h3>Chia sẻ khắp nơi</h3><p>Dùng trên website riêng và trang đặt phòng trực tiếp của bạn, Instagram và Reels, TikTok, YouTube, quảng cáo và ấn phẩm. Airbnb và VRBO hỗ trợ video không đồng đều, nên bạn hãy kiểm tra xem bài đăng của mình nhận được gì. Sau khi thanh toán, phim là của bạn, còn bài hát đi kèm giấy phép thương mại vĩnh viễn cho chỗ ở của bạn.</p></li>
           </ol>
         </div>
         <p class="jnote">Có thắc mắc? Cứ nhắn mình. Người thật trả lời hẳn hoi: chính mình, Luis.</p>
@@ -987,18 +1019,22 @@
         <div class="pill">Giá</div>
         <h2 class="section-title" style="margin-bottom:.75rem">Phim + bài hát. Giấy phép thương mại trọn gói.</h2>
         <p class="section-sub" style="margin-bottom:1.5rem"><strong>Xem trước miễn phí:</strong> bạn xem phim hoàn chỉnh trước khi trả bất cứ khoản nào. Sau khi thanh toán, phim là của bạn, và bài hát đi kèm <strong>giấy phép thương mại vĩnh viễn</strong> để quảng bá chỗ ở của bạn.</p>
+        <div class="pk-facts" id="ai-disclosure">
+          <p><strong>Cách làm:</strong> Bài hát được viết riêng cho chỗ ở của bạn và sản xuất bằng công cụ làm nhạc AI (Suno); phim được dựng từ chính ảnh trên bài đăng của bạn.</p>
+          <p><strong>Dùng ở đâu:</strong> Instagram và Reels, TikTok, YouTube, website riêng, trang đặt phòng trực tiếp và quảng cáo. Airbnb và VRBO hỗ trợ video không đồng đều, nên mình không thể hứa phim sẽ phát được trên bài đăng của bạn ở đó.</p>
+        </div>
         <div class="tiers">
           <div class="offer tier featured">
             <h3>Standard</h3>
             <div class="price">$249 <small>giấy phép thương mại trọn gói</small></div>
             <ul>
               <li>Phim mình đã gửi, bản hoàn thiện — full HD 16:9 + dọc, không watermark</li>
-              <li>Bài hát gốc dạng MP3 — đã gồm trong $249</li>
+              <li>Bài hát gốc dạng MP3, đã bao gồm</li>
               <li>Phim là của bạn; bài hát đi kèm giấy phép thương mại vĩnh viễn cho chỗ ở của bạn.</li>
               <li>Một vòng chỉnh nhỏ</li>
               <li>Giao trong 48 giờ sau khi thanh toán</li>
             </ul>
-            <a class="btn book" href="#contact" data-msg="Mình muốn Standard $249 (phim + bài hát, giấy phép thương mại trọn gói). Đây là link bài đăng:">Gửi link bài đăng của bạn</a>
+            <a class="btn book" href="#next-step" data-msg="Mình muốn Standard $249 (phim + bài hát, giấy phép thương mại trọn gói). Đây là link bài đăng:">Gửi link bài đăng của bạn</a>
           </div>
           <div class="offer tier">
             <h3>Elevated</h3>
@@ -1012,7 +1048,7 @@
               <li>Cùng giấy phép thương mại trọn gói cho phim + bài hát</li>
               <li>Giao trong 48 giờ sau khi thanh toán</li>
             </ul>
-            <a class="btn book" href="#contact" data-msg="Mình muốn Elevated $499 (phim tối đa 3 phút, bản cắt 15 + 30 giây, ba vòng chỉnh sửa, bản thay thế của bài hát).">Gửi link bài đăng của bạn</a>
+            <a class="btn book" href="#next-step" data-msg="Mình muốn Elevated $499 (phim tối đa 3 phút, bản cắt 15 + 30 giây, ba vòng chỉnh sửa, bản thay thế của bài hát).">Gửi link bài đăng của bạn</a>
           </div>
           <div class="offer tier">
             <h3>Maximus</h3>
@@ -1022,21 +1058,22 @@
               <li>Nhiều chỗ ở hoặc phạm vi tùy chỉnh</li>
               <li>Giá và thời gian sau khi trao đổi</li>
             </ul>
-            <a class="btn book" href="#contact" data-msg="Maximus / tùy chỉnh — trao đổi phạm vi nhé.">Gửi link bài đăng của bạn</a>
+            <a class="btn book" href="#next-step" data-msg="Maximus / tùy chỉnh — trao đổi phạm vi nhé.">Gửi link bài đăng của bạn</a>
           </div>
         </div>
         <ul class="trustrow" aria-label="Elevated Listing"><li>Xem thử miễn phí trước khi trả tiền</li><li>Giao trong vòng 48 giờ sau khi thanh toán</li><li>Thanh toán an toàn qua PayPal: thẻ hoặc số dư PayPal</li><li>Người thật trả lời: chính mình, Luis</li></ul>
         <div class="paynote">
           <h3>Xem trước đã</h3>
-          <p>Mình làm phim rồi gửi bạn bản có watermark. Xem sao thì nhận đúng như vậy. Ưng thì gật đầu và trả — Standard $249, hoặc Elevated $499 nếu muốn phim tối đa 3 phút, bản cắt ngắn 15 và 30 giây, ba vòng chỉnh sửa và một bản thay thế của bài hát. Không ưng thì không mất đồng nào. Phim để không công khai và mình không dùng để quảng bá chỗ ở của bạn.</p>
+          <p>Mình làm phim rồi gửi bạn bản có watermark. Xem sao thì nhận đúng như vậy. Ưng thì gật đầu và trả cho gói bạn chọn. Không ưng thì không mất đồng nào. Phim để không công khai và mình không dùng để quảng bá chỗ ở của bạn.</p>
           <h3>Giấy phép thương mại trọn gói cho phim và bài hát</h3>
           <p>Sau khi thanh toán, phim hoàn thiện là của bạn: Luis chuyển giao cho bạn mọi quyền anh ấy có đối với phim, phần dựng và lời bài hát anh ấy viết. Bài hát làm bằng Suno gói trả phí Pro hoặc Premier, và file bạn nhận là bản Download chính thức từ Suno; không bao giờ dùng bản remix bài hát của người dùng khác. Theo Điều khoản Suno (hiệu lực từ 3 tháng 9 năm 2026), bạn nhận mọi quyền Luis có đối với bài hát, cùng giấy phép thương mại vĩnh viễn, toàn cầu, miễn phí bản quyền để quảng bá chỗ ở (website, mạng xã hội, OTA cho phép video, quảng cáo, ấn phẩm) không phụ phí. Vì bài hát do AI tạo, không ai có thể cam kết rằng bài hát có bản quyền hay không có bài tương tự ở nơi khác, và mỗi nền tảng có quy định riêng về nhạc AI. Mình có thể đưa phim vào portfolio trừ khi bạn không muốn. Chi tiết trong phần <a href="/terms" style="color:var(--accent)">điều khoản</a> (tiếng Anh).</p>
-          <div class="paycallout">
+          <div class="paycallout" id="pay-now">
           <h3>Cách thanh toán</h3>
-          <p>Sau khi bạn gật đầu, mình gửi hóa đơn qua email. <strong>Ưu tiên: thẻ hoặc PayPal.</strong> Thanh toán bằng thẻ qua PayPal hoặc từ số dư PayPal, gửi tới tài khoản PayPal Business <strong>Elevated Listing</strong> của mình (sisyfosforever@gmail.com) và chọn <strong>Goods and Services</strong> (không chọn Friends and Family) để được PayPal bảo vệ người mua. Bạn cũng có thể trả bằng crypto (USDC trên Base hoặc USDT trên Arbitrum). Các bước tại <a href="/pay">elevatedlisting.co/pay</a>. 48 giờ bắt đầu tính khi tiền tới tay mình, và mình sẽ email báo bạn.</p>
-          <p class="pp-secure"><svg class="lock" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 10.5V7.8a3.5 3.5 0 0 1 7 0v2.7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="ppword" role="img" aria-label="PayPal"><b>Pay</b><b>Pal</b></span><span class="t">Thanh toán an toàn qua PayPal. Bạn trả bằng thẻ hoặc số dư PayPal. PayPal xử lý thông tin thẻ của bạn, nên mình không bao giờ thấy chúng. Người nhận hiển thị trong PayPal là <strong>Elevated Listing</strong>, tài khoản PayPal Business của mình.</span></p>
-          <p class="small">Chưa từng dùng crypto? Đa số chủ nhà mua USDC chỉ trong vài phút qua Coinbase, Kraken hoặc sàn tương tự, mình sẵn lòng hướng dẫn từng bước. Bạn chỉ trả tiền sau khi đã xem phim và đồng ý.</p>
-          <p class="small small-wu">Nếu cả hai cách trên đều không tiện, bạn có thể dùng Western Union như phương án cuối cùng. Xem <a href="/pay">/pay</a>.</p>
+          <p>Sau khi bạn gật đầu, mình gửi hóa đơn qua email. Sau đó bạn thanh toán qua trang thanh toán PayPal, bằng thẻ hoặc tài khoản PayPal. Tên người bán hiển thị trong PayPal là <strong>Elevated Listing</strong>. 48 giờ bắt đầu tính khi tiền tới tay mình, và mình sẽ email báo bạn.</p>
+          <p class="pp-cta"><a class="btn pp-checkout" href="#PAYPAL_CHECKOUT_LINK" rel="noopener"><span class="ppword" role="img" aria-label="PayPal"><b>Pay</b><b>Pal</b></span><span>Thanh toán an toàn qua PayPal (Elevated Listing)</span></a><span class="pp-sub">Thẻ hoặc tài khoản PayPal</span></p>
+          <p class="pp-secure"><svg class="lock" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 10.5V7.8a3.5 3.5 0 0 1 7 0v2.7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="t">PayPal xử lý thông tin thẻ của bạn, nên mình không bao giờ thấy chúng. Thanh toán qua PayPal có thể được Chương trình Bảo vệ Người mua của PayPal áp dụng, theo điều khoản của PayPal.</span></p>
+          <h4 class="other-pay">Cách thanh toán khác</h4>
+          <p class="small">Crypto: USDC trên Base hoặc USDT trên Arbitrum. Chưa từng dùng crypto? Đa số chủ nhà mua USDC chỉ trong vài phút qua Coinbase, Kraken hoặc sàn tương tự, mình sẵn lòng hướng dẫn. Western Union là lựa chọn cuối cùng. Bảo vệ người mua của PayPal không áp dụng cho các cách này. Các bước tại <a href="/pay">elevatedlisting.co/pay</a>.</p>
           </div>
         </div>
 
@@ -1064,7 +1101,7 @@
           </details>
           <details>
             <summary>Thanh toán thế nào?</summary>
-            <p>Sau khi bạn gật đầu, mình gửi hóa đơn qua email. Ưu tiên thẻ hoặc PayPal (Goods and Services, tới tài khoản PayPal Business Elevated Listing của mình), crypto (USDC trên Base hoặc USDT trên Arbitrum) cũng được. Phim giao trong vòng 48 giờ kể từ khi tiền tới tay mình. Các bước tại <a href="/pay" style="color:var(--accent)">elevatedlisting.co/pay</a>.</p>
+            <p>Sau khi bạn gật đầu, mình gửi hóa đơn qua email. Bạn thanh toán qua PayPal (Elevated Listing) bằng thẻ hoặc tài khoản PayPal; crypto (USDC trên Base hoặc USDT trên Arbitrum) và Western Union là các cách khác. Phim giao trong vòng 48 giờ kể từ khi tiền tới tay mình. Các bước tại <a href="/pay" style="color:var(--accent)">elevatedlisting.co/pay</a>.</p>
           </details>
         </div>
       </div>
@@ -1076,6 +1113,11 @@
       <div class="wrap">
         <h2 class="section-title">Nhắn mình</h2>
         <p class="section-sub">Gửi link bài đăng hoặc vài dòng. Mình tự đọc hết, không CRM, không trả lời tự động.</p>
+        <div class="card next-step" id="next-step">
+          <h3>Bước tiếp theo</h3>
+          <ol><li><strong>Chưa có phim?</strong> Gửi link bài đăng qua mẫu bên dưới. Mình làm bản xem trước miễn phí từ ảnh bài đăng của bạn và gửi qua email, có watermark.</li><li><strong>Đã xem bản xem trước và muốn lấy?</strong> Trả lời “đồng ý” email của mình, hoặc thanh toán tại đây. Phim tới tay bạn trong vòng 48 giờ sau khi thanh toán.</li></ol>
+          <p class="pp-cta" style="margin-bottom:0"><a class="btn pp-checkout" href="#PAYPAL_CHECKOUT_LINK" rel="noopener"><span class="ppword" role="img" aria-label="PayPal"><b>Pay</b><b>Pal</b></span><span>Thanh toán an toàn qua PayPal (Elevated Listing)</span></a><span class="pp-sub">Thẻ hoặc tài khoản PayPal</span></p>
+        </div>
         <div class="contact-grid">
           <form class="contact-form" name="contact" method="POST" action="https://formsubmit.co/f5238593f0f1a282c7691b9fc4166437" id="contact-form">
             <input type="hidden" name="_subject" value="Elevated Listing — site contact (VI)" />
@@ -1133,7 +1175,7 @@
           <div class="card" style="align-self:start">
             <h3>Gửi kèm thì càng tiện</h3>
             <p style="margin:0 0 .75rem">Link công khai của bài đăng, một dòng về không khí bạn muốn, và bạn đã nhận bản nháp nào từ mình chưa.</p>
-            <p style="margin:0;color:var(--mute);font-weight:300">Standard $249 (phim + bài hát, giấy phép thương mại trọn gói), Elevated $499, Maximus theo yêu cầu — chỉ khi bạn ưng. <a href="#packages" style="color:var(--accent)">Xem bạn nhận được gì</a>.</p>
+            <p style="margin:0;color:var(--mute);font-weight:300">Chỉ khi bạn ưng. <a href="#packages" style="color:var(--accent)">Xem bạn nhận được gì</a>.</p>
           </div>
         </div>
       </div>
@@ -1171,7 +1213,7 @@
 
   <footer>
     <div class="wrap row">
-      <div class="foot-brand"><a class="foot-logo" href="/vi/"><img src="/img/logo-mark.svg" alt="" width="34" height="34" /><span>Elevated <em>Listing</em></span></a><div class="foot-tag">Phim về chỗ ở của bạn, kèm bài hát riêng</div><div>© <span id="y"></span> Elevated Listing · Mats Ludvig Lindberg (Luis from Sweden)</div></div>
+      <div class="foot-brand"><a class="foot-logo" href="/vi/"><img src="/img/logo-mark.svg" alt="" width="34" height="34" /><span>Elevated <em>Listing</em></span></a><div class="foot-tag">Phim về chỗ ở của bạn, kèm bài hát riêng</div><div>© <span id="y"></span> Elevated Listing · Sole proprietor: Mats Ludvig Lindberg (Luis from Sweden)</div></div>
       <div class="legal-links">
         <a href="/terms" hreflang="en">Điều khoản</a>
         <span class="sep">·</span>

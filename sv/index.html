@@ -584,6 +584,23 @@
     @media (max-width:600px) { .logo { gap:.45rem; } .logo-mark { width:24px; height:24px; } .logo-text { line-height:1.12; } .nav-links .navpay { margin-right:0 !important; } }
     @media (max-width:389px) { .logo-mark { display:none; } }
   </style>
+  <style id="trust-fixes-1027">
+    .pk-facts{display:grid;gap:.55rem;max-width:46rem;margin:-.5rem 0 1.6rem}
+    .pk-facts p{margin:0;font-size:.95rem;line-height:1.55;color:var(--mute)}
+    .pk-facts strong{color:var(--ink);font-weight:500}
+    .pp-cta{display:flex;flex-direction:column;align-items:flex-start;gap:.35rem;margin:1rem 0}
+    .pp-checkout{display:inline-flex;align-items:center;gap:.65rem;text-align:left}
+    .pp-checkout .ppword{font-size:.85rem}
+    .pp-sub{font-size:.85rem;color:var(--mute)}
+    .other-pay{margin:1.4rem 0 .4rem;font-size:1rem;font-weight:500;color:var(--ink)}
+    .next-step{margin:0 0 1.75rem;max-width:46rem}
+    .next-step h3{margin-top:0}
+    .next-step ol{margin:.5rem 0 .75rem;padding-left:1.2rem;line-height:1.55}
+    .next-step li{margin:.35rem 0}
+    details.more-films,details.more-cuts{margin-top:1.5rem}
+    details.more-films>summary,details.more-cuts>summary{cursor:pointer;color:var(--accent);font-weight:500;padding:.6rem 0;list-style-position:inside}
+    details.more-films>.fgrid{margin-top:1rem}
+  </style>
 </head>
 <body>
   <header>
@@ -591,7 +608,7 @@
       <a href="/sv/" class="logo" aria-label="Elevated Listing, startsida" style="text-decoration:none;color:inherit" onclick="if(location.pathname==='/sv/'||location.pathname==='/sv/index.html'){window.scrollTo({top:0,behavior:'smooth'});history.replaceState(null,'','/sv/');return false;}"><img class="logo-mark" src="/img/logo-mark.svg" alt="" width="28" height="28" /><span class="logo-text">Elevated <span>Listing</span></span></a>
       <nav class="nav-links">
         <a class="hide-sm" href="#mind">Idén</a>
-        <a class="hide-sm" href="#work">Filmer</a>
+        <a class="hide-sm" href="#films">Filmer</a>
         <a class="hide-sm" href="#packages">Pris</a>
         <a class="hide-sm" href="#about">Om mig</a>
         <a class="hide-sm" href="#contact">Kontakt</a>
@@ -622,7 +639,7 @@
           </button>
         </div>
         <div class="hero-actions">
-          <a class="btn btn-ghost" href="#work">Se fler filmer</a>
+          <a class="btn btn-ghost" href="#films">Se fler filmer</a>
         </div>
         <p class="pkg-cue"><a href="#packages">Vill du ha en sån till ditt ställe? Kolla erbjudandet →</a></p>
         <div class="trust">
@@ -683,10 +700,113 @@
 
     
 
+    <section id="films">
+      <div class="wrap">
+        <h2 class="section-title">Utvalda filmer</h2>
+        <p class="section-sub">Några favoriter. Varje film börjar med annonsens egna bilder och en låt skriven för just det stället. Tryck på en bild för att titta.</p>
+        <p class="films-real">Filmerna bygger bara på boendets riktiga bilder. Jag lägger till rörelse, tempo och musik, aldrig påhittade bekvämligheter.</p>
+        <ul class="fgrid">
+          <li><button class="fcard" type="button" data-yt="S7OBQ2Mx6G0" aria-label="Spela upp Porch Light on the Chilcotin – The Historic Chilcotin Lodge, Riske Creek, British Columbia">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/S7OBQ2Mx6G0/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Porch Light on the Chilcotin</span><span class="fplace">The Historic Chilcotin Lodge, Riske Creek, British Columbia</span><span class="fcountry">Kanada</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="_pLDw5KINKY" aria-label="Spela upp Ranch&#x27;s World – Montana Hill Guest Ranch, South Cariboo, British Columbia">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/_pLDw5KINKY/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Ranch&#x27;s World</span><span class="fplace">Montana Hill Guest Ranch, South Cariboo, British Columbia</span><span class="fcountry">Kanada</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="EX0xMsigB8I" aria-label="Spela upp Pump Up the Gas – Pik Pak, Marfa, Texas">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/EX0xMsigB8I/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Pump Up the Gas</span><span class="fplace">Pik Pak, Marfa, Texas</span><span class="fcountry">USA</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="HJNe1U8_L2w" aria-label="Spela upp Light My Fire – Saugerties Lighthouse B&amp;B, Hudson River, New York">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/HJNe1U8_L2w/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Light My Fire</span><span class="fplace">Saugerties Lighthouse B&amp;B, Hudson River, New York</span><span class="fcountry">USA</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="Gy5infV4EKY" aria-label="Spela upp Stardust – Stardust Retreat, Coleman, Texas">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/Gy5infV4EKY/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Stardust</span><span class="fplace">Stardust Retreat, Coleman, Texas</span><span class="fcountry">USA</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="A4msgpOs3TA" aria-label="Spela upp Too Much Mirror – Notestone Reserve, Hocking Hills, Ohio">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/A4msgpOs3TA/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Too Much Mirror</span><span class="fplace">Notestone Reserve, Hocking Hills, Ohio</span><span class="fcountry">USA</span>
+          </button></li>
+        </ul>
+        <details class="more-films"><summary>Fler filmer till ställen jag fastnat för, gjorda innan någon frågade (15)</summary>
+        <ul class="fgrid">
+          <li><button class="fcard" type="button" data-yt="MrU4V8dQ9S8" aria-label="Spela upp Make You Sweat – Toutosen smoke sauna">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/MrU4V8dQ9S8/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Make You Sweat</span><span class="fplace">Toutosens rökbastu</span><span class="fcountry">Finland</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="QS8EtZkXTr4" aria-label="Spela upp Purple Row – Lavender Row B&amp;B, Outram, Otago">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/QS8EtZkXTr4/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Purple Row</span><span class="fplace">Lavender Row B&amp;B, Outram, Otago</span><span class="fcountry">Nya Zeeland</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="HgZ8F30TqR8" aria-label="Spela upp Hammock on the Bay – Bamboo Bay Eco Resort, Koh Phangan">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/HgZ8F30TqR8/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Hammock on the Bay</span><span class="fplace">Bamboo Bay Eco Resort, Koh Phangan</span><span class="fcountry">Thailand</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="ESzXXZeJpEg" aria-label="Spela upp Dryhead! – Dryhead Ranch, Pryor Mountains, Montana">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/ESzXXZeJpEg/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Dryhead!</span><span class="fplace">Dryhead Ranch, Pryor Mountains, Montana</span><span class="fcountry">USA</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="bJaVf5Z6sAg" aria-label="Spela upp Tree House Jamboree – Crazy House, Da Lat">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/bJaVf5Z6sAg/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Tree House Jamboree</span><span class="fplace">Crazy House, Da Lat</span><span class="fcountry">Vietnam</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="Si9_9n-1RPc" aria-label="Spela upp The Creagan Carriage-Motion – The Carriage at Creagan, Appin, Argyll">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/Si9_9n-1RPc/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">The Creagan Carriage-Motion</span><span class="fplace">The Carriage at Creagan, Appin, Argyll</span><span class="fcountry">Skottland</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="J5uGGgk7J_o" aria-label="Spela upp Windmills of Your Dreams – B&amp;B De Ouwe Meule, Nieuwdorp, Zeeland">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/J5uGGgk7J_o/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Windmills of Your Dreams</span><span class="fplace">B&amp;B De Ouwe Meule, Nieuwdorp, Zeeland</span><span class="fcountry">Nederländerna</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="-k3zWRS72Js" aria-label="Spela upp Lemon Grove – Agriturismo Villa Maria, Minori, Amalfi Coast">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/-k3zWRS72Js/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Lemon Grove</span><span class="fplace">Agriturismo Villa Maria, Minori, Amalfi Coast</span><span class="fcountry">Italien</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="UF2WhPcN0-M" aria-label="Spela upp Tiny Farmer – Aria&#x27;s Farm Tiny House, Rotorua">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/UF2WhPcN0-M/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Tiny Farmer</span><span class="fplace">Aria&#x27;s Farm Tiny House, Rotorua</span><span class="fcountry">Nya Zeeland</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="pkOUdc5xWvA" aria-label="Spela upp Paperback Sleeper – Amblongus Books, Chester">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/pkOUdc5xWvA/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Paperback Sleeper</span><span class="fplace">Amblongus Books, Chester</span><span class="fcountry">England</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="4R1-kjGwPBc" aria-label="Spela upp This Is My House – Rødkærgård B&amp;B, Kerteminde">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/4R1-kjGwPBc/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">This Is My House</span><span class="fplace">Rødkærgård B&amp;B, Kerteminde</span><span class="fcountry">Danmark</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="rxbjy8QPbsg" aria-label="Spela upp Honey, I&#x27;m Coming Home – 13 Bees, Confolens">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/rxbjy8QPbsg/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Honey, I&#x27;m Coming Home</span><span class="fplace">13 Bees, Confolens</span><span class="fcountry">Frankrike</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="VtwfTjgevMw" aria-label="Spela upp Welcome to the Dow Hotel – Dow Hotel &amp; Dow Villa Motel, Lone Pine, California">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/VtwfTjgevMw/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">Welcome to the Dow Hotel</span><span class="fplace">Dow Hotel &amp; Dow Villa Motel, Lone Pine, California</span><span class="fcountry">USA</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="saoqzTnSdkU" aria-label="Spela upp The Long Way Home – Forest Springs Getaway, Burney, California">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/saoqzTnSdkU/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">The Long Way Home</span><span class="fplace">Forest Springs Getaway, Burney, California</span><span class="fcountry">USA</span>
+          </button></li>
+          <li><button class="fcard" type="button" data-yt="fWPwq5pPP1M" aria-label="Spela upp 2423 Prytania Street – Garden District, New Orleans, Louisiana">
+            <span class="fthumb"><img src="https://i.ytimg.com/vi/fWPwq5pPP1M/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
+            <span class="ftitle">2423 Prytania Street</span><span class="fplace">Garden District, New Orleans, Louisiana</span><span class="fcountry">USA</span>
+          </button></li>
+        </ul>
+        </details>
+      </div>
+      <div class="flb" id="flb" hidden role="dialog" aria-modal="true" aria-label="Filmspelare">
+        <button class="flb-x" type="button" aria-label="Stäng">×</button>
+        <div class="flb-box"></div>
+      </div>
+    </section>
+
         <section id="work">
       <div class="wrap">
         <h2 class="section-title">Senaste filmerna</h2>
         <p class="section-sub">Filmer jag gjort till ställen jag gillade, innan någon ens frågade. Jag har gjort dem av bilderna i den öppna annonsen, och vill ägaren att jag tar ner en film gör jag det direkt.</p>
+        <details class="more-cuts"><summary>Visa filmerna</summary>
         <div class="work-grid">
 
 
@@ -845,100 +965,12 @@
               </div>
             </div>
           </article>
-        </div>
+        </div></details>
       </div>
     </section>
 
 
-    <section id="films">
-      <div class="wrap">
-        <h2 class="section-title">Filmer till ställen jag fastnat för</h2>
-        <p class="section-sub">Ingen bad mig om dem, jag gjorde dem ändå. Varje film börjar med annonsens egna bilder och en låt skriven för just det stället. Tryck på en bild för att titta.</p>
-        <p class="films-real">Filmerna bygger bara på boendets riktiga bilder. Jag lägger till rörelse, tempo och musik, aldrig påhittade bekvämligheter.</p>
-        <ul class="fgrid">
-          <li><button class="fcard" type="button" data-yt="A4msgpOs3TA" aria-label="Spela upp Too Much Mirror – Notestone Reserve, Hocking Hills, Ohio">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/A4msgpOs3TA/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">Too Much Mirror</span><span class="fplace">Notestone Reserve, Hocking Hills, Ohio</span><span class="fcountry">USA</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="MrU4V8dQ9S8" aria-label="Spela upp Make You Sweat – Toutosen smoke sauna">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/MrU4V8dQ9S8/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">Make You Sweat</span><span class="fplace">Toutosens rökbastu</span><span class="fcountry">Finland</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="EX0xMsigB8I" aria-label="Spela upp Pump Up the Gas – Pik Pak, Marfa, Texas">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/EX0xMsigB8I/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">Pump Up the Gas</span><span class="fplace">Pik Pak, Marfa, Texas</span><span class="fcountry">USA</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="HJNe1U8_L2w" aria-label="Spela upp Light My Fire – Saugerties Lighthouse B&amp;B, Hudson River, New York">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/HJNe1U8_L2w/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">Light My Fire</span><span class="fplace">Saugerties Lighthouse B&amp;B, Hudson River, New York</span><span class="fcountry">USA</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="QS8EtZkXTr4" aria-label="Spela upp Purple Row – Lavender Row B&amp;B, Outram, Otago">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/QS8EtZkXTr4/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">Purple Row</span><span class="fplace">Lavender Row B&amp;B, Outram, Otago</span><span class="fcountry">Nya Zeeland</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="HgZ8F30TqR8" aria-label="Spela upp Hammock on the Bay – Bamboo Bay Eco Resort, Koh Phangan">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/HgZ8F30TqR8/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">Hammock on the Bay</span><span class="fplace">Bamboo Bay Eco Resort, Koh Phangan</span><span class="fcountry">Thailand</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="ESzXXZeJpEg" aria-label="Spela upp Dryhead! – Dryhead Ranch, Pryor Mountains, Montana">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/ESzXXZeJpEg/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">Dryhead!</span><span class="fplace">Dryhead Ranch, Pryor Mountains, Montana</span><span class="fcountry">USA</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="bJaVf5Z6sAg" aria-label="Spela upp Tree House Jamboree – Crazy House, Da Lat">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/bJaVf5Z6sAg/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">Tree House Jamboree</span><span class="fplace">Crazy House, Da Lat</span><span class="fcountry">Vietnam</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="Si9_9n-1RPc" aria-label="Spela upp The Creagan Carriage-Motion – The Carriage at Creagan, Appin, Argyll">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/Si9_9n-1RPc/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">The Creagan Carriage-Motion</span><span class="fplace">The Carriage at Creagan, Appin, Argyll</span><span class="fcountry">Skottland</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="J5uGGgk7J_o" aria-label="Spela upp Windmills of Your Dreams – B&amp;B De Ouwe Meule, Nieuwdorp, Zeeland">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/J5uGGgk7J_o/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">Windmills of Your Dreams</span><span class="fplace">B&amp;B De Ouwe Meule, Nieuwdorp, Zeeland</span><span class="fcountry">Nederländerna</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="-k3zWRS72Js" aria-label="Spela upp Lemon Grove – Agriturismo Villa Maria, Minori, Amalfi Coast">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/-k3zWRS72Js/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">Lemon Grove</span><span class="fplace">Agriturismo Villa Maria, Minori, Amalfi Coast</span><span class="fcountry">Italien</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="UF2WhPcN0-M" aria-label="Spela upp Tiny Farmer – Aria&#x27;s Farm Tiny House, Rotorua">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/UF2WhPcN0-M/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">Tiny Farmer</span><span class="fplace">Aria&#x27;s Farm Tiny House, Rotorua</span><span class="fcountry">Nya Zeeland</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="pkOUdc5xWvA" aria-label="Spela upp Paperback Sleeper – Amblongus Books, Chester">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/pkOUdc5xWvA/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">Paperback Sleeper</span><span class="fplace">Amblongus Books, Chester</span><span class="fcountry">England</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="4R1-kjGwPBc" aria-label="Spela upp This Is My House – Rødkærgård B&amp;B, Kerteminde">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/4R1-kjGwPBc/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">This Is My House</span><span class="fplace">Rødkærgård B&amp;B, Kerteminde</span><span class="fcountry">Danmark</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="rxbjy8QPbsg" aria-label="Spela upp Honey, I&#x27;m Coming Home – 13 Bees, Confolens">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/rxbjy8QPbsg/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">Honey, I&#x27;m Coming Home</span><span class="fplace">13 Bees, Confolens</span><span class="fcountry">Frankrike</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="VtwfTjgevMw" aria-label="Spela upp Welcome to the Dow Hotel – Dow Hotel &amp; Dow Villa Motel, Lone Pine, California">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/VtwfTjgevMw/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">Welcome to the Dow Hotel</span><span class="fplace">Dow Hotel &amp; Dow Villa Motel, Lone Pine, California</span><span class="fcountry">USA</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="saoqzTnSdkU" aria-label="Spela upp The Long Way Home – Forest Springs Getaway, Burney, California">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/saoqzTnSdkU/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">The Long Way Home</span><span class="fplace">Forest Springs Getaway, Burney, California</span><span class="fcountry">USA</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="Gy5infV4EKY" aria-label="Spela upp Stardust – Stardust Retreat, Coleman, Texas">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/Gy5infV4EKY/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">Stardust</span><span class="fplace">Stardust Retreat, Coleman, Texas</span><span class="fcountry">USA</span>
-          </button></li>
-          <li><button class="fcard" type="button" data-yt="fWPwq5pPP1M" aria-label="Spela upp 2423 Prytania Street – Garden District, New Orleans, Louisiana">
-            <span class="fthumb"><img src="https://i.ytimg.com/vi/fWPwq5pPP1M/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="" loading="lazy" decoding="async" width="1280" height="720"><span class="fplay" aria-hidden="true"></span></span>
-            <span class="ftitle">2423 Prytania Street</span><span class="fplace">Garden District, New Orleans, Louisiana</span><span class="fcountry">USA</span>
-          </button></li>
-        </ul>
-      </div>
-      <div class="flb" id="flb" hidden role="dialog" aria-modal="true" aria-label="Filmspelare">
-        <button class="flb-x" type="button" aria-label="Stäng">×</button>
-        <div class="flb-box"></div>
-      </div>
-    </section>
+    
 
     <section id="journey">
       <div class="wrap">
@@ -953,11 +985,11 @@
           <li class="jstep reveal"><span class="jicon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M14 34 L27 46 L50 18"/></svg></span><span class="jnum" aria-hidden="true">2</span>
             <h3>Säg ja</h3><p>Svara bara på mitt mejl. Ett kort ”ja” räcker.</p></li>
           <li class="jstep reveal"><span class="jicon" aria-hidden="true"><svg viewBox="0 0 64 64"><rect x="10" y="20" width="44" height="28" rx="5"/><circle cx="32" cy="34" r="6"/></svg></span><span class="jnum" aria-hidden="true">3</span>
-            <h3>$249, en enda betalning</h3><p>Jag mejlar en faktura. Betala med kort eller PayPal till mitt PayPal Business-konto <strong>Elevated Listing</strong> (sisyfosforever@gmail.com, som Goods and Services), eller med krypto (USDC på Base eller USDT på Arbitrum). Ingen prenumeration. Inga fler kostnader sen. Steg på <a href="/pay">elevatedlisting.co/pay</a>.</p></li>
+            <h3>En enda betalning</h3><p>Jag mejlar en faktura. Betala säkert via PayPals kassa (<strong>Elevated Listing</strong>) med kort eller PayPal-konto. Krypto och Western Union går också. Ingen prenumeration. Inga fler kostnader sen. Steg på <a href="/pay">elevatedlisting.co/pay</a>.</p></li>
           <li class="jstep reveal"><span class="jicon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M10 22 L32 36 L54 22"/><rect x="10" y="18" width="44" height="30" rx="4"/></svg></span><span class="jnum" aria-hidden="true">4</span>
             <h3>Dina filmer inom 48 timmar</h3><p>Inom 48 timmar från att din betalning kommit fram får du filmen i full-HD utan vattenstämpel, en stående version för Reels och låten som MP3. Vill du ändra något litet? En omgång justeringar ingår.</p></li>
           <li class="jstep reveal"><span class="jicon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M32 50 C14 38 10 28 18 20 C24 14 30 18 32 23 C34 18 40 14 46 20 C54 28 50 38 32 50 Z"/></svg></span><span class="jnum" aria-hidden="true">5</span>
-            <h3>Dela den överallt</h3><p>Lägg upp den i annonsen, på hemsidan, i sociala medier, på OTAs som tillåter video, i reklam och i tryck. Efter betalning är filmen din, och låten får du en evig kommersiell licens för, för ditt boende.</p></li>
+            <h3>Dela den överallt</h3><p>Använd den på din egen hemsida och sidor för direktbokning, på Instagram och Reels, TikTok, YouTube, i annonser och i tryck. Airbnb och VRBO stöder video ojämnt, så kolla vad din annons tar emot. Efter betalning är filmen din, och låten får du en evig kommersiell licens för, för ditt boende.</p></li>
           </ol>
         </div>
         <p class="jnote">Frågor? Skriv bara. Det är en riktig människa som svarar: jag, Luis.</p>
@@ -993,18 +1025,22 @@
         <div class="pill">Pris</div>
         <h2 class="section-title" style="margin-bottom:.75rem">Film + låt. Full kommersiell licens.</h2>
         <p class="section-sub" style="margin-bottom:1.5rem"><strong>Gratis förhandsvisning först:</strong> du ser den färdiga filmen innan du betalar något. Efter betalning är filmen din, och låten kommer med en <strong>evig kommersiell licens</strong> för att marknadsföra ditt boende.</p>
+        <div class="pk-facts" id="ai-disclosure">
+          <p><strong>Så görs den:</strong> Låten skrivs för ditt boende och produceras med AI-musikverktyg (Suno); filmen klipps av dina egna annonsbilder.</p>
+          <p><strong>Var du kan använda den:</strong> Instagram och Reels, TikTok, YouTube, din egen hemsida, sidor för direktbokning och annonser. Airbnb och VRBO stöder video ojämnt, så jag kan inte lova att den spelas i din annons där.</p>
+        </div>
         <div class="tiers">
           <div class="offer tier featured">
             <h3>Standard</h3>
             <div class="price">$249 <small>full kommersiell licens</small></div>
             <ul>
               <li>Filmen jag skickade, färdig — full HD 16:9 + vertikal, utan vattenstämpel</li>
-              <li>Den egna låten som MP3 — ingår i $249</li>
+              <li>Den egna låten som MP3, ingår</li>
               <li>Filmen är din; låten får du en evig kommersiell licens för, för ditt boende.</li>
               <li>En runda mindre tweaks</li>
               <li>Leverans inom 48 timmar efter betalning</li>
             </ul>
-            <a class="btn book" href="#contact" data-msg="Jag vill ha Standard $249 (film + låt, full kommersiell licens). Här är länken till mitt boende:">Skicka länken till din annons</a>
+            <a class="btn book" href="#next-step" data-msg="Jag vill ha Standard $249 (film + låt, full kommersiell licens). Här är länken till mitt boende:">Skicka länken till din annons</a>
           </div>
           <div class="offer tier">
             <h3>Elevated</h3>
@@ -1018,7 +1054,7 @@
               <li>Samma fulla kommersiella licens för film + låt</li>
               <li>Leverans inom 48 timmar efter betalning</li>
             </ul>
-            <a class="btn book" href="#contact" data-msg="Jag vill ha Elevated $499 (film upp till 3 min, kortversioner på 15 + 30 s, tre ändringsrundor, alternativ version av låten).">Skicka länken till din annons</a>
+            <a class="btn book" href="#next-step" data-msg="Jag vill ha Elevated $499 (film upp till 3 min, kortversioner på 15 + 30 s, tre ändringsrundor, alternativ version av låten).">Skicka länken till din annons</a>
           </div>
           <div class="offer tier">
             <h3>Maximus</h3>
@@ -1028,21 +1064,22 @@
               <li>Flera boenden eller skräddarsytt upplägg</li>
               <li>Pris och tid efter att vi pratat</li>
             </ul>
-            <a class="btn book" href="#contact" data-msg="Maximus / skräddarsytt — låt oss prata om omfattningen.">Skicka länken till din annons</a>
+            <a class="btn book" href="#next-step" data-msg="Maximus / skräddarsytt — låt oss prata om omfattningen.">Skicka länken till din annons</a>
           </div>
         </div>
         <ul class="trustrow" aria-label="Elevated Listing"><li>Gratis förhandsvisning innan du betalar</li><li>Leverans inom 48 timmar efter betalning</li><li>Säker betalning via PayPal: kort eller PayPal-saldo</li><li>En riktig människa svarar: jag, Luis</li></ul>
         <div class="paynote">
           <h3>Du ser den först</h3>
-          <p>Jag gör filmen och skickar den till dig, med vattenstämpel. Det du ser är den riktiga filmen. Faller du för den säger du ja och betalar — Standard $249, eller Elevated $499 för en film upp till 3 minuter, kortversioner på 15 och 30 sekunder, tre ändringsrundor och en alternativ version av låten. Annars betalar du ingenting, och ingen blir sur. Filmen förblir olistad och jag använder den inte för att marknadsföra ditt boende.</p>
+          <p>Jag gör filmen och skickar den till dig, med vattenstämpel. Det du ser är den riktiga filmen. Faller du för den säger du ja och betalar för paketet du valt. Annars betalar du ingenting, och ingen blir sur. Filmen förblir olistad och jag använder den inte för att marknadsföra ditt boende.</p>
           <h3>Full kommersiell licens för filmen och låten</h3>
           <p>När du har betalat är den färdiga filmen din: Luis överlåter alla rättigheter han har i filmen, redigeringen och den låttext han skrivit till dig. Låten görs med Suno på ett betalt Pro- eller Premier-abonnemang, och filen du får är en officiell Suno-nedladdning; remixar av andra användares låtar används aldrig. Enligt Sunos villkor (gällande från 3 september 2026) får du alla rättigheter Luis har i låten, plus en evig, världsomfattande och royaltyfri licens att använda den kommersiellt för att marknadsföra boendet (hemsida, sociala medier, OTAs som tillåter video, reklam, tryck) utan extra avgifter. Eftersom låten är AI-genererad kan ingen lova att upphovsrätt finns i den eller att ingen liknande låt finns någon annanstans, och varje plattform har egna regler för AI-musik. Jag kan visa filmen i min portfolio, om du inte hellre vill att jag låter bli. Detaljer i <a href="/sv/terms" style="color:var(--accent)">villkoren</a>.</p>
-          <div class="paycallout">
+          <div class="paycallout" id="pay-now">
           <h3>Så fungerar betalningen</h3>
-          <p>När du har sagt ja mejlar jag dig en faktura. <strong>Helst kort eller PayPal.</strong> Betala med kort via PayPal eller från ditt PayPal-saldo, till mitt PayPal Business-konto <strong>Elevated Listing</strong> (sisyfosforever@gmail.com) som <strong>Goods and Services</strong> (inte Friends and Family), så har du PayPals köparskydd på din sida. Du kan också betala med krypto (USDC på Base eller USDT på Arbitrum). Steg på <a href="/pay">elevatedlisting.co/pay</a>. De 48 timmarna börjar när din betalning har kommit fram, och då mejlar jag dig.</p>
-          <p class="pp-secure"><svg class="lock" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 10.5V7.8a3.5 3.5 0 0 1 7 0v2.7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="ppword" role="img" aria-label="PayPal"><b>Pay</b><b>Pal</b></span><span class="t">Säker betalning via PayPal. Betala med kort eller ditt PayPal-saldo. PayPal hanterar dina kortuppgifter, så jag ser dem aldrig. Mottagaren som visas i PayPal är <strong>Elevated Listing</strong>, mitt PayPal Business-konto.</span></p>
-          <p class="small">Aldrig köpt krypto? De flesta värdar fixar USDC på några minuter via Coinbase, Kraken eller liknande, och jag guidar dig gärna steg för steg. Du betalar först när du har sett din film och sagt ja.</p>
-          <p class="small small-wu">Fungerar inget av det för dig går Western Union att använda som sista utväg. Se <a href="/pay">/pay</a>.</p>
+          <p>När du har sagt ja mejlar jag dig en faktura. Sedan betalar du via PayPals kassa, med kort eller PayPal-konto. Säljarnamnet du ser i PayPal är <strong>Elevated Listing</strong>. De 48 timmarna börjar när din betalning har kommit fram, och då mejlar jag dig.</p>
+          <p class="pp-cta"><a class="btn pp-checkout" href="#PAYPAL_CHECKOUT_LINK" rel="noopener"><span class="ppword" role="img" aria-label="PayPal"><b>Pay</b><b>Pal</b></span><span>Betala säkert med PayPal (Elevated Listing)</span></a><span class="pp-sub">Kort eller PayPal-konto</span></p>
+          <p class="pp-secure"><svg class="lock" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 10.5V7.8a3.5 3.5 0 0 1 7 0v2.7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="t">PayPal hanterar dina kortuppgifter, så jag ser dem aldrig. Betalningar via PayPals kassa kan omfattas av PayPals köparskydd, enligt PayPals egna villkor.</span></p>
+          <h4 class="other-pay">Andra sätt att betala</h4>
+          <p class="small">Krypto: USDC på Base eller USDT på Arbitrum. Aldrig köpt krypto? De flesta värdar fixar USDC på några minuter via Coinbase, Kraken eller liknande, och jag guidar dig gärna. Western Union går som en sista utväg. PayPals köparskydd gäller inte för dessa. Steg på <a href="/pay">elevatedlisting.co/pay</a>.</p>
           </div>
         </div>
 
@@ -1070,7 +1107,7 @@
           </details>
           <details>
             <summary>Hur betalar jag?</summary>
-            <p>När du har sagt ja mejlar jag en faktura. Helst kort eller PayPal (Goods and Services, till mitt PayPal Business-konto Elevated Listing), och krypto (USDC på Base eller USDT på Arbitrum) fungerar också. Leverans inom 48 timmar från att din betalning kommit fram. Steg på <a href="/pay" style="color:var(--accent)">elevatedlisting.co/pay</a>.</p>
+            <p>När du har sagt ja mejlar jag en faktura. Betala via PayPals kassa (Elevated Listing) med kort eller PayPal-konto; krypto (USDC på Base eller USDT på Arbitrum) och Western Union är andra sätt att betala. Leverans inom 48 timmar från att din betalning kommit fram. Steg på <a href="/pay" style="color:var(--accent)">elevatedlisting.co/pay</a>.</p>
           </details>
         </div>
       </div>
@@ -1082,6 +1119,11 @@
       <div class="wrap">
         <h2 class="section-title">Hör av dig</h2>
         <p class="section-sub">Skicka en länk till annonsen eller bara några rader. Jag läser allt själv. Inget CRM, inga autosvar.</p>
+        <div class="card next-step" id="next-step">
+          <h3>Ditt nästa steg</h3>
+          <ol><li><strong>Ingen film än?</strong> Skicka länken till din annons med formuläret nedan. Jag gör en gratis förhandsvisning av dina annonsbilder och mejlar den till dig, med vattenstämpel.</li><li><strong>Sett din förhandsvisning och vill ha den?</strong> Svara ”ja” på mitt mejl, eller betala här. Dina filmer kommer inom 48 timmar efter betalning.</li></ol>
+          <p class="pp-cta" style="margin-bottom:0"><a class="btn pp-checkout" href="#PAYPAL_CHECKOUT_LINK" rel="noopener"><span class="ppword" role="img" aria-label="PayPal"><b>Pay</b><b>Pal</b></span><span>Betala säkert med PayPal (Elevated Listing)</span></a><span class="pp-sub">Kort eller PayPal-konto</span></p>
+        </div>
         <div class="contact-grid">
           <form class="contact-form" name="contact" method="POST" action="https://formsubmit.co/f5238593f0f1a282c7691b9fc4166437" id="contact-form">
             <input type="hidden" name="_subject" value="Elevated Listing — site contact (SV)" />
@@ -1139,7 +1181,7 @@
           <div class="card" style="align-self:start">
             <h3>Det här hjälper</h3>
             <p style="margin:0 0 .75rem">Länken till din annons, en rad om känslan du är ute efter, och om du redan har fått ett utkast från mig.</p>
-            <p style="margin:0;color:var(--mute);font-weight:300">Standard $249 (film + låt, full kommersiell licens), Elevated $499, Maximus på förfrågan — bara om du faller för den. <a href="#packages" style="color:var(--accent)">Se vad du får</a>.</p>
+            <p style="margin:0;color:var(--mute);font-weight:300">Bara om du faller för den. <a href="#packages" style="color:var(--accent)">Se vad du får</a>.</p>
           </div>
         </div>
       </div>
@@ -1177,7 +1219,7 @@
 
   <footer>
     <div class="wrap row">
-      <div class="foot-brand"><a class="foot-logo" href="/sv/"><img src="/img/logo-mark.svg" alt="" width="34" height="34" /><span>Elevated <em>Listing</em></span></a><div class="foot-tag">Filmer om ditt boende, med en egen låt</div><div>© <span id="y"></span> Elevated Listing · Mats Ludvig Lindberg (Luis from Sweden)</div></div>
+      <div class="foot-brand"><a class="foot-logo" href="/sv/"><img src="/img/logo-mark.svg" alt="" width="34" height="34" /><span>Elevated <em>Listing</em></span></a><div class="foot-tag">Filmer om ditt boende, med en egen låt</div><div>© <span id="y"></span> Elevated Listing · Sole proprietor: Mats Ludvig Lindberg (Luis from Sweden)</div></div>
       <div class="legal-links">
         <a href="/sv/terms">Villkor</a>
         <span class="sep">·</span>
