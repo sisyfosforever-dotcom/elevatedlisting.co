@@ -35,7 +35,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Elevated Listing", "url": "https://elevatedlisting.co/", "image": "https://elevatedlisting.co/og.jpg", "logo": "https://elevatedlisting.co/apple-touch-icon.png", "email": "luis@elevatedlisting.co", "founder": {"@type": "Person", "name": "Mats Ludvig Lindberg", "alternateName": ["Luis Lindberg", "Luis from Sweden"]}, "description": "Handmade listing films for short-term and vacation rentals, cut to a song or set to an original one.", "makesOffer": [{"@type": "Offer", "name": "Listing film and song", "price": "249", "priceCurrency": "USD", "description": "One full-HD horizontal film, one vertical Reels version, the song as an MP3, one round of tweaks, delivered within 48 hours of payment. Paid only if you love it."}]}
+  {"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Elevated Listing", "url": "https://elevatedlisting.co/", "image": "https://elevatedlisting.co/og.jpg", "logo": "https://elevatedlisting.co/img/logo-512.png", "email": "luis@elevatedlisting.co", "founder": {"@type": "Person", "name": "Mats Ludvig Lindberg", "alternateName": ["Luis Lindberg", "Luis from Sweden"]}, "description": "Handmade listing films for short-term and vacation rentals, cut to a song or set to an original one.", "makesOffer": [{"@type": "Offer", "name": "Listing film and song", "price": "249", "priceCurrency": "USD", "description": "One full-HD horizontal film, one vertical Reels version, the song as an MP3, one round of tweaks, delivered within 48 hours of payment. Paid only if you love it."}]}
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -423,6 +423,13 @@
     .paycallout { margin:1rem 0; padding:1rem 1.25rem; border:1px solid var(--accent); border-left-width:4px; border-radius:var(--radius); background:rgba(196,165,116,.08); }
     .paycallout h3 { color:var(--accent); }
     .paycallout p { color:var(--ink); }
+    .hero-note { margin:.25rem 0 1.25rem; max-width:40rem; font-size:.92rem; font-weight:300; color:var(--mute); border-left:2px solid var(--accent); padding-left:.8rem; }
+    .hero-note strong { color:var(--ink); font-weight:500; }
+    .faq { margin-top:2rem; max-width:44rem; }
+    .faq details { border:1px solid var(--line); border-radius:var(--radius); background:var(--card); padding:.9rem 1.25rem; margin:.6rem 0; }
+    .faq summary { cursor:pointer; font-weight:500; color:var(--ink); }
+    .faq details p { margin:.6rem 0 0; font-weight:300; }
+    .paynote .small-wu { font-size:.85rem; color:var(--mute); }
     .avail { color:var(--accent); font-weight:500; letter-spacing:.02em; margin:.25rem 0 0; }
     .paynote .small { font-size:.9rem; margin:.75rem 0 0; }
     @media (max-width: 800px) { .tiers { grid-template-columns:1fr; } }
@@ -548,12 +555,34 @@
     @media (max-width:999px){.lang{display:none}.lang-sm{display:block}}
     @media (max-width:600px){.nav-links{gap:.6rem}.nav-links .btn{padding:.62rem .95rem;font-size:.86rem}}
     @media (max-width:360px){.logo{font-size:1.02rem}}
+    /* brand + trust (2026-10-27) */
+    .logo { display:inline-flex; align-items:center; gap:.55rem; }
+    .logo-mark { width:28px; height:28px; flex:none; display:block; }
+    .ppword { display:inline-block; background:#fff; border-radius:6px; padding:.18rem .5rem; font-family:Verdana,"DejaVu Sans",Arial,sans-serif; font-weight:700; font-style:italic; font-size:.92rem; letter-spacing:-.02em; line-height:1.25; vertical-align:middle; white-space:nowrap; }
+    .ppword b:first-child { color:#003087; } .ppword b + b { color:#009cde; }
+    .pp-secure { display:flex; gap:.6rem .8rem; align-items:center; flex-wrap:wrap; margin:.9rem 0 .4rem; padding:.75rem 1rem; background:rgba(243,239,230,.04); border:1px solid var(--line); border-radius:12px; font-size:.9rem; color:var(--ink); line-height:1.5; }
+    .pp-secure .lock { color:var(--accent); flex:none; }
+    .pp-secure span.t { flex:1 1 16rem; }
+    .trustrow { list-style:none; display:grid; grid-template-columns:repeat(auto-fit,minmax(13rem,1fr)); gap:.6rem 1.5rem; margin:1.5rem 0 0; padding:1rem 1.25rem; border:1px solid var(--line); border-radius:var(--radius); background:rgba(243,239,230,.03); font-size:.9rem; color:var(--ink); }
+    .trustrow li { display:flex; align-items:center; gap:.55rem; margin:0; }
+    .trustrow li::before { content:""; width:1rem; height:1rem; flex:none; background:no-repeat center/contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='7.25' fill='none' stroke='%23c4a574' stroke-width='1.3'/%3E%3Cpath d='M4.8 8.3l2.1 2.1 4.3-4.6' fill='none' stroke='%23c4a574' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); }
+    .about-cred { margin:0 0 1.25rem; padding-left:.8rem; border-left:2px solid var(--accent); color:var(--ink); font-weight:300; max-width:40rem; }
+    .about-cred strong { font-weight:500; }
+    footer .foot-brand { display:flex; flex-direction:column; gap:.45rem; }
+    footer .foot-logo { display:inline-flex; align-items:center; gap:.6rem; text-decoration:none; color:var(--ink); font-family:Fraunces,Georgia,serif; font-size:1.2rem; font-weight:600; letter-spacing:.02em; }
+    footer .foot-logo img { width:34px; height:34px; display:block; }
+    footer .foot-logo em { font-style:normal; color:var(--accent); font-weight:500; }
+    footer .foot-tag { color:var(--mute); font-size:.85rem; }
+    .logo .logo-text { display:block; color:inherit; font-weight:inherit; }
+    .logo .logo-text span { color:var(--accent); font-weight:500; }
+    @media (max-width:600px) { .logo { gap:.45rem; } .logo-mark { width:24px; height:24px; } .logo-text { line-height:1.12; } .nav-links .navpay { margin-right:0 !important; } }
+    @media (max-width:389px) { .logo-mark { display:none; } }
   </style>
 </head>
 <body>
   <header>
     <div class="wrap nav">
-      <a href="/fi/" class="logo" aria-label="Elevated Listing, etusivu" style="text-decoration:none;color:inherit" onclick="if(location.pathname==='/fi/'||location.pathname==='/fi/index.html'){window.scrollTo({top:0,behavior:'smooth'});history.replaceState(null,'','/fi/');return false;}">Elevated <span>Listing</span></a>
+      <a href="/fi/" class="logo" aria-label="Elevated Listing, etusivu" style="text-decoration:none;color:inherit" onclick="if(location.pathname==='/fi/'||location.pathname==='/fi/index.html'){window.scrollTo({top:0,behavior:'smooth'});history.replaceState(null,'','/fi/');return false;}"><img class="logo-mark" src="/img/logo-mark.svg" alt="" width="28" height="28" /><span class="logo-text">Elevated <span>Listing</span></span></a>
       <nav class="nav-links">
         <a class="hide-sm" href="#mind">Idea</a>
         <a class="hide-sm" href="#work">Filmit</a>
@@ -562,7 +591,7 @@
         <a class="hide-sm" href="#contact">Yhteys</a>
         <div class="lang" role="navigation" aria-label="Kieli"><a href="/" hreflang="en" lang="en" title="English">EN</a><span class="dot" aria-hidden="true">·</span><a href="/sv/" hreflang="sv" lang="sv" title="Svenska">SV</a><span class="dot" aria-hidden="true">·</span><a href="/es/" hreflang="es" lang="es" title="Español">ES</a><span class="dot" aria-hidden="true">·</span><a href="/fr/" hreflang="fr" lang="fr" title="Français">FR</a><span class="dot" aria-hidden="true">·</span><a href="/vi/" hreflang="vi" lang="vi" title="Tiếng Việt">VI</a><span class="dot" aria-hidden="true">·</span><a href="/fi/" hreflang="fi" lang="fi" title="Suomi" aria-current="page">FI</a><span class="dot" aria-hidden="true">·</span><a href="/th/" hreflang="th" lang="th" title="ไทย">TH</a></div>
         <details class="lang-sm"><summary aria-label="Kieli: Suomi">FI</summary><div class="lang-menu"><a href="/" hreflang="en" lang="en">English <span>EN</span></a><a href="/sv/" hreflang="sv" lang="sv">Svenska <span>SV</span></a><a href="/es/" hreflang="es" lang="es">Español <span>ES</span></a><a href="/fr/" hreflang="fr" lang="fr">Français <span>FR</span></a><a href="/vi/" hreflang="vi" lang="vi">Tiếng Việt <span>VI</span></a><a href="/fi/" hreflang="fi" lang="fi" aria-current="page">Suomi <span>FI</span></a><a href="/th/" hreflang="th" lang="th">ไทย <span>TH</span></a></div></details>
-        <a class="navpay" href="/pay" style="color:var(--accent);font-weight:500;margin-right:.75rem">Pay</a><a class="btn" href="#contact">Ota yhteyttä</a>
+        <a class="navpay" href="/pay" style="color:var(--accent);font-weight:500;margin-right:.75rem">Pay</a><a class="btn" href="#contact">Lähetä ilmoituksesi linkki</a>
       </nav>
     </div>
   </header>
@@ -572,12 +601,13 @@
     <section class="hero">
       <div class="wrap">
         <div class="eyebrow">Luis Ruotsista · Filmit ja omat biisit</div>
-        <h1>Kotisi, keskellä feediä.</h1>
-        <p class="hero-lead" style="color:var(--ink);font-weight:400">Teen majoituksestasi lyhytfilmin, jolla on ihan oma biisi. Näet valmiin filmin ensin. Jos ihastut, se on sinun hintaan $249.</p>
+        <h1>Ilmoituksesi lyhytelokuvana, jolla on oma biisi.</h1>
+        <p class="hero-lead" style="color:var(--ink);font-weight:400">Teen majoituksesi oikeista kuvista elokuvallisen filmin ja kirjoitan sitten oman biisin juuri tästä paikasta. Saat vaaka- ja pystyversion, valmiina ilmoitukseen, sivustolle ja someen.</p>
+        <p class="hero-offer"><strong>$249, kertamaksu.</strong> Ilmainen esikatselu ensin: näet valmiin filmin ennen kuin maksat mitään.</p>
         <div class="hero-actions" style="margin-bottom:.5rem">
-          <a class="btn book" href="#contact" data-msg="Moi Luis! Haluaisin ilmaisen filmin majoituksestani. Tässä linkki ilmoitukseen:">Tilaa ilmainen filmi kohteestasi</a>
+          <a class="btn book" href="#contact" data-msg="Moi Luis! Haluaisin ilmaisen filmin majoituksestani. Tässä linkki ilmoitukseen:">Lähetä minulle ilmoituksesi linkki</a>
         </div>
-        <p class="hero-lead" style="font-size:.95rem;margin-bottom:1.75rem">Lähetä linkki ilmoitukseesi. Et maksa mitään, jos et ihastu.</p>
+        <p class="hero-note" id="ai-note"><strong>Rehellisesti:</strong> biisi on tehty tekoälyn avulla (Suno), ja sen mukana tulee pysyvä kaupallinen lisenssi majoituksesi markkinointiin. Vain oikeita kuvia. Ei keksittyjä huoneita tai mukavuuksia.</p>
         <p class="hero-lead">Airbnb- ja VRBO-kohteille, lyhytvuokraukseen ja lomakoteihin, Marfasta ja Texasin Hill Countrysta aina torontolaiseen kellariasuntoon.</p>
         <div class="work-media hero-film" data-yt="FLXkCJTmrgQ">
           <button type="button" class="yt-facade" aria-label="Toista Elevated Listing - elevatedlisting.co">
@@ -664,7 +694,7 @@
             <div class="work-body">
               <div class="pill">Toronto</div>
               <h3>I got a basement in Toronto</h3>
-              <div class="work-meta">Ivan · Kodikas oma kellari · Sega Rally -nurkkaus</div>
+              <div class="work-meta">Kodikas oma kellari · Sega Rally -nurkkaus</div>
               <p>Kotiin kapeaa kujaa pitkin, muutama varovainen askel alas. Uloskirjautuminen venyy, se on varma.</p>
               <div class="link-row">
                 <a href="https://www.youtube.com/watch?v=zf0wbonvAfI" target="_blank" rel="noopener">Katso YouTubessa ↗</a>
@@ -733,37 +763,20 @@
 
 
 
-<article class="work">
-            <div class="work-media" data-yt="dtyS5c5j9rI">
-              <button type="button" class="yt-facade" aria-label="Toista ROAM Fredericksburg storyboard">
-                <img src="https://i.ytimg.com/vi/dtyS5c5j9rI/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="ROAM Fredericksburg storyboard – filmi" loading="lazy" decoding="async" />
-                <span class="yt-play" aria-hidden="true"></span>
-              </button>
-            </div>
-            <div class="work-body">
-              <div class="pill">Fredericksburg</div>
-              <h3>Kaksi konttia · ROAM</h3>
-              <div class="work-meta">ROAM · 2:43 · Storyboard · Viinireitti / 290</div>
-              <p>Kaksi mustaa konttia vierekkäin. Rohkea, sulava storyboard maantie-countryrockin tahtiin.</p>
-              <div class="link-row">
-                <a href="https://www.youtube.com/watch?v=dtyS5c5j9rI" target="_blank" rel="noopener">Katso YouTubessa ↗</a>
-              </div>
-            </div>
-          </article>
-<p class="pkg-cue"><a href="#packages">Haluatko samanlaisen omaan kohteeseesi? Katso tarjous →</a></p>
+
 
 
 <article class="work">
             <div class="work-media" data-yt="dwBMO4qtyFQ">
-              <button type="button" class="yt-facade" aria-label="Toista Jamie East Austin bathhouse">
-                <img src="https://i.ytimg.com/vi/dwBMO4qtyFQ/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="Jamie East Austin bathhouse – filmi" loading="lazy" decoding="async" />
+              <button type="button" class="yt-facade" aria-label="Toista East Austin bathhouse">
+                <img src="https://i.ytimg.com/vi/dwBMO4qtyFQ/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="East Austin bathhouse – filmi" loading="lazy" decoding="async" />
                 <span class="yt-play" aria-hidden="true"></span>
               </button>
             </div>
             <div class="work-body">
               <div class="pill">Austin</div>
               <h3>Yksityinen kylpylä · East Austin</h3>
-              <div class="work-meta">Jamie · Lyhyt versio · Tynnyrisauna ja setripaljut</div>
+              <div class="work-meta">Lyhyt versio · Tynnyrisauna ja setripaljut</div>
               <p>Setrin höyryä, tyyntä vettä, biisi hidastamisesta moottoritien itäpuolella.</p>
               <div class="link-row">
                 <a href="https://www.youtube.com/watch?v=dwBMO4qtyFQ" target="_blank" rel="noopener">Katso YouTubessa ↗</a>
@@ -799,7 +812,7 @@
             <div class="work-body">
               <div class="pill">Austin</div>
               <h3>Taidetta täynnä oleva kontti</h3>
-              <div class="work-meta">Lauren · 1:31 · Nuotiopaikka, jättiterassi, hiljainen maalaistie</div>
+              <div class="work-meta">1:31 · Nuotiopaikka, jättiterassi, hiljainen maalaistie</div>
               <p>Seinämaalauksia, valosarjoja ja indiefolkia, kun maali kuivuu ulkoilmassa.</p>
               <div class="link-row">
                 <a href="https://www.youtube.com/watch?v=4Yon44P1Hyw" target="_blank" rel="noopener">Katso YouTubessa ↗</a>
@@ -819,7 +832,7 @@
             <div class="work-body">
               <div class="pill">San Antonio · Hill Country</div>
               <h3>Grantham Housen mökki</h3>
-              <div class="work-meta">Paula · 1:28 · Rauhaisat näkymät, pariskuntien pakopaikka</div>
+              <div class="work-meta">1:28 · Rauhaisat näkymät, pariskuntien pakopaikka</div>
               <p>Iltavaloa Hill Countryn terassilla, porealtaan höyryä, balladi kahdelle.</p>
               <div class="link-row">
                 <a href="https://www.youtube.com/watch?v=Sy5VvSOGdHk" target="_blank" rel="noopener">Katso YouTubessa ↗</a>
@@ -933,11 +946,11 @@
           <li class="jstep reveal"><span class="jicon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M14 34 L27 46 L50 18"/></svg></span><span class="jnum" aria-hidden="true">2</span>
             <h3>Sano kyllä</h3><p>Vastaa vain sähköpostiini. Lyhyt ”joo” riittää.</p></li>
           <li class="jstep reveal"><span class="jicon" aria-hidden="true"><svg viewBox="0 0 64 64"><rect x="10" y="20" width="44" height="28" rx="5"/><circle cx="32" cy="34" r="6"/></svg></span><span class="jnum" aria-hidden="true">3</span>
-            <h3>$249, kertamaksu</h3><p>Lähetän laskun sähköpostilla. Maksat PayPalilla (Goods and Services osoitteeseen sisyfosforever@gmail.com), kryptolla (USDC Basessa tai USDT Arbitrumissa) tai Western Unionin kautta. Ei kuukausimaksuja. Ei lisälaskuja myöhemmin. Ohjeet: <a href="/pay">elevatedlisting.co/pay</a>.</p></li>
+            <h3>$249, kertamaksu</h3><p>Lähetän laskun sähköpostilla. Maksa kortilla tai PayPalilla PayPal Business -tililleni <strong>Elevated Listing</strong> (sisyfosforever@gmail.com, Goods and Services) tai kryptolla (USDC Basessa tai USDT Arbitrumissa). Ei tilausta. Ei lisämaksuja myöhemmin. Ohjeet: <a href="/pay">elevatedlisting.co/pay</a>.</p></li>
           <li class="jstep reveal"><span class="jicon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M10 22 L32 36 L54 22"/><rect x="10" y="18" width="44" height="30" rx="4"/></svg></span><span class="jnum" aria-hidden="true">4</span>
             <h3>Filmit 48 tunnissa</h3><p>48 tunnin sisällä siitä, kun maksusi on tullut perille, saat filmin full HD:nä ilman vesileimaa, pystyversion Reelsiin ja biisin MP3:na. Haluatko pienen muutoksen? Yksi muokkauskierros kuuluu hintaan.</p></li>
           <li class="jstep reveal"><span class="jicon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M32 50 C14 38 10 28 18 20 C24 14 30 18 32 23 C34 18 40 14 46 20 C54 28 50 38 32 50 Z"/></svg></span><span class="jnum" aria-hidden="true">5</span>
-            <h3>Jaa se kaikkialle</h3><p>Laita se ilmoitukseen, sivustolle, someen, OTA-palveluihin jotka sallivat videon, mainoksiin ja painotuotteisiin. Maksun jälkeen filmi on sinun, ja biisiin saat pysyvän kaupallisen käyttöoikeuden kohteellesi.</p><p class="jwink">Forever ever? Forever ever. Yes, Miss Jackson.</p></li>
+            <h3>Jaa se kaikkialle</h3><p>Laita se ilmoitukseen, sivustolle, someen, OTA-palveluihin jotka sallivat videon, mainoksiin ja painotuotteisiin. Maksun jälkeen filmi on sinun, ja biisiin saat pysyvän kaupallisen käyttöoikeuden kohteellesi.</p></li>
           </ol>
         </div>
         <p class="jnote">Kysyttävää? Kirjoita vain. Vastaan ihan itse, oikea ihminen: minä, Luis.</p>
@@ -971,7 +984,8 @@
 <section id="packages">
       <div class="wrap">
         <div class="pill">Hinta</div>
-        <h2 class="section-title" style="margin-bottom:1.5rem">Filmi + biisi. Täysi kaupallinen lisenssi.</h2>
+        <h2 class="section-title" style="margin-bottom:.75rem">Filmi + biisi. Täysi kaupallinen lisenssi.</h2>
+        <p class="section-sub" style="margin-bottom:1.5rem"><strong>Ilmainen esikatselu ensin:</strong> näet valmiin filmin ennen kuin maksat mitään. Maksun jälkeen filmi on sinun, ja biisin mukana tulee <strong>pysyvä kaupallinen lisenssi</strong> majoituksesi markkinointiin.</p>
         <div class="tiers">
           <div class="offer tier featured">
             <h3>Standard</h3>
@@ -983,7 +997,7 @@
               <li>Yksi pieni muokkauskierros</li>
               <li>Toimitus 48 tunnissa maksusta</li>
             </ul>
-            <a class="btn book" href="#contact" data-msg="Haluan Standard $249 (filmi + biisi, täysi kaupallinen lisenssi). Tässä ilmoituslinkki:">Varaa Standard $249</a>
+            <a class="btn book" href="#contact" data-msg="Haluan Standard $249 (filmi + biisi, täysi kaupallinen lisenssi). Tässä ilmoituslinkki:">Lähetä ilmoituksesi linkki</a>
           </div>
           <div class="offer tier">
             <h3>Elevated</h3>
@@ -997,7 +1011,7 @@
               <li>Sama täysi kaupallinen lisenssi filmille + biisille</li>
               <li>Toimitus 48 tunnissa maksusta</li>
             </ul>
-            <a class="btn book" href="#contact" data-msg="Haluan Elevated $499 (filmi enintään 3 min, 15 + 30 s versiot, kolme muutoskierrosta, vaihtoehtoinen versio biisistä).">Varaa Elevated $499</a>
+            <a class="btn book" href="#contact" data-msg="Haluan Elevated $499 (filmi enintään 3 min, 15 + 30 s versiot, kolme muutoskierrosta, vaihtoehtoinen versio biisistä).">Lähetä ilmoituksesi linkki</a>
           </div>
           <div class="offer tier">
             <h3>Maximus</h3>
@@ -1007,10 +1021,10 @@
               <li>Useita kohteita tai räätälöity laajuus</li>
               <li>Hinta ja aikataulu keskustelun jälkeen</li>
             </ul>
-            <a class="btn book" href="#contact" data-msg="Maximus / räätälöity — jutellaan laajuudesta.">Jutellaan</a>
+            <a class="btn book" href="#contact" data-msg="Maximus / räätälöity — jutellaan laajuudesta.">Lähetä ilmoituksesi linkki</a>
           </div>
         </div>
-        <p class="avail" style="margin-top:1rem">Otan vastaan 3 uutta filmiä viikossa.</p>
+        <ul class="trustrow" aria-label="Elevated Listing"><li>Ilmainen esikatselu ennen maksua</li><li>Toimitus 48 tunnin kuluessa maksusta</li><li>Turvallinen maksu PayPalin kautta: kortti tai PayPal-saldo</li><li>Vastaajana oikea ihminen: minä, Luis</li></ul>
         <div class="paynote">
           <h3>Näet ensin</h3>
           <p>Teen filmin ja lähetän sen vesileimalla. Näet juuri sen filmin, jonka saat. Jos ihastut, sanot kyllä ja maksat — Standard $249, tai Elevated $499 jos haluat enintään 3 minuutin filmin, 15 ja 30 sekunnin lyhyet versiot, kolme muutoskierrosta ja vaihtoehtoisen version biisistä. Jos et, et maksa mitään. Filmi pysyy piilotettuna, enkä käytä sitä kohteesi markkinointiin.</p>
@@ -1018,10 +1032,39 @@
           <p>Kun olet maksanut, valmis filmi on sinun: Luis siirtää sinulle kaikki oikeudet, jotka hänellä on filmiin, editointiin ja kirjoittamiinsa sanoituksiin. Biisi tehdään Sunolla maksullisella Pro- tai Premier-tilauksella, ja saamasi tiedosto on virallinen Suno-lataus; muiden käyttäjien biisien remixejä ei koskaan käytetä. Sunon ehtojen (voimassa 3.9.2026 alkaen) mukaan saat kaikki oikeudet, jotka Luisilla on biisiin, sekä pysyvän, maailmanlaajuisen ja rojaltivapaan käyttöoikeuden käyttää sitä kaupallisesti majoituksen markkinointiin (sivusto, some, OTA-palvelut jotka sallivat videon, mainokset, painotuotteet) ilman lisämaksuja. Koska biisi on tekoälyn tekemä, kukaan ei voi luvata, että siihen syntyy tekijänoikeutta tai ettei samankaltaista biisiä ole muualla, ja jokainen alusta soveltaa omia sääntöjään AI-musiikkiin. Saatan näyttää filmin portfoliossani, ellet toisin pyydä. Tiedot <a href="/terms" style="color:var(--accent)">ehdoissa</a> (englanniksi).</p>
           <div class="paycallout">
           <h3>Miten maksu toimii</h3>
-          <p>Kun olet sanonut kyllä, lähetän laskun sähköpostilla. Maksa PayPalilla osoitteeseen <strong>sisyfosforever@gmail.com</strong> valiten <strong>Goods and Services</strong>, kryptolla (USDC Basessa tai USDT Arbitrumissa) tai Western Unionin kautta. Ohjeet: <a href="/pay">elevatedlisting.co/pay</a>. 48 tuntia alkaa, kun maksusi on tullut perille, ja ilmoitan siitä sähköpostilla.</p>
-          <p style="margin:.6rem 0 0"><img src="/img/western-union.svg" alt="Western Union" height="28" style="background:#fff;border-radius:6px;padding:6px 10px;vertical-align:middle"></p>
+          <p>Kun olet sanonut kyllä, lähetän laskun sähköpostilla. <strong>Mieluiten kortti tai PayPal.</strong> Maksa kortilla PayPalin kautta tai PayPal-saldollasi PayPal Business -tililleni <strong>Elevated Listing</strong> (sisyfosforever@gmail.com) valinnalla <strong>Goods and Services</strong> (ei Friends and Family), jolloin PayPalin ostajansuoja on puolellasi. Voit maksaa myös kryptolla (USDC Basessa tai USDT Arbitrumissa). Ohjeet: <a href="/pay">elevatedlisting.co/pay</a>. 48 tuntia alkaa, kun maksusi on tullut perille, ja ilmoitan siitä sinulle sähköpostilla.</p>
+          <p class="pp-secure"><svg class="lock" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 10.5V7.8a3.5 3.5 0 0 1 7 0v2.7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="ppword" role="img" aria-label="PayPal"><b>Pay</b><b>Pal</b></span><span class="t">Turvallinen maksu PayPalin kautta. Maksa kortilla tai PayPal-saldollasi. PayPal käsittelee korttitietosi, joten minä en näe niitä koskaan. PayPalissa vastaanottajana näkyy <strong>Elevated Listing</strong>, PayPal Business -tilini.</span></p>
           <p class="small">Krypto on uutta? Useimmat majoittajat ostavat USDC:tä muutamassa minuutissa Coinbasen, Krakenin tai vastaavan kautta, ja opastan mielelläni. Maksat vasta, kun olet nähnyt filmisi ja sanonut kyllä.</p>
+          <p class="small small-wu">Jos kumpikaan ei sovi sinulle, Western Union on mahdollinen viimeisenä vaihtoehtona. Katso <a href="/pay">/pay</a>.</p>
           </div>
+        </div>
+
+        <div class="faq" id="faq">
+          <h3>Majoittajien kysymyksiä</h3>
+          <details>
+            <summary>Missä voin käyttää filmiä?</summary>
+            <p>Kaikkialla, missä markkinoit majoitusta: omalla sivustollasi, Instagramissa, TikTokissa, Facebookissa, YouTubessa, mainoksissa ja painotuotteissa sekä varausalustoilla, jotka sallivat videon. Airbnb:n oma tuki ilmoitusten videoille on rajallinen, joten tarkista, mitä alustasi hyväksyy. Pystyversio on tehty Reelsiin ja Storiesiin.</p>
+          </details>
+          <details>
+            <summary>Onko musiikki tekoälyä?</summary>
+            <p>Kyllä. Biisi on tehty tekoälyn avulla Sunolla maksullisella Pro- tai Premier-tilauksella, ja se on kirjoitettu juuri sinun majoituksestasi. Saat pysyvän, maailmanlaajuisen ja rojaltivapaan lisenssin käyttää sitä kaupallisesti majoituksesi markkinointiin. Koska biisi on tekoälyn tuottama, kukaan ei voi luvata, että siihen syntyy tekijänoikeus, ja jokainen alusta soveltaa tekoälymusiikkiin omia sääntöjään. Lisätiedot <a href="/terms" style="color:var(--accent)">ehdoissa</a>.</p>
+          </details>
+          <details>
+            <summary>Miten ilmainen esikatselu toimii?</summary>
+            <p>Lähetä minulle ilmoituksesi linkki. Teen filmin ilmoituksesi oikeista kuvista ja lähetän sen sinulle vesileimalla. Näet oikean filmin. Jos rakastut siihen, sano kyllä, niin lähetän laskun. Jos et, et maksa mitään. Filmi pysyy listaamattomana, enkä käytä sitä majoituksesi myymiseen.</p>
+          </details>
+          <details>
+            <summary>Voinko pyytää muutoksia?</summary>
+            <p>Standardiin kuuluu yksi kierros pieniä hienosäätöjä: yksi muutoslista yhdessä sähköpostissa, esimerkiksi ajoitus, kuviesi järjestys tai valinta tai ruututeksti. Elevatediin kuuluu kolme muutoskierrosta. Uusi konsepti tai uusi biisi ei sisälly, mutta niistä voidaan sopia erikseen.</p>
+          </details>
+          <details>
+            <summary>Entä palautukset?</summary>
+            <p>Koska näet filmin ennen maksamista, maksuja ei palauteta, kun filmi on toimitettu. Jos en toimita 48 tunnin kuluessa siitä, kun maksusi on vastaanotettu ja vahvistettu, saat täyden hyvityksen. Katso <a href="/refund" style="color:var(--accent)">palautuskäytäntö</a>.</p>
+          </details>
+          <details>
+            <summary>Miten maksan?</summary>
+            <p>Kun olet sanonut kyllä, lähetän laskun sähköpostilla. Kortti tai PayPal (Goods and Services, PayPal Business -tililleni Elevated Listing) on suositeltu, ja myös krypto (USDC Basessa tai USDT Arbitrumissa) käy. Toimitus 48 tunnin kuluessa siitä, kun maksusi on tullut perille. Ohjeet: <a href="/pay" style="color:var(--accent)">elevatedlisting.co/pay</a>.</p>
+          </details>
         </div>
       </div>
     </section>
@@ -1081,7 +1124,7 @@
                 <label for="c-message">Viesti</label>
                 <textarea id="c-message" name="message" required placeholder="Millainen paikka on, ja mitä haluat vieraan tuntevan?"></textarea>
               </div>
-              <button class="btn" type="submit">Lähetä viesti</button>
+              <button class="btn" type="submit">Lähetä minulle ilmoituksesi linkki</button>
               <p class="note">Viesti menee suoraan Elevated Listingin postilaatikkoon. Tai lähetä sähköpostia: <a href="mailto:luis@elevatedlisting.co" style="color:var(--accent)">luis@elevatedlisting.co</a>.</p>
             </div>
             <p class="thanks">Kiitos, viesti tuli perille! Vastaan osoitteesta luis@elevatedlisting.co.</p>
@@ -1102,6 +1145,7 @@
           <p class="section-sub" style="margin-bottom:1rem">
             Elokuvantekijä ja lauluntekijä. Elevated Listingissä vien sen käsityön paikkoihin, joissa on luonnetta. Ei massapostitusta, ei varman päälle tehtyjä pohjia. Jos paikassasi on sielua, haluan filmin avaavan oven jonkun mielikuvitukseen. Loput he hoitavat itse.
           </p>
+          <p class="about-cred">Ennen Elevated Listingiä työskentelin noin 20 vuotta mainonnan luovana johtajana.</p>
           <div class="link-row">
             <a href="https://www.youtube.com/@LuisfromSweden" target="_blank" rel="noopener">YouTube @LuisfromSweden</a>
             <a href="https://www.instagram.com/luisfromsweden/" target="_blank" rel="noopener">Instagram @luisfromsweden</a>
@@ -1126,7 +1170,7 @@
 
   <footer>
     <div class="wrap row">
-      <div>© <span id="y"></span> Elevated Listing · Mats Ludvig Lindberg (Luis from Sweden)</div>
+      <div class="foot-brand"><a class="foot-logo" href="/fi/"><img src="/img/logo-mark.svg" alt="" width="34" height="34" /><span>Elevated <em>Listing</em></span></a><div class="foot-tag">Majoituksesi filminä, omalla biisillä</div><div>© <span id="y"></span> Elevated Listing · Mats Ludvig Lindberg (Luis from Sweden)</div></div>
       <div class="legal-links">
         <a href="/terms" hreflang="en">Ehdot</a>
         <span class="sep">·</span>
@@ -1136,6 +1180,7 @@
       </div>
     <div class="contact-block">
         <p><strong>Yhteystiedot</strong> · <a href="mailto:luis@elevatedlisting.co">luis@elevatedlisting.co</a></p>
+        <p><strong>Maksut</strong> · PayPal (Business-tili: Elevated Listing) · krypto (USDC / USDT) · Western Union · <a href="/pay">Näin maksat</a></p>
         <p><strong>Peruutus:</strong> Saitko minulta myyntiviestin etkä halua lisää? Vastaa <strong>STOP</strong> tai lähetä viesti osoitteeseen <a href="mailto:luis@elevatedlisting.co?subject=STOP">luis@elevatedlisting.co</a> otsikolla STOP, enkä ota sinuun enää yhteyttä. Jokaisessa lähtevässä myyntiviestissä on tämä peruutustapa.</p>
       </div>
     </div>
@@ -1235,5 +1280,6 @@ document.addEventListener('click',function(e){document.querySelectorAll('.lang-s
 document.addEventListener('keydown',function(e){if(e.key==='Escape')document.querySelectorAll('.lang-sm[open]').forEach(function(d){d.removeAttribute('open');d.querySelector('summary').focus();});});
 document.querySelectorAll('.lang a[hreflang],.lang-menu a[hreflang]').forEach(function(a){a.addEventListener('click',function(){var c=a.getAttribute('hreflang');try{localStorage.setItem('el_lang',c)}catch(e){}document.cookie='el_lang='+c+';path=/;max-age=31536000;SameSite=Lax';});});
 </script>
+<!-- el-brand-1027 -->
 </body>
 </html>

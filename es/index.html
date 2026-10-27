@@ -35,7 +35,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Elevated Listing", "url": "https://elevatedlisting.co/", "image": "https://elevatedlisting.co/og.jpg", "logo": "https://elevatedlisting.co/apple-touch-icon.png", "email": "luis@elevatedlisting.co", "founder": {"@type": "Person", "name": "Mats Ludvig Lindberg", "alternateName": ["Luis Lindberg", "Luis from Sweden"]}, "description": "Handmade listing films for short-term and vacation rentals, cut to a song or set to an original one.", "makesOffer": [{"@type": "Offer", "name": "Listing film and song", "price": "249", "priceCurrency": "USD", "description": "One full-HD horizontal film, one vertical Reels version, the song as an MP3, one round of tweaks, delivered within 48 hours of payment. Paid only if you love it."}]}
+  {"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Elevated Listing", "url": "https://elevatedlisting.co/", "image": "https://elevatedlisting.co/og.jpg", "logo": "https://elevatedlisting.co/img/logo-512.png", "email": "luis@elevatedlisting.co", "founder": {"@type": "Person", "name": "Mats Ludvig Lindberg", "alternateName": ["Luis Lindberg", "Luis from Sweden"]}, "description": "Handmade listing films for short-term and vacation rentals, cut to a song or set to an original one.", "makesOffer": [{"@type": "Offer", "name": "Listing film and song", "price": "249", "priceCurrency": "USD", "description": "One full-HD horizontal film, one vertical Reels version, the song as an MP3, one round of tweaks, delivered within 48 hours of payment. Paid only if you love it."}]}
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -423,6 +423,13 @@
     .paycallout { margin:1rem 0; padding:1rem 1.25rem; border:1px solid var(--accent); border-left-width:4px; border-radius:var(--radius); background:rgba(196,165,116,.08); }
     .paycallout h3 { color:var(--accent); }
     .paycallout p { color:var(--ink); }
+    .hero-note { margin:.25rem 0 1.25rem; max-width:40rem; font-size:.92rem; font-weight:300; color:var(--mute); border-left:2px solid var(--accent); padding-left:.8rem; }
+    .hero-note strong { color:var(--ink); font-weight:500; }
+    .faq { margin-top:2rem; max-width:44rem; }
+    .faq details { border:1px solid var(--line); border-radius:var(--radius); background:var(--card); padding:.9rem 1.25rem; margin:.6rem 0; }
+    .faq summary { cursor:pointer; font-weight:500; color:var(--ink); }
+    .faq details p { margin:.6rem 0 0; font-weight:300; }
+    .paynote .small-wu { font-size:.85rem; color:var(--mute); }
     .avail { color:var(--accent); font-weight:500; letter-spacing:.02em; margin:.25rem 0 0; }
     .paynote .small { font-size:.9rem; margin:.75rem 0 0; }
     @media (max-width: 800px) { .tiers { grid-template-columns:1fr; } }
@@ -554,12 +561,34 @@
     @media (max-width:999px){.lang{display:none}.lang-sm{display:block}}
     @media (max-width:600px){.nav-links{gap:.6rem}.nav-links .btn{padding:.62rem .95rem;font-size:.86rem}}
     @media (max-width:360px){.logo{font-size:1.02rem}}
+    /* brand + trust (2026-10-27) */
+    .logo { display:inline-flex; align-items:center; gap:.55rem; }
+    .logo-mark { width:28px; height:28px; flex:none; display:block; }
+    .ppword { display:inline-block; background:#fff; border-radius:6px; padding:.18rem .5rem; font-family:Verdana,"DejaVu Sans",Arial,sans-serif; font-weight:700; font-style:italic; font-size:.92rem; letter-spacing:-.02em; line-height:1.25; vertical-align:middle; white-space:nowrap; }
+    .ppword b:first-child { color:#003087; } .ppword b + b { color:#009cde; }
+    .pp-secure { display:flex; gap:.6rem .8rem; align-items:center; flex-wrap:wrap; margin:.9rem 0 .4rem; padding:.75rem 1rem; background:rgba(243,239,230,.04); border:1px solid var(--line); border-radius:12px; font-size:.9rem; color:var(--ink); line-height:1.5; }
+    .pp-secure .lock { color:var(--accent); flex:none; }
+    .pp-secure span.t { flex:1 1 16rem; }
+    .trustrow { list-style:none; display:grid; grid-template-columns:repeat(auto-fit,minmax(13rem,1fr)); gap:.6rem 1.5rem; margin:1.5rem 0 0; padding:1rem 1.25rem; border:1px solid var(--line); border-radius:var(--radius); background:rgba(243,239,230,.03); font-size:.9rem; color:var(--ink); }
+    .trustrow li { display:flex; align-items:center; gap:.55rem; margin:0; }
+    .trustrow li::before { content:""; width:1rem; height:1rem; flex:none; background:no-repeat center/contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='7.25' fill='none' stroke='%23c4a574' stroke-width='1.3'/%3E%3Cpath d='M4.8 8.3l2.1 2.1 4.3-4.6' fill='none' stroke='%23c4a574' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); }
+    .about-cred { margin:0 0 1.25rem; padding-left:.8rem; border-left:2px solid var(--accent); color:var(--ink); font-weight:300; max-width:40rem; }
+    .about-cred strong { font-weight:500; }
+    footer .foot-brand { display:flex; flex-direction:column; gap:.45rem; }
+    footer .foot-logo { display:inline-flex; align-items:center; gap:.6rem; text-decoration:none; color:var(--ink); font-family:Fraunces,Georgia,serif; font-size:1.2rem; font-weight:600; letter-spacing:.02em; }
+    footer .foot-logo img { width:34px; height:34px; display:block; }
+    footer .foot-logo em { font-style:normal; color:var(--accent); font-weight:500; }
+    footer .foot-tag { color:var(--mute); font-size:.85rem; }
+    .logo .logo-text { display:block; color:inherit; font-weight:inherit; }
+    .logo .logo-text span { color:var(--accent); font-weight:500; }
+    @media (max-width:600px) { .logo { gap:.45rem; } .logo-mark { width:24px; height:24px; } .logo-text { line-height:1.12; } .nav-links .navpay { margin-right:0 !important; } }
+    @media (max-width:389px) { .logo-mark { display:none; } }
   </style>
 </head>
 <body>
   <header>
     <div class="wrap nav">
-      <a href="/es/" class="logo" aria-label="Elevated Listing, inicio" style="text-decoration:none;color:inherit" onclick="if(location.pathname==='/es/'||location.pathname==='/es/index.html'){window.scrollTo({top:0,behavior:'smooth'});history.replaceState(null,'','/es/');return false;}">Elevated <span>Listing</span></a>
+      <a href="/es/" class="logo" aria-label="Elevated Listing, inicio" style="text-decoration:none;color:inherit" onclick="if(location.pathname==='/es/'||location.pathname==='/es/index.html'){window.scrollTo({top:0,behavior:'smooth'});history.replaceState(null,'','/es/');return false;}"><img class="logo-mark" src="/img/logo-mark.svg" alt="" width="28" height="28" /><span class="logo-text">Elevated <span>Listing</span></span></a>
       <nav class="nav-links">
         <a class="hide-sm" href="#mind">La idea</a>
         <a class="hide-sm" href="#work">Videos</a>
@@ -568,7 +597,7 @@
         <a class="hide-sm" href="#contact">Contacto</a>
         <div class="lang" role="navigation" aria-label="Idioma"><a href="/" hreflang="en" lang="en" title="English">EN</a><span class="dot" aria-hidden="true">·</span><a href="/sv/" hreflang="sv" lang="sv" title="Svenska">SV</a><span class="dot" aria-hidden="true">·</span><a href="/es/" hreflang="es" lang="es" title="Español" aria-current="page">ES</a><span class="dot" aria-hidden="true">·</span><a href="/fr/" hreflang="fr" lang="fr" title="Français">FR</a><span class="dot" aria-hidden="true">·</span><a href="/vi/" hreflang="vi" lang="vi" title="Tiếng Việt">VI</a><span class="dot" aria-hidden="true">·</span><a href="/fi/" hreflang="fi" lang="fi" title="Suomi">FI</a><span class="dot" aria-hidden="true">·</span><a href="/th/" hreflang="th" lang="th" title="ไทย">TH</a></div>
         <details class="lang-sm"><summary aria-label="Idioma: Español">ES</summary><div class="lang-menu"><a href="/" hreflang="en" lang="en">English <span>EN</span></a><a href="/sv/" hreflang="sv" lang="sv">Svenska <span>SV</span></a><a href="/es/" hreflang="es" lang="es" aria-current="page">Español <span>ES</span></a><a href="/fr/" hreflang="fr" lang="fr">Français <span>FR</span></a><a href="/vi/" hreflang="vi" lang="vi">Tiếng Việt <span>VI</span></a><a href="/fi/" hreflang="fi" lang="fi">Suomi <span>FI</span></a><a href="/th/" hreflang="th" lang="th">ไทย <span>TH</span></a></div></details>
-        <a class="navpay" href="/pay" style="color:var(--accent);font-weight:500;margin-right:.75rem">Pay</a><a class="btn" href="#contact">Escríbeme</a>
+        <a class="navpay" href="/pay" style="color:var(--accent);font-weight:500;margin-right:.75rem">Pay</a><a class="btn" href="#contact">Envía el enlace de tu anuncio</a>
       </nav>
     </div>
   </header>
@@ -578,18 +607,13 @@
     <section class="hero">
       <div class="wrap">
         <div class="eyebrow">Por Luis, desde Suecia · Videos y canciones originales</div>
-        <h1>Tu casa, en pleno feed.</h1>
-        <ul class="hero-benefits">
-          <li>Las fotos reales de tu alojamiento, convertidas en un video de cine</li>
-          <li>Una canción original, escrita sobre tu alojamiento</li>
-          <li>Versiones horizontal y vertical, listas para tus anuncios y redes sociales</li>
-        </ul>
-        <p class="hero-offer"><strong>$249, pago único.</strong> Vista previa gratis primero: ves el video antes de pagar.</p>
+        <h1>Tu anuncio, como un cortometraje con su propia canción.</h1>
+        <p class="hero-lead" style="color:var(--ink);font-weight:400">Tomo las fotos reales de tu alojamiento y las convierto en un video cinematográfico, y luego escribo una canción original sobre la estancia. Recibes versiones horizontal y vertical, listas para tu anuncio, tu web y tus redes.</p>
+        <p class="hero-offer"><strong>$249, pago único.</strong> Vista previa gratis primero: ves el video terminado antes de pagar nada.</p>
         <div class="hero-actions" style="margin-bottom:.5rem">
-          <a class="btn book" href="#contact" data-msg="¡Hola, Luis! Me encantaría un video gratis de mi alojamiento. Te paso el enlace de mi anuncio:">Pide tu video gratis</a>
+          <a class="btn book" href="#contact" data-msg="¡Hola, Luis! Me encantaría un video gratis de mi alojamiento. Te paso el enlace de mi anuncio:">Envíame el enlace de tu anuncio</a>
         </div>
-        <p class="hero-lead" style="color:var(--ink);font-weight:400">Convierto tu alojamiento en un cortometraje con canción propia. Primero ves el video terminado. Si te encanta, es tuyo por $249.</p>
-        <p class="hero-lead" style="font-size:.95rem;margin-bottom:1.75rem">Mándame el enlace de tu anuncio. Si no te encanta, no pagas nada.</p>
+        <p class="hero-note" id="ai-note"><strong>Con total sinceridad:</strong> la canción está hecha con ayuda de IA (Suno) e incluye una licencia comercial perpetua para promocionar tu alojamiento. Solo fotos reales. Nada de habitaciones ni servicios inventados.</p>
         <p class="hero-lead">Para Airbnb, VRBO y cualquier alquiler vacacional o de temporada corta, desde Marfa y el Hill Country de Texas hasta un sótano en Toronto.</p>
         <div class="work-media hero-film" data-yt="FLXkCJTmrgQ">
           <button type="button" class="yt-facade" aria-label="Reproducir Elevated Listing - elevatedlisting.co">
@@ -676,7 +700,7 @@
             <div class="work-body">
               <div class="pill">Toronto</div>
               <h3>I got a basement in Toronto</h3>
-              <div class="work-meta">Ivan · Sótano independiente y acogedor · Rincón de Sega Rally</div>
+              <div class="work-meta">Sótano independiente y acogedor · Rincón de Sega Rally</div>
               <p>De vuelta por un callejón angosto, bajando los escalones con cuidadito. El check-out va a ser tarde.</p>
               <div class="link-row">
                 <a href="https://www.youtube.com/watch?v=zf0wbonvAfI" target="_blank" rel="noopener">Ver en YouTube ↗</a>
@@ -745,37 +769,20 @@
 
 
 
-<article class="work">
-            <div class="work-media" data-yt="dtyS5c5j9rI">
-              <button type="button" class="yt-facade" aria-label="Reproducir ROAM Fredericksburg storyboard">
-                <img src="https://i.ytimg.com/vi/dtyS5c5j9rI/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="ROAM Fredericksburg storyboard – video" loading="lazy" decoding="async" />
-                <span class="yt-play" aria-hidden="true"></span>
-              </button>
-            </div>
-            <div class="work-body">
-              <div class="pill">Fredericksburg</div>
-              <h3>Dos contenedores · ROAM</h3>
-              <div class="work-meta">ROAM · 2:43 · Storyboard · Ruta del vino / 290</div>
-              <p>Dos contenedores negros lado a lado. Un storyboard atrevido que se derrite sobre un country-rock de carretera.</p>
-              <div class="link-row">
-                <a href="https://www.youtube.com/watch?v=dtyS5c5j9rI" target="_blank" rel="noopener">Ver en YouTube ↗</a>
-              </div>
-            </div>
-          </article>
-<p class="pkg-cue"><a href="#packages">¿Quieres uno así para tu alojamiento? Mira la oferta →</a></p>
+
 
 
 <article class="work">
             <div class="work-media" data-yt="dwBMO4qtyFQ">
-              <button type="button" class="yt-facade" aria-label="Reproducir Jamie East Austin bathhouse">
-                <img src="https://i.ytimg.com/vi/dwBMO4qtyFQ/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="Jamie East Austin bathhouse – video" loading="lazy" decoding="async" />
+              <button type="button" class="yt-facade" aria-label="Reproducir East Austin bathhouse">
+                <img src="https://i.ytimg.com/vi/dwBMO4qtyFQ/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="East Austin bathhouse – video" loading="lazy" decoding="async" />
                 <span class="yt-play" aria-hidden="true"></span>
               </button>
             </div>
             <div class="work-body">
               <div class="pill">Austin</div>
               <h3>Baños privados · East Austin</h3>
-              <div class="work-meta">Jamie · Versión corta · Sauna de barril y tinas de cedro</div>
+              <div class="work-meta">Versión corta · Sauna de barril y tinas de cedro</div>
               <p>Vapor de cedro, agua quieta y una canción sobre tomárselo con calma al este de la autopista.</p>
               <div class="link-row">
                 <a href="https://www.youtube.com/watch?v=dwBMO4qtyFQ" target="_blank" rel="noopener">Ver en YouTube ↗</a>
@@ -811,7 +818,7 @@
             <div class="work-body">
               <div class="pill">Austin</div>
               <h3>Contenedor lleno de arte</h3>
-              <div class="work-meta">Lauren · 1:31 · Fogata, terraza enorme, camino de campo tranquilo</div>
+              <div class="work-meta">1:31 · Fogata, terraza enorme, camino de campo tranquilo</div>
               <p>Murales, guirnaldas de luces y folk indie mientras la pintura se seca al aire libre.</p>
               <div class="link-row">
                 <a href="https://www.youtube.com/watch?v=4Yon44P1Hyw" target="_blank" rel="noopener">Ver en YouTube ↗</a>
@@ -831,7 +838,7 @@
             <div class="work-body">
               <div class="pill">San Antonio · Hill Country</div>
               <h3>Cabaña Grantham House</h3>
-              <div class="work-meta">Paula · 1:28 · Vistas sin vecinos, escapada en pareja</div>
+              <div class="work-meta">1:28 · Vistas sin vecinos, escapada en pareja</div>
               <p>Luz de tarde sobre la terraza del Hill Country, vapor del jacuzzi, una balada para dos.</p>
               <div class="link-row">
                 <a href="https://www.youtube.com/watch?v=Sy5VvSOGdHk" target="_blank" rel="noopener">Ver en YouTube ↗</a>
@@ -946,11 +953,11 @@
           <li class="jstep reveal"><span class="jicon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M14 34 L27 46 L50 18"/></svg></span><span class="jnum" aria-hidden="true">2</span>
             <h3>Di que sí</h3><p>Solo contesta mi correo. Con un “sí” basta.</p></li>
           <li class="jstep reveal"><span class="jicon" aria-hidden="true"><svg viewBox="0 0 64 64"><rect x="10" y="20" width="44" height="28" rx="5"/><circle cx="32" cy="34" r="6"/></svg></span><span class="jnum" aria-hidden="true">3</span>
-            <h3>$249, un solo pago</h3><p>Te mando la factura por correo. Pagas por PayPal (Goods and Services a sisyfosforever@gmail.com), con cripto (USDC en Base o USDT en Arbitrum) o por Western Union. Sin suscripción. Sin cobros después. Pasos en <a href="/pay">elevatedlisting.co/pay</a>.</p></li>
+            <h3>$249, un solo pago</h3><p>Te mando la factura por correo. Pagas con tarjeta o PayPal a mi cuenta PayPal Business <strong>Elevated Listing</strong> (sisyfosforever@gmail.com, como Goods and Services), o con cripto (USDC en Base o USDT en Arbitrum). Sin suscripción. Nada más después. Pasos en <a href="/pay">elevatedlisting.co/pay</a>.</p></li>
           <li class="jstep reveal"><span class="jicon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M10 22 L32 36 L54 22"/><rect x="10" y="18" width="44" height="30" rx="4"/></svg></span><span class="jnum" aria-hidden="true">4</span>
             <h3>Tus videos en 48 horas</h3><p>En las 48 horas siguientes a que me llegue tu pago, recibes el video en full HD sin marca de agua, una versión vertical para Reels y la canción en MP3. ¿Quieres cambiar algún detalle? Una ronda de ajustes va incluida.</p></li>
           <li class="jstep reveal"><span class="jicon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M32 50 C14 38 10 28 18 20 C24 14 30 18 32 23 C34 18 40 14 46 20 C54 28 50 38 32 50 Z"/></svg></span><span class="jnum" aria-hidden="true">5</span>
-            <h3>Compártelo donde quieras</h3><p>Súbelo a tu anuncio, web, redes, OTAs que acepten video, publicidad e impresión. Tras el pago, el video es tuyo, y la canción viene con una licencia comercial perpetua para tu alojamiento.</p><p class="jwink">Forever ever? Forever ever. Yes, Miss Jackson.</p></li>
+            <h3>Compártelo donde quieras</h3><p>Súbelo a tu anuncio, web, redes, OTAs que acepten video, publicidad e impresión. Tras el pago, el video es tuyo, y la canción viene con una licencia comercial perpetua para tu alojamiento.</p></li>
           </ol>
         </div>
         <p class="jnote">¿Dudas? Escríbeme. Te contesta una persona de carne y hueso: yo, Luis.</p>
@@ -984,7 +991,8 @@
 <section id="packages">
       <div class="wrap">
         <div class="pill">Precio</div>
-        <h2 class="section-title" style="margin-bottom:1.5rem">Video + canción. Licencia comercial completa.</h2>
+        <h2 class="section-title" style="margin-bottom:.75rem">Video + canción. Licencia comercial completa.</h2>
+        <p class="section-sub" style="margin-bottom:1.5rem"><strong>Vista previa gratis primero:</strong> ves el video terminado antes de pagar nada. Tras el pago, el video es tuyo y la canción viene con una <strong>licencia comercial perpetua</strong> para promocionar tu alojamiento.</p>
         <div class="tiers">
           <div class="offer tier featured">
             <h3>Standard</h3>
@@ -996,7 +1004,7 @@
               <li>Una ronda de ajustes pequeños</li>
               <li>Entrega en 48 horas tras el pago</li>
             </ul>
-            <a class="btn book" href="#contact" data-msg="Quiero el Standard $249 (video + canción, licencia comercial completa). Aquí va el enlace de mi anuncio:">Reservar Standard $249</a>
+            <a class="btn book" href="#contact" data-msg="Quiero el Standard $249 (video + canción, licencia comercial completa). Aquí va el enlace de mi anuncio:">Envía el enlace de tu anuncio</a>
           </div>
           <div class="offer tier">
             <h3>Elevated</h3>
@@ -1010,7 +1018,7 @@
               <li>Misma licencia comercial completa para video + canción</li>
               <li>Entrega en 48 horas tras el pago</li>
             </ul>
-            <a class="btn book" href="#contact" data-msg="Quiero el Elevated $499 (video de hasta 3 min, versiones de 15 + 30 s, tres rondas de cambios, versión alternativa de la canción).">Reservar Elevated $499</a>
+            <a class="btn book" href="#contact" data-msg="Quiero el Elevated $499 (video de hasta 3 min, versiones de 15 + 30 s, tres rondas de cambios, versión alternativa de la canción).">Envía el enlace de tu anuncio</a>
           </div>
           <div class="offer tier">
             <h3>Maximus</h3>
@@ -1020,10 +1028,10 @@
               <li>Varios alojamientos o alcance a medida</li>
               <li>Precio y plazos después de hablar</li>
             </ul>
-            <a class="btn book" href="#contact" data-msg="Maximus / a medida — hablemos del alcance.">Hablemos</a>
+            <a class="btn book" href="#contact" data-msg="Maximus / a medida — hablemos del alcance.">Envía el enlace de tu anuncio</a>
           </div>
         </div>
-        <p class="avail" style="margin-top:1rem">Solo 3 videos nuevos a la semana.</p>
+        <ul class="trustrow" aria-label="Elevated Listing"><li>Vista previa gratis antes de pagar</li><li>Entrega dentro de las 48 horas tras el pago</li><li>Pago seguro con PayPal: tarjeta o saldo de PayPal</li><li>Te responde una persona real: yo, Luis</li></ul>
         <div class="paynote">
           <h3>Primero lo ves</h3>
           <p>Hago el video y te lo mando con marca de agua. Lo que ves es el video real. Si te encanta, dices que sí y pagas — Standard $249, o Elevated $499 para un video de hasta 3 minutos, versiones cortas de 15 y 30 segundos, tres rondas de cambios y una versión alternativa de la canción. Si no, no pagas nada y tan amigos. El video queda oculto y no lo uso para vender tu alojamiento.</p>
@@ -1031,10 +1039,39 @@
           <p>Cuando pagas, el video terminado es tuyo: Luis te cede todos los derechos que tiene sobre el video, la edición y la letra que haya escrito. La canción se hace con Suno en un plan de pago Pro o Premier, y el archivo que recibes es una descarga oficial de Suno; nunca se usan remixes de canciones de otros usuarios. Según los Términos de Suno (vigentes desde el 3 de septiembre de 2026) recibes todos los derechos que Luis tiene sobre la canción, más una licencia perpetua, mundial y libre de regalías para usarla comercialmente y promocionar el alojamiento (web, redes, OTAs que acepten video, publicidad, impresión) sin costos extra. Como la canción está generada con IA, nadie puede prometer que exista copyright sobre ella ni que no haya una canción parecida en otro lugar, y cada plataforma aplica sus propias reglas a la música con IA. Puede que muestre el video en mi portafolio, salvo que prefieras que no. Detalles en los <a href="/es/terms" style="color:var(--accent)">términos</a>.</p>
           <div class="paycallout">
           <h3>Cómo funciona el pago</h3>
-          <p>Cuando me dices que sí, te mando la factura por correo. Pagas por PayPal a <strong>sisyfosforever@gmail.com</strong> como <strong>Goods and Services</strong>, con cripto (USDC en Base o USDT en Arbitrum) o por Western Union. Pasos en <a href="/pay">elevatedlisting.co/pay</a>. Las 48 horas empiezan cuando me llega tu pago, y te aviso por correo en cuanto llegue.</p>
-          <p style="margin:.6rem 0 0"><img src="/img/western-union.svg" alt="Western Union" height="28" style="background:#fff;border-radius:6px;padding:6px 10px;vertical-align:middle"></p>
+          <p>Cuando me dices que sí, te mando la factura por correo. <strong>Preferible: tarjeta o PayPal.</strong> Paga con tarjeta a través de PayPal o con tu saldo de PayPal, a mi cuenta PayPal Business <strong>Elevated Listing</strong> (sisyfosforever@gmail.com) como <strong>Goods and Services</strong> (no Friends and Family), así conservas la protección al comprador de PayPal. También puedes pagar con cripto (USDC en Base o USDT en Arbitrum). Pasos en <a href="/pay">elevatedlisting.co/pay</a>. Las 48 horas empiezan cuando me llega tu pago, y te escribo en cuanto llegue.</p>
+          <p class="pp-secure"><svg class="lock" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 10.5V7.8a3.5 3.5 0 0 1 7 0v2.7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="ppword" role="img" aria-label="PayPal"><b>Pay</b><b>Pal</b></span><span class="t">Pago seguro con PayPal. Paga con tarjeta o con tu saldo de PayPal. PayPal gestiona los datos de tu tarjeta, así que yo nunca los veo. En PayPal verás como destinatario <strong>Elevated Listing</strong>, mi cuenta PayPal Business.</span></p>
           <p class="small">¿Primera vez con cripto? La mayoría de los anfitriones compra USDC en minutos en Coinbase, Kraken o similares, y con gusto te ayudo paso a paso. Solo pagas después de ver tu video y decir que sí.</p>
+          <p class="small small-wu">Si nada de esto te sirve, Western Union es posible como último recurso. Mira <a href="/pay">/pay</a>.</p>
           </div>
+        </div>
+
+        <div class="faq" id="faq">
+          <h3>Preguntas frecuentes de anfitriones</h3>
+          <details>
+            <summary>¿Dónde puedo usar el video?</summary>
+            <p>En cualquier lugar donde promociones el alojamiento: tu propia web, Instagram, TikTok, Facebook, YouTube, publicidad e impresión, y plataformas de reservas que acepten video. El soporte de Airbnb para videos en los anuncios es limitado, así que revisa qué acepta tu plataforma. La versión vertical está pensada para Reels y Stories.</p>
+          </details>
+          <details>
+            <summary>¿La música es IA?</summary>
+            <p>Sí. La canción está hecha con ayuda de IA, con Suno en un plan de pago Pro o Premier, y escrita sobre tu alojamiento. Recibes una licencia perpetua, mundial y libre de regalías para usarla comercialmente en la promoción de tu alojamiento. Como está generada con IA, nadie puede garantizar que tenga derechos de autor, y cada plataforma aplica sus propias reglas a la música con IA. Detalles en los <a href="/es/terms" style="color:var(--accent)">términos</a>.</p>
+          </details>
+          <details>
+            <summary>¿Cómo funciona la vista previa gratis?</summary>
+            <p>Envíame el enlace de tu anuncio. Hago el video con las fotos reales de tu anuncio y te lo mando con marca de agua. Lo que ves es el video real. Si te encanta, dices que sí y te mando la factura. Si no, no pagas nada. El video queda oculto y no lo uso para vender tu alojamiento.</p>
+          </details>
+          <details>
+            <summary>¿Puedo pedir cambios?</summary>
+            <p>El Standard incluye una ronda de pequeños ajustes: una lista de cambios en un solo correo, como el ritmo, el orden o la elección de tus fotos, o el texto en pantalla. El Elevated incluye tres rondas de cambios. Un concepto nuevo o una canción nueva no están incluidos, pero podemos acordarlo aparte.</p>
+          </details>
+          <details>
+            <summary>¿Y los reembolsos?</summary>
+            <p>Como ves el video antes de pagar, los pagos no se reembolsan una vez entregado el video. Si no lo entrego dentro de las 48 horas desde que tu pago se recibe y se confirma, te devuelvo el importe completo. Consulta la <a href="/es/refund" style="color:var(--accent)">política de reembolsos</a>.</p>
+          </details>
+          <details>
+            <summary>¿Cómo pago?</summary>
+            <p>Cuando me dices que sí, te mando la factura por correo. Se prefiere tarjeta o PayPal (Goods and Services, a mi cuenta PayPal Business Elevated Listing), y cripto (USDC en Base o USDT en Arbitrum) también sirve. La entrega es dentro de las 48 horas desde que me llega tu pago. Pasos en <a href="/pay" style="color:var(--accent)">elevatedlisting.co/pay</a>.</p>
+          </details>
         </div>
       </div>
     </section>
@@ -1094,7 +1131,7 @@
                 <label for="c-message">Mensaje <span style="color:var(--mute);font-weight:300;text-transform:none;letter-spacing:0">(opcional)</span></label>
                 <textarea id="c-message" name="message" placeholder="¿Cómo es tu lugar y qué quieres que sienta el huésped?"></textarea>
               </div>
-              <button class="btn" type="submit">Enviar mensaje</button>
+              <button class="btn" type="submit">Envíame el enlace de tu anuncio</button>
               <p class="note">Llega directo a la bandeja de Elevated Listing. O escribe a <a href="mailto:luis@elevatedlisting.co" style="color:var(--accent)">luis@elevatedlisting.co</a>.</p>
             </div>
             <p class="thanks">¡Listo, me llegó! Te respondo desde luis@elevatedlisting.co.</p>
@@ -1115,6 +1152,7 @@
           <p class="section-sub" style="margin-bottom:1rem">
             Cineasta y compositor. En Elevated Listing llevo ese oficio a lugares con carácter. Nada de envíos masivos ni plantillas a lo seguro. Si tu alojamiento tiene alma, quiero que el video le abra una puerta a la imaginación de alguien, y que el resto lo ponga esa persona.
           </p>
+          <p class="about-cred">Antes de Elevated Listing, pasé unos 20 años como director creativo en publicidad.</p>
           <div class="link-row">
             <a href="https://www.youtube.com/@LuisfromSweden" target="_blank" rel="noopener">YouTube @LuisfromSweden</a>
             <a href="https://www.instagram.com/luisfromsweden/" target="_blank" rel="noopener">Instagram @luisfromsweden</a>
@@ -1139,7 +1177,7 @@
 
   <footer>
     <div class="wrap row">
-      <div>© <span id="y"></span> Elevated Listing · Mats Ludvig Lindberg (Luis from Sweden)</div>
+      <div class="foot-brand"><a class="foot-logo" href="/es/"><img src="/img/logo-mark.svg" alt="" width="34" height="34" /><span>Elevated <em>Listing</em></span></a><div class="foot-tag">Videos de tu alojamiento, con canción propia</div><div>© <span id="y"></span> Elevated Listing · Mats Ludvig Lindberg (Luis from Sweden)</div></div>
       <div class="legal-links">
         <a href="/es/terms">Términos</a>
         <span class="sep">·</span>
@@ -1149,6 +1187,7 @@
       </div>
     <div class="contact-block">
         <p><strong>Contacto</strong> · <a href="mailto:luis@elevatedlisting.co">luis@elevatedlisting.co</a></p>
+        <p><strong>Pagos</strong> · PayPal (cuenta Business: Elevated Listing) · cripto (USDC / USDT) · Western Union · <a href="/pay">Cómo pagar</a></p>
         <p><strong>Darse de baja:</strong> ¿Recibiste un correo comercial mío y no quieres más? Responde <strong>STOP</strong>, o escribe a <a href="mailto:luis@elevatedlisting.co?subject=STOP">luis@elevatedlisting.co</a> con el asunto STOP, y no volveré a contactarte. Todo correo comercial que envío incluye esta vía de baja.</p>
       </div>
     </div>
@@ -1248,5 +1287,6 @@ document.addEventListener('click',function(e){document.querySelectorAll('.lang-s
 document.addEventListener('keydown',function(e){if(e.key==='Escape')document.querySelectorAll('.lang-sm[open]').forEach(function(d){d.removeAttribute('open');d.querySelector('summary').focus();});});
 document.querySelectorAll('.lang a[hreflang],.lang-menu a[hreflang]').forEach(function(a){a.addEventListener('click',function(){var c=a.getAttribute('hreflang');try{localStorage.setItem('el_lang',c)}catch(e){}document.cookie='el_lang='+c+';path=/;max-age=31536000;SameSite=Lax';});});
 </script>
+<!-- el-brand-1027 -->
 </body>
 </html>

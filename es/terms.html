@@ -122,12 +122,34 @@
     footer .contact-block p { margin: .35rem 0; }
 
 
+    /* brand + trust (2026-10-27) */
+    .logo { display:inline-flex; align-items:center; gap:.55rem; }
+    .logo-mark { width:28px; height:28px; flex:none; display:block; }
+    .ppword { display:inline-block; background:#fff; border-radius:6px; padding:.18rem .5rem; font-family:Verdana,"DejaVu Sans",Arial,sans-serif; font-weight:700; font-style:italic; font-size:.92rem; letter-spacing:-.02em; line-height:1.25; vertical-align:middle; white-space:nowrap; }
+    .ppword b:first-child { color:#003087; } .ppword b + b { color:#009cde; }
+    .pp-secure { display:flex; gap:.6rem .8rem; align-items:center; flex-wrap:wrap; margin:.9rem 0 .4rem; padding:.75rem 1rem; background:rgba(243,239,230,.04); border:1px solid var(--line); border-radius:12px; font-size:.9rem; color:var(--ink); line-height:1.5; }
+    .pp-secure .lock { color:var(--accent); flex:none; }
+    .pp-secure span.t { flex:1 1 16rem; }
+    .trustrow { list-style:none; display:grid; grid-template-columns:repeat(auto-fit,minmax(13rem,1fr)); gap:.6rem 1.5rem; margin:1.5rem 0 0; padding:1rem 1.25rem; border:1px solid var(--line); border-radius:var(--radius); background:rgba(243,239,230,.03); font-size:.9rem; color:var(--ink); }
+    .trustrow li { display:flex; align-items:center; gap:.55rem; margin:0; }
+    .trustrow li::before { content:""; width:1rem; height:1rem; flex:none; background:no-repeat center/contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='7.25' fill='none' stroke='%23c4a574' stroke-width='1.3'/%3E%3Cpath d='M4.8 8.3l2.1 2.1 4.3-4.6' fill='none' stroke='%23c4a574' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); }
+    .about-cred { margin:0 0 1.25rem; padding-left:.8rem; border-left:2px solid var(--accent); color:var(--ink); font-weight:300; max-width:40rem; }
+    .about-cred strong { font-weight:500; }
+    footer .foot-brand { display:flex; flex-direction:column; gap:.45rem; }
+    footer .foot-logo { display:inline-flex; align-items:center; gap:.6rem; text-decoration:none; color:var(--ink); font-family:Fraunces,Georgia,serif; font-size:1.2rem; font-weight:600; letter-spacing:.02em; }
+    footer .foot-logo img { width:34px; height:34px; display:block; }
+    footer .foot-logo em { font-style:normal; color:var(--accent); font-weight:500; }
+    footer .foot-tag { color:var(--mute); font-size:.85rem; }
+    .logo .logo-text { display:block; color:inherit; font-weight:inherit; }
+    .logo .logo-text span { color:var(--accent); font-weight:500; }
+    @media (max-width:600px) { .logo { gap:.45rem; } .logo-mark { width:24px; height:24px; } .logo-text { line-height:1.12; } .nav-links .navpay { margin-right:0 !important; } }
+    @media (max-width:389px) { .logo-mark { display:none; } }
   </style>
 </head>
 <body>
   <header>
     <div class="wrap nav">
-      <a class="logo" href="/es/">Elevated <span>Listing</span></a>
+      <a class="logo" href="/es/"><img class="logo-mark" src="/img/logo-mark.svg" alt="" width="28" height="28" /><span class="logo-text">Elevated <span>Listing</span></span></a>
       <nav class="nav-links">
         <a href="/#packages">Price</a>
         <a href="/#contact">Contact</a>
@@ -141,10 +163,11 @@
       <div class="wrap">
         <div class="eyebrow">Legal</div>
         <h1>Términos del servicio</h1>
-        <p class="updated">Última actualización: 21 de octubre de 2026</p>
+        <p class="updated">Última actualización: 27 de octubre de 2026</p>
         <div class="legal-card">
           <h2>Quiénes somos</h2>
           <p>Elevated Listing es el nombre comercial con el que trabaja <strong>Mats Ludvig Lindberg</strong> (conocido como Luis Lindberg, y como “Luis from Sweden” en YouTube), como particular. Elevated Listing no es una empresa y no está registrado como negocio en ningún país. Cuando estos términos dicen “yo”, “Luis” o “Elevated Listing”, se refieren a esa persona. Contacto: <a href="mailto:luis@elevatedlisting.co">luis@elevatedlisting.co</a>.</p>
+          <p>Los pagos por PayPal van a una cuenta PayPal Business a nombre de <strong>Elevated Listing</strong> (sisyfosforever@gmail.com), cuyo titular es Mats Ludvig Lindberg. Ese es el nombre del vendedor que ves en PayPal. Esos pagos los procesa PayPal.</p>
 
                     <h2>Qué recibes</h2>
           <p>Paquetes (pago único, sin suscripción):</p>
@@ -182,7 +205,7 @@
           <p>Un buen video puede encender la imaginación. <strong>No</strong> garantiza posicionamiento, lugar en las búsquedas, reservas, ingresos ni reseñas.</p>
 
                     <h2>Pagos y reembolsos</h2>
-          <p>Standard cuesta $249; Elevated, $499; Maximus / a medida se presupuesta a demanda. Sin suscripción. Puedes pagar por PayPal a sisyfosforever@gmail.com como Goods and Services, con criptomonedas (USDC en Base o USDT en Arbitrum) o por Western Union. Instrucciones paso a paso en <a href="/pay">elevatedlisting.co/pay</a>. Te envío la factura por correo cuando dices que sí. Los reembolsos se explican en la <a href="/es/refund">Política de reembolsos</a>.</p>
+          <p>Standard cuesta $249; Elevated, $499; Maximus / a medida se presupuesta a demanda. Sin suscripción. Puedes pagar por PayPal (tarjeta o saldo de PayPal) a la cuenta PayPal Business “Elevated Listing” (sisyfosforever@gmail.com) como Goods and Services; esos pagos los procesa PayPal. También puedes pagar con criptomonedas (USDC en Base o USDT en Arbitrum), directamente a mi billetera, o por Western Union, que procesa esas transferencias. Instrucciones paso a paso en <a href="/pay">elevatedlisting.co/pay</a>. Te envío la factura por correo cuando dices que sí. Los reembolsos se explican en la <a href="/es/refund">Política de reembolsos</a>.</p>
 
 
           <h2>Consumidores de la UE</h2>
@@ -200,7 +223,7 @@
 
   <footer>
     <div class="wrap row">
-      <div>© <span id="y"></span> Elevated Listing · Mats Ludvig Lindberg (Luis from Sweden)</div>
+      <div class="foot-brand"><a class="foot-logo" href="/es/"><img src="/img/logo-mark.svg" alt="" width="34" height="34" /><span>Elevated <em>Listing</em></span></a><div class="foot-tag">Videos de tu alojamiento, con canción propia</div><div>© <span id="y"></span> Elevated Listing · Mats Ludvig Lindberg (Luis from Sweden)</div></div>
       <div class="legal-links">
         <a href="/es/terms">Términos</a>
         <span class="sep">·</span>
@@ -210,10 +233,12 @@
       </div>
     <div class="contact-block">
         <p><strong>Contacto</strong> · <a href="mailto:luis@elevatedlisting.co">luis@elevatedlisting.co</a></p>
+        <p><strong>Pagos</strong> · PayPal (cuenta Business: Elevated Listing) · cripto (USDC / USDT) · Western Union · <a href="/pay">Cómo pagar</a></p>
         <p><strong>Darse de baja:</strong> ¿Recibiste un correo comercial mío y no quieres más? Responde <strong>STOP</strong>, o escribe a <a href="mailto:luis@elevatedlisting.co?subject=STOP">luis@elevatedlisting.co</a> con el asunto STOP, y no volveré a contactarte. Todo correo comercial que envío incluye esta vía de baja.</p>
       </div>
     </div>
   </footer>
   <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+<!-- el-brand-1027 -->
 </body>
 </html>

@@ -122,12 +122,34 @@
     footer .contact-block p { margin: .35rem 0; }
 
 
+    /* brand + trust (2026-10-27) */
+    .logo { display:inline-flex; align-items:center; gap:.55rem; }
+    .logo-mark { width:28px; height:28px; flex:none; display:block; }
+    .ppword { display:inline-block; background:#fff; border-radius:6px; padding:.18rem .5rem; font-family:Verdana,"DejaVu Sans",Arial,sans-serif; font-weight:700; font-style:italic; font-size:.92rem; letter-spacing:-.02em; line-height:1.25; vertical-align:middle; white-space:nowrap; }
+    .ppword b:first-child { color:#003087; } .ppword b + b { color:#009cde; }
+    .pp-secure { display:flex; gap:.6rem .8rem; align-items:center; flex-wrap:wrap; margin:.9rem 0 .4rem; padding:.75rem 1rem; background:rgba(243,239,230,.04); border:1px solid var(--line); border-radius:12px; font-size:.9rem; color:var(--ink); line-height:1.5; }
+    .pp-secure .lock { color:var(--accent); flex:none; }
+    .pp-secure span.t { flex:1 1 16rem; }
+    .trustrow { list-style:none; display:grid; grid-template-columns:repeat(auto-fit,minmax(13rem,1fr)); gap:.6rem 1.5rem; margin:1.5rem 0 0; padding:1rem 1.25rem; border:1px solid var(--line); border-radius:var(--radius); background:rgba(243,239,230,.03); font-size:.9rem; color:var(--ink); }
+    .trustrow li { display:flex; align-items:center; gap:.55rem; margin:0; }
+    .trustrow li::before { content:""; width:1rem; height:1rem; flex:none; background:no-repeat center/contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='7.25' fill='none' stroke='%23c4a574' stroke-width='1.3'/%3E%3Cpath d='M4.8 8.3l2.1 2.1 4.3-4.6' fill='none' stroke='%23c4a574' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); }
+    .about-cred { margin:0 0 1.25rem; padding-left:.8rem; border-left:2px solid var(--accent); color:var(--ink); font-weight:300; max-width:40rem; }
+    .about-cred strong { font-weight:500; }
+    footer .foot-brand { display:flex; flex-direction:column; gap:.45rem; }
+    footer .foot-logo { display:inline-flex; align-items:center; gap:.6rem; text-decoration:none; color:var(--ink); font-family:Fraunces,Georgia,serif; font-size:1.2rem; font-weight:600; letter-spacing:.02em; }
+    footer .foot-logo img { width:34px; height:34px; display:block; }
+    footer .foot-logo em { font-style:normal; color:var(--accent); font-weight:500; }
+    footer .foot-tag { color:var(--mute); font-size:.85rem; }
+    .logo .logo-text { display:block; color:inherit; font-weight:inherit; }
+    .logo .logo-text span { color:var(--accent); font-weight:500; }
+    @media (max-width:600px) { .logo { gap:.45rem; } .logo-mark { width:24px; height:24px; } .logo-text { line-height:1.12; } .nav-links .navpay { margin-right:0 !important; } }
+    @media (max-width:389px) { .logo-mark { display:none; } }
   </style>
 </head>
 <body>
   <header>
     <div class="wrap nav">
-      <a class="logo" href="/">Elevated <span>Listing</span></a>
+      <a class="logo" href="/"><img class="logo-mark" src="/img/logo-mark.svg" alt="" width="28" height="28" /><span class="logo-text">Elevated <span>Listing</span></span></a>
       <nav class="nav-links">
         <a href="/#packages">Price</a>
         <a href="/#contact">Contact</a>
@@ -141,7 +163,7 @@
       <div class="wrap">
         <div class="eyebrow">Legal</div>
         <h1>Refund Policy</h1>
-        <p class="updated">Last updated: 21 October 2026</p>
+        <p class="updated">Last updated: 27 October 2026</p>
         <div class="legal-card">
           <h2>See it before you pay</h2>
           <p>The preview is free. You see a draft of your film, with a watermark, before paying anything, so you know exactly what you are buying. If you want it, you pay for the package we agreed (Standard $249, Elevated $499, or a custom quote). If you don’t, you pay nothing.</p>
@@ -153,7 +175,7 @@
           <p>If I do not deliver the film within 48 hours (calendar days) of your payment being received and confirmed, you are entitled to a full refund.</p>
 
           <h2>How refunds work</h2>
-          <p>You can pay by PayPal (Goods and Services to sisyfosforever@gmail.com), crypto or Western Union; see <a href="/pay">elevatedlisting.co/pay</a>. Refunds are handled directly by Luis. Email <a href="mailto:luis@elevatedlisting.co">luis@elevatedlisting.co</a> with your order details. Approved refunds are sent back the same way you paid within 14 days: PayPal payments are refunded through PayPal, crypto in the same coin to the wallet you paid from, Western Union by Western Union to the name on your transfer. Crypto and Western Union payments can’t be reversed by a bank; PayPal Goods and Services payments also carry PayPal’s own buyer protection, under PayPal’s terms.</p>
+          <p>You can pay by PayPal (Goods and Services to the PayPal Business account “Elevated Listing”, sisyfosforever@gmail.com; processed by PayPal), crypto or Western Union; see <a href="/pay">elevatedlisting.co/pay</a>. Refunds are handled directly by Luis. Email <a href="mailto:luis@elevatedlisting.co">luis@elevatedlisting.co</a> with your order details. Approved refunds are sent back the same way you paid within 14 days: PayPal payments are refunded through PayPal, crypto in the same coin to the wallet you paid from, Western Union by Western Union to the name on your transfer. Crypto and Western Union payments can’t be reversed by a bank; PayPal Goods and Services payments also carry PayPal’s own buyer protection, under PayPal’s terms.</p>
 
           <p><em>Elevated Listing is the trading name of Mats Ludvig Lindberg (Luis Lindberg), a private individual; it is not a company and is not registered as a business. These terms are governed by the laws of Sweden, and if you buy as a consumer you keep the mandatory consumer-protection rights of the country where you live. See the <a href="/terms">Terms</a> for details.</em></p>
         </div>
@@ -163,7 +185,7 @@
 
   <footer>
     <div class="wrap row">
-      <div>© <span id="y"></span> Elevated Listing · Mats Ludvig Lindberg (Luis from Sweden)</div>
+      <div class="foot-brand"><a class="foot-logo" href="/"><img src="/img/logo-mark.svg" alt="" width="34" height="34" /><span>Elevated <em>Listing</em></span></a><div class="foot-tag">Listing films set to a song</div><div>© <span id="y"></span> Elevated Listing · Mats Ludvig Lindberg (Luis from Sweden)</div></div>
       <div class="legal-links">
         <a href="/terms">Terms</a>
         <span class="sep">·</span>
@@ -173,10 +195,12 @@
       </div>
     <div class="contact-block">
         <p><strong>Contact</strong> · <a href="mailto:luis@elevatedlisting.co">luis@elevatedlisting.co</a></p>
+        <p><strong>Payments</strong> · PayPal (Business account: Elevated Listing) · crypto (USDC / USDT) · Western Union · <a href="/pay">How to pay</a></p>
         <p><strong>Opt out:</strong> Got a sales email from me and don’t want more? Reply <strong>STOP</strong>, or email <a href="mailto:luis@elevatedlisting.co?subject=STOP">luis@elevatedlisting.co</a> with subject STOP, and I won’t contact you again. Every outbound sales email includes this unsubscribe path.</p>
       </div>
     </div>
   </footer>
   <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+<!-- el-brand-1027 -->
 </body>
 </html>

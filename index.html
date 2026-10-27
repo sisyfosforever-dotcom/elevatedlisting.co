@@ -35,7 +35,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Elevated Listing", "url": "https://elevatedlisting.co/", "image": "https://elevatedlisting.co/og.jpg", "logo": "https://elevatedlisting.co/apple-touch-icon.png", "email": "luis@elevatedlisting.co", "founder": {"@type": "Person", "name": "Mats Ludvig Lindberg", "alternateName": ["Luis Lindberg", "Luis from Sweden"]}, "description": "Handmade listing films for short-term and vacation rentals, cut to a song or set to an original one.", "makesOffer": [{"@type": "Offer", "name": "Standard listing film and song, full commercial licence", "price": "249", "priceCurrency": "USD", "description": "Finished film (16:9 + vertical) plus original song (official Suno Download), full commercial licence, one round of tweaks, delivered within 48 hours of payment. Elevated $499 adds a film up to 3 minutes, 15- and 30-second cutdowns for ads and Reels, three rounds of changes and an alternate version of the song. Paid only if you love it."}]}
+  {"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Elevated Listing", "url": "https://elevatedlisting.co/", "image": "https://elevatedlisting.co/og.jpg", "logo": "https://elevatedlisting.co/img/logo-512.png", "email": "luis@elevatedlisting.co", "founder": {"@type": "Person", "name": "Mats Ludvig Lindberg", "alternateName": ["Luis Lindberg", "Luis from Sweden"]}, "description": "Handmade listing films for short-term and vacation rentals, cut to a song or set to an original one.", "makesOffer": [{"@type": "Offer", "name": "Standard listing film and song, full commercial licence", "price": "249", "priceCurrency": "USD", "description": "Finished film (16:9 + vertical) plus original song (official Suno Download), full commercial licence, one round of tweaks, delivered within 48 hours of payment. Elevated $499 adds a film up to 3 minutes, 15- and 30-second cutdowns for ads and Reels, three rounds of changes and an alternate version of the song. Paid only if you love it."}]}
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -561,12 +561,34 @@
     @media (max-width:999px){.lang{display:none}.lang-sm{display:block}}
     @media (max-width:600px){.nav-links{gap:.6rem}.nav-links .btn{padding:.62rem .95rem;font-size:.86rem}}
     @media (max-width:360px){.logo{font-size:1.02rem}}
+    /* brand + trust (2026-10-27) */
+    .logo { display:inline-flex; align-items:center; gap:.55rem; }
+    .logo-mark { width:28px; height:28px; flex:none; display:block; }
+    .ppword { display:inline-block; background:#fff; border-radius:6px; padding:.18rem .5rem; font-family:Verdana,"DejaVu Sans",Arial,sans-serif; font-weight:700; font-style:italic; font-size:.92rem; letter-spacing:-.02em; line-height:1.25; vertical-align:middle; white-space:nowrap; }
+    .ppword b:first-child { color:#003087; } .ppword b + b { color:#009cde; }
+    .pp-secure { display:flex; gap:.6rem .8rem; align-items:center; flex-wrap:wrap; margin:.9rem 0 .4rem; padding:.75rem 1rem; background:rgba(243,239,230,.04); border:1px solid var(--line); border-radius:12px; font-size:.9rem; color:var(--ink); line-height:1.5; }
+    .pp-secure .lock { color:var(--accent); flex:none; }
+    .pp-secure span.t { flex:1 1 16rem; }
+    .trustrow { list-style:none; display:grid; grid-template-columns:repeat(auto-fit,minmax(13rem,1fr)); gap:.6rem 1.5rem; margin:1.5rem 0 0; padding:1rem 1.25rem; border:1px solid var(--line); border-radius:var(--radius); background:rgba(243,239,230,.03); font-size:.9rem; color:var(--ink); }
+    .trustrow li { display:flex; align-items:center; gap:.55rem; margin:0; }
+    .trustrow li::before { content:""; width:1rem; height:1rem; flex:none; background:no-repeat center/contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='7.25' fill='none' stroke='%23c4a574' stroke-width='1.3'/%3E%3Cpath d='M4.8 8.3l2.1 2.1 4.3-4.6' fill='none' stroke='%23c4a574' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); }
+    .about-cred { margin:0 0 1.25rem; padding-left:.8rem; border-left:2px solid var(--accent); color:var(--ink); font-weight:300; max-width:40rem; }
+    .about-cred strong { font-weight:500; }
+    footer .foot-brand { display:flex; flex-direction:column; gap:.45rem; }
+    footer .foot-logo { display:inline-flex; align-items:center; gap:.6rem; text-decoration:none; color:var(--ink); font-family:Fraunces,Georgia,serif; font-size:1.2rem; font-weight:600; letter-spacing:.02em; }
+    footer .foot-logo img { width:34px; height:34px; display:block; }
+    footer .foot-logo em { font-style:normal; color:var(--accent); font-weight:500; }
+    footer .foot-tag { color:var(--mute); font-size:.85rem; }
+    .logo .logo-text { display:block; color:inherit; font-weight:inherit; }
+    .logo .logo-text span { color:var(--accent); font-weight:500; }
+    @media (max-width:600px) { .logo { gap:.45rem; } .logo-mark { width:24px; height:24px; } .logo-text { line-height:1.12; } .nav-links .navpay { margin-right:0 !important; } }
+    @media (max-width:389px) { .logo-mark { display:none; } }
   </style>
 </head>
 <body>
   <header>
     <div class="wrap nav">
-      <a href="/" class="logo" aria-label="Elevated Listing home" style="text-decoration:none;color:inherit" onclick="if(location.pathname==='/'||location.pathname==='/index.html'){window.scrollTo({top:0,behavior:'smooth'});history.replaceState(null,'','/');return false;}">Elevated <span>Listing</span></a>
+      <a href="/" class="logo" aria-label="Elevated Listing home" style="text-decoration:none;color:inherit" onclick="if(location.pathname==='/'||location.pathname==='/index.html'){window.scrollTo({top:0,behavior:'smooth'});history.replaceState(null,'','/');return false;}"><img class="logo-mark" src="/img/logo-mark.svg" alt="" width="28" height="28" /><span class="logo-text">Elevated <span>Listing</span></span></a>
       <nav class="nav-links">
         <a class="hide-sm" href="#mind">Mind</a>
         <a class="hide-sm" href="#work">Work</a>
@@ -937,7 +959,7 @@
           <li class="jstep reveal"><span class="jicon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M14 34 L27 46 L50 18"/></svg></span><span class="jnum" aria-hidden="true">2</span>
             <h3>Say yes</h3><p>Just reply to my email. A short “yes” is enough.</p></li>
           <li class="jstep reveal"><span class="jicon" aria-hidden="true"><svg viewBox="0 0 64 64"><rect x="10" y="20" width="44" height="28" rx="5"/><circle cx="32" cy="34" r="6"/></svg></span><span class="jnum" aria-hidden="true">3</span>
-            <h3>$249, one payment</h3><p>I email you an invoice. Pay by card or PayPal (as Goods and Services to sisyfosforever@gmail.com), or by crypto (USDC on Base or USDT on Arbitrum). No subscription. Nothing more later. Steps at <a href="/pay">elevatedlisting.co/pay</a>.</p></li>
+            <h3>$249, one payment</h3><p>I email you an invoice. Pay by card or PayPal to my PayPal Business account <strong>Elevated Listing</strong> (sisyfosforever@gmail.com, as Goods and Services), or by crypto (USDC on Base or USDT on Arbitrum). No subscription. Nothing more later. Steps at <a href="/pay">elevatedlisting.co/pay</a>.</p></li>
           <li class="jstep reveal"><span class="jicon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M10 22 L32 36 L54 22"/><rect x="10" y="18" width="44" height="30" rx="4"/></svg></span><span class="jnum" aria-hidden="true">4</span>
             <h3>Get your films in 48 hours</h3><p>Within 48 hours of your payment reaching me: the full-HD film with no watermark, a vertical version for Reels, and the song as an MP3. Want a small change? One round of tweaks is included.</p></li>
           <li class="jstep reveal"><span class="jicon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M32 50 C14 38 10 28 18 20 C24 14 30 18 32 23 C34 18 40 14 46 20 C54 28 50 38 32 50 Z"/></svg></span><span class="jnum" aria-hidden="true">5</span>
@@ -1015,6 +1037,7 @@
             <a class="btn book" href="#contact" data-msg="Maximus / custom — let's talk about scope. Here's my listing link:">Send your listing link</a>
           </div>
         </div>
+        <ul class="trustrow" aria-label="Elevated Listing"><li>Free preview before you pay</li><li>Delivered within 48 hours of payment</li><li>Secure payment via PayPal: card or PayPal balance</li><li>A real person answers: me, Luis</li></ul>
         <div class="paynote">
           <h3>You see it first</h3>
           <p>I make the film and send it to you, with a watermark. What you see is the real film. If you love it, say yes and pay — Standard $249, or Elevated $499 for a film up to 3 minutes, 15- and 30-second cutdowns, three rounds of changes and an alternate version of the song. If not, you pay nothing, no hard feelings. The film stays unlisted and I don’t use it to sell your place.</p>
@@ -1022,7 +1045,8 @@
           <p>Once you’ve paid, the finished film is yours: Luis assigns to you all rights he holds in the film, the edit and any lyrics he wrote. The song is made with Suno on a paid Pro or Premier plan, and the file you receive is an official Suno Download; Remixes of other users’ songs are never used. Under Suno’s Terms (effective 3 September 2026) you get all rights Luis holds in the song, plus a perpetual, worldwide, royalty-free licence to use it commercially to market the property (website, socials, OTAs that allow video, ads, print) with no further fees. Because the song is AI-generated, no one can promise that copyright exists in it or that no similar song exists elsewhere, and each platform applies its own rules to AI music. I may show the film in my portfolio unless you’d rather I didn’t. Full details in the <a href="/terms" style="color:var(--accent)">terms</a>.</p>
           <div class="paycallout">
           <h3>How payment works</h3>
-          <p>After you say yes, I email you an invoice. <strong>Preferred: card or PayPal.</strong> Pay with a card through PayPal or from your PayPal balance, sent to <strong>sisyfosforever@gmail.com</strong> as <strong>Goods and Services</strong> (not Friends and Family), which keeps PayPal’s buyer protection on your side. You can also pay by crypto (USDC on Base or USDT on Arbitrum). Full steps at <a href="/pay">elevatedlisting.co/pay</a>. The 48 hours start when your payment reaches me, and I’ll email you when it does.</p>
+          <p>After you say yes, I email you an invoice. <strong>Preferred: card or PayPal.</strong> Pay with a card through PayPal or from your PayPal balance, sent to my PayPal Business account <strong>Elevated Listing</strong> (sisyfosforever@gmail.com) as <strong>Goods and Services</strong> (not Friends and Family), which keeps PayPal’s buyer protection on your side. You can also pay by crypto (USDC on Base or USDT on Arbitrum). Full steps at <a href="/pay">elevatedlisting.co/pay</a>. The 48 hours start when your payment reaches me, and I’ll email you when it does.</p>
+          <p class="pp-secure"><svg class="lock" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 10.5V7.8a3.5 3.5 0 0 1 7 0v2.7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="ppword" role="img" aria-label="PayPal"><b>Pay</b><b>Pal</b></span><span class="t">Secure payment via PayPal. Pay with a card or your PayPal balance. PayPal handles your card details, so I never see them. The recipient shown in PayPal is <strong>Elevated Listing</strong>, my PayPal Business account.</span></p>
           <p class="small">New to crypto? Most hosts buy USDC in minutes via Coinbase, Kraken or similar, and I'm happy to walk you through it. You only pay after you’ve seen your film and said yes.</p>
           <p class="small small-wu">If neither works for you, Western Union is possible as a last resort. See <a href="/pay">/pay</a>.</p>
           </div>
@@ -1052,7 +1076,7 @@
           </details>
           <details>
             <summary>How do I pay?</summary>
-            <p>After you say yes, I email you an invoice. Card or PayPal (Goods and Services) is preferred, and crypto (USDC on Base or USDT on Arbitrum) also works. Delivery is within 48 hours of your payment reaching me. Steps at <a href="/pay" style="color:var(--accent)">elevatedlisting.co/pay</a>.</p>
+            <p>After you say yes, I email you an invoice. Card or PayPal (Goods and Services, to my PayPal Business account Elevated Listing) is preferred, and crypto (USDC on Base or USDT on Arbitrum) also works. Delivery is within 48 hours of your payment reaching me. Steps at <a href="/pay" style="color:var(--accent)">elevatedlisting.co/pay</a>.</p>
           </details>
         </div>
       </div>
@@ -1136,6 +1160,7 @@
             not volume outreach, not safe templates. If your place has soul, I want the film to open a door
             in someone’s head and leave the rest to them.
           </p>
+          <p class="about-cred">Before Elevated Listing, I spent about 20 years as a creative director in advertising.</p>
           <div class="link-row">
             <a href="https://www.youtube.com/@LuisfromSweden" target="_blank" rel="noopener">YouTube @LuisfromSweden</a>
             <a href="https://www.instagram.com/luisfromsweden/" target="_blank" rel="noopener">Instagram @luisfromsweden</a>
@@ -1160,7 +1185,7 @@
 
   <footer>
     <div class="wrap row">
-      <div>© <span id="y"></span> Elevated Listing · Mats Ludvig Lindberg (Luis from Sweden)</div>
+      <div class="foot-brand"><a class="foot-logo" href="/"><img src="/img/logo-mark.svg" alt="" width="34" height="34" /><span>Elevated <em>Listing</em></span></a><div class="foot-tag">Listing films set to a song</div><div>© <span id="y"></span> Elevated Listing · Mats Ludvig Lindberg (Luis from Sweden)</div></div>
       <div class="legal-links">
         <a href="/terms">Terms</a>
         <span class="sep">·</span>
@@ -1170,6 +1195,7 @@
       </div>
     <div class="contact-block">
         <p><strong>Contact</strong> · <a href="mailto:luis@elevatedlisting.co">luis@elevatedlisting.co</a></p>
+        <p><strong>Payments</strong> · PayPal (Business account: Elevated Listing) · crypto (USDC / USDT) · Western Union · <a href="/pay">How to pay</a></p>
         <p><strong>Opt out:</strong> Got a sales email from me and don’t want more? Reply <strong>STOP</strong>, or email <a href="mailto:luis@elevatedlisting.co?subject=STOP">luis@elevatedlisting.co</a> with subject STOP, and I won’t contact you again. Every outbound sales email includes this unsubscribe path.</p>
       </div>
     </div>
@@ -1269,5 +1295,6 @@ document.addEventListener('click',function(e){document.querySelectorAll('.lang-s
 document.addEventListener('keydown',function(e){if(e.key==='Escape')document.querySelectorAll('.lang-sm[open]').forEach(function(d){d.removeAttribute('open');d.querySelector('summary').focus();});});
 document.querySelectorAll('.lang a[hreflang],.lang-menu a[hreflang]').forEach(function(a){a.addEventListener('click',function(){var c=a.getAttribute('hreflang');try{localStorage.setItem('el_lang',c)}catch(e){}document.cookie='el_lang='+c+';path=/;max-age=31536000;SameSite=Lax';});});
 </script>
+<!-- el-brand-1027 -->
 </body>
 </html>

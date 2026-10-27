@@ -35,7 +35,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Elevated Listing", "url": "https://elevatedlisting.co/", "image": "https://elevatedlisting.co/og.jpg", "logo": "https://elevatedlisting.co/apple-touch-icon.png", "email": "luis@elevatedlisting.co", "founder": {"@type": "Person", "name": "Mats Ludvig Lindberg", "alternateName": ["Luis Lindberg", "Luis from Sweden"]}, "description": "Handmade listing films for short-term and vacation rentals, cut to a song or set to an original one.", "makesOffer": [{"@type": "Offer", "name": "Listing film and song", "price": "249", "priceCurrency": "USD", "description": "One full-HD horizontal film, one vertical Reels version, the song as an MP3, one round of tweaks, delivered within 48 hours of payment. Paid only if you love it."}]}
+  {"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Elevated Listing", "url": "https://elevatedlisting.co/", "image": "https://elevatedlisting.co/og.jpg", "logo": "https://elevatedlisting.co/img/logo-512.png", "email": "luis@elevatedlisting.co", "founder": {"@type": "Person", "name": "Mats Ludvig Lindberg", "alternateName": ["Luis Lindberg", "Luis from Sweden"]}, "description": "Handmade listing films for short-term and vacation rentals, cut to a song or set to an original one.", "makesOffer": [{"@type": "Offer", "name": "Listing film and song", "price": "249", "priceCurrency": "USD", "description": "One full-HD horizontal film, one vertical Reels version, the song as an MP3, one round of tweaks, delivered within 48 hours of payment. Paid only if you love it."}]}
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -423,6 +423,13 @@
     .paycallout { margin:1rem 0; padding:1rem 1.25rem; border:1px solid var(--accent); border-left-width:4px; border-radius:var(--radius); background:rgba(196,165,116,.08); }
     .paycallout h3 { color:var(--accent); }
     .paycallout p { color:var(--ink); }
+    .hero-note { margin:.25rem 0 1.25rem; max-width:40rem; font-size:.92rem; font-weight:300; color:var(--mute); border-left:2px solid var(--accent); padding-left:.8rem; }
+    .hero-note strong { color:var(--ink); font-weight:500; }
+    .faq { margin-top:2rem; max-width:44rem; }
+    .faq details { border:1px solid var(--line); border-radius:var(--radius); background:var(--card); padding:.9rem 1.25rem; margin:.6rem 0; }
+    .faq summary { cursor:pointer; font-weight:500; color:var(--ink); }
+    .faq details p { margin:.6rem 0 0; font-weight:300; }
+    .paynote .small-wu { font-size:.85rem; color:var(--mute); }
     .avail { color:var(--accent); font-weight:500; letter-spacing:.02em; margin:.25rem 0 0; }
     .paynote .small { font-size:.9rem; margin:.75rem 0 0; }
     @media (max-width: 800px) { .tiers { grid-template-columns:1fr; } }
@@ -551,12 +558,34 @@
     /* Thai: taller lines for stacked vowels/tone marks, no tight tracking */
     h1,h2,h3,.section-title{line-height:1.4;letter-spacing:0}
     body{line-height:1.75}
+    /* brand + trust (2026-10-27) */
+    .logo { display:inline-flex; align-items:center; gap:.55rem; }
+    .logo-mark { width:28px; height:28px; flex:none; display:block; }
+    .ppword { display:inline-block; background:#fff; border-radius:6px; padding:.18rem .5rem; font-family:Verdana,"DejaVu Sans",Arial,sans-serif; font-weight:700; font-style:italic; font-size:.92rem; letter-spacing:-.02em; line-height:1.25; vertical-align:middle; white-space:nowrap; }
+    .ppword b:first-child { color:#003087; } .ppword b + b { color:#009cde; }
+    .pp-secure { display:flex; gap:.6rem .8rem; align-items:center; flex-wrap:wrap; margin:.9rem 0 .4rem; padding:.75rem 1rem; background:rgba(243,239,230,.04); border:1px solid var(--line); border-radius:12px; font-size:.9rem; color:var(--ink); line-height:1.5; }
+    .pp-secure .lock { color:var(--accent); flex:none; }
+    .pp-secure span.t { flex:1 1 16rem; }
+    .trustrow { list-style:none; display:grid; grid-template-columns:repeat(auto-fit,minmax(13rem,1fr)); gap:.6rem 1.5rem; margin:1.5rem 0 0; padding:1rem 1.25rem; border:1px solid var(--line); border-radius:var(--radius); background:rgba(243,239,230,.03); font-size:.9rem; color:var(--ink); }
+    .trustrow li { display:flex; align-items:center; gap:.55rem; margin:0; }
+    .trustrow li::before { content:""; width:1rem; height:1rem; flex:none; background:no-repeat center/contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='7.25' fill='none' stroke='%23c4a574' stroke-width='1.3'/%3E%3Cpath d='M4.8 8.3l2.1 2.1 4.3-4.6' fill='none' stroke='%23c4a574' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); }
+    .about-cred { margin:0 0 1.25rem; padding-left:.8rem; border-left:2px solid var(--accent); color:var(--ink); font-weight:300; max-width:40rem; }
+    .about-cred strong { font-weight:500; }
+    footer .foot-brand { display:flex; flex-direction:column; gap:.45rem; }
+    footer .foot-logo { display:inline-flex; align-items:center; gap:.6rem; text-decoration:none; color:var(--ink); font-family:Fraunces,Georgia,serif; font-size:1.2rem; font-weight:600; letter-spacing:.02em; }
+    footer .foot-logo img { width:34px; height:34px; display:block; }
+    footer .foot-logo em { font-style:normal; color:var(--accent); font-weight:500; }
+    footer .foot-tag { color:var(--mute); font-size:.85rem; }
+    .logo .logo-text { display:block; color:inherit; font-weight:inherit; }
+    .logo .logo-text span { color:var(--accent); font-weight:500; }
+    @media (max-width:600px) { .logo { gap:.45rem; } .logo-mark { width:24px; height:24px; } .logo-text { line-height:1.12; } .nav-links .navpay { margin-right:0 !important; } }
+    @media (max-width:389px) { .logo-mark { display:none; } }
   </style>
 </head>
 <body>
   <header>
     <div class="wrap nav">
-      <a href="/th/" class="logo" aria-label="Elevated Listing หน้าแรก" style="text-decoration:none;color:inherit" onclick="if(location.pathname==='/th/'||location.pathname==='/th/index.html'){window.scrollTo({top:0,behavior:'smooth'});history.replaceState(null,'','/th/');return false;}">Elevated <span>Listing</span></a>
+      <a href="/th/" class="logo" aria-label="Elevated Listing หน้าแรก" style="text-decoration:none;color:inherit" onclick="if(location.pathname==='/th/'||location.pathname==='/th/index.html'){window.scrollTo({top:0,behavior:'smooth'});history.replaceState(null,'','/th/');return false;}"><img class="logo-mark" src="/img/logo-mark.svg" alt="" width="28" height="28" /><span class="logo-text">Elevated <span>Listing</span></span></a>
       <nav class="nav-links">
         <a class="hide-sm" href="#mind">แนวคิด</a>
         <a class="hide-sm" href="#work">ผลงาน</a>
@@ -565,7 +594,7 @@
         <a class="hide-sm" href="#contact">ติดต่อ</a>
         <div class="lang" role="navigation" aria-label="ภาษา"><a href="/" hreflang="en" lang="en" title="English">EN</a><span class="dot" aria-hidden="true">·</span><a href="/sv/" hreflang="sv" lang="sv" title="Svenska">SV</a><span class="dot" aria-hidden="true">·</span><a href="/es/" hreflang="es" lang="es" title="Español">ES</a><span class="dot" aria-hidden="true">·</span><a href="/fr/" hreflang="fr" lang="fr" title="Français">FR</a><span class="dot" aria-hidden="true">·</span><a href="/vi/" hreflang="vi" lang="vi" title="Tiếng Việt">VI</a><span class="dot" aria-hidden="true">·</span><a href="/fi/" hreflang="fi" lang="fi" title="Suomi">FI</a><span class="dot" aria-hidden="true">·</span><a href="/th/" hreflang="th" lang="th" title="ไทย" aria-current="page">TH</a></div>
         <details class="lang-sm"><summary aria-label="ภาษา: ไทย">TH</summary><div class="lang-menu"><a href="/" hreflang="en" lang="en">English <span>EN</span></a><a href="/sv/" hreflang="sv" lang="sv">Svenska <span>SV</span></a><a href="/es/" hreflang="es" lang="es">Español <span>ES</span></a><a href="/fr/" hreflang="fr" lang="fr">Français <span>FR</span></a><a href="/vi/" hreflang="vi" lang="vi">Tiếng Việt <span>VI</span></a><a href="/fi/" hreflang="fi" lang="fi">Suomi <span>FI</span></a><a href="/th/" hreflang="th" lang="th" aria-current="page">ไทย <span>TH</span></a></div></details>
-        <a class="navpay" href="/pay" style="color:var(--accent);font-weight:500;margin-right:.75rem">Pay</a><a class="btn" href="#contact">ทักมาคุยกัน</a>
+        <a class="navpay" href="/pay" style="color:var(--accent);font-weight:500;margin-right:.75rem">Pay</a><a class="btn" href="#contact">ส่งลิงก์ประกาศที่พัก</a>
       </nav>
     </div>
   </header>
@@ -575,12 +604,13 @@
     <section class="hero">
       <div class="wrap">
         <div class="eyebrow">โดย Luis จากสวีเดน · วิดีโอและเพลงแต่งเอง</div>
-        <h1>บ้านของคุณ เด่นกลางฟีด</h1>
-        <p class="hero-lead" style="color:var(--ink);font-weight:400">ผมเปลี่ยนที่พักของคุณให้เป็นหนังสั้น พร้อมเพลงประจำบ้าน คุณได้ดูงานเสร็จก่อน ถ้าชอบ ค่อยรับไปในราคา $249</p>
+        <h1>ประกาศที่พักของคุณ ในรูปหนังสั้นพร้อมเพลงของตัวเอง</h1>
+        <p class="hero-lead" style="color:var(--ink);font-weight:400">ผมนำรูปถ่ายจริงของที่พักคุณมาทำเป็นวิดีโอสไตล์ภาพยนตร์ แล้วแต่งเพลงต้นฉบับเกี่ยวกับการเข้าพักที่นั่น คุณจะได้ทั้งเวอร์ชันแนวนอนและแนวตั้ง พร้อมใช้กับประกาศ เว็บไซต์ และโซเชียล</p>
+        <p class="hero-offer"><strong>$249 จ่ายครั้งเดียว</strong> ดูตัวอย่างฟรีก่อน คุณได้ดูวิดีโอฉบับสมบูรณ์ก่อนจ่ายเงินใดๆ</p>
         <div class="hero-actions" style="margin-bottom:.5rem">
-          <a class="btn book" href="#contact" data-msg="สวัสดี Luis อยากได้วิดีโอฟรีของที่พักเรา นี่คือลิงก์ประกาศ:">รับวิดีโอฟรีของที่พักคุณ</a>
+          <a class="btn book" href="#contact" data-msg="สวัสดี Luis อยากได้วิดีโอฟรีของที่พักเรา นี่คือลิงก์ประกาศ:">ส่งลิงก์ประกาศที่พักมาให้ผม</a>
         </div>
-        <p class="hero-lead" style="font-size:.95rem;margin-bottom:1.75rem">ส่งลิงก์ประกาศมาได้เลย ไม่ถูกใจ ไม่ต้องจ่ายสักบาท</p>
+        <p class="hero-note" id="ai-note"><strong>บอกกันตรงๆ:</strong> เพลงทำโดยใช้ AI ช่วย (Suno) และมาพร้อมสิทธิ์ใช้งานเชิงพาณิชย์แบบถาวรสำหรับโปรโมตที่พักของคุณ ใช้รูปจริงเท่านั้น ไม่มีห้องหรือสิ่งอำนวยความสะดวกที่แต่งขึ้นเอง</p>
         <p class="hero-lead">สำหรับ Airbnb, VRBO และบ้านพักให้เช่าระยะสั้นทุกแบบ ตั้งแต่ Marfa กับ Hill Country ในเท็กซัส ไปจนถึงห้องใต้ดินในโตรอนโต</p>
         <div class="work-media hero-film" data-yt="FLXkCJTmrgQ">
           <button type="button" class="yt-facade" aria-label="เล่น Elevated Listing - elevatedlisting.co">
@@ -667,7 +697,7 @@
             <div class="work-body">
               <div class="pill">Toronto</div>
               <h3>I got a basement in Toronto</h3>
-              <div class="work-meta">Ivan · ห้องใต้ดินส่วนตัวสุดอบอุ่น · มุมเกม Sega Rally</div>
+              <div class="work-meta">ห้องใต้ดินส่วนตัวสุดอบอุ่น · มุมเกม Sega Rally</div>
               <p>กลับบ้านผ่านซอยแคบๆ ค่อยๆ ก้าวลงบันไดทีละขั้น เช็กเอาต์สายแน่นอน</p>
               <div class="link-row">
                 <a href="https://www.youtube.com/watch?v=zf0wbonvAfI" target="_blank" rel="noopener">ดูบน YouTube ↗</a>
@@ -736,37 +766,20 @@
 
 
 
-<article class="work">
-            <div class="work-media" data-yt="dtyS5c5j9rI">
-              <button type="button" class="yt-facade" aria-label="เล่น ROAM Fredericksburg storyboard">
-                <img src="https://i.ytimg.com/vi/dtyS5c5j9rI/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="ROAM Fredericksburg storyboard – วิดีโอ" loading="lazy" decoding="async" />
-                <span class="yt-play" aria-hidden="true"></span>
-              </button>
-            </div>
-            <div class="work-body">
-              <div class="pill">Fredericksburg</div>
-              <h3>คอนเทนเนอร์สองตู้ · ROAM</h3>
-              <div class="work-meta">ROAM · 2:43 · สตอรีบอร์ด · เส้นทางไวน์ / 290</div>
-              <p>คอนเทนเนอร์สีดำสองตู้วางเคียงกัน สตอรีบอร์ดจัดจ้านที่ค่อยๆ ละลาย ไปกับเพลงคันทรีร็อกสายโร้ดทริป</p>
-              <div class="link-row">
-                <a href="https://www.youtube.com/watch?v=dtyS5c5j9rI" target="_blank" rel="noopener">ดูบน YouTube ↗</a>
-              </div>
-            </div>
-          </article>
-<p class="pkg-cue"><a href="#packages">อยากได้แบบนี้ให้ที่พักคุณบ้างไหม? ดูรายละเอียด →</a></p>
+
 
 
 <article class="work">
             <div class="work-media" data-yt="dwBMO4qtyFQ">
-              <button type="button" class="yt-facade" aria-label="เล่น Jamie East Austin bathhouse">
-                <img src="https://i.ytimg.com/vi/dwBMO4qtyFQ/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="Jamie East Austin bathhouse – วิดีโอ" loading="lazy" decoding="async" />
+              <button type="button" class="yt-facade" aria-label="เล่น East Austin bathhouse">
+                <img src="https://i.ytimg.com/vi/dwBMO4qtyFQ/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="East Austin bathhouse – วิดีโอ" loading="lazy" decoding="async" />
                 <span class="yt-play" aria-hidden="true"></span>
               </button>
             </div>
             <div class="work-body">
               <div class="pill">Austin</div>
               <h3>โรงอาบน้ำส่วนตัว · East Austin</h3>
-              <div class="work-meta">Jamie · ฉบับสั้น · ซาวน่าถังไม้และอ่างแช่ไม้ซีดาร์</div>
+              <div class="work-meta">ฉบับสั้น · ซาวน่าถังไม้และอ่างแช่ไม้ซีดาร์</div>
               <p>ไอน้ำกลิ่นไม้ซีดาร์ น้ำนิ่งๆ กับเพลงที่ชวนให้ชะลอชีวิตลง ฝั่งตะวันออกของไฮเวย์</p>
               <div class="link-row">
                 <a href="https://www.youtube.com/watch?v=dwBMO4qtyFQ" target="_blank" rel="noopener">ดูบน YouTube ↗</a>
@@ -802,7 +815,7 @@
             <div class="work-body">
               <div class="pill">Austin</div>
               <h3>คอนเทนเนอร์อาร์ตๆ ทั้งหลัง</h3>
-              <div class="work-meta">Lauren · 1:31 · หลุมกองไฟ ระเบียงไม้กว้างสุดๆ ถนนชนบทเงียบๆ</div>
+              <div class="work-meta">1:31 · หลุมกองไฟ ระเบียงไม้กว้างสุดๆ ถนนชนบทเงียบๆ</div>
               <p>ภาพวาดบนผนัง ไฟประดับเส้นยาว เพลงอินดี้โฟล์ก ระหว่างรอสีแห้งกลางแจ้ง</p>
               <div class="link-row">
                 <a href="https://www.youtube.com/watch?v=4Yon44P1Hyw" target="_blank" rel="noopener">ดูบน YouTube ↗</a>
@@ -822,7 +835,7 @@
             <div class="work-body">
               <div class="pill">San Antonio · Hill Country</div>
               <h3>กระท่อม Grantham House</h3>
-              <div class="work-meta">Paula · 1:28 · วิวส่วนตัว เหมาะกับคู่รัก</div>
+              <div class="work-meta">1:28 · วิวส่วนตัว เหมาะกับคู่รัก</div>
               <p>แสงเย็นบนระเบียงไม้ใน Hill Country ไอร้อนจากอ่างน้ำอุ่น เพลงบัลลาดที่แต่งไว้สำหรับสองคน</p>
               <div class="link-row">
                 <a href="https://www.youtube.com/watch?v=Sy5VvSOGdHk" target="_blank" rel="noopener">ดูบน YouTube ↗</a>
@@ -936,11 +949,11 @@
           <li class="jstep reveal"><span class="jicon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M14 34 L27 46 L50 18"/></svg></span><span class="jnum" aria-hidden="true">2</span>
             <h3>ตอบตกลง</h3><p>แค่ตอบอีเมลผมกลับมา พิมพ์สั้นๆ ว่า “โอเค” ก็พอ</p></li>
           <li class="jstep reveal"><span class="jicon" aria-hidden="true"><svg viewBox="0 0 64 64"><rect x="10" y="20" width="44" height="28" rx="5"/><circle cx="32" cy="34" r="6"/></svg></span><span class="jnum" aria-hidden="true">3</span>
-            <h3>$249 จ่ายครั้งเดียวจบ</h3><p>ผมส่งใบแจ้งหนี้ทางอีเมล จ่ายผ่าน PayPal (Goods and Services ไปที่ sisyfosforever@gmail.com) คริปโต (USDC บน Base หรือ USDT บน Arbitrum) หรือ Western Union ก็ได้ ไม่มีรายเดือน ไม่มีค่าใช้จ่ายแอบแฝงทีหลัง ขั้นตอนที่ <a href="/pay">elevatedlisting.co/pay</a></p></li>
+            <h3>$249 จ่ายครั้งเดียวจบ</h3><p>ผมส่งใบแจ้งหนี้ทางอีเมล จ่ายด้วยบัตรหรือ PayPal เข้าบัญชี PayPal Business ชื่อ <strong>Elevated Listing</strong> ของผม (sisyfosforever@gmail.com เลือก Goods and Services) หรือคริปโต (USDC บน Base หรือ USDT บน Arbitrum) ไม่มีสมัครสมาชิก ไม่มีค่าใช้จ่ายเพิ่มภายหลัง ดูขั้นตอนที่ <a href="/pay">elevatedlisting.co/pay</a></p></li>
           <li class="jstep reveal"><span class="jicon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M10 22 L32 36 L54 22"/><rect x="10" y="18" width="44" height="30" rx="4"/></svg></span><span class="jnum" aria-hidden="true">4</span>
             <h3>ได้วิดีโอภายใน 48 ชั่วโมง</h3><p>ภายใน 48 ชั่วโมงหลังผมได้รับเงิน คุณจะได้วิดีโอ Full HD ไม่มีลายน้ำ เวอร์ชันแนวตั้งสำหรับ Reels และเพลงไฟล์ MP3 อยากแก้นิดหน่อย? แก้ได้หนึ่งรอบ ไม่มีค่าใช้จ่ายเพิ่ม</p></li>
           <li class="jstep reveal"><span class="jicon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M32 50 C14 38 10 28 18 20 C24 14 30 18 32 23 C34 18 40 14 46 20 C54 28 50 38 32 50 Z"/></svg></span><span class="jnum" aria-hidden="true">5</span>
-            <h3>แชร์ได้ทุกที่</h3><p>ใส่ในประกาศ เว็บไซต์ โซเชียล OTA ที่รับวิดีโอ โฆษณา และสื่อพิมพ์ หลังชำระเงิน วิดีโอเป็นของคุณ ส่วนเพลงได้สิทธิ์ใช้เชิงพาณิชย์ถาวรสำหรับที่พักของคุณ</p><p class="jwink">Forever ever? Forever ever. Yes, Miss Jackson.</p></li>
+            <h3>แชร์ได้ทุกที่</h3><p>ใส่ในประกาศ เว็บไซต์ โซเชียล OTA ที่รับวิดีโอ โฆษณา และสื่อพิมพ์ หลังชำระเงิน วิดีโอเป็นของคุณ ส่วนเพลงได้สิทธิ์ใช้เชิงพาณิชย์ถาวรสำหรับที่พักของคุณ</p></li>
           </ol>
         </div>
         <p class="jnote">มีคำถาม? ทักมาได้เลย คนจริงๆ ตอบเอง ก็ผมนี่แหละ Luis</p>
@@ -974,7 +987,8 @@
 <section id="packages">
       <div class="wrap">
         <div class="pill">ราคา</div>
-        <h2 class="section-title" style="margin-bottom:1.5rem">วิดีโอ + เพลง สิทธิ์ใช้งานเชิงพาณิชย์เต็มรูปแบบ</h2>
+        <h2 class="section-title" style="margin-bottom:.75rem">วิดีโอ + เพลง สิทธิ์ใช้งานเชิงพาณิชย์เต็มรูปแบบ</h2>
+        <p class="section-sub" style="margin-bottom:1.5rem"><strong>ดูตัวอย่างฟรีก่อน:</strong> คุณได้ดูวิดีโอฉบับสมบูรณ์ก่อนจ่ายเงินใดๆ หลังชำระเงิน วิดีโอเป็นของคุณ และเพลงมาพร้อม<strong>สิทธิ์ใช้งานเชิงพาณิชย์แบบถาวร</strong>สำหรับโปรโมตที่พักของคุณ</p>
         <div class="tiers">
           <div class="offer tier featured">
             <h3>Standard</h3>
@@ -986,7 +1000,7 @@
               <li>ปรับแก้เล็กน้อยหนึ่งรอบ</li>
               <li>ส่งมอบภายใน 48 ชั่วโมงหลังชำระเงิน</li>
             </ul>
-            <a class="btn book" href="#contact" data-msg="อยากได้ Standard $249 (วิดีโอ + เพลง สิทธิ์ใช้งานเชิงพาณิชย์เต็มรูปแบบ) นี่คือลิงก์ประกาศ:">จอง Standard $249</a>
+            <a class="btn book" href="#contact" data-msg="อยากได้ Standard $249 (วิดีโอ + เพลง สิทธิ์ใช้งานเชิงพาณิชย์เต็มรูปแบบ) นี่คือลิงก์ประกาศ:">ส่งลิงก์ประกาศที่พัก</a>
           </div>
           <div class="offer tier">
             <h3>Elevated</h3>
@@ -1000,7 +1014,7 @@
               <li>สิทธิ์ใช้งานเชิงพาณิชย์เต็มรูปแบบสำหรับวิดีโอ + เพลงเช่นกัน</li>
               <li>ส่งมอบภายใน 48 ชั่วโมงหลังชำระเงิน</li>
             </ul>
-            <a class="btn book" href="#contact" data-msg="อยากได้ Elevated $499 (วิดีโอสูงสุด 3 นาที คลิปสั้น 15 + 30 วินาที แก้ไข 3 รอบ เพลงเวอร์ชันทางเลือก)">จอง Elevated $499</a>
+            <a class="btn book" href="#contact" data-msg="อยากได้ Elevated $499 (วิดีโอสูงสุด 3 นาที คลิปสั้น 15 + 30 วินาที แก้ไข 3 รอบ เพลงเวอร์ชันทางเลือก)">ส่งลิงก์ประกาศที่พัก</a>
           </div>
           <div class="offer tier">
             <h3>Maximus</h3>
@@ -1010,10 +1024,10 @@
               <li>หลายที่พักหรืองานสั่งทำ</li>
               <li>ราคาและเวลาหลังคุยกัน</li>
             </ul>
-            <a class="btn book" href="#contact" data-msg="Maximus / สั่งทำ — คุยขอบเขตงานกัน">คุยกัน</a>
+            <a class="btn book" href="#contact" data-msg="Maximus / สั่งทำ — คุยขอบเขตงานกัน">ส่งลิงก์ประกาศที่พัก</a>
           </div>
         </div>
-        <p class="avail" style="margin-top:1rem">รับงานใหม่แค่สัปดาห์ละ 3 ชิ้น</p>
+        <ul class="trustrow" aria-label="Elevated Listing"><li>ดูตัวอย่างฟรีก่อนจ่าย</li><li>ส่งมอบภายใน 48 ชั่วโมงหลังชำระเงิน</li><li>ชำระเงินปลอดภัยผ่าน PayPal: บัตรหรือยอดเงิน PayPal</li><li>คุยกับคนจริง: ผมเอง Luis</li></ul>
         <div class="paynote">
           <h3>ดูก่อน จ่ายทีหลัง</h3>
           <p>ผมทำวิดีโอเสร็จแล้วส่งให้คุณดูแบบมีลายน้ำ เห็นแบบไหน ได้แบบนั้น ถ้าชอบ ตอบตกลงแล้วจ่าย — Standard $249 หรือ Elevated $499 ถ้าอยากได้วิดีโอยาวสูงสุด 3 นาที คลิปสั้น 15 และ 30 วินาที แก้ไขได้ 3 รอบ และเพลงเวอร์ชันทางเลือก ถ้าไม่ชอบ ไม่ต้องจ่าย วิดีโอจะไม่เปิดสาธารณะ และผมจะไม่เอาไปโปรโมตที่พักของคุณ</p>
@@ -1021,10 +1035,39 @@
           <p>พอชำระเงินแล้ว วิดีโอจบเป็นของคุณ Luis โอนสิทธิ์ทั้งหมดที่เขามีในวิดีโอ การตัดต่อ และเนื้อเพลงที่เขาเขียนให้คุณ เพลงทำด้วย Suno แผนเสียเงิน Pro หรือ Premier และไฟล์ที่คุณได้รับเป็นไฟล์ดาวน์โหลดอย่างเป็นทางการจาก Suno ไม่เคยใช้รีมิกซ์จากเพลงของผู้ใช้อื่น ตามข้อกำหนดของ Suno (มีผล 3 ก.ย. 2026) คุณได้สิทธิ์ทั้งหมดที่ Luis มีในเพลง พร้อมสิทธิ์ใช้เชิงพาณิชย์ถาวร ทั่วโลก ไม่มีค่าลิขสิทธิ์ เพื่อโปรโมตที่พัก (เว็บไซต์ โซเชียล OTA ที่รับวิดีโอ โฆษณา สื่อพิมพ์) โดยไม่มีค่าใช้จ่ายเพิ่ม เพราะเพลงสร้างด้วย AI จึงไม่มีใครรับประกันได้ว่ามีลิขสิทธิ์ในเพลง หรือไม่มีเพลงคล้ายกันที่อื่น และแต่ละแพลตฟอร์มมีกฎของตัวเองสำหรับเพลง AI ผมอาจลงพอร์ตโฟลิโอ ถ้าไม่สะดวกบอกได้ รายละเอียดใน<a href="/terms" style="color:var(--accent)">ข้อตกลง</a> (ภาษาอังกฤษ)</p>
           <div class="paycallout">
           <h3>วิธีชำระเงิน</h3>
-          <p>พอคุณตอบตกลง ผมจะส่งใบแจ้งหนี้ทางอีเมล จ่ายผ่าน PayPal ไปที่ <strong>sisyfosforever@gmail.com</strong> แบบ <strong>Goods and Services</strong> หรือคริปโต (USDC บน Base หรือ USDT บน Arbitrum) หรือ Western Union ขั้นตอนที่ <a href="/pay">elevatedlisting.co/pay</a> นับ 48 ชั่วโมงตั้งแต่ผมได้รับเงิน และผมจะอีเมลแจ้งทันทีที่เงินเข้า</p>
-          <p style="margin:.6rem 0 0"><img src="/img/western-union.svg" alt="Western Union" height="28" style="background:#fff;border-radius:6px;padding:6px 10px;vertical-align:middle"></p>
+          <p>พอคุณตอบตกลง ผมจะส่งใบแจ้งหนี้ทางอีเมล <strong>แนะนำ: บัตรหรือ PayPal</strong> จ่ายด้วยบัตรผ่าน PayPal หรือจากยอดเงินใน PayPal เข้าบัญชี PayPal Business ชื่อ <strong>Elevated Listing</strong> ของผม (sisyfosforever@gmail.com) โดยเลือก <strong>Goods and Services</strong> (ไม่ใช่ Friends and Family) เพื่อให้คุณได้รับการคุ้มครองผู้ซื้อของ PayPal หรือจะจ่ายด้วยคริปโต (USDC บน Base หรือ USDT บน Arbitrum) ก็ได้ ดูขั้นตอนที่ <a href="/pay">elevatedlisting.co/pay</a> นับ 48 ชั่วโมงตั้งแต่เงินถึงผม และผมจะอีเมลแจ้งคุณ</p>
+          <p class="pp-secure"><svg class="lock" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 10.5V7.8a3.5 3.5 0 0 1 7 0v2.7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="ppword" role="img" aria-label="PayPal"><b>Pay</b><b>Pal</b></span><span class="t">ชำระเงินปลอดภัยผ่าน PayPal จ่ายด้วยบัตรหรือยอดเงินใน PayPal ก็ได้ ข้อมูลบัตรของคุณอยู่กับ PayPal ผมไม่เคยเห็นเลย ชื่อผู้รับที่แสดงใน PayPal คือ <strong>Elevated Listing</strong> ซึ่งเป็นบัญชี PayPal Business ของผม</span></p>
           <p class="small">ใหม่กับคริปโต? เจ้าของที่พักส่วนใหญ่ซื้อ USDC ได้ในไม่กี่นาทีผ่าน Coinbase, Kraken หรือที่คล้ายกัน ผมยินดีพาทีละขั้น จ่ายหลังดูวิดีโอและตอบตกลงเท่านั้น</p>
+          <p class="small small-wu">ถ้าทั้งสองวิธีไม่สะดวก ใช้ Western Union ได้เป็นทางเลือกสุดท้าย ดูที่ <a href="/pay">/pay</a></p>
           </div>
+        </div>
+
+        <div class="faq" id="faq">
+          <h3>คำถามที่เจ้าของที่พักถามบ่อย</h3>
+          <details>
+            <summary>ใช้วิดีโอได้ที่ไหนบ้าง?</summary>
+            <p>ทุกที่ที่คุณโปรโมตที่พัก: เว็บไซต์ของคุณเอง Instagram TikTok Facebook YouTube โฆษณาและสิ่งพิมพ์ รวมถึงแพลตฟอร์มจองที่พักที่รองรับวิดีโอ Airbnb รองรับวิดีโอในประกาศได้จำกัด จึงควรเช็กว่าแพลตฟอร์มของคุณรับอะไรได้บ้าง เวอร์ชันแนวตั้งทำมาสำหรับ Reels และ Stories</p>
+          </details>
+          <details>
+            <summary>เพลงทำด้วย AI ใช่ไหม?</summary>
+            <p>ใช่ เพลงทำโดยใช้ AI ช่วย ด้วย Suno แพ็กเกจแบบเสียเงิน Pro หรือ Premier และแต่งขึ้นเกี่ยวกับที่พักของคุณ คุณได้สิทธิ์ใช้งานแบบถาวร ทั่วโลก และไม่มีค่าลิขสิทธิ์ เพื่อใช้เชิงพาณิชย์ในการโปรโมตที่พัก เนื่องจากเพลงสร้างโดย AI จึงไม่มีใครรับประกันได้ว่าเพลงจะมีลิขสิทธิ์ และแต่ละแพลตฟอร์มมีกฎของตัวเองสำหรับเพลง AI ดูรายละเอียดใน<a href="/terms" style="color:var(--accent)">ข้อกำหนด</a></p>
+          </details>
+          <details>
+            <summary>ดูตัวอย่างฟรีทำงานอย่างไร?</summary>
+            <p>ส่งลิงก์ประกาศที่พักมาให้ผม ผมจะทำวิดีโอจากรูปจริงในประกาศของคุณและส่งให้คุณแบบมีลายน้ำ สิ่งที่คุณเห็นคือวิดีโอจริง ถ้าชอบ ตอบตกลงแล้วผมจะส่งใบแจ้งหนี้ ถ้าไม่ชอบ คุณไม่ต้องจ่ายอะไร วิดีโอจะไม่เปิดเป็นสาธารณะ และผมจะไม่ใช้มันเพื่อขายที่พักของคุณ</p>
+          </details>
+          <details>
+            <summary>ขอแก้ไขได้ไหม?</summary>
+            <p>Standard รวมการปรับเล็กน้อยหนึ่งรอบ: รายการแก้ไขหนึ่งชุดในอีเมลฉบับเดียว เช่น จังหวะ ลำดับหรือการเลือกรูป หรือข้อความบนจอ ส่วน Elevated รวมการแก้ไขสามรอบ แนวคิดใหม่หรือเพลงใหม่ไม่รวมอยู่ในแพ็กเกจ แต่ตกลงกันแยกได้</p>
+          </details>
+          <details>
+            <summary>คืนเงินได้ไหม?</summary>
+            <p>เพราะคุณได้ดูวิดีโอก่อนจ่ายเงิน จึงไม่คืนเงินหลังส่งมอบวิดีโอแล้ว หากผมส่งมอบไม่ทันภายใน 48 ชั่วโมงหลังได้รับและยืนยันการชำระเงิน คุณจะได้รับเงินคืนเต็มจำนวน ดู<a href="/refund" style="color:var(--accent)">นโยบายการคืนเงิน</a></p>
+          </details>
+          <details>
+            <summary>จ่ายเงินอย่างไร?</summary>
+            <p>พอคุณตอบตกลง ผมจะส่งใบแจ้งหนี้ทางอีเมล แนะนำบัตรหรือ PayPal (Goods and Services เข้าบัญชี PayPal Business ชื่อ Elevated Listing) และคริปโต (USDC บน Base หรือ USDT บน Arbitrum) ก็ใช้ได้ ส่งมอบภายใน 48 ชั่วโมงหลังเงินถึงผม ดูขั้นตอนที่ <a href="/pay" style="color:var(--accent)">elevatedlisting.co/pay</a></p>
+          </details>
         </div>
       </div>
     </section>
@@ -1084,7 +1127,7 @@
                 <label for="c-message">ข้อความ</label>
                 <textarea id="c-message" name="message" required placeholder="ที่พักของคุณเป็นแบบไหน และอยากให้แขกรู้สึกยังไง?"></textarea>
               </div>
-              <button class="btn" type="submit">ส่งข้อความ</button>
+              <button class="btn" type="submit">ส่งลิงก์ประกาศที่พักมาให้ผม</button>
               <p class="note">ข้อความจะส่งตรงเข้ากล่องจดหมาย Elevated Listing หรืออีเมลมาที่ <a href="mailto:luis@elevatedlisting.co" style="color:var(--accent)">luis@elevatedlisting.co</a>.</p>
             </div>
             <p class="thanks">ได้รับแล้วครับ! เดี๋ยวผมตอบกลับจาก luis@elevatedlisting.co</p>
@@ -1105,6 +1148,7 @@
           <p class="section-sub" style="margin-bottom:1rem">
             คนทำหนังและแต่งเพลง Elevated Listing คือที่ที่ผมเอางานฝีมือนี้ไปใช้กับที่พักที่มีคาแรกเตอร์ ไม่หว่านส่งทีละเยอะๆ ไม่ใช้เทมเพลตเซฟๆ ถ้าที่พักของคุณมีจิตวิญญาณ ผมอยากให้วิดีโอเปิดประตูในจินตนาการของใครสักคน ที่เหลือให้เขาไปต่อเอง
           </p>
+          <p class="about-cred">ก่อนจะมาทำ Elevated Listing ผมเป็นครีเอทีฟไดเรกเตอร์ในวงการโฆษณามาราว 20 ปี</p>
           <div class="link-row">
             <a href="https://www.youtube.com/@LuisfromSweden" target="_blank" rel="noopener">YouTube @LuisfromSweden</a>
             <a href="https://www.instagram.com/luisfromsweden/" target="_blank" rel="noopener">Instagram @luisfromsweden</a>
@@ -1129,7 +1173,7 @@
 
   <footer>
     <div class="wrap row">
-      <div>© <span id="y"></span> Elevated Listing · Mats Ludvig Lindberg (Luis from Sweden)</div>
+      <div class="foot-brand"><a class="foot-logo" href="/th/"><img src="/img/logo-mark.svg" alt="" width="34" height="34" /><span>Elevated <em>Listing</em></span></a><div class="foot-tag">วิดีโอที่พักของคุณ พร้อมเพลงประจำบ้าน</div><div>© <span id="y"></span> Elevated Listing · Mats Ludvig Lindberg (Luis from Sweden)</div></div>
       <div class="legal-links">
         <a href="/terms" hreflang="en">ข้อตกลง</a>
         <span class="sep">·</span>
@@ -1139,6 +1183,7 @@
       </div>
     <div class="contact-block">
         <p><strong>ติดต่อ</strong> · <a href="mailto:luis@elevatedlisting.co">luis@elevatedlisting.co</a></p>
+        <p><strong>การชำระเงิน</strong> · PayPal (บัญชี Business: Elevated Listing) · คริปโต (USDC / USDT) · Western Union · <a href="/pay">วิธีชำระเงิน</a></p>
         <p><strong>ยกเลิกการรับอีเมล:</strong> ได้รับอีเมลเสนอขายจากผมและไม่ต้องการอีก? ตอบกลับว่า <strong>STOP</strong> หรืออีเมลไปที่ <a href="mailto:luis@elevatedlisting.co?subject=STOP">luis@elevatedlisting.co</a> หัวข้อ STOP แล้วผมจะไม่ติดต่ออีก อีเมลเสนอขายทุกฉบับมีช่องทางยกเลิกนี้</p>
       </div>
     </div>
@@ -1238,5 +1283,6 @@ document.addEventListener('click',function(e){document.querySelectorAll('.lang-s
 document.addEventListener('keydown',function(e){if(e.key==='Escape')document.querySelectorAll('.lang-sm[open]').forEach(function(d){d.removeAttribute('open');d.querySelector('summary').focus();});});
 document.querySelectorAll('.lang a[hreflang],.lang-menu a[hreflang]').forEach(function(a){a.addEventListener('click',function(){var c=a.getAttribute('hreflang');try{localStorage.setItem('el_lang',c)}catch(e){}document.cookie='el_lang='+c+';path=/;max-age=31536000;SameSite=Lax';});});
 </script>
+<!-- el-brand-1027 -->
 </body>
 </html>

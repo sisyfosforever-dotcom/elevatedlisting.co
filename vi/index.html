@@ -35,7 +35,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Elevated Listing", "url": "https://elevatedlisting.co/", "image": "https://elevatedlisting.co/og.jpg", "logo": "https://elevatedlisting.co/apple-touch-icon.png", "email": "luis@elevatedlisting.co", "founder": {"@type": "Person", "name": "Mats Ludvig Lindberg", "alternateName": ["Luis Lindberg", "Luis from Sweden"]}, "description": "Handmade listing films for short-term and vacation rentals, cut to a song or set to an original one.", "makesOffer": [{"@type": "Offer", "name": "Listing film and song", "price": "249", "priceCurrency": "USD", "description": "One full-HD horizontal film, one vertical Reels version, the song as an MP3, one round of tweaks, delivered within 48 hours of payment. Paid only if you love it."}]}
+  {"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Elevated Listing", "url": "https://elevatedlisting.co/", "image": "https://elevatedlisting.co/og.jpg", "logo": "https://elevatedlisting.co/img/logo-512.png", "email": "luis@elevatedlisting.co", "founder": {"@type": "Person", "name": "Mats Ludvig Lindberg", "alternateName": ["Luis Lindberg", "Luis from Sweden"]}, "description": "Handmade listing films for short-term and vacation rentals, cut to a song or set to an original one.", "makesOffer": [{"@type": "Offer", "name": "Listing film and song", "price": "249", "priceCurrency": "USD", "description": "One full-HD horizontal film, one vertical Reels version, the song as an MP3, one round of tweaks, delivered within 48 hours of payment. Paid only if you love it."}]}
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -423,6 +423,13 @@
     .paycallout { margin:1rem 0; padding:1rem 1.25rem; border:1px solid var(--accent); border-left-width:4px; border-radius:var(--radius); background:rgba(196,165,116,.08); }
     .paycallout h3 { color:var(--accent); }
     .paycallout p { color:var(--ink); }
+    .hero-note { margin:.25rem 0 1.25rem; max-width:40rem; font-size:.92rem; font-weight:300; color:var(--mute); border-left:2px solid var(--accent); padding-left:.8rem; }
+    .hero-note strong { color:var(--ink); font-weight:500; }
+    .faq { margin-top:2rem; max-width:44rem; }
+    .faq details { border:1px solid var(--line); border-radius:var(--radius); background:var(--card); padding:.9rem 1.25rem; margin:.6rem 0; }
+    .faq summary { cursor:pointer; font-weight:500; color:var(--ink); }
+    .faq details p { margin:.6rem 0 0; font-weight:300; }
+    .paynote .small-wu { font-size:.85rem; color:var(--mute); }
     .avail { color:var(--accent); font-weight:500; letter-spacing:.02em; margin:.25rem 0 0; }
     .paynote .small { font-size:.9rem; margin:.75rem 0 0; }
     @media (max-width: 800px) { .tiers { grid-template-columns:1fr; } }
@@ -549,12 +556,34 @@
     @media (max-width:600px){.nav-links{gap:.6rem}.nav-links .btn{padding:.62rem .95rem;font-size:.86rem}}
     @media (max-width:360px){.logo{font-size:1.02rem}}
     h1,h2,h3,.section-title{line-height:1.25}
+    /* brand + trust (2026-10-27) */
+    .logo { display:inline-flex; align-items:center; gap:.55rem; }
+    .logo-mark { width:28px; height:28px; flex:none; display:block; }
+    .ppword { display:inline-block; background:#fff; border-radius:6px; padding:.18rem .5rem; font-family:Verdana,"DejaVu Sans",Arial,sans-serif; font-weight:700; font-style:italic; font-size:.92rem; letter-spacing:-.02em; line-height:1.25; vertical-align:middle; white-space:nowrap; }
+    .ppword b:first-child { color:#003087; } .ppword b + b { color:#009cde; }
+    .pp-secure { display:flex; gap:.6rem .8rem; align-items:center; flex-wrap:wrap; margin:.9rem 0 .4rem; padding:.75rem 1rem; background:rgba(243,239,230,.04); border:1px solid var(--line); border-radius:12px; font-size:.9rem; color:var(--ink); line-height:1.5; }
+    .pp-secure .lock { color:var(--accent); flex:none; }
+    .pp-secure span.t { flex:1 1 16rem; }
+    .trustrow { list-style:none; display:grid; grid-template-columns:repeat(auto-fit,minmax(13rem,1fr)); gap:.6rem 1.5rem; margin:1.5rem 0 0; padding:1rem 1.25rem; border:1px solid var(--line); border-radius:var(--radius); background:rgba(243,239,230,.03); font-size:.9rem; color:var(--ink); }
+    .trustrow li { display:flex; align-items:center; gap:.55rem; margin:0; }
+    .trustrow li::before { content:""; width:1rem; height:1rem; flex:none; background:no-repeat center/contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='7.25' fill='none' stroke='%23c4a574' stroke-width='1.3'/%3E%3Cpath d='M4.8 8.3l2.1 2.1 4.3-4.6' fill='none' stroke='%23c4a574' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); }
+    .about-cred { margin:0 0 1.25rem; padding-left:.8rem; border-left:2px solid var(--accent); color:var(--ink); font-weight:300; max-width:40rem; }
+    .about-cred strong { font-weight:500; }
+    footer .foot-brand { display:flex; flex-direction:column; gap:.45rem; }
+    footer .foot-logo { display:inline-flex; align-items:center; gap:.6rem; text-decoration:none; color:var(--ink); font-family:Fraunces,Georgia,serif; font-size:1.2rem; font-weight:600; letter-spacing:.02em; }
+    footer .foot-logo img { width:34px; height:34px; display:block; }
+    footer .foot-logo em { font-style:normal; color:var(--accent); font-weight:500; }
+    footer .foot-tag { color:var(--mute); font-size:.85rem; }
+    .logo .logo-text { display:block; color:inherit; font-weight:inherit; }
+    .logo .logo-text span { color:var(--accent); font-weight:500; }
+    @media (max-width:600px) { .logo { gap:.45rem; } .logo-mark { width:24px; height:24px; } .logo-text { line-height:1.12; } .nav-links .navpay { margin-right:0 !important; } }
+    @media (max-width:389px) { .logo-mark { display:none; } }
   </style>
 </head>
 <body>
   <header>
     <div class="wrap nav">
-      <a href="/vi/" class="logo" aria-label="Elevated Listing, trang chủ" style="text-decoration:none;color:inherit" onclick="if(location.pathname==='/vi/'||location.pathname==='/vi/index.html'){window.scrollTo({top:0,behavior:'smooth'});history.replaceState(null,'','/vi/');return false;}">Elevated <span>Listing</span></a>
+      <a href="/vi/" class="logo" aria-label="Elevated Listing, trang chủ" style="text-decoration:none;color:inherit" onclick="if(location.pathname==='/vi/'||location.pathname==='/vi/index.html'){window.scrollTo({top:0,behavior:'smooth'});history.replaceState(null,'','/vi/');return false;}"><img class="logo-mark" src="/img/logo-mark.svg" alt="" width="28" height="28" /><span class="logo-text">Elevated <span>Listing</span></span></a>
       <nav class="nav-links">
         <a class="hide-sm" href="#mind">Ý tưởng</a>
         <a class="hide-sm" href="#work">Phim</a>
@@ -563,7 +592,7 @@
         <a class="hide-sm" href="#contact">Liên hệ</a>
         <div class="lang" role="navigation" aria-label="Ngôn ngữ"><a href="/" hreflang="en" lang="en" title="English">EN</a><span class="dot" aria-hidden="true">·</span><a href="/sv/" hreflang="sv" lang="sv" title="Svenska">SV</a><span class="dot" aria-hidden="true">·</span><a href="/es/" hreflang="es" lang="es" title="Español">ES</a><span class="dot" aria-hidden="true">·</span><a href="/fr/" hreflang="fr" lang="fr" title="Français">FR</a><span class="dot" aria-hidden="true">·</span><a href="/vi/" hreflang="vi" lang="vi" title="Tiếng Việt" aria-current="page">VI</a><span class="dot" aria-hidden="true">·</span><a href="/fi/" hreflang="fi" lang="fi" title="Suomi">FI</a><span class="dot" aria-hidden="true">·</span><a href="/th/" hreflang="th" lang="th" title="ไทย">TH</a></div>
         <details class="lang-sm"><summary aria-label="Ngôn ngữ: Tiếng Việt">VI</summary><div class="lang-menu"><a href="/" hreflang="en" lang="en">English <span>EN</span></a><a href="/sv/" hreflang="sv" lang="sv">Svenska <span>SV</span></a><a href="/es/" hreflang="es" lang="es">Español <span>ES</span></a><a href="/fr/" hreflang="fr" lang="fr">Français <span>FR</span></a><a href="/vi/" hreflang="vi" lang="vi" aria-current="page">Tiếng Việt <span>VI</span></a><a href="/fi/" hreflang="fi" lang="fi">Suomi <span>FI</span></a><a href="/th/" hreflang="th" lang="th">ไทย <span>TH</span></a></div></details>
-        <a class="navpay" href="/pay" style="color:var(--accent);font-weight:500;margin-right:.75rem">Pay</a><a class="btn" href="#contact">Nhắn mình</a>
+        <a class="navpay" href="/pay" style="color:var(--accent);font-weight:500;margin-right:.75rem">Pay</a><a class="btn" href="#contact">Gửi link bài đăng của bạn</a>
       </nav>
     </div>
   </header>
@@ -573,12 +602,13 @@
     <section class="hero">
       <div class="wrap">
         <div class="eyebrow">Luis từ Thụy Điển · Phim & nhạc tự sáng tác</div>
-        <h1>Căn nhà của bạn, ngay giữa newsfeed.</h1>
-        <p class="hero-lead" style="color:var(--ink);font-weight:400">Mình biến chỗ ở của bạn thành một phim ngắn có bài hát riêng. Bạn xem bản hoàn chỉnh trước. Ưng thì lấy, giá $249.</p>
+        <h1>Chỗ ở của bạn, thành một phim ngắn với bài hát riêng.</h1>
+        <p class="hero-lead" style="color:var(--ink);font-weight:400">Mình lấy chính những tấm ảnh thật của chỗ ở và dựng thành một phim ngắn đậm chất điện ảnh, rồi viết một bài hát riêng về kỳ nghỉ ở đó. Bạn nhận cả bản ngang và bản dọc, sẵn sàng cho trang cho thuê, website và mạng xã hội.</p>
+        <p class="hero-offer"><strong>$249, trả một lần.</strong> Xem trước miễn phí: bạn xem phim hoàn chỉnh trước khi trả bất cứ khoản nào.</p>
         <div class="hero-actions" style="margin-bottom:.5rem">
-          <a class="btn book" href="#contact" data-msg="Chào Luis! Mình muốn nhận một phim miễn phí cho chỗ ở của mình. Đây là link bài đăng:">Nhận phim miễn phí cho chỗ của bạn</a>
+          <a class="btn book" href="#contact" data-msg="Chào Luis! Mình muốn nhận một phim miễn phí cho chỗ ở của mình. Đây là link bài đăng:">Gửi mình link bài đăng của bạn</a>
         </div>
-        <p class="hero-lead" style="font-size:.95rem;margin-bottom:1.75rem">Gửi mình link bài đăng. Không ưng thì không mất đồng nào.</p>
+        <p class="hero-note" id="ai-note"><strong>Nói thật với bạn:</strong> bài hát được làm với sự hỗ trợ của AI (Suno) và đi kèm giấy phép thương mại vĩnh viễn để quảng bá chỗ ở của bạn. Chỉ dùng ảnh thật. Không bịa thêm phòng hay tiện nghi.</p>
         <p class="hero-lead">Dành cho Airbnb, VRBO, homestay và nhà cho thuê ngắn ngày, từ Marfa, vùng Hill Country ở Texas cho tới một căn tầng hầm ở Toronto.</p>
         <div class="work-media hero-film" data-yt="FLXkCJTmrgQ">
           <button type="button" class="yt-facade" aria-label="Phát Elevated Listing - elevatedlisting.co">
@@ -665,7 +695,7 @@
             <div class="work-body">
               <div class="pill">Toronto</div>
               <h3>I got a basement in Toronto</h3>
-              <div class="work-meta">Ivan · Tầng hầm riêng ấm cúng · Góc chơi Sega Rally</div>
+              <div class="work-meta">Tầng hầm riêng ấm cúng · Góc chơi Sega Rally</div>
               <p>Về nhà qua con hẻm nhỏ, rón rén bước xuống mấy bậc thang. Chắc là trả phòng trễ rồi.</p>
               <div class="link-row">
                 <a href="https://www.youtube.com/watch?v=zf0wbonvAfI" target="_blank" rel="noopener">Xem trên YouTube ↗</a>
@@ -734,37 +764,20 @@
 
 
 
-<article class="work">
-            <div class="work-media" data-yt="dtyS5c5j9rI">
-              <button type="button" class="yt-facade" aria-label="Phát ROAM Fredericksburg storyboard">
-                <img src="https://i.ytimg.com/vi/dtyS5c5j9rI/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="ROAM Fredericksburg storyboard – phim" loading="lazy" decoding="async" />
-                <span class="yt-play" aria-hidden="true"></span>
-              </button>
-            </div>
-            <div class="work-body">
-              <div class="pill">Fredericksburg</div>
-              <h3>Hai container · ROAM</h3>
-              <div class="work-meta">ROAM · 2:43 · Storyboard · Cung đường rượu vang / 290</div>
-              <p>Hai container đen nằm cạnh nhau. Một storyboard táo bạo tan chảy theo giai điệu country-rock của những cung đường dài.</p>
-              <div class="link-row">
-                <a href="https://www.youtube.com/watch?v=dtyS5c5j9rI" target="_blank" rel="noopener">Xem trên YouTube ↗</a>
-              </div>
-            </div>
-          </article>
-<p class="pkg-cue"><a href="#packages">Muốn có một phim như vậy cho chỗ của bạn? Xem gói dịch vụ →</a></p>
+
 
 
 <article class="work">
             <div class="work-media" data-yt="dwBMO4qtyFQ">
-              <button type="button" class="yt-facade" aria-label="Phát Jamie East Austin bathhouse">
-                <img src="https://i.ytimg.com/vi/dwBMO4qtyFQ/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="Jamie East Austin bathhouse – phim" loading="lazy" decoding="async" />
+              <button type="button" class="yt-facade" aria-label="Phát East Austin bathhouse">
+                <img src="https://i.ytimg.com/vi/dwBMO4qtyFQ/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="East Austin bathhouse – phim" loading="lazy" decoding="async" />
                 <span class="yt-play" aria-hidden="true"></span>
               </button>
             </div>
             <div class="work-body">
               <div class="pill">Austin</div>
               <h3>Nhà tắm riêng · East Austin</h3>
-              <div class="work-meta">Jamie · Bản ngắn · Xông hơi thùng gỗ & bồn ngâm gỗ tuyết tùng</div>
+              <div class="work-meta">Bản ngắn · Xông hơi thùng gỗ & bồn ngâm gỗ tuyết tùng</div>
               <p>Hơi gỗ tuyết tùng, mặt nước lặng, một bài hát về chuyện sống chậm lại ở phía đông xa lộ.</p>
               <div class="link-row">
                 <a href="https://www.youtube.com/watch?v=dwBMO4qtyFQ" target="_blank" rel="noopener">Xem trên YouTube ↗</a>
@@ -800,7 +813,7 @@
             <div class="work-body">
               <div class="pill">Austin</div>
               <h3>Container đầy tranh nghệ thuật</h3>
-              <div class="work-meta">Lauren · 1:31 · Bếp lửa, sàn gỗ siêu rộng, đường quê yên tĩnh</div>
+              <div class="work-meta">1:31 · Bếp lửa, sàn gỗ siêu rộng, đường quê yên tĩnh</div>
               <p>Tranh tường, dây đèn, nhạc indie folk trong lúc sơn khô dần ngoài trời.</p>
               <div class="link-row">
                 <a href="https://www.youtube.com/watch?v=4Yon44P1Hyw" target="_blank" rel="noopener">Xem trên YouTube ↗</a>
@@ -820,7 +833,7 @@
             <div class="work-body">
               <div class="pill">San Antonio · Hill Country</div>
               <h3>Cabin Grantham House</h3>
-              <div class="work-meta">Paula · 1:28 · Tầm nhìn riêng tư, chốn hẹn hò cho hai người</div>
+              <div class="work-meta">1:28 · Tầm nhìn riêng tư, chốn hẹn hò cho hai người</div>
               <p>Nắng chiều trên hiên gỗ Hill Country, hơi nước bồn nóng, một bản ballad viết cho hai người.</p>
               <div class="link-row">
                 <a href="https://www.youtube.com/watch?v=Sy5VvSOGdHk" target="_blank" rel="noopener">Xem trên YouTube ↗</a>
@@ -934,11 +947,11 @@
           <li class="jstep reveal"><span class="jicon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M14 34 L27 46 L50 18"/></svg></span><span class="jnum" aria-hidden="true">2</span>
             <h3>Gật đầu</h3><p>Chỉ cần trả lời email của mình. Một chữ “ok” là đủ.</p></li>
           <li class="jstep reveal"><span class="jicon" aria-hidden="true"><svg viewBox="0 0 64 64"><rect x="10" y="20" width="44" height="28" rx="5"/><circle cx="32" cy="34" r="6"/></svg></span><span class="jnum" aria-hidden="true">3</span>
-            <h3>$249, trả một lần</h3><p>Mình gửi hóa đơn qua email. Bạn thanh toán bằng PayPal (Goods and Services tới sisyfosforever@gmail.com), crypto (USDC trên Base hoặc USDT trên Arbitrum) hoặc Western Union. Không thuê bao. Không phát sinh thêm. Các bước tại <a href="/pay">elevatedlisting.co/pay</a>.</p></li>
+            <h3>$249, trả một lần</h3><p>Mình gửi hóa đơn qua email. Bạn thanh toán bằng thẻ hoặc PayPal tới tài khoản PayPal Business <strong>Elevated Listing</strong> của mình (sisyfosforever@gmail.com, chọn Goods and Services), hoặc bằng crypto (USDC trên Base hoặc USDT trên Arbitrum). Không thuê bao. Không phát sinh thêm. Các bước tại <a href="/pay">elevatedlisting.co/pay</a>.</p></li>
           <li class="jstep reveal"><span class="jicon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M10 22 L32 36 L54 22"/><rect x="10" y="18" width="44" height="30" rx="4"/></svg></span><span class="jnum" aria-hidden="true">4</span>
             <h3>Nhận phim trong 48 giờ</h3><p>Trong vòng 48 giờ kể từ khi mình nhận được tiền: phim full HD không watermark, một bản dọc cho Reels và bài hát dạng MP3. Muốn chỉnh chút xíu? Có sẵn một lần chỉnh sửa.</p></li>
           <li class="jstep reveal"><span class="jicon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M32 50 C14 38 10 28 18 20 C24 14 30 18 32 23 C34 18 40 14 46 20 C54 28 50 38 32 50 Z"/></svg></span><span class="jnum" aria-hidden="true">5</span>
-            <h3>Chia sẻ khắp nơi</h3><p>Gắn vào trang cho thuê, website, mạng xã hội, OTA cho phép video, quảng cáo và ấn phẩm. Sau khi thanh toán, phim là của bạn, còn bài hát đi kèm giấy phép thương mại vĩnh viễn cho chỗ ở của bạn.</p><p class="jwink">Forever ever? Forever ever. Yes, Miss Jackson.</p></li>
+            <h3>Chia sẻ khắp nơi</h3><p>Gắn vào trang cho thuê, website, mạng xã hội, OTA cho phép video, quảng cáo và ấn phẩm. Sau khi thanh toán, phim là của bạn, còn bài hát đi kèm giấy phép thương mại vĩnh viễn cho chỗ ở của bạn.</p></li>
           </ol>
         </div>
         <p class="jnote">Có thắc mắc? Cứ nhắn mình. Người thật trả lời hẳn hoi: chính mình, Luis.</p>
@@ -972,7 +985,8 @@
 <section id="packages">
       <div class="wrap">
         <div class="pill">Giá</div>
-        <h2 class="section-title" style="margin-bottom:1.5rem">Phim + bài hát. Giấy phép thương mại trọn gói.</h2>
+        <h2 class="section-title" style="margin-bottom:.75rem">Phim + bài hát. Giấy phép thương mại trọn gói.</h2>
+        <p class="section-sub" style="margin-bottom:1.5rem"><strong>Xem trước miễn phí:</strong> bạn xem phim hoàn chỉnh trước khi trả bất cứ khoản nào. Sau khi thanh toán, phim là của bạn, và bài hát đi kèm <strong>giấy phép thương mại vĩnh viễn</strong> để quảng bá chỗ ở của bạn.</p>
         <div class="tiers">
           <div class="offer tier featured">
             <h3>Standard</h3>
@@ -984,7 +998,7 @@
               <li>Một vòng chỉnh nhỏ</li>
               <li>Giao trong 48 giờ sau khi thanh toán</li>
             </ul>
-            <a class="btn book" href="#contact" data-msg="Mình muốn Standard $249 (phim + bài hát, giấy phép thương mại trọn gói). Đây là link bài đăng:">Đặt Standard $249</a>
+            <a class="btn book" href="#contact" data-msg="Mình muốn Standard $249 (phim + bài hát, giấy phép thương mại trọn gói). Đây là link bài đăng:">Gửi link bài đăng của bạn</a>
           </div>
           <div class="offer tier">
             <h3>Elevated</h3>
@@ -998,7 +1012,7 @@
               <li>Cùng giấy phép thương mại trọn gói cho phim + bài hát</li>
               <li>Giao trong 48 giờ sau khi thanh toán</li>
             </ul>
-            <a class="btn book" href="#contact" data-msg="Mình muốn Elevated $499 (phim tối đa 3 phút, bản cắt 15 + 30 giây, ba vòng chỉnh sửa, bản thay thế của bài hát).">Đặt Elevated $499</a>
+            <a class="btn book" href="#contact" data-msg="Mình muốn Elevated $499 (phim tối đa 3 phút, bản cắt 15 + 30 giây, ba vòng chỉnh sửa, bản thay thế của bài hát).">Gửi link bài đăng của bạn</a>
           </div>
           <div class="offer tier">
             <h3>Maximus</h3>
@@ -1008,10 +1022,10 @@
               <li>Nhiều chỗ ở hoặc phạm vi tùy chỉnh</li>
               <li>Giá và thời gian sau khi trao đổi</li>
             </ul>
-            <a class="btn book" href="#contact" data-msg="Maximus / tùy chỉnh — trao đổi phạm vi nhé.">Trao đổi</a>
+            <a class="btn book" href="#contact" data-msg="Maximus / tùy chỉnh — trao đổi phạm vi nhé.">Gửi link bài đăng của bạn</a>
           </div>
         </div>
-        <p class="avail" style="margin-top:1rem">Mỗi tuần mình chỉ nhận 3 phim mới.</p>
+        <ul class="trustrow" aria-label="Elevated Listing"><li>Xem thử miễn phí trước khi trả tiền</li><li>Giao trong vòng 48 giờ sau khi thanh toán</li><li>Thanh toán an toàn qua PayPal: thẻ hoặc số dư PayPal</li><li>Người thật trả lời: chính mình, Luis</li></ul>
         <div class="paynote">
           <h3>Xem trước đã</h3>
           <p>Mình làm phim rồi gửi bạn bản có watermark. Xem sao thì nhận đúng như vậy. Ưng thì gật đầu và trả — Standard $249, hoặc Elevated $499 nếu muốn phim tối đa 3 phút, bản cắt ngắn 15 và 30 giây, ba vòng chỉnh sửa và một bản thay thế của bài hát. Không ưng thì không mất đồng nào. Phim để không công khai và mình không dùng để quảng bá chỗ ở của bạn.</p>
@@ -1019,10 +1033,39 @@
           <p>Sau khi thanh toán, phim hoàn thiện là của bạn: Luis chuyển giao cho bạn mọi quyền anh ấy có đối với phim, phần dựng và lời bài hát anh ấy viết. Bài hát làm bằng Suno gói trả phí Pro hoặc Premier, và file bạn nhận là bản Download chính thức từ Suno; không bao giờ dùng bản remix bài hát của người dùng khác. Theo Điều khoản Suno (hiệu lực từ 3 tháng 9 năm 2026), bạn nhận mọi quyền Luis có đối với bài hát, cùng giấy phép thương mại vĩnh viễn, toàn cầu, miễn phí bản quyền để quảng bá chỗ ở (website, mạng xã hội, OTA cho phép video, quảng cáo, ấn phẩm) không phụ phí. Vì bài hát do AI tạo, không ai có thể cam kết rằng bài hát có bản quyền hay không có bài tương tự ở nơi khác, và mỗi nền tảng có quy định riêng về nhạc AI. Mình có thể đưa phim vào portfolio trừ khi bạn không muốn. Chi tiết trong phần <a href="/terms" style="color:var(--accent)">điều khoản</a> (tiếng Anh).</p>
           <div class="paycallout">
           <h3>Cách thanh toán</h3>
-          <p>Sau khi bạn gật đầu, mình gửi hóa đơn qua email. Thanh toán qua PayPal tới <strong>sisyfosforever@gmail.com</strong> dạng <strong>Goods and Services</strong>, bằng crypto (USDC trên Base hoặc USDT trên Arbitrum) hoặc Western Union. Các bước tại <a href="/pay">elevatedlisting.co/pay</a>. 48 giờ bắt đầu tính từ lúc mình nhận được tiền, và mình sẽ email báo bạn ngay.</p>
-          <p style="margin:.6rem 0 0"><img src="/img/western-union.svg" alt="Western Union" height="28" style="background:#fff;border-radius:6px;padding:6px 10px;vertical-align:middle"></p>
+          <p>Sau khi bạn gật đầu, mình gửi hóa đơn qua email. <strong>Ưu tiên: thẻ hoặc PayPal.</strong> Thanh toán bằng thẻ qua PayPal hoặc từ số dư PayPal, gửi tới tài khoản PayPal Business <strong>Elevated Listing</strong> của mình (sisyfosforever@gmail.com) và chọn <strong>Goods and Services</strong> (không chọn Friends and Family) để được PayPal bảo vệ người mua. Bạn cũng có thể trả bằng crypto (USDC trên Base hoặc USDT trên Arbitrum). Các bước tại <a href="/pay">elevatedlisting.co/pay</a>. 48 giờ bắt đầu tính khi tiền tới tay mình, và mình sẽ email báo bạn.</p>
+          <p class="pp-secure"><svg class="lock" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 10.5V7.8a3.5 3.5 0 0 1 7 0v2.7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="ppword" role="img" aria-label="PayPal"><b>Pay</b><b>Pal</b></span><span class="t">Thanh toán an toàn qua PayPal. Bạn trả bằng thẻ hoặc số dư PayPal. PayPal xử lý thông tin thẻ của bạn, nên mình không bao giờ thấy chúng. Người nhận hiển thị trong PayPal là <strong>Elevated Listing</strong>, tài khoản PayPal Business của mình.</span></p>
           <p class="small">Chưa từng dùng crypto? Đa số chủ nhà mua USDC chỉ trong vài phút qua Coinbase, Kraken hoặc sàn tương tự, mình sẵn lòng hướng dẫn từng bước. Bạn chỉ trả tiền sau khi đã xem phim và đồng ý.</p>
+          <p class="small small-wu">Nếu cả hai cách trên đều không tiện, bạn có thể dùng Western Union như phương án cuối cùng. Xem <a href="/pay">/pay</a>.</p>
           </div>
+        </div>
+
+        <div class="faq" id="faq">
+          <h3>Chủ nhà hay hỏi</h3>
+          <details>
+            <summary>Có thể dùng phim ở đâu?</summary>
+            <p>Ở bất cứ đâu bạn quảng bá chỗ ở: website riêng, Instagram, TikTok, Facebook, YouTube, quảng cáo, ấn phẩm in, và các nền tảng đặt phòng cho phép video. Airbnb hỗ trợ video trong bài đăng khá hạn chế, nên bạn hãy kiểm tra xem nền tảng của mình nhận những gì. Bản dọc được làm cho Reels và Stories.</p>
+          </details>
+          <details>
+            <summary>Nhạc có phải do AI làm không?</summary>
+            <p>Đúng vậy. Bài hát được làm với sự hỗ trợ của AI, bằng Suno trên gói trả phí Pro hoặc Premier, và được viết về chỗ ở của bạn. Bạn nhận giấy phép vĩnh viễn, toàn cầu, miễn phí bản quyền để dùng thương mại khi quảng bá chỗ ở. Vì bài hát do AI tạo ra, không ai có thể cam kết rằng nó có bản quyền tác giả, và mỗi nền tảng có quy định riêng về nhạc AI. Chi tiết trong <a href="/terms" style="color:var(--accent)">điều khoản</a>.</p>
+          </details>
+          <details>
+            <summary>Xem trước miễn phí hoạt động thế nào?</summary>
+            <p>Gửi mình link bài đăng của bạn. Mình làm phim từ ảnh thật trong bài đăng và gửi bạn bản có watermark. Bạn xem đúng là phim thật. Ưng thì bạn trả lời đồng ý, mình gửi hóa đơn. Không ưng thì bạn không trả gì. Phim vẫn để ở chế độ không công khai và mình không dùng nó để bán chỗ ở của bạn.</p>
+          </details>
+          <details>
+            <summary>Có chỉnh sửa được không?</summary>
+            <p>Gói Standard có một lượt chỉnh nhỏ: một danh sách thay đổi trong một email, như nhịp phim, thứ tự hoặc lựa chọn ảnh, hay chữ trên màn hình. Gói Elevated có ba lượt chỉnh sửa. Ý tưởng mới hoặc bài hát mới không nằm trong gói, nhưng mình có thể thỏa thuận riêng.</p>
+          </details>
+          <details>
+            <summary>Còn hoàn tiền thì sao?</summary>
+            <p>Vì bạn đã xem phim trước khi trả tiền, khoản thanh toán không được hoàn lại sau khi phim đã giao. Nếu mình không giao trong vòng 48 giờ kể từ khi nhận và xác nhận thanh toán, bạn được hoàn tiền toàn bộ. Xem <a href="/refund" style="color:var(--accent)">chính sách hoàn tiền</a>.</p>
+          </details>
+          <details>
+            <summary>Thanh toán thế nào?</summary>
+            <p>Sau khi bạn gật đầu, mình gửi hóa đơn qua email. Ưu tiên thẻ hoặc PayPal (Goods and Services, tới tài khoản PayPal Business Elevated Listing của mình), crypto (USDC trên Base hoặc USDT trên Arbitrum) cũng được. Phim giao trong vòng 48 giờ kể từ khi tiền tới tay mình. Các bước tại <a href="/pay" style="color:var(--accent)">elevatedlisting.co/pay</a>.</p>
+          </details>
         </div>
       </div>
     </section>
@@ -1082,7 +1125,7 @@
                 <label for="c-message">Lời nhắn</label>
                 <textarea id="c-message" name="message" required placeholder="Chỗ ở của bạn thế nào, và bạn muốn khách cảm thấy ra sao?"></textarea>
               </div>
-              <button class="btn" type="submit">Gửi tin nhắn</button>
+              <button class="btn" type="submit">Gửi mình link bài đăng của bạn</button>
               <p class="note">Tin nhắn sẽ tới thẳng hộp thư Elevated Listing. Hoặc email cho <a href="mailto:luis@elevatedlisting.co" style="color:var(--accent)">luis@elevatedlisting.co</a>.</p>
             </div>
             <p class="thanks">Nhận rồi nhé! Mình sẽ trả lời từ luis@elevatedlisting.co.</p>
@@ -1103,6 +1146,7 @@
           <p class="section-sub" style="margin-bottom:1rem">
             Làm phim và viết nhạc. Elevated Listing là nơi mình mang tay nghề đó đến những chỗ ở có cá tính. Không gửi hàng loạt, không rập khuôn cho an toàn. Nếu chỗ của bạn có hồn, mình muốn phim mở ra một cánh cửa trong trí tưởng tượng của ai đó, phần còn lại để họ tự đi tiếp.
           </p>
+          <p class="about-cred">Trước Elevated Listing, mình có khoảng 20 năm làm giám đốc sáng tạo trong ngành quảng cáo.</p>
           <div class="link-row">
             <a href="https://www.youtube.com/@LuisfromSweden" target="_blank" rel="noopener">YouTube @LuisfromSweden</a>
             <a href="https://www.instagram.com/luisfromsweden/" target="_blank" rel="noopener">Instagram @luisfromsweden</a>
@@ -1127,7 +1171,7 @@
 
   <footer>
     <div class="wrap row">
-      <div>© <span id="y"></span> Elevated Listing · Mats Ludvig Lindberg (Luis from Sweden)</div>
+      <div class="foot-brand"><a class="foot-logo" href="/vi/"><img src="/img/logo-mark.svg" alt="" width="34" height="34" /><span>Elevated <em>Listing</em></span></a><div class="foot-tag">Phim về chỗ ở của bạn, kèm bài hát riêng</div><div>© <span id="y"></span> Elevated Listing · Mats Ludvig Lindberg (Luis from Sweden)</div></div>
       <div class="legal-links">
         <a href="/terms" hreflang="en">Điều khoản</a>
         <span class="sep">·</span>
@@ -1137,6 +1181,7 @@
       </div>
     <div class="contact-block">
         <p><strong>Liên hệ</strong> · <a href="mailto:luis@elevatedlisting.co">luis@elevatedlisting.co</a></p>
+        <p><strong>Thanh toán</strong> · PayPal (tài khoản Business: Elevated Listing) · crypto (USDC / USDT) · Western Union · <a href="/pay">Cách thanh toán</a></p>
         <p><strong>Hủy nhận email:</strong> Nhận email chào hàng từ mình và không muốn nhận nữa? Trả lời <strong>STOP</strong>, hoặc email <a href="mailto:luis@elevatedlisting.co?subject=STOP">luis@elevatedlisting.co</a> với tiêu đề STOP, mình sẽ không liên hệ lại. Mọi email chào hàng gửi đi đều có cách hủy này.</p>
       </div>
     </div>
@@ -1236,5 +1281,6 @@ document.addEventListener('click',function(e){document.querySelectorAll('.lang-s
 document.addEventListener('keydown',function(e){if(e.key==='Escape')document.querySelectorAll('.lang-sm[open]').forEach(function(d){d.removeAttribute('open');d.querySelector('summary').focus();});});
 document.querySelectorAll('.lang a[hreflang],.lang-menu a[hreflang]').forEach(function(a){a.addEventListener('click',function(){var c=a.getAttribute('hreflang');try{localStorage.setItem('el_lang',c)}catch(e){}document.cookie='el_lang='+c+';path=/;max-age=31536000;SameSite=Lax';});});
 </script>
+<!-- el-brand-1027 -->
 </body>
 </html>

@@ -52,11 +52,32 @@
     .calm li{margin:.4rem 0}
     footer{color:var(--mute);font-size:1rem;text-align:center;margin-top:2rem}
     @media (min-width:768px){body{font-size:1.3rem}.wrap{padding:2rem 2rem 5rem}.card{padding:2rem 2.25rem}.crypto-grid{display:grid;grid-template-columns:240px 1fr;gap:1.5rem;align-items:start}}
+    /* brand header/footer + PayPal Business (2026-10-27) */
+    .top{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding:.25rem 0 1rem;border-bottom:1px solid var(--line)}
+    .brand{display:inline-flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--ink);font-family:Fraunces,Georgia,serif;font-weight:600;font-size:1.3rem;letter-spacing:.02em}
+    .brand img{width:34px;height:34px;display:block}
+    .brand em{font-style:normal;color:var(--accent);font-weight:500}
+    .top .back{min-height:48px;padding:.5rem 1.1rem;font-size:1rem}
+    .payee{display:grid;grid-template-columns:auto 1fr;gap:.3rem 1rem;margin:1rem 0;padding:1rem 1.2rem;background:var(--bg-soft);border:1px solid var(--line);border-radius:14px;font-size:1.05rem}
+    .payee dt{color:var(--mute)}
+    .payee dd{margin:0;font-weight:600;word-break:break-word}
+    .pp-secure{display:flex;gap:.6rem .8rem;align-items:center;flex-wrap:wrap;margin:1rem 0;padding:.8rem 1rem;background:rgba(243,239,230,.04);border:1px solid var(--line);border-radius:12px;font-size:1rem;color:var(--ink);line-height:1.5}
+    .pp-secure .lock{color:var(--accent);flex:none}
+    .pp-secure .t{flex:1 1 16rem}
+    .ppword{display:inline-block;background:#fff;border-radius:6px;padding:.18rem .5rem;font-family:Verdana,"DejaVu Sans",Arial,sans-serif;font-weight:700;font-style:italic;font-size:.95rem;letter-spacing:-.02em;line-height:1.25;white-space:nowrap}
+    .ppword b:first-child{color:#003087}.ppword b+b{color:#009cde}
+    footer.site{border-top:1px solid var(--line);margin-top:3rem;padding-top:1.75rem;text-align:left;display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem 2rem;font-size:.95rem}
+    footer.site .brand{font-size:1.15rem}
+    footer.site .links{display:flex;flex-wrap:wrap;gap:.4rem 1rem;align-items:center}
+    footer.site .links a{color:var(--mute);text-decoration:none}
+    footer.site .links a:hover{color:var(--ink)}
+    footer.site .small{flex-basis:100%;color:var(--mute);font-size:.9rem;margin:0}
+    footer.site .small a{color:var(--accent)}
   </style>
 </head>
 <body>
   <main class="wrap">
-    <a class="back" href="/">&larr; Back to the homepage</a>
+    <div class="top"><a class="brand" href="/" aria-label="Elevated Listing home"><img src="/img/logo-mark.svg" alt="" width="34" height="34" /><span>Elevated <em>Listing</em></span></a><a class="back" href="/">&larr; Back to the homepage</a></div>
 
     <h1>How to pay</h1>
     <p class="price">As invoiced <small>Standard $249 · Elevated $499 · custom on request</small></p>
@@ -67,7 +88,7 @@
       <ul>
         <li>You see a <strong>free preview</strong> first. You only pay if you like it.</li>
         <li>Your finished film arrives <strong>within 48 hours</strong> after your payment reaches me.</li>
-        <li>Payments go to <strong>Luis Lindberg</strong> (legal name <strong>Mats Ludvig Lindberg</strong>), the person behind Elevated Listing. Every payment follows an invoice I email you first.</li>
+        <li>PayPal payments go to my PayPal Business account <strong>Elevated Listing</strong>. Elevated Listing is my trading name; I am <strong>Luis Lindberg</strong> (legal name <strong>Mats Ludvig Lindberg</strong>). Every payment follows an invoice I email you first.</li>
         <li>Questions? Email <a href="mailto:luis@elevatedlisting.co">luis@elevatedlisting.co</a></li>
         <li>Read the <a href="/terms">terms</a> and the <a href="/refund">refund policy</a>.</li>
       </ul>
@@ -78,7 +99,8 @@
          set PAYPAL_URL in the script at the bottom: the button appears and these steps hide. -->
     <section class="card" id="pay-paypal">
       <h2><span class="num">1</span> Card or PayPal <span class="tag">Preferred</span></h2>
-      <p><span class="badge ppbadge" aria-label="PayPal"><span class="pp1">Pay</span><span class="pp2">Pal</span></span></p>
+      <dl class="payee"><dt>Recipient</dt><dd>Elevated Listing <span class="tag">PayPal Business account</span></dd><dt>PayPal email</dt><dd>sisyfosforever@gmail.com</dd></dl>
+      <p class="pp-secure"><svg class="lock" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 10.5V7.8a3.5 3.5 0 0 1 7 0v2.7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="ppword" role="img" aria-label="PayPal"><b>Pay</b><b>Pal</b></span><span class="t">Secure payment via PayPal. Pay with a card or your PayPal balance. PayPal handles your card details, so I never see them.</span></p>
       <div id="paypal-steps">
         <p class="note">Card payment is preferred when it’s available to you. Today it runs through PayPal: you can pay with a normal debit or credit card linked to PayPal, or from your PayPal balance. It takes about two minutes.</p>
         <p class="note"><strong>Please choose Goods and Services.</strong> That is PayPal’s option for paying for something you bought, and it keeps PayPal’s buyer protection on your side. Please don’t use Friends and Family for this payment.</p>
@@ -86,7 +108,7 @@
           <li>Log in at <a href="https://www.paypal.com/myaccount/transfer/homepage/pay" target="_self">paypal.com &rarr; Send</a>.</li>
           <li>Send to this email:
             <div class="copyrow"><span class="val">sisyfosforever@gmail.com</span> <button class="copy" type="button" data-copy="sisyfosforever@gmail.com">Copy</button></div>
-            <span class="field">The PayPal account is in my legal name, Mats Ludvig Lindberg.</span></li>
+            <span class="field">PayPal shows the recipient as <strong>Elevated Listing</strong>, my PayPal Business account. That’s me.</span></li>
           <li>Amount: the USD total on your invoice (Standard <span class="val">$249</span>, Elevated <span class="val">$499</span>, or your custom quote).</li>
           <li>When PayPal asks what the payment is for, choose <strong>Goods and Services</strong> (paying for an item or service), not Friends and Family. That keeps PayPal&rsquo;s buyer protection on your side.</li>
           <li>In the note, write your <strong>property name</strong>. Then reply to my email so I can match the payment. Your film arrives within <strong>48 hours</strong>.</li>
@@ -137,7 +159,7 @@
     </section>
 
     <p style="text-align:center;margin-top:2rem"><a class="back" href="/">&larr; Back to the homepage</a></p>
-    <footer>Elevated Listing · <a href="mailto:luis@elevatedlisting.co">luis@elevatedlisting.co</a> · <a href="/terms">Terms</a></footer>
+    <footer class="site"><a class="brand" href="/"><img src="/img/logo-mark.svg" alt="" width="34" height="34" /><span>Elevated <em>Listing</em></span></a><nav class="links" aria-label="Legal"><a href="/terms">Terms</a><a href="/privacy">Privacy</a><a href="/refund">Refund</a><a href="mailto:luis@elevatedlisting.co">luis@elevatedlisting.co</a></nav><p class="small">© 2026 Elevated Listing · Mats Ludvig Lindberg (Luis from Sweden). Payments: PayPal (Business account: Elevated Listing), crypto (USDC / USDT) or Western Union. Questions? <a href="mailto:luis@elevatedlisting.co">luis@elevatedlisting.co</a></p></footer>
   </main>
   <script>
     /* PayPal: set this to Luis's own paypal.me link for sisyfosforever@gmail.com
@@ -160,5 +182,6 @@
       });
     });
   </script>
+<!-- el-brand-1027 -->
 </body>
 </html>
