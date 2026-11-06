@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sandbox demos · Elevated Listing</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+  <style>
+    :root { --bg:#0f1210; --ink:#f3efe6; --mute:#a8b0a6; --line:rgba(243,239,230,.12); --accent:#c4a574; --card:#1c231e; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; overflow-x: clip; }
+    body {
+      min-height: 100vh; font-family: system-ui, sans-serif; color: var(--ink);
+      background: radial-gradient(900px 500px at 10% -10%, rgba(196,165,116,.16), transparent 55%), var(--bg);
+      line-height: 1.55; padding: 1.25rem;
+    }
+    .wrap { width: min(640px, 100%); margin: 0 auto; padding: 2rem 0 3rem; }
+    a { color: var(--accent); }
+    h1 { font-family: Georgia, serif; font-weight: 600; font-size: clamp(1.6rem, 5vw, 2.2rem); margin: 0 0 .75rem; }
+    p { color: var(--mute); margin: 0 0 1.5rem; }
+    ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .85rem; }
+    li a {
+      display: block; text-decoration: none; color: var(--ink);
+      background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+      padding: 1rem 1.15rem; transition: border-color .2s;
+    }
+    li a:hover { border-color: var(--accent); }
+    li strong { display: block; font-size: 1.05rem; margin-bottom: .25rem; }
+    li span { color: var(--mute); font-size: .9rem; }
+    .back { display: inline-block; margin-top: 2rem; color: var(--mute); text-decoration: none; }
+    .back:hover { color: var(--ink); }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>Sandbox demos</h1>
+    <p>Temporary preview sites made with Elevated Listing films and songs. Not client production pages.</p>
+    <ul>
+      <li><a href="/sandbox/montana-hill/"><strong>Montana Hill Guest Ranch</strong><span>Bridge Lake, British Columbia</span></a></li>
+      <li><a href="/sandbox/lynn-sundlof/"><strong>Lynn Sundlöf</strong><span>Craniosacral Therapie · Basel</span></a></li>
+    </ul>
+    <a class="back" href="/">← Elevated Listing</a>
+  </main>
+</body>
+</html>

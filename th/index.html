@@ -669,6 +669,81 @@
       .usp-pa-steps li:not(:last-child)::after{content:"↓";right:auto;left:1.15rem;top:auto;bottom:-.72rem;transform:none}
     }
   </style>
+
+  <style id="responsive-polish-1106">
+    /* Elevated Listing responsive polish 2026-11-06 — CSS only, no copy changes */
+    #voices .vcard { margin-inline: 0; width: min(100%, 40rem); }
+    .navpay {
+      display: inline-flex; align-items: center; justify-content: center;
+      text-decoration: none;
+    }
+    .hp, .hp * {
+      position: absolute !important; left: -10000px !important; top: auto !important;
+      width: 1px !important; height: 1px !important; overflow: hidden !important;
+      margin: 0 !important; padding: 0 !important; border: 0 !important;
+    }
+    /* Keep CTA on one line; long localized labels were wrapping the sticky header */
+    .nav-links .btn { white-space: nowrap; }
+    /* Compact language menu before EN·SV·ES·… plus long CTAs wrap (~1280–1400) */
+    @media (max-width: 1520px) {
+      .lang { display: none !important; }
+      .lang-sm { display: block; }
+    }
+    @media (max-width: 1100px) {
+      .nav-links .hide-sm { display: none !important; }
+    }
+    @media (max-width: 600px) {
+      .nav { gap: .45rem; padding: .65rem 0; }
+      .logo { min-width: 0; flex: 0 1 auto; }
+      .nav-links {
+        min-width: 0; flex: 1 1 auto; justify-content: flex-end;
+        gap: .35rem; flex-wrap: nowrap;
+      }
+      .navpay {
+        min-width: 44px; min-height: 44px;
+        padding: .45rem .55rem;
+        margin-right: 0 !important;
+        border-radius: 999px;
+        border: 1px solid transparent;
+        flex: none;
+      }
+      .navpay:hover, .navpay:focus-visible { border-color: var(--line); }
+      .lang-sm { flex: none; }
+      .lang-sm summary { min-height: 44px; padding: .55rem .65rem; box-sizing: border-box; }
+      .nav-links .btn {
+        flex: 0 1 auto;
+        min-width: 0;
+        max-width: calc(100vw - 12.75rem);
+        padding: .55rem .7rem;
+        font-size: .78rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .fgrid { gap: .85rem; }
+      .ftitle { font-size: 1.05rem; padding: .7rem .75rem 0; }
+      .fplace { font-size: .84rem; padding: .25rem .75rem 0; line-height: 1.35; }
+      .fcountry { padding: .4rem .75rem .8rem; font-size: .72rem; }
+      .hero h1 { font-size: clamp(1.85rem, 8.2vw, 2.4rem); }
+      #voices .vcard { padding: 1.2rem 1rem 1.1rem; }
+      .usp-pa { width: 100%; }
+      .yt-facade, .work-media, .hero-film { max-width: 100%; }
+      .yt-facade img, .work-media img { width: 100%; height: auto; }
+    }
+    @media (max-width: 420px) {
+      .nav { flex-wrap: wrap; row-gap: .55rem; }
+      .nav-links { flex: 1 1 100%; width: 100%; }
+      .nav-links .btn { max-width: none; flex: 1 1 auto; font-size: .86rem; padding: .62rem .9rem; }
+      .fgrid { grid-template-columns: 1fr !important; gap: 1rem; }
+      .ftitle { font-size: 1.12rem; }
+      .fplace { font-size: .9rem; }
+      .logo-text { font-size: 1rem; }
+    }
+    @media (max-width: 360px) {
+      .logo-mark { display: none; }
+    }
+  </style>
+
 </head>
 <body>
   <header>
