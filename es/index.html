@@ -602,6 +602,49 @@
     details.more-films>.fgrid{margin-top:1rem}
     .tip-btn{display:none!important}
   </style>
+
+  <style id="voices-brenda">
+    #voices { padding: 3.5rem 0 1rem; }
+    #voices .vcard {
+      max-width: 40rem;
+      background: linear-gradient(180deg, rgba(255,255,255,.03), transparent), var(--card);
+      border: 1px solid var(--line);
+      border-radius: 1.1rem;
+      padding: 1.6rem 1.7rem 1.45rem;
+    }
+    #voices blockquote {
+      margin: 0 0 1rem;
+      padding: 0;
+      border: 0;
+      font-family: Fraunces, Georgia, serif;
+      font-size: 1.22rem;
+      font-weight: 500;
+      line-height: 1.45;
+      color: var(--ink);
+      text-wrap: pretty;
+    }
+    #voices blockquote::before {
+      content: "“";
+      color: var(--accent);
+      font-size: 1.6rem;
+      line-height: 0;
+      margin-right: .15rem;
+      vertical-align: -0.15em;
+    }
+    #voices .vwho {
+      margin: 0;
+      color: var(--mute);
+      font-size: .92rem;
+      font-weight: 400;
+      letter-spacing: .01em;
+    }
+    #voices .vwho strong { color: var(--ink); font-weight: 500; }
+    @media (max-width:600px){
+      #voices blockquote { font-size: 1.08rem; }
+      #voices .vcard { padding: 1.25rem 1.15rem 1.15rem; }
+    }
+  </style>
+
   <style id="usp-pay-after-1103">
     .usp-pa{position:relative;margin:1.1rem 0 1.4rem;padding:1.25rem 1.4rem 1.3rem;border:1px solid var(--accent);border-left-width:5px;border-radius:var(--radius);background:linear-gradient(135deg,rgba(196,165,116,.16),rgba(196,165,116,.04) 60%,rgba(125,155,132,.06));box-shadow:0 0 50px var(--glow);max-width:46rem;overflow:hidden}
     .usp-pa-head{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;padding-right:6.6rem}
@@ -1001,6 +1044,19 @@
 
 
     
+
+
+    <section id="voices">
+      <div class="wrap">
+        <div class="eyebrow">De anfitriones</div>
+        <h2 class="section-title">Lo que dicen los anfitriones</h2>
+        <p class="section-sub">Clientes de pago, con sus palabras o líneas que aprobaron.</p>
+        <figure class="vcard">
+          <blockquote lang="en">We're a family-run lodge, so it had to include Kris. Luis listened and reworked the song around our family and the Lodge as it is today.</blockquote>
+          <figcaption class="vwho"><strong>Brenda y Kurt</strong> · The Historic Chilcotin Lodge · Riske Creek, British Columbia</figcaption>
+        </figure>
+      </div>
+    </section>
 
     <section id="journey">
       <div class="wrap">
