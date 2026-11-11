@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ชำระเงินอย่างปลอดภัย · Elevated Listing</title>
+  <meta name="description" content="ชำระค่าวิดีโอและเพลง Elevated Listing แพ็กเกจ Standard $249 หรือ Elevated $499 บัตร, PayPal, Apple Pay และ Google Pay ส่งมอบภายใน 48 ชั่วโมงหลังชำระเงิน" />
+  <meta name="robots" content="noindex" />
+  <link rel="canonical" href="https://elevatedlisting.co/th/checkout/" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root{--bg:#0f1210;--bg-soft:#171c18;--card:#1c231e;--ink:#f3efe6;--mute:#a8b0a6;--line:rgba(243,239,230,.12);--accent:#c4a574;--accent-2:#7d9b84;--radius:18px;--max:640px}
+    *{box-sizing:border-box}
+    html,body{overflow-x:clip}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:Outfit,system-ui,sans-serif;font-size:1.15rem;line-height:1.6;-webkit-font-smoothing:antialiased}
+    a{color:var(--accent)}
+    img,svg{max-width:100%;height:auto}
+    .wrap{max-width:var(--max);margin:0 auto;padding:1.15rem 1.2rem 3.5rem}
+    .top{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding:.15rem 0 1rem;border-bottom:1px solid var(--line)}
+    .brand{display:inline-flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--ink);font-family:Fraunces,Georgia,serif;font-weight:600;font-size:1.25rem;letter-spacing:.02em}
+    .brand img{width:34px;height:34px;display:block}
+    .brand em{font-style:normal;color:var(--accent);font-weight:500}
+    .secure{display:inline-flex;align-items:center;gap:.45rem;color:var(--accent-2);font-weight:600;font-size:.95rem;letter-spacing:.04em;text-transform:uppercase}
+    .secure svg{width:16px;height:16px;flex:none}
+    h1,h2{font-family:Fraunces,Georgia,serif;font-weight:500;line-height:1.2}
+    h1{font-size:clamp(1.9rem,5.5vw,2.5rem);margin:1.4rem 0 .35rem}
+    .lede{color:var(--mute);margin:0 0 1.4rem}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1.4rem 1.3rem;margin:0 0 1.15rem}
+    .summary-top{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap}
+    .pkg{margin:0;font-size:1.55rem}
+    .price{margin:0;font-family:Fraunces,Georgia,serif;font-size:2.15rem;color:var(--accent)}
+    .includes{margin:.85rem 0 0;padding:0;list-style:none}
+    .includes li{position:relative;padding:.28rem 0 .28rem 1.35rem}
+    .includes li::before{content:"";position:absolute;left:0;top:.7rem;width:.55rem;height:.55rem;border-radius:50%;background:var(--accent-2)}
+    .deliver{margin:.9rem 0 0;color:var(--ink);font-weight:500}
+    .methods{margin:0}
+    .methods h2{font-size:1.05rem;margin:0 0 .85rem;font-family:Outfit,system-ui,sans-serif;font-weight:600;letter-spacing:.02em}
+    .method-row{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center}
+    .badge{display:inline-flex;align-items:center;justify-content:center;background:#fff;border-radius:10px;padding:.55rem .7rem;height:52px;min-width:76px;box-shadow:0 1px 0 rgba(0,0,0,.12)}
+    .badge img{display:block;height:28px;width:auto;max-width:86px;object-fit:contain}
+    .badge.amex img{height:34px}
+    .badge.mastercard img{height:32px}
+    .steps{margin:0;padding:0;list-style:none;counter-reset:s}
+    .steps h2,.card h2{font-size:1.35rem;margin:0 0 .8rem}
+    .steps li{counter-increment:s;position:relative;padding:.55rem 0 .55rem 3rem;border-top:1px solid var(--line)}
+    .steps li:first-of-type{border-top:0}
+    .steps li::before{content:counter(s);position:absolute;left:0;top:.5rem;width:2.1rem;height:2.1rem;border-radius:50%;border:2px solid var(--accent);color:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:600;font-size:.95rem}
+    .reassure{margin:0;color:var(--mute);font-size:1.02rem}
+    .checkout-form{display:flex;flex-direction:column;gap:.55rem;margin:0}
+    .checkout-form label{font-weight:500}
+    .checkout-form .hint{display:block;color:var(--mute);font-size:.9rem;font-weight:400;margin-top:.15rem}
+    .checkout-form input[type=email]{min-height:54px;padding:.75rem 1rem;border-radius:12px;border:1px solid var(--line);background:var(--bg-soft);color:var(--ink);font:400 1.05rem Outfit,system-ui,sans-serif;width:100%}
+    .checkout-form input:focus{outline:2px solid var(--accent);border-color:var(--accent)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:62px;padding:1rem 1.4rem;border-radius:14px;border:0;background:var(--accent);color:#161410;font-family:Outfit,sans-serif;font-size:1.2rem;font-weight:600;letter-spacing:.01em;text-decoration:none;cursor:pointer;width:100%;box-shadow:0 10px 28px rgba(196,165,116,.3);touch-action:manipulation}
+    .btn:hover,.btn:focus-visible{filter:brightness(1.07)}
+    .btn:disabled{opacity:.65;cursor:wait;filter:none}
+    .btn svg{width:18px;height:18px;flex:none}
+    .form-error{color:#e8b4b4;font-size:.95rem;margin:.1rem 0 0}
+    .q{margin:1rem 0 0;color:var(--mute);font-size:1rem}
+    .alt{margin:1.1rem 0 0;text-align:center;color:var(--mute);font-size:.98rem}
+    .chooser{display:grid;gap:.85rem}
+    .chooser a.pick{display:block;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1.2rem 1.25rem;text-decoration:none;color:var(--ink)}
+    .chooser a.pick:hover,.chooser a.pick:focus-visible{border-color:var(--accent)}
+    .chooser h2{margin:0 0 .2rem;font-size:1.45rem}
+    .chooser .price{font-size:1.7rem}
+    .chooser p{margin:.35rem 0 0;color:var(--mute)}
+    footer.site{border-top:1px solid var(--line);margin-top:2.4rem;padding-top:1.5rem;display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem 2rem;font-size:.95rem}
+    footer.site .links{display:flex;flex-wrap:wrap;gap:.4rem 1rem;align-items:center}
+    footer.site .links a{color:var(--mute);text-decoration:none}
+    footer.site .links a:hover{color:var(--ink)}
+    footer.site .small{flex-basis:100%;color:var(--mute);font-size:.9rem;margin:0}
+    footer.site .small a{color:var(--accent)}
+    [hidden]{display:none !important}
+    @media (max-width:600px){
+      .wrap{padding:1rem 1rem 3rem}
+      .top{gap:.7rem}
+      .brand{font-size:1.1rem}
+      .brand img{width:28px;height:28px}
+      .secure{width:100%}
+      .card{padding:1.15rem 1.05rem}
+      .price{font-size:1.9rem}
+      .badge{height:48px;min-width:70px;padding:.45rem .55rem}
+      .badge img{height:24px;max-width:76px}
+      .btn{font-size:1.12rem}
+      footer.site{flex-direction:column;align-items:flex-start}
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="top">
+      <a class="brand" href="/th/" aria-label="Elevated Listing home"><img src="/img/logo-mark.svg" alt="" width="34" height="34" /><span>Elevated <em>Listing</em></span></a>
+      <p class="secure">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+        ชำระเงินอย่างปลอดภัย
+      </p>
+    </div>
+
+    <div id="chooser" hidden>
+      <h1>ชำระเงินอย่างปลอดภัย</h1>
+      <p class="lede">เลือกแพ็กเกจ แล้วไปชำระเงิน</p>
+      <div class="chooser">
+        <a class="pick" href="/th/checkout/?plan=standard">
+          <h2>Standard</h2>
+          <p class="price">$249</p>
+          <p>วิดีโอฉบับสมบูรณ์ เวอร์ชันแนวตั้ง และเพลงพร้อมสิทธิ์ใช้งาน ส่งมอบภายใน 48 ชั่วโมงหลังชำระเงิน</p>
+        </a>
+        <a class="pick" href="/th/checkout/?plan=elevated">
+          <h2>Elevated</h2>
+          <p class="price">$499</p>
+          <p>ทุกอย่างใน Standard พร้อมวิดีโอยาวขึ้น คลิปสั้นสำหรับโฆษณา และเพลงเวอร์ชันทางเลือก ส่งมอบภายใน 48 ชั่วโมงหลังชำระเงิน</p>
+        </a>
+      </div>
+    </div>
+
+    <div id="checkout-panel" hidden>
+      <h1>ชำระเงินอย่างปลอดภัย</h1>
+      <p class="lede">ตรวจสอบคำสั่งซื้อ แล้วไปชำระเงิน</p>
+
+      <section class="card" aria-labelledby="order-title">
+        <div class="summary-top">
+          <h2 class="pkg" id="order-title"></h2>
+          <p class="price" id="order-price"></p>
+        </div>
+        <ul class="includes" id="order-includes"></ul>
+        <p class="deliver">ส่งมอบภายใน 48 ชั่วโมงหลังชำระเงิน</p>
+      </section>
+
+      <section class="card methods" aria-label="ชำระด้วย">
+        <h2>ชำระด้วย</h2>
+        <div class="method-row">
+          <span class="badge"><img src="/img/payments/visa.svg" alt="Visa" width="86" height="28" /></span>
+          <span class="badge mastercard"><img src="/img/payments/mastercard.svg" alt="Mastercard" width="86" height="32" /></span>
+          <span class="badge amex"><img src="/img/payments/amex.svg" alt="American Express" width="86" height="34" /></span>
+          <span class="badge"><img src="/img/payments/paypal.svg" alt="PayPal" width="86" height="28" /></span>
+          <span class="badge"><img src="/img/payments/apple-pay.svg" alt="Apple Pay" width="86" height="28" /></span>
+          <span class="badge"><img src="/img/payments/google-pay.svg" alt="Google Pay" width="86" height="28" /></span>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>ขั้นตอนต่อไป</h2>
+        <ol class="steps">
+          <li>ชำระเงินอย่างปลอดภัยกับพาร์ทเนอร์ด้านการชำระเงินของเรา</li>
+          <li>อีเมลยืนยัน</li>
+          <li>ได้วิดีโอภายใน 48 ชั่วโมง</li>
+        </ol>
+        <p class="reassure">การชำระด้วยบัตรดำเนินการโดยพาร์ทเนอร์ด้านการชำระเงินของเรา หน้าถัดไปอาจแสดงแบรนด์ของพวกเขาและมีขั้นตอนแปลงสกุลเงิน — เป็นเรื่องปกติ</p>
+      </section>
+
+      <section class="card">
+        <form class="checkout-form" id="pay-form" method="post" action="#">
+          <label for="email">อีเมล<span class="hint">สำหรับใบเสร็จ และเพื่อให้วิดีโอส่งถึงคุณ</span></label>
+          <input id="email" name="email" type="email" autocomplete="email" required inputmode="email" placeholder="you@example.com" />
+          <button class="btn" type="submit">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+            ดำเนินการชำระเงินอย่างปลอดภัย
+          </button>
+          <p class="form-error" hidden role="alert"></p>
+        </form>
+        <p class="q">มีคำถาม? <a href="mailto:luis@elevatedlisting.co">luis@elevatedlisting.co</a></p>
+      </section>
+      <p class="alt" id="other-plan"></p>
+    </div>
+
+    <footer class="site">
+      <a class="brand" href="/th/"><img src="/img/logo-mark.svg" alt="" width="34" height="34" /><span>Elevated <em>Listing</em></span></a>
+      <nav class="links" aria-label="ข้อมูลทางกฎหมาย"><a href="/terms" hreflang="en">ข้อตกลง</a><a href="/privacy" hreflang="en">ความเป็นส่วนตัว</a><a href="/refund" hreflang="en">การคืนเงิน</a></nav>
+      <p class="small">© 2026 Elevated Listing · Sole proprietor: Mats Ludvig Lindberg (Luis from Sweden). การชำระเงิน: บัตร, PayPal, Apple Pay, Google Pay มีคำถาม? <a href="mailto:luis@elevatedlisting.co">luis@elevatedlisting.co</a></p>
+    </footer>
+  </main>
+
+  <script>
+    window.EL_CHECKOUT_ENDPOINT = window.EL_CHECKOUT_ENDPOINT || "https://paymegate-checkout.sisyfosforever.workers.dev/checkout";
+    (function () {
+      var PLANS = {
+        standard: {
+          sku: "el_standard_usd",
+          name: "Standard",
+          price: "$249",
+          includes: [
+            "วิดีโอฉบับสมบูรณ์ — full HD 16:9 และเวอร์ชันแนวตั้ง ไม่มีลายน้ำ",
+            "เพลงต้นฉบับเป็น MP3 พร้อมสิทธิ์ใช้เชิงพาณิชย์สำหรับที่พักของคุณ",
+            "วิดีโอเป็นของคุณ",
+            "ปรับแก้เล็กน้อยหนึ่งรอบ"
+          ],
+          otherHref: "/th/checkout/?plan=elevated",
+          otherLabel: "กำลังมองหา Elevated — $499?"
+        },
+        elevated: {
+          sku: "el_elevated_usd",
+          name: "Elevated",
+          price: "$499",
+          includes: [
+            "ทุกอย่างใน Standard: วิดีโอ เวอร์ชันแนวตั้ง และเพลงพร้อมสิทธิ์ใช้งาน",
+            "วิดีโอยาวขึ้น ความยาวสูงสุด 3 นาที",
+            "คลิปสั้น 15 วินาทีและ 30 วินาที สำหรับโฆษณาและ Reels",
+            "แก้ไขได้ 3 รอบ (แทน 1 รอบ)",
+            "เพลงเวอร์ชันที่สอง (เวอร์ชันทางเลือก)"
+          ],
+          otherHref: "/th/checkout/?plan=standard",
+          otherLabel: "กำลังมองหา Standard — $249?"
+        }
+      };
+
+      var params = new URLSearchParams(window.location.search);
+      var raw = (params.get("plan") || "").toLowerCase().trim();
+      if (raw === "249" || raw === "el_standard_usd") raw = "standard";
+      if (raw === "499" || raw === "el_elevated_usd") raw = "elevated";
+      var plan = PLANS[raw] || null;
+
+      var chooser = document.getElementById("chooser");
+      var panel = document.getElementById("checkout-panel");
+      if (!plan) {
+        chooser.hidden = false;
+        return;
+      }
+
+      panel.hidden = false;
+      document.getElementById("order-title").textContent = plan.name;
+      document.getElementById("order-price").textContent = plan.price;
+      var list = document.getElementById("order-includes");
+      plan.includes.forEach(function (item) {
+        var li = document.createElement("li");
+        li.textContent = item;
+        list.appendChild(li);
+      });
+      var other = document.getElementById("other-plan");
+      var otherLink = document.createElement("a");
+      otherLink.href = plan.otherHref;
+      otherLink.textContent = plan.otherLabel;
+      other.appendChild(otherLink);
+
+      var PAY_URL = /^https:\/\/www\.paymegate\.com\/pay\/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+      var endpoint = window.EL_CHECKOUT_ENDPOINT;
+      var form = document.getElementById("pay-form");
+      var ERR_EMAIL = "กรุณาใส่อีเมลที่ถูกต้อง";
+      var ERR_RETRY = "ลองอีกครั้ง หรืออีเมลไปที่ luis@elevatedlisting.co";
+      function showErr(msg) {
+        var el = form.querySelector(".form-error");
+        el.hidden = false;
+        el.textContent = msg;
+      }
+      function hideErr() {
+        var el = form.querySelector(".form-error");
+        el.hidden = true;
+        el.textContent = "";
+      }
+      form.addEventListener("submit", function (ev) {
+        ev.preventDefault();
+        hideErr();
+        if (!endpoint) return;
+        var email = (form.email.value || "").trim();
+        if (!email || email.indexOf("@") < 1) {
+          showErr(ERR_EMAIL);
+          return;
+        }
+        var btn = form.querySelector('button[type="submit"]');
+        if (btn) btn.disabled = true;
+        fetch(endpoint, {
+          method: "POST",
+          headers: { "content-type": "application/json", "accept": "application/json" },
+          body: JSON.stringify({ sku: plan.sku, email: email, site: "el" })
+        }).then(function (r) {
+          return r.json().then(function (d) { return { ok: r.ok, d: d }; }, function () { return { ok: r.ok, d: {} }; });
+        }).then(function (res) {
+          var url = res.d && res.d.checkoutUrl;
+          if (url && PAY_URL.test(url)) {
+            window.location.href = url;
+            return;
+          }
+          showErr((res.d && res.d.error) || ERR_RETRY);
+          if (btn) btn.disabled = false;
+        }).catch(function () {
+          showErr(ERR_RETRY);
+          if (btn) btn.disabled = false;
+        });
+      });
+    })();
+  </script>
+  <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "8505ff3cf0a6467a842ac6a2459cd20f"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
