@@ -172,7 +172,7 @@
 <script>
   /* When this is set to the Worker /checkout URL, forms go to Paymegate.
      While it is empty, the Pay buttons are mailto links. */
-  window.EL_CHECKOUT_ENDPOINT = window.EL_CHECKOUT_ENDPOINT || "";
+  window.EL_CHECKOUT_ENDPOINT = window.EL_CHECKOUT_ENDPOINT || "https://paymegate-checkout.sisyfosforever.workers.dev/checkout";
   (function () {
     var PAY_URL = /^https:\/\/www\.paymegate\.com\/pay\/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
     var endpoint = window.EL_CHECKOUT_ENDPOINT;
