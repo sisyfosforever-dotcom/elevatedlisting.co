@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>How to pay · Elevated Listing</title>
-  <meta name="description" content="How to pay for your Elevated Listing film and song. You get the finished film first, then pay by Western Union or crypto. Standard $249, Elevated $499, or custom as agreed." />
+  <title>Buy now · Elevated Listing</title>
+  <meta name="description" content="How to pay for your Elevated Listing film and song. Buy now, then the finished film, the vertical cut and the song with its licence are delivered. Standard $249, Elevated $499, or custom as agreed. Card, Apple Pay and Google Pay." />
   <meta name="robots" content="noindex" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -30,9 +30,8 @@
     .tag{font-family:Outfit,sans-serif;font-size:1rem;color:var(--accent-2);font-weight:500}
     .badge{display:inline-flex;align-items:center;justify-content:center;vertical-align:middle;background:#fff;border-radius:10px;padding:10px 14px;line-height:0;box-sizing:border-box;height:calc(1.1rem*1.3 + .7rem + 8px);min-height:46px}
     .badge img{display:block;height:26px;width:auto;max-width:100%;object-fit:contain}
-    .tbadge{display:inline-block;background:#fff;color:#003087;font-family:Outfit,sans-serif;font-weight:600;font-size:1.1rem;border-radius:8px;padding:.35rem .8rem;line-height:1.3}
-    .ppbadge{line-height:1;font-family:Verdana,"DejaVu Sans",Arial,sans-serif;font-weight:700;font-style:italic;font-size:1.45rem;letter-spacing:-.02em}
-    .ppbadge .pp1{color:#003087}.ppbadge .pp2{color:#009cde}
+
+    
     ol.steps{padding-left:0;list-style:none;counter-reset:s;margin:1rem 0}
     ol.steps li{counter-increment:s;position:relative;padding:.9rem 0 .9rem 3.2rem;border-top:1px solid var(--line)}
     ol.steps li::before{content:counter(s);position:absolute;left:0;top:.9rem;width:2.2rem;height:2.2rem;border-radius:50%;border:2px solid var(--accent);color:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:600}
@@ -51,7 +50,7 @@
     .calm ul{padding-left:1.2rem;margin:.5rem 0}
     .calm li{margin:.4rem 0}
     footer{color:var(--mute);font-size:1rem;text-align:center;margin-top:2rem}
-    @media (min-width:768px){body{font-size:1.3rem}.wrap{padding:2rem 2rem 5rem}.card{padding:2rem 2.25rem}.crypto-grid{display:grid;grid-template-columns:240px 1fr;gap:1.5rem;align-items:start}}
+    @media (min-width:768px){body{font-size:1.3rem}.wrap{padding:2rem 2rem 5rem}.card{padding:2rem 2.25rem}}
     /* brand header/footer + payee box (2026-10-27) */
     .top{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding:.25rem 0 1rem;border-bottom:1px solid var(--line)}
     .brand{display:inline-flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--ink);font-family:Fraunces,Georgia,serif;font-weight:600;font-size:1.3rem;letter-spacing:.02em}
@@ -61,12 +60,10 @@
     .payee{display:grid;grid-template-columns:auto 1fr;gap:.3rem 1rem;margin:1rem 0;padding:1rem 1.2rem;background:var(--bg-soft);border:1px solid var(--line);border-radius:14px;font-size:1.05rem}
     .payee dt{color:var(--mute)}
     .payee dd{margin:0;font-weight:600;word-break:break-word}
-    .pp-secure{display:flex;gap:.6rem .8rem;align-items:center;flex-wrap:wrap;margin:1rem 0;padding:.8rem 1rem;background:rgba(243,239,230,.04);border:1px solid var(--line);border-radius:12px;font-size:1rem;color:var(--ink);line-height:1.5}
-    .pp-secure .lock{color:var(--accent);flex:none}
-    .pp-secure .t{flex:1 1 16rem}
-    .ppword{display:inline-block;background:#fff;border-radius:6px;padding:.18rem .5rem;font-family:Verdana,"DejaVu Sans",Arial,sans-serif;font-weight:700;font-style:italic;font-size:.95rem;letter-spacing:-.02em;line-height:1.25;white-space:nowrap}
-    .ppword b:first-child{color:#003087}.ppword b+b{color:#009cde}
-    .btn.pp-checkout{gap:.5rem;max-width:520px;text-align:left}
+
+    
+
+    
     footer.site{border-top:1px solid var(--line);margin-top:3rem;padding-top:1.75rem;text-align:left;display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem 2rem;font-size:.95rem}
     footer.site .brand{font-size:1.15rem}
     footer.site .links{display:flex;flex-wrap:wrap;gap:.4rem 1rem;align-items:center}
@@ -98,78 +95,141 @@
     }
   </style>
 
+<style id="buy-now-cta">
+  .btn-buy{background:var(--accent);color:#161410;font-weight:600;letter-spacing:.01em;box-shadow:0 10px 28px rgba(196,165,116,.3)}
+  .btn-buy:hover,.btn-buy:focus-visible{filter:brightness(1.07)}
+  .buy-now-panel{margin:1rem 0 1.15rem}
+  .buy-now-methods{margin:.55rem 0 0;font-size:.92rem;color:var(--mute);line-height:1.45;max-width:28rem}
+  .buy-now-get{margin:.35rem 0 0;font-size:.98rem;color:var(--ink);line-height:1.5;max-width:32rem}
+  .hero-actions .btn-buy{min-height:52px;padding:.9rem 1.45rem;font-size:1.06rem}
+  .buy-now-panel .btn-buy{display:inline-flex}
+  @media (max-width:480px){
+    .hero-actions .btn-buy,.buy-now-panel .btn-buy{flex:1 1 100%;width:100%;justify-content:center;text-align:center}
+  }
+  .nav-links .btn-buy{white-space:nowrap}
+  .tier .btn-buy{align-self:stretch;justify-content:center;text-align:center;width:100%;margin-top:.15rem}
+</style>
+<style id="checkout-form-css">.checkout-form{margin-top:1.15rem;display:flex;flex-direction:column;gap:.55rem;max-width:28rem}.checkout-form label{font-size:.98rem;color:var(--ink);font-weight:500}.checkout-form label .hint{display:block;color:var(--mute);font-size:.88rem;font-weight:400;margin-top:.2rem}.checkout-form input[type=email],.checkout-form input[type=number],.checkout-form input[type=text]{min-height:52px;padding:.75rem 1rem;border-radius:12px;border:1px solid var(--line);background:var(--bg-soft);color:var(--ink);font:400 1.05rem Outfit,system-ui,sans-serif;width:100%}.checkout-form input:focus{outline:2px solid var(--accent);border-color:var(--accent)}.checkout-form .btn-buy{width:100%;max-width:100%;min-height:56px;margin-top:.15rem;border:0;cursor:pointer}.checkout-form .btn-buy:disabled{opacity:.65;cursor:wait}.form-error{color:#e8b4b4;font-size:.95rem;margin:.15rem 0 0}.buy-now-methods{margin:.45rem 0 0;font-size:.92rem;color:var(--mute);line-height:1.45}.buy-now-get{margin:.25rem 0 0;font-size:.98rem;color:var(--ink);line-height:1.5}</style>
 </head>
 <body>
   <main class="wrap">
     <div class="top"><a class="brand" href="/" aria-label="Elevated Listing home"><img src="/img/logo-mark.svg" alt="" width="34" height="34" /><span>Elevated <em>Listing</em></span></a><a class="back" href="/">&larr; Back to the homepage</a></div>
 
-    <h1>How to pay</h1>
-    <p class="price">After delivery <small>Standard $249 · Elevated $499 · custom as agreed</small></p>
-    <p class="lead">Take your time. Pick the way that feels easiest for you. If anything is unclear, just email me and I will help.</p>
+    <h1>Buy now</h1>
+    <p class="price">$249 <small>Standard · Elevated $499 · custom as agreed</small></p>
+    <p class="lead">Enter your email, pay, then the clean film, the vertical cut and the song with its licence are delivered. Usually within 48 hours of your purchase (it can take a little longer during temporary peaks).</p>
 
-    <section class="card calm" aria-label="See it first, pay after">
-      <h2>See it first, pay after</h2>
+    <section class="card calm" aria-label="How it works">
+      <h2>How it works</h2>
       <ul>
-        <li>We choose to trust our customers. You see a <strong>free preview</strong> first, and when you say yes, you get the <strong>finished film and song before you pay anything</strong>.</li>
-        <li>When you say yes, the material arrives within 48 hours (it can take a little longer during temporary peaks), but you always get the material before you have to pay.</li>
-        <li>Once the files are with you, pay for your package (Standard $249, Elevated $499, or the custom price we agreed) by Western Union or crypto. Elevated Listing is my trading name; I am <strong>Luis Lindberg</strong> (legal name <strong>Mats Ludvig Lindberg</strong>).</li>
+        <li>You can still ask for a <strong>free preview</strong> first — a watermarked draft made from your listing photos, so you see the real film.</li>
+        <li>When you buy, you pay, and then the finished film and song are delivered, usually within 48 hours of your purchase (it can take a little longer during temporary peaks).</li>
+        <li>Standard is $249, Elevated is $499, and custom work is the price we agreed. Elevated Listing is my trading name; I am <strong>Luis Lindberg</strong> (legal name <strong>Mats Ludvig Lindberg</strong>).</li>
         <li>Questions? Email <a href="mailto:luis@elevatedlisting.co">luis@elevatedlisting.co</a></li>
         <li>Read the <a href="/terms">terms</a> and the <a href="/refund">refund policy</a>.</li>
       </ul>
     </section>
 
-    <h2 style="margin:2rem 0 .5rem">Two simple ways to pay</h2>
-    <p class="note" style="margin:0 0 1rem">Pick whichever is easiest for you. After you pay, reply to my email so I can confirm. That’s all.</p>
-
-    <section class="card" id="pay-wu">
-      <h2><span class="num">1</span> Western Union</h2>
-      <p><span class="badge"><img src="/img/western-union.svg" alt="Western Union" width="117" height="26"></span></p>
-      <p>You can do this on the Western Union website, or at any Western Union shop.</p>
-      <ol class="steps">
-        <li>Go to <a href="https://www.westernunion.com" target="_self">westernunion.com</a>.</li>
-        <li>Choose to send your package amount in USD (usually <span class="val">$249</span> or <span class="val">$499</span>) to <span class="val">Vietnam</span>, for <span class="val">cash pickup</span>.</li>
-        <li>Receiver (fill in exactly like this):
-          <dl class="payee" aria-label="Western Union receiver">
-            <dt>First name(s)</dt><dd><div class="copyrow" style="margin:0"><span class="val">MATS LUDVIG</span> <button class="copy" type="button" data-copy="MATS LUDVIG">Copy</button></div></dd>
-            <dt>Last name</dt><dd><div class="copyrow" style="margin:0"><span class="val">LINDBERG</span> <button class="copy" type="button" data-copy="LINDBERG">Copy</button></div></dd>
-            <dt>Country</dt><dd><span class="val">Vietnam</span> (cash pickup)</dd>
-          </dl>
-          <span class="field">Both first names go in the first-name field; the last name is LINDBERG.</span></li>
-        <li>Receiver email:
-          <div class="copyrow"><span class="val">luisfromsweden@gmail.com</span> <button class="copy" type="button" data-copy="luisfromsweden@gmail.com">Copy</button></div></li>
-        <li>When you have paid, you get a tracking number called the <strong>MTCN</strong>. Reply to my email and send me that number. That is all.</li>
-      </ol>
-      <p><a class="btn ghost" href="https://www.westernunion.com" target="_self">Go to westernunion.com</a></p>
+    <section class="card" id="standard">
+      <h2>Standard — $249</h2>
+      <p>The full-HD film (16:9), the vertical cut, and the song with its commercial licence.</p>
+      <form class="checkout-form" data-sku="el_standard_usd" method="post" action="#">
+        <label for="email-standard">Email<span class="hint">For the receipt, and so the films can reach you.</span></label>
+        <input id="email-standard" name="email" type="email" autocomplete="email" required inputmode="email" placeholder="you@example.com" />
+        <a class="btn btn-buy checkout-fallback" href="mailto:luis@elevatedlisting.co?subject=Buy%20now%3A%20Elevated%20Listing%20%24249&body=Hi%20Luis%2C%20I%27d%20like%20to%20buy%20Elevated%20Listing%20Standard%20for%20%24249.%20Please%20send%20me%20a%20payment%20link%20for%20card%2C%20Apple%20Pay%20or%20Google%20Pay.">Pay $249</a>
+        <button class="btn btn-buy checkout-live" type="submit" hidden>Pay $249</button>
+        <p class="buy-now-methods">Card, Apple Pay or Google Pay.</p>
+        <p class="buy-now-get">You pay now. Delivery is usually within 48 hours of your purchase (a little longer during temporary peaks).</p>
+        <p class="form-error" hidden role="alert"></p>
+      </form>
     </section>
 
-    <section class="card" id="pay-crypto">
-      <h2><span class="num">2</span> Crypto</h2>
-      <p>Send your package amount in <span class="val">USDC on Base</span> or <span class="val">USDT on Arbitrum</span> to this address (usually <span class="val">$249</span> or <span class="val">$499</span>). Please use only these two options.</p>
-      <div class="crypto-grid">
-        <img class="qr" src="/img/pay-wallet-qr.svg" alt="QR code of the wallet address" width="220" height="220">
-        <div>
-          <code class="addr" id="wallet">0xDC056F7a17797D7CD7B6D1c3DFeb2d898a88BDC4</code>
-          <div class="copyrow"><button class="copy" type="button" data-copy="0xDC056F7a17797D7CD7B6D1c3DFeb2d898a88BDC4">Copy address</button></div>
-          <p class="note">New to crypto? Most people buy USDC in a few minutes on Coinbase, Kraken or similar. I am happy to walk you through it. After you send, reply to my email so I can confirm.</p>
-        </div>
-      </div>
+    <section class="card" id="elevated">
+      <h2>Elevated — $499</h2>
+      <p>Everything in Standard, plus a longer film (up to 3 minutes), 15- and 30-second cutdowns, three rounds of changes, and an alternate version of the song.</p>
+      <form class="checkout-form" data-sku="el_elevated_usd" method="post" action="#">
+        <label for="email-elevated">Email<span class="hint">For the receipt, and so the films can reach you.</span></label>
+        <input id="email-elevated" name="email" type="email" autocomplete="email" required inputmode="email" placeholder="you@example.com" />
+        <a class="btn btn-buy checkout-fallback" href="mailto:luis@elevatedlisting.co?subject=Buy%20now%3A%20Elevated%20Listing%20%24499&body=Hi%20Luis%2C%20I%27d%20like%20to%20buy%20Elevated%20Listing%20Elevated%20for%20%24499.%20Please%20send%20me%20a%20payment%20link%20for%20card%2C%20Apple%20Pay%20or%20Google%20Pay.">Pay $499</a>
+        <button class="btn btn-buy checkout-live" type="submit" hidden>Pay $499</button>
+        <p class="buy-now-methods">Card, Apple Pay or Google Pay.</p>
+        <p class="buy-now-get">You pay now. Delivery is usually within 48 hours of your purchase (a little longer during temporary peaks).</p>
+        <p class="form-error" hidden role="alert"></p>
+      </form>
+    </section>
+
+    <section class="card" id="custom">
+      <h2>Maximus / custom</h2>
+      <p>Priced on request. Email <a href="mailto:luis@elevatedlisting.co">luis@elevatedlisting.co</a> or use the form on the homepage, and we’ll agree the price before you pay.</p>
     </section>
 
     <p style="text-align:center;margin-top:2rem"><a class="back" href="/">&larr; Back to the homepage</a></p>
-    <footer class="site"><a class="brand" href="/"><img src="/img/logo-mark.svg" alt="" width="34" height="34" /><span>Elevated <em>Listing</em></span></a><nav class="links" aria-label="Legal"><a href="/terms">Terms</a><a href="/privacy">Privacy</a><a href="/refund">Refund</a><a href="mailto:luis@elevatedlisting.co">luis@elevatedlisting.co</a></nav><p class="small">© 2026 Elevated Listing · Sole proprietor: Mats Ludvig Lindberg (Luis from Sweden). Payments: after delivery, by Western Union or crypto (USDC / USDT). Questions? <a href="mailto:luis@elevatedlisting.co">luis@elevatedlisting.co</a></p></footer>
-  </main>
-  <script>
-    document.querySelectorAll('.copy').forEach(function (b) {
-      var label = b.textContent;
-      b.addEventListener('click', function () {
-        var t = b.getAttribute('data-copy');
-        var ok = function () { b.textContent = 'Copied ✓'; b.classList.add('done'); setTimeout(function () { b.textContent = label; b.classList.remove('done'); }, 2500); };
-        if (navigator.clipboard) navigator.clipboard.writeText(t).then(ok, function () { prompt('Copy this:', t); });
-        else prompt('Copy this:', t);
+    <footer class="site"><a class="brand" href="/"><img src="/img/logo-mark.svg" alt="" width="34" height="34" /><span>Elevated <em>Listing</em></span></a><nav class="links" aria-label="Legal"><a href="/terms">Terms</a><a href="/privacy">Privacy</a><a href="/refund">Refund</a><a href="mailto:luis@elevatedlisting.co">luis@elevatedlisting.co</a></nav><p class="small">© 2026 Elevated Listing · Sole proprietor: Mats Ludvig Lindberg (Luis from Sweden). Payments: card, Apple Pay, Google Pay. Questions? <a href="mailto:luis@elevatedlisting.co">luis@elevatedlisting.co</a></p></footer>
+  
+</main>
+  
+<!-- el-brand-1027 -->
+<script>
+  /* When this is set to the Worker /checkout URL, forms go to Paymegate.
+     While it is empty, the Pay buttons are mailto links. */
+  window.EL_CHECKOUT_ENDPOINT = window.EL_CHECKOUT_ENDPOINT || "";
+  (function () {
+    var PAY_URL = /^https:\/\/www\.paymegate\.com\/pay\/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+    var endpoint = window.EL_CHECKOUT_ENDPOINT;
+    function showErr(form, msg) {
+      var el = form.querySelector(".form-error");
+      if (!el) return;
+      el.hidden = false;
+      el.textContent = msg;
+    }
+    function hideErr(form) {
+      var el = form.querySelector(".form-error");
+      if (!el) return;
+      el.hidden = true;
+      el.textContent = "";
+    }
+    document.querySelectorAll("form.checkout-form").forEach(function (form) {
+      var fallback = form.querySelector(".checkout-fallback");
+      var live = form.querySelector(".checkout-live");
+      if (endpoint) {
+        if (fallback) fallback.hidden = true;
+        if (live) live.hidden = false;
+      }
+      form.addEventListener("submit", function (ev) {
+        ev.preventDefault();
+        hideErr(form);
+        if (!endpoint) return;
+        var email = (form.email.value || "").trim();
+        var sku = form.getAttribute("data-sku");
+        if (!email || email.indexOf("@") < 1) {
+          showErr(form, "Please enter a valid email.");
+          return;
+        }
+        var btn = form.querySelector(".checkout-live");
+        if (btn) btn.disabled = true;
+        fetch(endpoint, {
+          method: "POST",
+          headers: { "content-type": "application/json", "accept": "application/json" },
+          body: JSON.stringify({ sku: sku, email: email, site: "el" })
+        }).then(function (r) {
+          return r.json().then(function (d) { return { ok: r.ok, d: d }; }, function () { return { ok: r.ok, d: {} }; });
+        }).then(function (res) {
+          var url = res.d && res.d.checkoutUrl;
+          if (url && PAY_URL.test(url)) {
+            window.location.href = url;
+            return;
+          }
+          showErr(form, (res.d && res.d.error) || "Please try again, or email luis@elevatedlisting.co.");
+          if (btn) btn.disabled = false;
+        }).catch(function () {
+          showErr(form, "Please try again, or email luis@elevatedlisting.co.");
+          if (btn) btn.disabled = false;
+        });
       });
     });
-  </script>
-<!-- el-brand-1027 -->
+  })();
+</script>
+
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "8505ff3cf0a6467a842ac6a2459cd20f"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>

@@ -121,15 +121,12 @@
     footer .contact-block a { color: var(--accent); }
     footer .contact-block p { margin: .35rem 0; }
 
-
     /* brand + trust (2026-10-27) */
     .logo { display:inline-flex; align-items:center; gap:.55rem; }
     .logo-mark { width:28px; height:28px; flex:none; display:block; }
-    .ppword { display:inline-block; background:#fff; border-radius:6px; padding:.18rem .5rem; font-family:Verdana,"DejaVu Sans",Arial,sans-serif; font-weight:700; font-style:italic; font-size:.92rem; letter-spacing:-.02em; line-height:1.25; vertical-align:middle; white-space:nowrap; }
-    .ppword b:first-child { color:#003087; } .ppword b + b { color:#009cde; }
-    .pp-secure { display:flex; gap:.6rem .8rem; align-items:center; flex-wrap:wrap; margin:.9rem 0 .4rem; padding:.75rem 1rem; background:rgba(243,239,230,.04); border:1px solid var(--line); border-radius:12px; font-size:.9rem; color:var(--ink); line-height:1.5; }
-    .pp-secure .lock { color:var(--accent); flex:none; }
-    .pp-secure span.t { flex:1 1 16rem; }
+
+    
+
     .trustrow { list-style:none; display:grid; grid-template-columns:repeat(auto-fit,minmax(13rem,1fr)); gap:.6rem 1.5rem; margin:1.5rem 0 0; padding:1rem 1.25rem; border:1px solid var(--line); border-radius:var(--radius); background:rgba(243,239,230,.03); font-size:.9rem; color:var(--ink); }
     .trustrow li { display:flex; align-items:center; gap:.55rem; margin:0; }
     .trustrow li::before { content:""; width:1rem; height:1rem; flex:none; background:no-repeat center/contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='7.25' fill='none' stroke='%23c4a574' stroke-width='1.3'/%3E%3Cpath d='M4.8 8.3l2.1 2.1 4.3-4.6' fill='none' stroke='%23c4a574' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); }
@@ -145,6 +142,20 @@
     @media (max-width:600px) { .logo { gap:.45rem; } .logo-mark { width:24px; height:24px; } .logo-text { line-height:1.12; } .nav-links .navpay { margin-right:0 !important; } }
     @media (max-width:389px) { .logo-mark { display:none; } }
   </style>
+<style id="buy-now-cta">
+  .btn-buy{background:var(--accent);color:#161410;font-weight:600;letter-spacing:.01em;box-shadow:0 10px 28px rgba(196,165,116,.3)}
+  .btn-buy:hover,.btn-buy:focus-visible{filter:brightness(1.07)}
+  .buy-now-panel{margin:1rem 0 1.15rem}
+  .buy-now-methods{margin:.55rem 0 0;font-size:.92rem;color:var(--mute);line-height:1.45;max-width:28rem}
+  .buy-now-get{margin:.35rem 0 0;font-size:.98rem;color:var(--ink);line-height:1.5;max-width:32rem}
+  .hero-actions .btn-buy{min-height:52px;padding:.9rem 1.45rem;font-size:1.06rem}
+  .buy-now-panel .btn-buy{display:inline-flex}
+  @media (max-width:480px){
+    .hero-actions .btn-buy,.buy-now-panel .btn-buy{flex:1 1 100%;width:100%;justify-content:center;text-align:center}
+  }
+  .nav-links .btn-buy{white-space:nowrap}
+  .tier .btn-buy{align-self:stretch;justify-content:center;text-align:center;width:100%;margin-top:.15rem}
+</style>
 </head>
 <body>
   <header>
@@ -165,17 +176,17 @@
         <h1>Política de reembolsos</h1>
         <p class="updated">Última actualización: 3 de noviembre de 2026</p>
         <div class="legal-card">
-          <h2>Lo ves antes de pagar</h2>
-          <p>La vista previa es gratis. Ves un borrador de tu video, con marca de agua, antes de decir que sí, así sabes exactamente lo que recibes. Si lo quieres, dices que sí al paquete que acordemos (Standard $249, Elevated $499 o un presupuesto a medida). Si no, no pagas nada.</p>
+          <h2>Mira una vista previa primero</h2>
+          <p>La vista previa es gratis. Ves un borrador de tu video, con marca de agua, antes de comprar, así sabes exactamente lo que recibes. Si lo quieres, compras el paquete que acordemos (Standard $249, Elevated $499 o un presupuesto a medida). Si no, no pagas nada.</p>
 
-          <h2>Primero lo recibes, después pagas</h2>
-          <p>Elegimos confiar en nuestros clientes. Cuando dices que sí, te mando primero el video terminado y la canción, y pagas después de la entrega. Como has visto el trabajo y ya lo tienes antes de pagar, los pagos hechos después de la entrega son definitivos. Las rondas de cambios (una en Standard, tres en Elevated) están para ajustar detalles.</p>
+          <h2>Compra ahora, después la entrega</h2>
+          <p>Cuando compras, pagas, y después se entregan el video terminado, la versión vertical y la canción con su licencia, normalmente en 48 horas desde tu compra (puede tardar un poco más en momentos puntuales de mucha demanda). Las rondas de cambios (una en Standard, tres en Elevated) están para ajustar detalles.</p>
 
           <h2>Plazo de entrega</h2>
-          <p>Cuando dices que sí, el material llega en 48 horas (puede tardar un poco más en momentos puntuales de mucha demanda), pero siempre recibes el material antes de tener que pagar.</p>
+          <p>Después de tu compra, el material llega en 48 horas (puede tardar un poco más en momentos puntuales de mucha demanda).</p>
 
           <h2>Cómo funciona el pago</h2>
-          <p>Pagas después de la entrega, por Western Union o con criptomonedas; ver <a href="/pay">elevatedlisting.co/pay</a>. Si hay que corregir algo de un pago, por ejemplo un pago doble, escribe a <a href="mailto:luis@elevatedlisting.co">luis@elevatedlisting.co</a> con los datos de tu pedido y Luis lo resuelve directamente. Cualquier importe a devolver se devuelve por el mismo medio de pago en un plazo de 14 días: criptomonedas en la misma moneda a la billetera desde la que pagaste, Western Union por Western Union al nombre de tu transferencia.</p>
+          <p>Pagas con tarjeta, Apple Pay o Google Pay; ver <a href="/pay">elevatedlisting.co/pay</a>. Si hay que corregir algo de un pago, por ejemplo un pago doble, escribe a <a href="mailto:luis@elevatedlisting.co">luis@elevatedlisting.co</a> con los datos de tu pedido y Luis lo resuelve directamente. Cualquier importe a devolver se devuelve por el mismo medio de pago en un plazo de 14 días, a través del proveedor de pagos a la tarjeta o cuenta con la que pagaste.</p>
 
           <p><em>Elevated Listing es el nombre comercial de Mats Ludvig Lindberg (Luis Lindberg), un particular que trabaja por cuenta propia a su nombre (sole proprietor); no es una empresa y no está registrado como negocio. Si surge algún problema, primero buscaremos una solución de buena fe por correo y, si compras como consumidor, conservas los derechos imperativos de protección al consumidor del país donde vives. Consulta los <a href="/es/terms">términos</a> para más detalles.</em></p>
         </div>
@@ -195,7 +206,7 @@
       </div>
     <div class="contact-block">
         <p><strong>Contacto</strong> · <a href="mailto:luis@elevatedlisting.co">luis@elevatedlisting.co</a></p>
-        <p><strong>Pagos</strong> · después de la entrega · Western Union · cripto (USDC / USDT) · <a href="/pay">Cómo pagar</a></p>
+        <p><strong>Pagos</strong> · tarjeta, Apple Pay, Google Pay · <a href="/pay">Cómo pagar</a></p>
         <p><strong>Darse de baja:</strong> ¿Recibiste un correo comercial mío y no quieres más? Responde <strong>STOP</strong>, o escribe a <a href="mailto:luis@elevatedlisting.co?subject=STOP">luis@elevatedlisting.co</a> con el asunto STOP, y no volveré a contactarte. Todo correo comercial que envío incluye esta vía de baja. ¿Recibiste un video de muestra mío que no pediste? Escribe a <a href="mailto:luis@elevatedlisting.co">luis@elevatedlisting.co</a> y lo retiro.</p>
       </div>
     </div>

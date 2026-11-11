@@ -121,15 +121,12 @@
     footer .contact-block a { color: var(--accent); }
     footer .contact-block p { margin: .35rem 0; }
 
-
     /* brand + trust (2026-10-27) */
     .logo { display:inline-flex; align-items:center; gap:.55rem; }
     .logo-mark { width:28px; height:28px; flex:none; display:block; }
-    .ppword { display:inline-block; background:#fff; border-radius:6px; padding:.18rem .5rem; font-family:Verdana,"DejaVu Sans",Arial,sans-serif; font-weight:700; font-style:italic; font-size:.92rem; letter-spacing:-.02em; line-height:1.25; vertical-align:middle; white-space:nowrap; }
-    .ppword b:first-child { color:#003087; } .ppword b + b { color:#009cde; }
-    .pp-secure { display:flex; gap:.6rem .8rem; align-items:center; flex-wrap:wrap; margin:.9rem 0 .4rem; padding:.75rem 1rem; background:rgba(243,239,230,.04); border:1px solid var(--line); border-radius:12px; font-size:.9rem; color:var(--ink); line-height:1.5; }
-    .pp-secure .lock { color:var(--accent); flex:none; }
-    .pp-secure span.t { flex:1 1 16rem; }
+
+    
+
     .trustrow { list-style:none; display:grid; grid-template-columns:repeat(auto-fit,minmax(13rem,1fr)); gap:.6rem 1.5rem; margin:1.5rem 0 0; padding:1rem 1.25rem; border:1px solid var(--line); border-radius:var(--radius); background:rgba(243,239,230,.03); font-size:.9rem; color:var(--ink); }
     .trustrow li { display:flex; align-items:center; gap:.55rem; margin:0; }
     .trustrow li::before { content:""; width:1rem; height:1rem; flex:none; background:no-repeat center/contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='7.25' fill='none' stroke='%23c4a574' stroke-width='1.3'/%3E%3Cpath d='M4.8 8.3l2.1 2.1 4.3-4.6' fill='none' stroke='%23c4a574' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); }
@@ -145,6 +142,20 @@
     @media (max-width:600px) { .logo { gap:.45rem; } .logo-mark { width:24px; height:24px; } .logo-text { line-height:1.12; } .nav-links .navpay { margin-right:0 !important; } }
     @media (max-width:389px) { .logo-mark { display:none; } }
   </style>
+<style id="buy-now-cta">
+  .btn-buy{background:var(--accent);color:#161410;font-weight:600;letter-spacing:.01em;box-shadow:0 10px 28px rgba(196,165,116,.3)}
+  .btn-buy:hover,.btn-buy:focus-visible{filter:brightness(1.07)}
+  .buy-now-panel{margin:1rem 0 1.15rem}
+  .buy-now-methods{margin:.55rem 0 0;font-size:.92rem;color:var(--mute);line-height:1.45;max-width:28rem}
+  .buy-now-get{margin:.35rem 0 0;font-size:.98rem;color:var(--ink);line-height:1.5;max-width:32rem}
+  .hero-actions .btn-buy{min-height:52px;padding:.9rem 1.45rem;font-size:1.06rem}
+  .buy-now-panel .btn-buy{display:inline-flex}
+  @media (max-width:480px){
+    .hero-actions .btn-buy,.buy-now-panel .btn-buy{flex:1 1 100%;width:100%;justify-content:center;text-align:center}
+  }
+  .nav-links .btn-buy{white-space:nowrap}
+  .tier .btn-buy{align-self:stretch;justify-content:center;text-align:center;width:100%;margin-top:.15rem}
+</style>
 </head>
 <body>
   <header>
@@ -177,16 +188,14 @@
           </ul>
           <p>La canción está incluida en Standard ($249). No se reserva para un paquete superior.</p>
 
-
           <h2>Primero, vista previa gratis</h2>
           <p>Antes de que pagues nada, te envío un borrador del video, con marca de agua, sin costo. Solo pagas si quieres el video. Si no, no se cobra nada y el borrador no se usa comercialmente para tu alojamiento.</p>
 
           <h2>Entrega: normalmente en 48 horas</h2>
-          <p>La entrega es digital, por enlace en un correo. Cuando dices que sí, el material llega en 48 horas (puede tardar un poco más en momentos puntuales de mucha demanda), pero siempre recibes el material antes de tener que pagar.</p>
+          <p>La entrega es digital, por enlace en un correo. Después de tu compra, el material llega en 48 horas (puede tardar un poco más en momentos puntuales de mucha demanda).</p>
 
                     <h2>Cambios</h2>
           <p>El Standard incluye una ronda de cambios: una lista de cambios enviada en un solo correo, como el ritmo, el orden o la selección de tus fotos, o el texto en pantalla. El Elevated incluye tres rondas de cambios. Los conceptos nuevos o una canción nueva fuera del paquete no están incluidos, pero se pueden acordar aparte (o como Maximus / a medida).</p>
-
 
                     <h2>Sobre qué recibes derechos (licencia comercial completa)</h2>
           <p>En resumen, hay tres partes: los derechos que puedo cederte (el montaje del video y la letra que escribí), una licencia comercial para la canción hecha con ayuda de Suno, y lo que nadie puede garantizar (que exista copyright sobre música generada con IA, o que la canción sea exclusivamente tuya).</p>
@@ -209,13 +218,12 @@
           <h2>Sin garantías de posicionamiento ni reservas</h2>
           <p>Un buen video puede encender la imaginación. <strong>No</strong> garantiza posicionamiento, lugar en las búsquedas, reservas, ingresos ni reseñas.</p>
 
-                    <h2>Pago: después de la entrega</h2>
-          <p>Standard cuesta $249; Elevated, $499; Maximus / a medida se presupuesta a demanda. Sin suscripción. Elegimos confiar en nuestros clientes: recibes primero el video terminado y la canción, y el pago se hace una vez que te los hemos entregado. Pagas con criptomonedas (USDC en Base o USDT en Arbitrum), directamente a mi billetera, o por Western Union, que procesa esas transferencias. Instrucciones paso a paso en <a href="/pay">elevatedlisting.co/pay</a>.</p>
-          <p><strong>Reembolsos:</strong> la vista previa es gratis y solo pagas cuando ya tienes el trabajo terminado, así que no hay nada que pagar por adelantado. Las rondas de cambios (una en Standard, tres en Elevated) están para afinar detalles, y los pagos hechos después de la entrega son definitivos. Detalles en la <a href="/es/refund">Política de reembolsos</a>.</p>
-
+                    <h2>Pago: cuando compras</h2>
+          <p>Standard cuesta $249; Elevated, $499; Maximus / a medida se presupuesta a demanda. Sin suscripción. Cuando compras, pagas, y después se entregan el video terminado, la versión vertical y la canción con su licencia, normalmente en 48 horas desde tu compra (puede tardar un poco más en momentos puntuales de mucha demanda). Pagas con tarjeta, Apple Pay o Google Pay. Instrucciones paso a paso en <a href="/pay">elevatedlisting.co/pay</a>.</p>
+          <p><strong>Reembolsos:</strong> la vista previa es gratis y pagas cuando compras. Las rondas de cambios (una en Standard, tres en Elevated) están para afinar detalles. Si hay que corregir un pago, por ejemplo un pago doble, consulta la <a href="/es/refund">Política de reembolsos</a>.</p>
 
           <h2>Consumidores de la UE</h2>
-          <p>El video es contenido digital. El suministro empieza cuando dices que sí, y aceptas que tu derecho de desistimiento termina con la entrega.</p>
+          <p>El video es contenido digital. El suministro empieza cuando compras, y aceptas que tu derecho de desistimiento termina con la entrega.</p>
 
           <h2>Uso justo del sitio</h2>
           <p>No hagas mal uso del formulario de contacto, no extraigas datos del sitio de forma abusiva ni intentes interrumpir el servicio. Podemos rechazar o pausar un trabajo si la colaboración no funciona.</p>
@@ -239,7 +247,7 @@
       </div>
     <div class="contact-block">
         <p><strong>Contacto</strong> · <a href="mailto:luis@elevatedlisting.co">luis@elevatedlisting.co</a></p>
-        <p><strong>Pagos</strong> · después de la entrega · Western Union · cripto (USDC / USDT) · <a href="/pay">Cómo pagar</a></p>
+        <p><strong>Pagos</strong> · tarjeta, Apple Pay, Google Pay · <a href="/pay">Cómo pagar</a></p>
         <p><strong>Darse de baja:</strong> ¿Recibiste un correo comercial mío y no quieres más? Responde <strong>STOP</strong>, o escribe a <a href="mailto:luis@elevatedlisting.co?subject=STOP">luis@elevatedlisting.co</a> con el asunto STOP, y no volveré a contactarte. Todo correo comercial que envío incluye esta vía de baja. ¿Recibiste un video de muestra mío que no pediste? Escribe a <a href="mailto:luis@elevatedlisting.co">luis@elevatedlisting.co</a> y lo retiro.</p>
       </div>
     </div>

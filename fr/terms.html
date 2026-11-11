@@ -121,15 +121,12 @@
     footer .contact-block a { color: var(--accent); }
     footer .contact-block p { margin: .35rem 0; }
 
-
     /* brand + trust (2026-10-27) */
     .logo { display:inline-flex; align-items:center; gap:.55rem; }
     .logo-mark { width:28px; height:28px; flex:none; display:block; }
-    .ppword { display:inline-block; background:#fff; border-radius:6px; padding:.18rem .5rem; font-family:Verdana,"DejaVu Sans",Arial,sans-serif; font-weight:700; font-style:italic; font-size:.92rem; letter-spacing:-.02em; line-height:1.25; vertical-align:middle; white-space:nowrap; }
-    .ppword b:first-child { color:#003087; } .ppword b + b { color:#009cde; }
-    .pp-secure { display:flex; gap:.6rem .8rem; align-items:center; flex-wrap:wrap; margin:.9rem 0 .4rem; padding:.75rem 1rem; background:rgba(243,239,230,.04); border:1px solid var(--line); border-radius:12px; font-size:.9rem; color:var(--ink); line-height:1.5; }
-    .pp-secure .lock { color:var(--accent); flex:none; }
-    .pp-secure span.t { flex:1 1 16rem; }
+
+    
+
     .trustrow { list-style:none; display:grid; grid-template-columns:repeat(auto-fit,minmax(13rem,1fr)); gap:.6rem 1.5rem; margin:1.5rem 0 0; padding:1rem 1.25rem; border:1px solid var(--line); border-radius:var(--radius); background:rgba(243,239,230,.03); font-size:.9rem; color:var(--ink); }
     .trustrow li { display:flex; align-items:center; gap:.55rem; margin:0; }
     .trustrow li::before { content:""; width:1rem; height:1rem; flex:none; background:no-repeat center/contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='7.25' fill='none' stroke='%23c4a574' stroke-width='1.3'/%3E%3Cpath d='M4.8 8.3l2.1 2.1 4.3-4.6' fill='none' stroke='%23c4a574' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); }
@@ -145,6 +142,20 @@
     @media (max-width:600px) { .logo { gap:.45rem; } .logo-mark { width:24px; height:24px; } .logo-text { line-height:1.12; } .nav-links .navpay { margin-right:0 !important; } }
     @media (max-width:389px) { .logo-mark { display:none; } }
   </style>
+<style id="buy-now-cta">
+  .btn-buy{background:var(--accent);color:#161410;font-weight:600;letter-spacing:.01em;box-shadow:0 10px 28px rgba(196,165,116,.3)}
+  .btn-buy:hover,.btn-buy:focus-visible{filter:brightness(1.07)}
+  .buy-now-panel{margin:1rem 0 1.15rem}
+  .buy-now-methods{margin:.55rem 0 0;font-size:.92rem;color:var(--mute);line-height:1.45;max-width:28rem}
+  .buy-now-get{margin:.35rem 0 0;font-size:.98rem;color:var(--ink);line-height:1.5;max-width:32rem}
+  .hero-actions .btn-buy{min-height:52px;padding:.9rem 1.45rem;font-size:1.06rem}
+  .buy-now-panel .btn-buy{display:inline-flex}
+  @media (max-width:480px){
+    .hero-actions .btn-buy,.buy-now-panel .btn-buy{flex:1 1 100%;width:100%;justify-content:center;text-align:center}
+  }
+  .nav-links .btn-buy{white-space:nowrap}
+  .tier .btn-buy{align-self:stretch;justify-content:center;text-align:center;width:100%;margin-top:.15rem}
+</style>
 </head>
 <body>
   <header>
@@ -177,16 +188,14 @@
           </ul>
           <p>La chanson est incluse dans le Standard ($249). Elle n’est pas réservée à une formule supérieure.</p>
 
-
           <h2>D’abord un aperçu gratuit</h2>
           <p>Avant tout paiement, je vous envoie gratuitement une ébauche du film, avec filigrane. Vous ne payez que si vous voulez le film. Sinon, rien n’est facturé et l’ébauche n’est pas utilisée commercialement pour votre logement.</p>
 
           <h2>Livraison : en général sous 48 heures</h2>
-          <p>La livraison est numérique, par lien envoyé par e-mail. Après votre oui, vos fichiers arrivent sous 48 heures (cela peut prendre un peu plus de temps lors de pics d’activité ponctuels), mais vous les recevez toujours avant de devoir payer.</p>
+          <p>La livraison est numérique, par lien envoyé par e-mail. Après votre achat, vos fichiers arrivent sous 48 heures (cela peut prendre un peu plus de temps lors de pics d’activité ponctuels).</p>
 
                     <h2>Retouches</h2>
           <p>Le Standard comprend une série de retouches : une liste de modifications envoyée en un seul e-mail, comme le rythme, l’ordre ou le choix de vos photos, ou le texte à l’écran. L’Elevated comprend trois séries de retouches. Les nouveaux concepts ou une nouvelle chanson hors formule ne sont pas inclus, mais peuvent être convenus à part (ou en Maximus / sur mesure).</p>
-
 
                     <h2>Vos droits (licence commerciale complète)</h2>
           <p>En bref, il y a trois volets : les droits que je peux vous céder (le montage du film et les paroles que j’ai écrites), une licence commerciale pour la chanson réalisée avec l’aide de Suno, et ce que personne ne peut garantir (qu’un droit d’auteur existe sur une musique générée par IA, ou que la chanson vous soit exclusive).</p>
@@ -209,10 +218,9 @@
           <h2>Aucune garantie de classement ni de réservations</h2>
           <p>Un bon film peut éveiller l’imagination. Il ne garantit <strong>pas</strong> le classement, la position dans les recherches, les réservations, les revenus ni les avis.</p>
 
-                    <h2>Paiement : après la livraison</h2>
-          <p>Standard coûte $249 ; Elevated, $499 ; Maximus / sur mesure est tarifé sur devis. Sans abonnement. Nous choisissons de faire confiance à nos clients : vous recevez d’abord le film terminé et la chanson, et le paiement est dû une fois qu’ils vous ont été livrés. Vous payez par Western Union, ou en crypto (USDC sur Base ou USDT sur Arbitrum) directement sur mon portefeuille. Instructions détaillées sur <a href="/pay">elevatedlisting.co/pay</a>.</p>
-          <p><strong>Remboursements :</strong> l’aperçu est gratuit et vous ne payez qu’une fois le travail terminé entre vos mains : il n’y a donc rien à payer d’avance. Les séries de retouches (une pour Standard, trois pour Elevated) servent à peaufiner les détails, et les paiements effectués après la livraison sont définitifs. Détails dans la <a href="/fr/refund">Politique de remboursement</a>.</p>
-
+                    <h2>Paiement : lorsque vous achetez</h2>
+          <p>Standard coûte $249 ; Elevated, $499 ; Maximus / sur mesure est tarifé sur devis. Sans abonnement. Lorsque vous achetez, vous payez, puis le film terminé, la version verticale et la chanson avec sa licence sont livrés, en général sous 48 heures après votre achat (cela peut prendre un peu plus de temps lors de pics d’activité ponctuels). Vous payez par carte, Apple Pay ou Google Pay. Instructions détaillées sur <a href="/pay">elevatedlisting.co/pay</a>.</p>
+          <p><strong>Remboursements :</strong> l’aperçu est gratuit et vous payez lorsque vous achetez. Les séries de retouches (une pour Standard, trois pour Elevated) servent à peaufiner les détails. Si un paiement doit être corrigé, par exemple un double paiement, voir la <a href="/fr/refund">Politique de remboursement</a>.</p>
 
           <h2>Consommateurs de l’UE</h2>
           <p>Le film est un contenu numérique. La fourniture commence une fois que vous avez dit oui, et vous acceptez que votre droit de rétractation prenne fin à la livraison.</p>
@@ -239,7 +247,7 @@
       </div>
     <div class="contact-block">
         <p><strong>Contact</strong> · <a href="mailto:luis@elevatedlisting.co">luis@elevatedlisting.co</a></p>
-        <p><strong>Paiements</strong> · après livraison · Western Union · crypto (USDC / USDT) · <a href="/pay">Comment payer</a></p>
+        <p><strong>Paiements</strong> · carte, Apple Pay, Google Pay · <a href="/pay">Comment payer</a></p>
         <p><strong>Désinscription :</strong> Vous avez reçu un e-mail commercial de ma part et n’en voulez plus ? Répondez <strong>STOP</strong>, ou écrivez à <a href="mailto:luis@elevatedlisting.co?subject=STOP">luis@elevatedlisting.co</a> avec l’objet STOP, et je ne vous recontacterai pas. Chaque e-mail commercial envoyé inclut ce moyen de désinscription. Vous avez reçu de ma part un film d’essai non sollicité ? Écrivez à <a href="mailto:luis@elevatedlisting.co">luis@elevatedlisting.co</a> et je le retire.</p>
       </div>
     </div>

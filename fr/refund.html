@@ -121,15 +121,12 @@
     footer .contact-block a { color: var(--accent); }
     footer .contact-block p { margin: .35rem 0; }
 
-
     /* brand + trust (2026-10-27) */
     .logo { display:inline-flex; align-items:center; gap:.55rem; }
     .logo-mark { width:28px; height:28px; flex:none; display:block; }
-    .ppword { display:inline-block; background:#fff; border-radius:6px; padding:.18rem .5rem; font-family:Verdana,"DejaVu Sans",Arial,sans-serif; font-weight:700; font-style:italic; font-size:.92rem; letter-spacing:-.02em; line-height:1.25; vertical-align:middle; white-space:nowrap; }
-    .ppword b:first-child { color:#003087; } .ppword b + b { color:#009cde; }
-    .pp-secure { display:flex; gap:.6rem .8rem; align-items:center; flex-wrap:wrap; margin:.9rem 0 .4rem; padding:.75rem 1rem; background:rgba(243,239,230,.04); border:1px solid var(--line); border-radius:12px; font-size:.9rem; color:var(--ink); line-height:1.5; }
-    .pp-secure .lock { color:var(--accent); flex:none; }
-    .pp-secure span.t { flex:1 1 16rem; }
+
+    
+
     .trustrow { list-style:none; display:grid; grid-template-columns:repeat(auto-fit,minmax(13rem,1fr)); gap:.6rem 1.5rem; margin:1.5rem 0 0; padding:1rem 1.25rem; border:1px solid var(--line); border-radius:var(--radius); background:rgba(243,239,230,.03); font-size:.9rem; color:var(--ink); }
     .trustrow li { display:flex; align-items:center; gap:.55rem; margin:0; }
     .trustrow li::before { content:""; width:1rem; height:1rem; flex:none; background:no-repeat center/contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='7.25' fill='none' stroke='%23c4a574' stroke-width='1.3'/%3E%3Cpath d='M4.8 8.3l2.1 2.1 4.3-4.6' fill='none' stroke='%23c4a574' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); }
@@ -145,6 +142,20 @@
     @media (max-width:600px) { .logo { gap:.45rem; } .logo-mark { width:24px; height:24px; } .logo-text { line-height:1.12; } .nav-links .navpay { margin-right:0 !important; } }
     @media (max-width:389px) { .logo-mark { display:none; } }
   </style>
+<style id="buy-now-cta">
+  .btn-buy{background:var(--accent);color:#161410;font-weight:600;letter-spacing:.01em;box-shadow:0 10px 28px rgba(196,165,116,.3)}
+  .btn-buy:hover,.btn-buy:focus-visible{filter:brightness(1.07)}
+  .buy-now-panel{margin:1rem 0 1.15rem}
+  .buy-now-methods{margin:.55rem 0 0;font-size:.92rem;color:var(--mute);line-height:1.45;max-width:28rem}
+  .buy-now-get{margin:.35rem 0 0;font-size:.98rem;color:var(--ink);line-height:1.5;max-width:32rem}
+  .hero-actions .btn-buy{min-height:52px;padding:.9rem 1.45rem;font-size:1.06rem}
+  .buy-now-panel .btn-buy{display:inline-flex}
+  @media (max-width:480px){
+    .hero-actions .btn-buy,.buy-now-panel .btn-buy{flex:1 1 100%;width:100%;justify-content:center;text-align:center}
+  }
+  .nav-links .btn-buy{white-space:nowrap}
+  .tier .btn-buy{align-self:stretch;justify-content:center;text-align:center;width:100%;margin-top:.15rem}
+</style>
 </head>
 <body>
   <header>
@@ -165,17 +176,17 @@
         <h1>Politique de remboursement</h1>
         <p class="updated">Dernière mise à jour : 3 novembre 2026</p>
         <div class="legal-card">
-          <h2>Vous voyez le film avant de payer</h2>
-          <p>L’aperçu est gratuit. Vous voyez une ébauche de votre film, avec filigrane, avant de dire oui : vous savez exactement ce que vous recevez. Si vous le voulez, vous dites oui à la formule convenue (Standard $249, Elevated $499 ou un devis sur mesure). Sinon, vous ne payez rien.</p>
+          <h2>Voyez d’abord un aperçu</h2>
+          <p>L’aperçu est gratuit. Vous voyez une ébauche de votre film, avec filigrane, avant d’acheter : vous savez exactement ce que vous recevez. Si vous le voulez, vous achetez la formule convenue (Standard $249, Elevated $499 ou un devis sur mesure). Sinon, vous ne payez rien.</p>
 
-          <h2>Vous le recevez d’abord, vous payez ensuite</h2>
-          <p>Nous choisissons de faire confiance à nos clients. Après votre oui, je vous envoie d’abord le film terminé et la chanson, et vous payez après la livraison. Comme vous avez vu le travail et l’avez entre les mains avant de payer, les paiements effectués après la livraison sont définitifs. Les séries de retouches (une pour Standard, trois pour Elevated) servent à corriger les détails.</p>
+          <h2>Achetez maintenant, puis la livraison</h2>
+          <p>Lorsque vous achetez, vous payez, puis le film terminé, la version verticale et la chanson avec sa licence sont livrés, en général sous 48 heures après votre achat (cela peut prendre un peu plus de temps lors de pics d’activité ponctuels). Les séries de retouches (une pour Standard, trois pour Elevated) servent à corriger les détails.</p>
 
           <h2>Délai de livraison</h2>
-          <p>Après votre oui, vos fichiers arrivent sous 48 heures (cela peut prendre un peu plus de temps lors de pics d’activité ponctuels), mais vous les recevez toujours avant de devoir payer.</p>
+          <p>Après votre achat, vos fichiers arrivent sous 48 heures (cela peut prendre un peu plus de temps lors de pics d’activité ponctuels).</p>
 
           <h2>Comment se passe le paiement</h2>
-          <p>Vous payez après la livraison, par Western Union ou en crypto ; voir <a href="/pay">elevatedlisting.co/pay</a>. Si quelque chose doit être corrigé sur un paiement, par exemple un double paiement, écrivez à <a href="mailto:luis@elevatedlisting.co">luis@elevatedlisting.co</a> avec les détails de votre commande et Luis s’en occupe directement. Tout montant à rendre est renvoyé par le même moyen de paiement sous 14 jours : les cryptos dans la même devise vers le portefeuille d’origine, Western Union par Western Union au nom figurant sur votre transfert.</p>
+          <p>Vous payez par carte, Apple Pay ou Google Pay ; voir <a href="/pay">elevatedlisting.co/pay</a>. Si quelque chose doit être corrigé sur un paiement, par exemple un double paiement, écrivez à <a href="mailto:luis@elevatedlisting.co">luis@elevatedlisting.co</a> avec les détails de votre commande et Luis s’en occupe directement. Tout montant à rendre est renvoyé par le même moyen de paiement sous 14 jours, via le prestataire de paiement vers la carte ou le compte utilisé pour payer.</p>
 
           <p><em>Elevated Listing est le nom commercial de Mats Ludvig Lindberg (Luis Lindberg), un particulier exerçant seul en son nom propre (sole proprietor) ; ce n’est pas une société et il n’est pas immatriculé comme entreprise. En cas de problème, nous chercherons d’abord une solution de bonne foi par e-mail et, si vous achetez en tant que consommateur, vous conservez les droits impératifs de protection des consommateurs du pays où vous résidez. Voir les <a href="/fr/terms">conditions</a> pour les détails.</em></p>
         </div>
@@ -195,7 +206,7 @@
       </div>
     <div class="contact-block">
         <p><strong>Contact</strong> · <a href="mailto:luis@elevatedlisting.co">luis@elevatedlisting.co</a></p>
-        <p><strong>Paiements</strong> · après livraison · Western Union · crypto (USDC / USDT) · <a href="/pay">Comment payer</a></p>
+        <p><strong>Paiements</strong> · carte, Apple Pay, Google Pay · <a href="/pay">Comment payer</a></p>
         <p><strong>Désinscription :</strong> Vous avez reçu un e-mail commercial de ma part et n’en voulez plus ? Répondez <strong>STOP</strong>, ou écrivez à <a href="mailto:luis@elevatedlisting.co?subject=STOP">luis@elevatedlisting.co</a> avec l’objet STOP, et je ne vous recontacterai pas. Chaque e-mail commercial envoyé inclut ce moyen de désinscription. Vous avez reçu de ma part un film d’essai non sollicité ? Écrivez à <a href="mailto:luis@elevatedlisting.co">luis@elevatedlisting.co</a> et je le retire.</p>
       </div>
     </div>
