@@ -117,17 +117,12 @@
 
     <h1>Buy now</h1>
     <p class="price">$249 <small>Standard · Elevated $499 · custom as agreed</small></p>
-    <p class="lead">Enter your email, pay, then the clean film, the vertical cut and the song with its licence are delivered. Usually within 48 hours of your purchase (it can take a little longer during temporary peaks).</p>
+    <p class="lead">Enter your email and pay. Your finished film, vertical cut and licensed song are delivered within 48 hours.</p>
 
     <section class="card calm" aria-label="How it works">
       <h2>How it works</h2>
-      <ul>
-        <li>You can still ask for a <strong>free preview</strong> first — a watermarked draft made from your listing photos, so you see the real film.</li>
-        <li>When you buy, you pay, and then the finished film and song are delivered, usually within 48 hours of your purchase (it can take a little longer during temporary peaks).</li>
-        <li>Standard is $249, Elevated is $499, and custom work is the price we agreed. Elevated Listing is my trading name; I am <strong>Luis Lindberg</strong> (legal name <strong>Mats Ludvig Lindberg</strong>).</li>
-        <li>Questions? Email <a href="mailto:luis@elevatedlisting.co">luis@elevatedlisting.co</a></li>
-        <li>Read the <a href="/terms">terms</a> and the <a href="/refund">refund policy</a>.</li>
-      </ul>
+      <p>Pick your package and pay. Your finished film, vertical cut and licensed song are delivered within 48 hours. Standard $249. Elevated $499.</p>
+      <p>Questions? <a href="mailto:luis@elevatedlisting.co">luis@elevatedlisting.co</a>. <a href="/terms">Terms</a> · <a href="/refund">Refund policy</a>.</p>
     </section>
 
     <section class="card" id="standard">
@@ -136,10 +131,9 @@
       <form class="checkout-form" data-sku="el_standard_usd" method="post" action="#">
         <label for="email-standard">Email<span class="hint">For the receipt, and so the films can reach you.</span></label>
         <input id="email-standard" name="email" type="email" autocomplete="email" required inputmode="email" placeholder="you@example.com" />
-        <a class="btn btn-buy checkout-fallback" href="mailto:luis@elevatedlisting.co?subject=Buy%20now%3A%20Elevated%20Listing%20%24249&body=Hi%20Luis%2C%20I%27d%20like%20to%20buy%20Elevated%20Listing%20Standard%20for%20%24249.%20Please%20send%20me%20a%20payment%20link%20for%20card%2C%20Apple%20Pay%20or%20Google%20Pay.">Pay $249</a>
-        <button class="btn btn-buy checkout-live" type="submit" hidden>Pay $249</button>
+        <button class="btn btn-buy" type="submit">Pay $249</button>
         <p class="buy-now-methods">Card, Apple Pay or Google Pay.</p>
-        <p class="buy-now-get">You pay now. Delivery is usually within 48 hours of your purchase (a little longer during temporary peaks).</p>
+        <p class="buy-now-get">Delivered within 48 hours of your purchase.</p>
         <p class="form-error" hidden role="alert"></p>
       </form>
     </section>
@@ -150,10 +144,9 @@
       <form class="checkout-form" data-sku="el_elevated_usd" method="post" action="#">
         <label for="email-elevated">Email<span class="hint">For the receipt, and so the films can reach you.</span></label>
         <input id="email-elevated" name="email" type="email" autocomplete="email" required inputmode="email" placeholder="you@example.com" />
-        <a class="btn btn-buy checkout-fallback" href="mailto:luis@elevatedlisting.co?subject=Buy%20now%3A%20Elevated%20Listing%20%24499&body=Hi%20Luis%2C%20I%27d%20like%20to%20buy%20Elevated%20Listing%20Elevated%20for%20%24499.%20Please%20send%20me%20a%20payment%20link%20for%20card%2C%20Apple%20Pay%20or%20Google%20Pay.">Pay $499</a>
-        <button class="btn btn-buy checkout-live" type="submit" hidden>Pay $499</button>
+        <button class="btn btn-buy" type="submit">Pay $499</button>
         <p class="buy-now-methods">Card, Apple Pay or Google Pay.</p>
-        <p class="buy-now-get">You pay now. Delivery is usually within 48 hours of your purchase (a little longer during temporary peaks).</p>
+        <p class="buy-now-get">Delivered within 48 hours of your purchase.</p>
         <p class="form-error" hidden role="alert"></p>
       </form>
     </section>
@@ -170,8 +163,7 @@
   
 <!-- el-brand-1027 -->
 <script>
-  /* When this is set to the Worker /checkout URL, forms go to Paymegate.
-     While it is empty, the Pay buttons are mailto links. */
+  /* Worker /checkout URL. Forms POST here and redirect to Paymegate. */
   window.EL_CHECKOUT_ENDPOINT = window.EL_CHECKOUT_ENDPOINT || "https://paymegate-checkout.sisyfosforever.workers.dev/checkout";
   (function () {
     var PAY_URL = /^https:\/\/www\.paymegate\.com\/pay\/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
@@ -189,12 +181,6 @@
       el.textContent = "";
     }
     document.querySelectorAll("form.checkout-form").forEach(function (form) {
-      var fallback = form.querySelector(".checkout-fallback");
-      var live = form.querySelector(".checkout-live");
-      if (endpoint) {
-        if (fallback) fallback.hidden = true;
-        if (live) live.hidden = false;
-      }
       form.addEventListener("submit", function (ev) {
         ev.preventDefault();
         hideErr(form);
@@ -205,7 +191,7 @@
           showErr(form, "Please enter a valid email.");
           return;
         }
-        var btn = form.querySelector(".checkout-live");
+        var btn = form.querySelector('button[type="submit"]');
         if (btn) btn.disabled = true;
         fetch(endpoint, {
           method: "POST",
