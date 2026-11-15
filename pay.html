@@ -3,21 +3,23 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Secure checkout · Elevated Listing</title>
+  <title>Secure checkout with MoonPay — coming soon · Elevated Listing</title>
   <meta name="robots" content="noindex" />
-  <link rel="canonical" href="https://elevatedlisting.co/checkout/" />
+  <link rel="canonical" href="https://elevatedlisting.co/checkout-coming-soon/" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
   <script>
     (function () {
       var h = (location.hash || "").replace("#", "").toLowerCase();
-      var plan = (h === "standard" || h === "elevated") ? h : "";
-      location.replace("/checkout/" + (plan ? ("?plan=" + encodeURIComponent(plan)) : ""));
+      var params = new URLSearchParams(location.search);
+      var plan = params.get("plan") || "";
+      if (!plan && (h === "standard" || h === "elevated")) plan = h;
+      var dest = "/checkout-coming-soon/" + (plan ? ("?plan=" + encodeURIComponent(plan)) : "");
+      location.replace(dest);
     })();
   </script>
-  <meta http-equiv="refresh" content="0;url=/checkout/" />
 </head>
 <body>
-  <p>Continue to <a href="/checkout/">secure checkout</a>.</p>
+  <p>Continue to <a href="/checkout-coming-soon/">secure checkout</a>.</p>
   <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "8505ff3cf0a6467a842ac6a2459cd20f"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
