@@ -49,6 +49,29 @@
     footer.site .small{flex-basis:100%;color:var(--mute);font-size:.9rem;margin:0}
     footer.site .small a{color:var(--accent)}
     [hidden]{display:none !important}
+
+    .request h2{font-size:1.45rem;margin:0 0 .4rem}
+    .request .intro{color:var(--mute);margin:0 0 1.1rem}
+    .request label{display:block;font-size:.82rem;font-weight:500;letter-spacing:.04em;text-transform:uppercase;color:var(--mute);margin:0 0 .35rem}
+    .request .field{margin:0 0 .9rem}
+    .request input,
+    .request select,
+    .request textarea{width:100%;background:#141915;color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:.75rem .85rem;font:inherit;font-size:1.05rem}
+    .request input:focus,
+    .request select:focus,
+    .request textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(196,165,116,.22)}
+    .request textarea{min-height:7rem;resize:vertical}
+    .request .hp{position:absolute;left:-9999px;height:0;overflow:hidden}
+    .request .btn{display:inline-flex;align-items:center;justify-content:center;width:100%;background:var(--accent);color:#161410;font-weight:600;font-size:1.05rem;border:0;border-radius:12px;padding:.9rem 1.1rem;cursor:pointer;margin-top:.2rem;text-decoration:none}
+    .request .btn:hover{filter:brightness(1.06)}
+    .request .btn:disabled{opacity:.7;cursor:wait}
+    .request .note{margin:.75rem 0 0;color:var(--mute);font-size:.95rem}
+    .request.is-sent .fields,
+    .request.is-sent .btn,
+    .request.is-sent .intro,
+    .request.is-sent .note{display:none}
+    .request .thanks{display:none;color:var(--accent);margin:0}
+    .request.is-sent .thanks{display:block}
     @media (max-width:600px){
       .wrap{padding:1rem 1rem 3rem}
       .top{gap:.7rem}
@@ -84,6 +107,48 @@
       <p class="deliver">Giao trong vòng 48 giờ sau khi thanh toán.</p>
     </section>
 
+    <section class="card request" id="purchase-request" aria-labelledby="request-title">
+      <h2 id="request-title">Muốn mua ngay?</h2>
+      <p class="intro">Gửi yêu cầu, chúng tôi sẽ hỗ trợ bạn trực tiếp.</p>
+      <form class="purchase-form" id="purchase-form" name="purchase-request" method="POST" action="https://formsubmit.co/d56ebdeefb1eb49c27173522fb849243">
+        <input type="hidden" name="_subject" value="Elevated Listing — purchase request" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_next" value="https://elevatedlisting.co/vi/checkout-coming-soon/?sent=1" />
+        <input type="hidden" name="page" id="p-page" value="https://elevatedlisting.co/vi/checkout-coming-soon/" />
+        <p class="hp" aria-hidden="true"><label>Đừng điền vào đây: <input name="_honey" tabindex="-1" autocomplete="off" /></label></p>
+        <div class="fields">
+          <div class="field">
+            <label for="p-name">Tên</label>
+            <input id="p-name" name="name" type="text" autocomplete="name" required />
+          </div>
+          <div class="field">
+            <label for="p-email">Email</label>
+            <input id="p-email" name="email" type="email" autocomplete="email" required />
+          </div>
+          <div class="field">
+            <label for="p-package">Gói</label>
+            <select id="p-package" name="package" required>
+              <option value="">Chọn gói</option>
+              <option value="$199">$199</option>
+              <option value="Standard — $249">Standard — $249</option>
+              <option value="Elevated — $499">Elevated — $499</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="p-property">Tên hoặc liên kết của chỗ ở</label>
+            <input id="p-property" name="property" type="text" autocomplete="off" placeholder="Tên chỗ ở, hoặc URL bài đăng" />
+          </div>
+          <div class="field">
+            <label for="p-message">Lời nhắn</label>
+            <textarea id="p-message" name="message" placeholder="Có điều gì chúng tôi nên biết không?"></textarea>
+          </div>
+          <button class="btn" type="submit" data-sending="Đang gửi…" data-sent="Đã gửi — cảm ơn">Gửi yêu cầu</button>
+        </div>
+        <p class="thanks">Đã nhận — chúng tôi sẽ hỗ trợ bạn trực tiếp và phản hồi sớm.</p>
+      </form>
+    </section>
+
     <section class="card" aria-label="Payment methods">
       <div class="method-row">
         <span class="badge"><img src="/img/payments/visa.svg" alt="Visa" width="86" height="28" /></span>
@@ -107,18 +172,76 @@
   <script>
     (function () {
       var PLANS = {
+        "199": { name: "$199", price: "$199" },
         standard: { name: "Standard", price: "$249" },
         elevated: { name: "Elevated", price: "$499" }
       };
+      var PACKAGE = {
+        "199": "$199",
+        standard: "Standard — $249",
+        elevated: "Elevated — $499"
+      };
       var params = new URLSearchParams(window.location.search);
       var raw = (params.get("plan") || "").toLowerCase().trim();
+      if (raw === "199" || raw === "$199") raw = "199";
       if (raw === "249" || raw === "el_standard_usd") raw = "standard";
       if (raw === "499" || raw === "el_elevated_usd") raw = "elevated";
       var plan = PLANS[raw];
-      if (!plan) return;
-      document.getElementById("plan-name").textContent = plan.name;
-      document.getElementById("plan-price").textContent = plan.price;
-      document.getElementById("plan-card").hidden = false;
+      if (plan) {
+        document.getElementById("plan-name").textContent = plan.name;
+        document.getElementById("plan-price").textContent = plan.price;
+        document.getElementById("plan-card").hidden = false;
+      }
+      var pkg = document.getElementById("p-package");
+      if (pkg && PACKAGE[raw]) pkg.value = PACKAGE[raw];
+      var prop = document.getElementById("p-property");
+      var listing = params.get("property") || params.get("listing") || params.get("url") || "";
+      if (prop && listing) prop.value = listing;
+      var page = document.getElementById("p-page");
+      if (page) page.value = window.location.href;
+    })();
+  </script>
+  <script>
+    (function () {
+      var form = document.getElementById("purchase-form");
+      if (!form) return;
+      if ((window.location.search || "").indexOf("sent=1") !== -1) {
+        var box = document.getElementById("purchase-request");
+        if (box) box.classList.add("is-sent");
+        if (window.history && history.replaceState) {
+          var u = new URL(window.location.href);
+          u.searchParams.delete("sent");
+          history.replaceState(null, "", u.pathname + (u.search ? u.search : "") + u.hash);
+        }
+        return;
+      }
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var honey = form.querySelector("[name=_honey]");
+        if (honey && honey.value) return;
+        var btn = form.querySelector("[type=submit]");
+        if (btn) { btn.disabled = true; btn.dataset.t = btn.textContent; btn.textContent = btn.getAttribute("data-sending") || "Sending…"; }
+        var fd = new FormData(form);
+        function fallback() {
+          var lines = [];
+          fd.forEach(function (v, k) { if (k.charAt(0) !== "_") lines.push(k + ": " + v); });
+          window.location.href = "mailto:luis@elevatedlisting.co?subject=" + encodeURIComponent("Elevated Listing — purchase request") + "&body=" + encodeURIComponent(lines.join("\n"));
+          if (btn) { btn.disabled = false; btn.textContent = btn.dataset.t; }
+        }
+        var data = {}; fd.forEach(function (v, k) { data[k] = v; });
+        fetch("https://formsubmit.co/ajax/d56ebdeefb1eb49c27173522fb849243", {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "Accept": "application/json" },
+          body: JSON.stringify(data)
+        }).then(function (r) { return r.json(); }).then(function (j) {
+          if (j && (j.success === true || j.success === "true")) {
+            var box = document.getElementById("purchase-request");
+            if (box) box.classList.add("is-sent");
+            form.reset();
+            if (btn) btn.textContent = btn.getAttribute("data-sent") || "Sent";
+          } else fallback();
+        }).catch(fallback);
+      });
     })();
   </script>
   <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "8505ff3cf0a6467a842ac6a2459cd20f"}'></script><!-- End Cloudflare Web Analytics -->
